@@ -8,7 +8,7 @@ describe('App' , () => {
     component = renderComponent(App);
   });
 
-  it('renders something', () => {
+  it('renders the app', () => {
     expect(component).to.exist;
   });
 });
