@@ -1,4 +1,5 @@
-# restaurant-reviewer
-Restaurant Reviewer Application
+# Restaurant Reviewer
+A Redux application with React and Babel support for reviewing restaurants
 
-React Redux
+## Nanodegree project
+
