@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 
-export default header = () => {
-	render : function() {
+export default class header extends Component {
+	render () {
 		return (
 			<div> Restaurant Application comming soon! </div>
 		);
 	}
 }
+
