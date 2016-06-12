@@ -31,3 +31,7 @@ export default class header extends Component {
 	}
 }
 
+function mapStateToProps(state) {
+  return { authenticated: state.authenticated };
+}
+
