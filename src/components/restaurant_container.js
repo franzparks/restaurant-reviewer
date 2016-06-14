@@ -5,9 +5,9 @@ export default class RestaurantContainer extends Component {
 	render(){
         return (
         <div className="nav">
-        	<ul>
-        	   <li>First Restaurant </li>
-        	   <li> Second Restaurant </li>  
+        	<ul className="list-group">
+        	   <li className="list-group-item">First Restaurant </li>
+        	   <li className="list-group-item"> Second Restaurant </li>  
         	</ul>
         </div>
         );
