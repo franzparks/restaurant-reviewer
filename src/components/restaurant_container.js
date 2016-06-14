@@ -1,5 +1,5 @@
-var React, {Component} = require('react');
-var {connect} = require('react-redux');
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
 
 export default class RestaurantContainer extends Component {
 	render(){
