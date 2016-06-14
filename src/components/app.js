@@ -5,7 +5,7 @@ import RestaurantContainer from './restaurant_container';
 export default class App extends Component {
   render() {
     return (
-      <div>
+      <div className="container">
       	<Header />
       	<RestaurantContainer />
       </div>
