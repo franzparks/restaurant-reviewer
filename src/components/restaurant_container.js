@@ -7,7 +7,8 @@ export default class RestaurantContainer extends Component {
         <div className="nav">
         	<ul className="list-group">
         	   <li className="list-group-item">First Restaurant </li>
-        	   <li className="list-group-item"> Second Restaurant </li>  
+        	   <li className="list-group-item"> Second Restaurant </li>
+        	   <li className="list-group-item"> Third Restaurant </li>  
         	</ul>
         </div>
         );
