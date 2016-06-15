@@ -1,4 +1,4 @@
-import { renderComponent , expect } from '../test_helper';
+/*import { renderComponent , expect } from '../test_helper';
 import RestaurantContainer from '../../src/components/restaurant_container';
 
 describe('header' , () => {
@@ -12,3 +12,4 @@ describe('header' , () => {
     expect(component).to.exist;
   });
 });
+*/
