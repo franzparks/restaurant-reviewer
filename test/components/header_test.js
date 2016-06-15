@@ -5,7 +5,7 @@ describe('header' , () => {
   let component;
 
   beforeEach(() => {
-    component = renderComponent(App);
+    component = renderComponent(Header);
   });
 
   it('renders the app header', () => {
