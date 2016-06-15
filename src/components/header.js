@@ -22,7 +22,7 @@ class Header extends Component {
                     <li className="nav-item">
                         <Link to="/resources">Resources</Link>
                     </li>
-                    <li className="nav-item btn btn-default navbar-btn">
+                    <li className="nav-item">
                         {this.authButton()}
                     </li>
                 </ul>
