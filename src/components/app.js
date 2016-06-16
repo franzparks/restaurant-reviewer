@@ -9,7 +9,7 @@ export default class App extends Component {
       <div>
     	<Header />
         <div className="container">
-            <div class="row row-offcanvas row-offcanvas-right">
+            <div className="row row-offcanvas row-offcanvas-right">
       	        <RestaurantContainer />
       	        <Footer />
             </div>
