@@ -8,9 +8,49 @@ class MainLayout extends Component {
 	    return (
 	  	    <div className="container">
 	            <div className="row row-offcanvas row-offcanvas-right">
-	                <RestaurantContainer />
-	      	        <Footer />
+	                 <div className="col-xs-12 col-sm-9">
+				          <p className="pull-right visible-xs">
+				            <button type="button" className="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+				          </p>
+				          <div className="jumbotron">
+				            <h1>Restaurant Reviewer</h1>
+				            <p>An Application To Rate And Review Restaurants.</p>
+				          </div>
+				          <div className="row">
+				            <div className="col-xs-6 col-lg-4">
+				              <h2>Heading</h2>
+				              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+				              <p><a className="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+				            </div>
+				            <div className="col-xs-6 col-lg-4">
+				              <h2>Heading</h2>
+				              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+				              <p><a className="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+				            </div>
+				            <div className="col-xs-6 col-lg-4">
+				              <h2>Heading</h2>
+				              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+				              <p><a className="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+				            </div>
+				            <div className="col-xs-6 col-lg-4">
+				              <h2>Heading</h2>
+				              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+				              <p><a className="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+				            </div>
+				          </div>
+				        </div>
+
+				        <div className="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+				          <div className="list-group">
+				            <a href="#" className="list-group-item active">By Location</a>
+				            <a href="#" className="list-group-item">By Menu</a>
+				            <a href="#" className="list-group-item">My Something</a>           
+				          </div>
+				        </div>
+	      	        
 	            </div>
+
+	            <Footer />
 
 	        </div> 
 	  	);
