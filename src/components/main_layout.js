@@ -1,11 +1,20 @@
-import React from 'react';
+import React, {Component} from 'react';
+import RestaurantContainer from './restaurant_container';
+import Footer from './footer';
 
-const MainLayout = () =>{
-    return (
-  	<div>
-  	Am the main layout 
+class MainLayout extends Component {
 
-  	</div>
-  	);
+	render() {
+	    return (
+	  	    <div className="container">
+	            <div className="row row-offcanvas row-offcanvas-right">
+	                <RestaurantContainer />
+	      	        <Footer />
+	            </div>
+
+	        </div> 
+	  	);
+	}  	
 }
+
 export default MainLayout;
