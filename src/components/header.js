@@ -17,14 +17,15 @@ class Header extends Component {
 			<nav className="navbar navbar-default">
                 <ul className="nav navbar-nav">
                     <li className="nav-item">
-                        <Link to="/">Home</Link>
+                        <Link to="/">Restaurant Reviewer</Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/resources">Resources</Link>
+                        <Link to="/filter">Filter</Link>
                     </li>
-                    <li className="nav-item">
+                    {/*<li className="nav-item">
                         {this.authButton()}
-                    </li>
+                     </li>
+                    */}
                 </ul>
             </nav>
 		);
