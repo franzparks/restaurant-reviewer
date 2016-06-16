@@ -2,7 +2,12 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <div>Footer</div>   
+        <div>
+           	<hr />
+            <footer>
+            <p>&copy; 2016 Franzcorps, Inc.</p>
+            </footer>
+        </div>   
     );
     
 }
