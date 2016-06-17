@@ -43,8 +43,8 @@ class MainLayout extends Component {
 				        <div className="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
 				          <div className="list-group">
 				            <a href="#" className="list-group-item active">By Location</a>
-				            <a href="#" className="list-group-item">By Menu</a>
-				            <a href="#" className="list-group-item">My Something</a>           
+				            <a href="#" className="list-group-item">By Cuisine</a>
+				            <a href="#" className="list-group-item">By Ratings</a>           
 				          </div>
 				        </div>
 	      	        
