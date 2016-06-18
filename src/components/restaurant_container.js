@@ -7,7 +7,13 @@ const RestaurantContainer = (props) => {
         var results = [];
 
         props.restaurants.forEach((restaurant) => {
-             results.push(<Restaurant key={restaurant.name}/> );
+             results.push(<Restaurant key={restaurant.name}
+                name={restaurant.name}
+                image={restaurant.image}
+                address={restaurant.address}
+                cuisineType={restaurant.cuisineType}
+                /> 
+             );
         });
 
         return (
