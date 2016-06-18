@@ -2,15 +2,19 @@ import React, {Component} from 'react';
 import Restaurant from './restaurant';
 //import {connect} from 'react-redux';
 
-class RestaurantContainer extends Component {
+const RestaurantContainer = (props) => {
     
-    render() { 
+        var results = [];
+
+        props.restaurants.forEach((restaurant) => {
+             results.push(<Restaurant key={restaurant.name}/> );
+        });
+
         return (
                 <div className="row">
-                     <Restaurant />   
+                      {results} 
                 </div>
-        ); 
-    }     
+        );     
 }
 
 export default RestaurantContainer;
