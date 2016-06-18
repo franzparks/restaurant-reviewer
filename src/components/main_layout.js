@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import RestaurantContainer from './restaurant_container';
-//import Overview from './overview';
+import Overview from './overview';
 import Footer from './footer';
 
 class MainLayout extends Component {
@@ -13,11 +13,7 @@ class MainLayout extends Component {
 				          <p className="pull-right visible-xs">
 				            <button type="button" className="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
 				          </p>
-				          <div className="jumbotron">
-				            <h1>Restaurant Reviewer</h1>
-				            <p>An Application To Rate And Review Restaurants.</p>
-				          </div>
-				          
+				           <Overview />
 				          <div className="row">
 				            <div className="col-xs-6 col-lg-4">
 				              <h2>Heading</h2>
