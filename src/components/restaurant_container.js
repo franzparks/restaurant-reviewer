@@ -1,14 +1,16 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Restaurant from './restaurant';
 //import {connect} from 'react-redux';
 
-const RestaurantContainer = () => {
-     
+class RestaurantContainer extends Component {
+    
+    render() { 
         return (
                 <div className="row">
                      <Restaurant />   
                 </div>
-        );  
+        ); 
+    }     
 }
 
 export default RestaurantContainer;
