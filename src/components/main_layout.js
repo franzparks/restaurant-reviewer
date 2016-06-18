@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import RestaurantContainer from './restaurant_container';
-import OverView from './overview';
+//import Overview from './overview';
 import Footer from './footer';
 
 class MainLayout extends Component {
@@ -17,7 +17,7 @@ class MainLayout extends Component {
 				            <h1>Restaurant Reviewer</h1>
 				            <p>An Application To Rate And Review Restaurants.</p>
 				          </div>
-				          <OverView />
+				          
 				          <div className="row">
 				            <div className="col-xs-6 col-lg-4">
 				              <h2>Heading</h2>
