@@ -11,19 +11,14 @@ class MainLayout extends Component {
 	    return (
 	  	    <div className="container">
 	            <div className="row row-offcanvas row-offcanvas-right">
-	                 <div className="col-xs-12 col-sm-9">
-				           <ToggleNav />
-				           <Overview />
-				           <RestaurantContainer />
-
-				      </div>
-
-				        <Menu />
-	      	        
+	                <div className="col-xs-12 col-sm-9">
+				        <ToggleNav />
+				        <Overview />
+				        <RestaurantContainer restaurants={this.props.restaurants}/>
+				    </div>
+				    <Menu />	      	        
 	            </div>
-
 	            <Footer />
-
 	        </div> 
 	  	);
 	}  	
