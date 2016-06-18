@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
+import React from 'react';
 //import {connect} from 'react-redux';
 
-const RestaurantContainer () => {
+const RestaurantContainer = () => {
 
         return (
             <div className="row">
