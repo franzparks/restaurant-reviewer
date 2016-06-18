@@ -1,12 +1,13 @@
 import React from 'react';
 
-const Restaurant = () => {
+const Restaurant = (props) => {
+	
 	return(
 	    <div className="col-xs-6 col-lg-4">
-	        <h2>Lusaka Restaurant</h2>
-	        <p>Donec id elit non mi porta gravida at eget metus. Fusce 
-	                         dapibus, tellus ac cursus commodo, tortor mauris condime
-	                         uada magna mollis euismod. Donec sed odio dui. </p>
+	        <h2>{props.name}</h2>
+	        <p>{props.image}</p>
+	        <p>Address: {props.address}</p>
+	        <p>Type: {props.cuisineType}</p>
 	        <p><a className="btn btn-default" href="#" role="button">View details &raquo;</a></p>
 	    </div>
     );
