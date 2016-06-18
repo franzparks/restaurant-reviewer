@@ -14,7 +14,9 @@ class MainLayout extends Component {
 	                <div className="col-xs-12 col-sm-9">
 				        <ToggleNav />
 				        <Overview />
-				        <RestaurantContainer restaurants={this.props.restaurants}/>
+				        <RestaurantContainer 
+				            restaurants={this.props.restaurants}
+				            filterCategory={this.state.filterCategory}/>
 				    </div>
 				    <Menu />	      	        
 	            </div>
