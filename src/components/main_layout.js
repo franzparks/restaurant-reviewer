@@ -8,6 +8,7 @@ import ToggleNav from './toggle_nav';
 class MainLayout extends Component {
 
 	render() {
+		let RESTAURANTS = [{"name":"Lusaka Rest", "address":"101 Lsk", "image":"url","cuisineType":"Zambian"}];
 	    return (
 	  	    <div className="container">
 	            <div className="row row-offcanvas row-offcanvas-right">
@@ -15,7 +16,7 @@ class MainLayout extends Component {
 				        <ToggleNav />
 				        <Overview />
 				        <RestaurantContainer 
-				            restaurants={this.props.restaurants}
+				            restaurants={RESTAURANTS}
 				            filterCategory={this.props.filterCategory}/>
 				    </div>
 				    <Menu />	      	        
