@@ -1,11 +1,11 @@
 [
-{
-	"name":"Zambian Restaurant",
-	"image" :"",
-	"address":"101 Santa Clara",
-	"cuisineType":"zambian",
-	"operatingHours":"dusk till kwacha"
+	{
+		"name":"Zambian Restaurant",
+		"image" :"",
+		"address":"101 Santa Clara",
+		"cuisineType":"zambian",
+		"operatingHours":"dusk till kwacha"
 
-}
+	}
 
 ]
