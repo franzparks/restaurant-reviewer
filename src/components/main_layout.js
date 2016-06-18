@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import RestaurantContainer from './restaurant_container';
 import Overview from './overview';
 import Footer from './footer';
+import Menu from './menu';
 import ToggleNav from './toggle_nav';
 
 class MainLayout extends Component {
