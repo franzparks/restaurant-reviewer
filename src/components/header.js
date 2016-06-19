@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
+import SearchBar from './search_bar';
 
 class Header extends Component {
 	authButton() {
@@ -30,6 +31,7 @@ class Header extends Component {
                             <li className="active"><a href="#">Home</a></li>
                             <li><a href="#about">About</a></li>
                             <li><a href="#contact">Contact</a></li>
+                            <li><SearchBar /></li>
                         </ul>
                     </div>
                 </div>
