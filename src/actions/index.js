@@ -5,7 +5,7 @@ import {
 }from './types';
 
 export function fetchRestaurants() {
-	const request = axios.get('');
+	const request = axios.get('../../data/restaurants.json');
 	return {
 		type: FETCH_RESTAURANTS,
 		payload: request
