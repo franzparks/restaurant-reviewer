@@ -2,7 +2,7 @@ import React from 'react';
 
 const SearchBar = () => {
     return (
-        <form className="form-inline" role="form">
+        <form className="navbar-form navbar-left" role="search">
 	        <div className="form-group">
 	            <label htmlFor="searchBar">Filter By</label>
 	        	<input
