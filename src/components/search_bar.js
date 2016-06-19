@@ -2,12 +2,17 @@ import React from 'react';
 
 const SearchBar = () => {
     return (
-        <form>
-        	<input
-        	    type="text"
-        	    placeholder="Name, Location"
-        	    
-        	/>    
+        <form className="form-inline" role="form">
+	        <div className="form-group">
+	            <label for="searchBar">Filter By </label>
+	        	<input
+	        	    className="form-control"
+	        	    id="searchBar"
+	        	    type="text"
+	        	    placeholder="Name, Location"
+	        	    
+	        	/>  
+	        </div>	  
         </form>
     );
 }
