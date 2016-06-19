@@ -4,8 +4,8 @@
 		"image" :"image coming soon",
 		"address":"101 Santa Clara",
 		"cuisineType":"zambian",
-		"operatingHours":"dusk till kwacha"
-		
+		"operatingHours":"dusk till kwacha",
+		"reviews" : []
 
 	}
 
