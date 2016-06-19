@@ -6,7 +6,7 @@ const SearchBar = () => {
         	<input
         	    type="text"
         	    placeholder="Name, Location"
-        	    value={this.props.filterText}
+        	    
         	/>    
         </form>
     );
