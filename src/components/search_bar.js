@@ -2,14 +2,12 @@ import React from 'react';
 
 const SearchBar = () => {
     return (
-        <form className="navbar-form navbar-left" role="search">
-	        <div className="form-group">
-	            <label htmlFor="searchBar">Filter By</label>
+        <form className="navbar-form navbar-center" role="search">
+	        <div className="form-group">	        
 	        	<input
 	        	    className="form-control"
-	        	    id="searchBar"
 	        	    type="text"
-	        	    placeholder="Name, Location"
+	        	    placeholder=" Name, Location"
 	        	    
 	        	/>  
 	        </div>	  

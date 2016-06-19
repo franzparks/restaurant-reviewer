@@ -30,6 +30,8 @@ class Header extends Component {
                         <ul className="nav navbar-nav">
                             <li className="active"><a href="#">Home</a></li>
                             <li><a href="#about">About</a></li>
+                            <li><a href="#">Filter By : </a></li>
+                             
                         </ul>
                         <SearchBar />
                     </div>
