@@ -1,7 +1,8 @@
 import { combineReducers } from 'redux';
+import restaurantsReducer from './restaurants';
 
 const rootReducer = combineReducers({
-  state: (state = {}) => state
+  restaurants: restaurantsReducer
 });
 
 export default rootReducer;
