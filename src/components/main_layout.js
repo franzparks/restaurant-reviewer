@@ -11,6 +11,8 @@ import ToggleNav from './toggle_nav';
 class MainLayout extends Component {
 
 	componentWillMount() {
+		console.log("here");
+		console.log("props : "+this.props);
 		this.props.fetchRestaurants();
 	}
 
@@ -36,6 +38,7 @@ class MainLayout extends Component {
 	}  	
 }
 function mapStateToProps(state) {
+	console.log("state : "+state.restaurants);
 	return { restaurants : state.restaurants };
 }
 export default connect(mapStateToProps,actions)(MainLayout);
