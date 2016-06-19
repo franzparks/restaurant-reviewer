@@ -4,7 +4,7 @@ const SearchBar = () => {
     return (
         <form className="form-inline" role="form">
 	        <div className="form-group">
-	            <label for="searchBar">Filter By </label>
+	            <label htmlFor="searchBar">Filter By</label>
 	        	<input
 	        	    className="form-control"
 	        	    id="searchBar"
