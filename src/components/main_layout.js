@@ -38,4 +38,4 @@ class MainLayout extends Component {
 function mapStateToProps(state) {
 	return { restaurants : state.restaurants };
 }
-export default MainLayout;
+export default connect(mapStateToProps,actions)(MainLayout);
