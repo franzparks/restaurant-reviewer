@@ -1,4 +1,7 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
+
+
 import RestaurantContainer from './restaurant_container';
 import Overview from './overview';
 import Footer from './footer';
@@ -6,6 +9,10 @@ import Menu from './menu';
 import ToggleNav from './toggle_nav';
 
 class MainLayout extends Component {
+
+	componentWillMount() {
+		this.props.fetchRestaurants();
+	}
 
 	render() {
 		let RESTAURANTS = [{"name":"Lusaka Restaurant", "address":"101 Lsk", "image":"image","cuisineType":"Zambian"},

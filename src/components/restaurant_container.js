@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import Restaurant from './restaurant';
-//import {connect} from 'react-redux';
 
 const RestaurantContainer = (props) => {
     
