@@ -8,10 +8,15 @@ class Header extends Component {
 
 
     constructor(props) {
-    super(props);
-    this.state = {filterText : ''};
-    this.authButton.tick = this.authButton.bind(this);
-  }
+        super(props);
+        this.state = {filterText : ''};
+        this.authButton = this.authButton.bind(this);
+        //this.hangleChange = this.hangleChange.bind(this);
+    }
+
+    hangleChange = function(e){
+        this.setState({ filterText : e.target.value });
+    }
 
 	authButton() {
         if (this.props.authenticated) {
@@ -20,6 +25,8 @@ class Header extends Component {
 
         return <button onClick={() => this.props.authenticate(true)}>Sign In</button>;
     }
+
+
 
 	render () {
 		return (
