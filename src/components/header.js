@@ -26,8 +26,6 @@ class Header extends Component {
         return <button onClick={() => this.props.authenticate(true)}>Sign In</button>;
     }
 
-
-
 	render () {
 		return (
 			<nav className="navbar navbar-fixed-top navbar-inverse">
@@ -48,8 +46,9 @@ class Header extends Component {
                             <li><a href="#">Filter By : </a></li>
                              
                         </ul>
-                        <SearchBar filterText={this.state.filterText}
-                         handleChange={this.handleChange}
+                        <SearchBar 
+                            filterText={this.state.filterText}
+                            handleChange={this.handleChange}
                         />
                     </div>
                 </div>
