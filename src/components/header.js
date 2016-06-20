@@ -7,6 +7,11 @@ import SearchBar from './search_bar';
 class Header extends Component {
 
 
+    constructor(props) {
+    super(props);
+    this.state = {filterText : ''};
+    this.authButton.tick = this.authButton.bind(this);
+  }
 
 	authButton() {
         if (this.props.authenticated) {
