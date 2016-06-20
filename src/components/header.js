@@ -11,11 +11,12 @@ class Header extends Component {
         super(props);
         this.state = {filterText : ''};
         this.authButton = this.authButton.bind(this);
-        //this.hangleChange = this.hangleChange.bind(this);
+        this.hangleChange = this.hangleChange.bind(this);
     }
 
     hangleChange = function(e){
         this.setState({ filterText : e.target.value });
+        console.log("filterText : "+e.target.value);
     }
 
 	authButton() {
@@ -48,7 +49,9 @@ class Header extends Component {
                             <li><a href="#">Filter By : </a></li>
                              
                         </ul>
-                        <SearchBar filterText={this.state.filterText}/>
+                        <SearchBar filterText={this.state.filterText}
+                         handleChange={this.state.handleChange}
+                        />
                     </div>
                 </div>
             </nav>
