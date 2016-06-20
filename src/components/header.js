@@ -7,7 +7,7 @@ import SearchBar from './search_bar';
 class Header extends Component {
 
     initialState() => {
-     
+     filterText : ''
     },
 	authButton() {
         if (this.props.authenticated) {
