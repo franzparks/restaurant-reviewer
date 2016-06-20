@@ -11,10 +11,10 @@ class Header extends Component {
         super(props);
         this.state = {filterText : ''};
         this.authButton = this.authButton.bind(this);
-        this.hangleChange = this.hangleChange.bind(this);
+        this.handleChange = this.handleChange.bind(this);
     }
 
-    hangleChange = function(e){
+    handleChange = function(e){
         this.setState({ filterText : e.target.value });
         console.log("filterText : "+e.target.value);
     }
