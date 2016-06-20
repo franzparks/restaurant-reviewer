@@ -5,6 +5,8 @@ import * as actions from '../actions';
 import SearchBar from './search_bar';
 
 class Header extends Component {
+
+    
 	authButton() {
         if (this.props.authenticated) {
             return <button onClick={() => this.props.authenticate(false)}>Sign Out</button>;
@@ -33,7 +35,7 @@ class Header extends Component {
                             <li><a href="#">Filter By : </a></li>
                              
                         </ul>
-                        <SearchBar />
+                        <SearchBar filterText={this.state.filterText}/>
                     </div>
                 </div>
             </nav>

@@ -8,6 +8,7 @@ const SearchBar = () => {
 	        	    className="form-control"
 	        	    type="text"
 	        	    placeholder=" Name, Location"
+	        	    value={this.props.filterText}
 	        	    
 	        	/>  
 	        </div>	  
