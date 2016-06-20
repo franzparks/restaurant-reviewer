@@ -41,7 +41,7 @@ class Header extends Component {
                             <li><a href="#">Filter By : </a></li>
                              
                         </ul>
-                        <SearchBar filterText={''}/>
+                        <SearchBar filterText={this.state.filterText}/>
                     </div>
                 </div>
             </nav>
