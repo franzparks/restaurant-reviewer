@@ -6,9 +6,8 @@ import SearchBar from './search_bar';
 
 class Header extends Component {
 
-    initialState() => {
-     filterText : ''
-    },
+
+
 	authButton() {
         if (this.props.authenticated) {
             return <button onClick={() => this.props.authenticate(false)}>Sign Out</button>;
@@ -37,7 +36,7 @@ class Header extends Component {
                             <li><a href="#">Filter By : </a></li>
                              
                         </ul>
-                        <SearchBar filterText={this.state.filterText}/>
+                        <SearchBar filterText={''}/>
                     </div>
                 </div>
             </nav>

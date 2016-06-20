@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SearchBar = () => {
+const SearchBar = (props) => {
     return (
         <form className="navbar-form navbar-center" role="search">
 	        <div className="form-group">	        
@@ -8,7 +8,7 @@ const SearchBar = () => {
 	        	    className="form-control"
 	        	    type="text"
 	        	    placeholder=" Name, Location"
-	        	    value={this.props.filterText}
+	        	    value={props.filterText}
 	        	    
 	        	/>  
 	        </div>	  
