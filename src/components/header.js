@@ -14,9 +14,9 @@ class Header extends Component {
         this.handleChange = this.handleChange.bind(this);
     }
 
-    handleChange = function(e){
-        this.setState({ filterText : e.target.value });
-        console.log("filterText : "+e.target.value);
+    handleChange = function(text){
+        //this.setState({ filterText : e.target.value });
+        console.log("filterText : "+text);
     }
 
 	authButton() {

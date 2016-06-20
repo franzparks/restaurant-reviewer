@@ -3,6 +3,8 @@ import React from 'react';
 const SearchBar = (props) => {
   
     handleOnChange function(e){
+    	e.preventDefault();
+    	
         props.handleChange(e.target.value);
     }.bind(this);
 
