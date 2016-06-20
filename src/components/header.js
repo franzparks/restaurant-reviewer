@@ -42,7 +42,7 @@ class Header extends Component {
                         </ul>
                         <SearchBar 
                             filterText={this.state.filterText}
-                            handleChange={this.handleChange}
+                            handleChange={this.props.handleChange}
                         />
                     </div>
                 </div>
