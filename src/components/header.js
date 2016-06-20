@@ -6,7 +6,9 @@ import SearchBar from './search_bar';
 
 class Header extends Component {
 
-    
+    initialState() => {
+     
+    },
 	authButton() {
         if (this.props.authenticated) {
             return <button onClick={() => this.props.authenticate(false)}>Sign Out</button>;
