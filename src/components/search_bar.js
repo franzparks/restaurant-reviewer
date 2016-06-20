@@ -1,12 +1,11 @@
 import React from 'react';
 
 const SearchBar = (props) => {
-  
-    handleOnChange function(e){
+    
+    const handleOnChange = (e) => {
     	e.preventDefault();
-    	
         props.handleChange(e.target.value);
-    }.bind(this);
+    }
 
     return (
         <form className="navbar-form navbar-center" role="search" >
@@ -15,7 +14,7 @@ const SearchBar = (props) => {
 	        	    className="form-control"
 	        	    type="text"
 	        	    placeholder=" Name, Location"
-	        	    onChange={this.handleOnChange}
+	        	    onChange={handleOnChange.bind(this)}
 	        	    value={props.filterText}
 	        	    
 	        	/>  

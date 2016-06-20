@@ -15,8 +15,7 @@ class Header extends Component {
     }
 
     handleChange = function(text){
-        //this.setState({ filterText : e.target.value });
-        console.log("filterText : "+text);
+        this.setState({ filterText : text });
     }
 
 	authButton() {
@@ -50,7 +49,7 @@ class Header extends Component {
                              
                         </ul>
                         <SearchBar filterText={this.state.filterText}
-                         handleChange={this.state.handleChange}
+                         handleChange={this.handleChange}
                         />
                     </div>
                 </div>
