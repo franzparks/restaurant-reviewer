@@ -10,7 +10,16 @@ import ToggleNav from './toggle_nav';
 import Header from './header';
 
 class MainLayout extends Component {
+	
+    constructor(props) {
+        super(props);
+        this.state = {filterText : ''};
+        this.handleChange = this.handleChange.bind(this);
+    }
 
+    handleChange = function(text){
+        this.setState({ filterText : text });
+    }
 	componentWillMount() {
 		this.props.fetchRestaurants();
 	}
