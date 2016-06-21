@@ -4,7 +4,7 @@
 		"image" :"image",
 		"address":"101 Santa Clara",
 		"cuisineType":"Zambian",
-		"operatingHours":"dusk till kwacha",
+		"operatingHours":{"open":07,"close":11},
 		"reviews" : []
 
 	},
@@ -12,21 +12,21 @@
 	    "image":"image",
 	    "address":"101 Lsk",
 	    "cuisineType":"Zambian",
-	    "operatingHours":"dusk till kwacha",
+	    "operatingHours":{"open":07,"close":11},
 		"reviews" : []
 	},
 	{   "name":"Ndola",
 	    "image":"image",
 	    "address":"101 Ndola",
 	    "cuisineType":"Zambian",
-	    "operatingHours":"dusk till kwacha",
+	    "operatingHours":{"open":07,"close":11},
 		"reviews" : []
 	},
 	{   "name":"Livingstone",
 	    "image":"image",
 	    "address":"101 Lvstone", 
 	    "cuisineType":"Zambian",
-	    "operatingHours":"dusk till kwacha",
+	    "operatingHours":{"open":07,"close":11},
 		"reviews" : []
 	}
 
