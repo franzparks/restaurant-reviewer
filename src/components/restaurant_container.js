@@ -12,11 +12,14 @@ const RestaurantContainer = (props) => {
                 (restaurant.address).indexOf(filter) !== -1 ||
                 (restaurant.cuisineType).indexOf(filter) !== -1)
 
-                results.push(<Restaurant key={restaurant.name}
+                results.push(
+                    <Restaurant 
+                    key={restaurant.name}
                     name={restaurant.name}
                     image={restaurant.image}
                     address={restaurant.address}
                     cuisineType={restaurant.cuisineType}
+                    handleSelection={props.handleSelection}
                     /> 
 
             );
