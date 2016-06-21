@@ -37,7 +37,7 @@ class MainLayout extends Component {
 					        <Overview />
 					        <RestaurantContainer 
 					            restaurants={this.props.restaurants}
-					            filterCategory={this.props.filterCategory}/>
+					            filterCategory={this.props.filterText}/>
 
 					    </div>
 					    <Menu />	      	        
