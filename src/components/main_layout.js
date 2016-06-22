@@ -26,7 +26,7 @@ class MainLayout extends Component {
     }
 
     handleSelection = function(selection){
-     
+      console.log("selection : "+selection);
     }
 
 	render() {
@@ -57,7 +57,7 @@ class MainLayout extends Component {
 	}  	
 }
 function mapStateToProps(state) {
-	console.log("state : "+state.restaurants);
+	//console.log("state : "+state.restaurants);
 	return { restaurants : state.restaurants };
 }
 export default connect(mapStateToProps,actions)(MainLayout);
