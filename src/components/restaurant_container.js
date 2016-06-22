@@ -19,7 +19,7 @@ const RestaurantContainer = (props) => {
                     image={restaurant.image}
                     address={restaurant.address}
                     cuisineType={restaurant.cuisineType}
-                    handleSelection={props.handleSelection}
+        
                     /> 
 
             );
