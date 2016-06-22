@@ -25,8 +25,8 @@ class MainLayout extends Component {
         this.setState({ filterText : text });
     }
 
-    handleSelection = function(){
-    	
+    handleSelection = function(selection){
+
     }
 
 	render() {
