@@ -26,7 +26,7 @@ class MainLayout extends Component {
     }
 
     handleSelection = function(selection){
-
+     
     }
 
 	render() {
@@ -42,13 +42,15 @@ class MainLayout extends Component {
 					        <RestaurantContainer 
 					            restaurants={this.props.restaurants}
 					            filterText={this.state.filterText}
-					            handleSelection={this.handleSelection}
+					            
 
 					        />
 
 
 					    </div>
-					    <Menu />	      	        
+					    <Menu 
+					    	handleSelection={this.handleSelection}
+					    />	      	        
 		            </div>
 		            <Footer />
 		        </div> 
