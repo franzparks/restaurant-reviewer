@@ -2,20 +2,24 @@ import React from 'react';
 
 const Menu = (props) => {
 	var selected = false;
-	handleClick = function(selection){
-        //props.handleSelection(selection);
-        selected = true;
+	var style = "list-group-item active";
+	var handleClick = function(selection){
+        props.handleSelection(selection);
+        //selected = true;
+        //style = "list-group-item active";
+        //console.log(selected);
 	}
+
 	return (
-		var style = {selected} ? : "list-group-item active" : "list-group-item";
+		
 
 	    <div className="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
 
 			<div className="list-group">
-			    <a href="#" className="list-group-item active" onClick={handleClick('all').bind(this)}>All</a>
-			    <a href="#" className="list-group-item">Highest Rated</a>
-			    <a href="#" className="list-group-item">Most Reviewed</a>
-			    <a href="#" className="list-group-item">Open Now</a>           
+			    <a href="#" className={style} onClick={handleClick('all')} >All</a>
+			    <a href="#" className="list-group-item" onClick={handleClick('highestRated')}>Highest Rated</a>
+			    <a href="#" className="list-group-item" onClick={handleClick('mostReviewed')}>Most Reviewed</a>
+			    <a href="#" className="list-group-item" onClick={handleClick('openNow')}>Open Now</a>           
 			</div>
 		</div>
 	);	
