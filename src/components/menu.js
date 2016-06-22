@@ -16,10 +16,11 @@ const Menu = (props) => {
 	    <div className="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
 
 			<div className="list-group">
-			    <a href="#" className={style} onClick={handleClick('all')} >All</a>
-			    <a href="#" className="list-group-item" onClick={handleClick('highestRated')}>Highest Rated</a>
-			    <a href="#" className="list-group-item" onClick={handleClick('mostReviewed')}>Most Reviewed</a>
-			    <a href="#" className="list-group-item" onClick={handleClick('openNow')}>Open Now</a>           
+			    <a href="#" className={style} onClick={() => props.handleSelection('all')} >All</a>
+			    <a href="#" className="list-group-item" onClick={() => props.handleSelection('highestRated')}>Highest Rated</a>
+			    <a href="#" className="list-group-item" onClick={() => props.handleSelection('mostReviewed')}>Most Reviewed</a>
+			    <a href="#" className="list-group-item" onClick={() => props.handleSelection('openNow')}>Open Now</a>      
+			          
 			</div>
 		</div>
 	);	
