@@ -42,8 +42,6 @@ class MainLayout extends Component {
 					        <RestaurantContainer 
 					            restaurants={this.props.restaurants}
 					            filterText={this.state.filterText}
-					            
-
 					        />
 
 
@@ -59,6 +57,7 @@ class MainLayout extends Component {
 	}  	
 }
 function mapStateToProps(state) {
+	console.log("state : "+state.restaurants);
 	return { restaurants : state.restaurants };
 }
 export default connect(mapStateToProps,actions)(MainLayout);
