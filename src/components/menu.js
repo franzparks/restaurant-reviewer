@@ -1,6 +1,11 @@
 import React from 'react';
 
 const Menu = (props) => {
+	var selected = false;
+	handleClick = function(selection){
+        //props.handleSelection(selection);
+        selected = true;
+	}
 	return (
 		var style = {selected} ? : "list-group-item active" : "list-group-item";
 
