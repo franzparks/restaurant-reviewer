@@ -7,11 +7,11 @@ const RestaurantContainer = (props) => {
         var filter = props.filterText;
 
         props.restaurants.forEach((restaurant) => {
-            console.log(" restaurant : "+restaurant);
+            //console.log(" restaurant : "+restaurant);
             if((restaurant.name).indexOf(filter) !== -1 || 
                 (restaurant.address).indexOf(filter) !== -1 ||
                 (restaurant.cuisineType).indexOf(filter) !== -1)
-
+                
                 results.push(
                     <Restaurant 
                     key={restaurant.name}
@@ -19,10 +19,13 @@ const RestaurantContainer = (props) => {
                     image={restaurant.image}
                     address={restaurant.address}
                     cuisineType={restaurant.cuisineType}
+                    averageRating = {getAverageRating(restaurant)}
+                    numberOfRatings={getNumberOfRatings(restaurant)}
 
                     /> 
 
             );
+            console.log("results : "+Object.keys(results[0].props));
         });
 
         return (
