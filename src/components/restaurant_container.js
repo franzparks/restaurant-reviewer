@@ -17,11 +17,12 @@ class RestaurantContainer  extends Component {
         this.sortByHighestRated = this.sortByHighestRated.bind(this);
         this.sortByMostReviewed = this.sortByMostReviewed.bind(this);
         this.sortResults       = this.sortResults.bind(this);
-        this.loadData(props.restaurants);
+        this.loadData          = this.loadData.bind(this);
+
         }
 
         loadData = (data) => {
-
+           console.log("I got called : "+data);
             data.forEach((restaurant) => {
                 //console.log(" restaurant : "+restaurant);     
                 this.state.results.push(
@@ -93,7 +94,9 @@ class RestaurantContainer  extends Component {
             });
 
             */
-
+            if(this.props.restaurants){
+                this.loadData(this.props.restaurants);
+            }
 
             if(this.state.filterCategory){
                 ///console.log("results : "+results[2].props.averageRating);
