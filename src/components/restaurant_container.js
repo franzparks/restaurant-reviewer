@@ -60,6 +60,10 @@ const RestaurantContainer = (props) => {
         if(props.filterCategory){
             if(props.filterCategory === 'all'){
                 /* Do nothing */
+            }else{
+                if(props.filterCategory === 'highestRated' && results.length > 2){
+                    sortByHighestRated(results,results[0]);
+                }
             }
 
         }
