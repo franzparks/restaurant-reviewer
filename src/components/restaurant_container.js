@@ -21,6 +21,10 @@ class RestaurantContainer  extends Component {
 
         }
 
+        componentDidMount: function() {
+          this.loadData(this.props.restaurants);
+        }
+
         loadData = (data) => {
            console.log("I got called : "+data);
             data.forEach((restaurant) => {
@@ -72,7 +76,7 @@ class RestaurantContainer  extends Component {
         render(){
 
             if(this.props.restaurants){
-                this.loadData(this.props.restaurants);
+                
             }
 
             if(this.state.filterCategory){
