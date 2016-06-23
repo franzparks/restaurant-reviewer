@@ -7,13 +7,13 @@ class RestaurantContainer  extends Component {
      
         constructor(props) {
         super(props);
-        this.state = {filterText : '', filterCategory : ''};
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSelection = this.handleSelection.bind(this);
+        this.state = {results : [], filter : props.filterText};
+        //this.handleChange = this.handleChange.bind(this);
+        //this.handleSelection = this.handleSelection.bind(this);
         }
-        
-        var results = [];
-        var filter = props.filterText;
+
+        //var results = [];
+        //var filter = props.filterText;
 
         var getAverageRating = (restaurant) => {
             if(restaurant.reviews.length > 1){
