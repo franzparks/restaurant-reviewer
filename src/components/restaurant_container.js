@@ -64,7 +64,9 @@ const RestaurantContainer = (props) => {
                 if(props.filterCategory === 'highestRated' && results.length > 2){
                     sortByHighestRated(results,results[0]);
                 }else if(props.filterCategory === 'mostReviewed' && results.length > 2){
-                    sortByMostReviewed(results,results[0]);
+                    sortByMostReviewed(results, results[0]);
+                }
+
             }
 
         }
