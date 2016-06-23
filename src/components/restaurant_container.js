@@ -50,16 +50,17 @@ class RestaurantContainer  extends Component {
         }
 
         
+        render(){
 
-        this.state.restaurants.forEach((restaurant) => {
+            this.props.restaurants.forEach((restaurant) => {
             //console.log(" restaurant : "+restaurant);
-            if((restaurant.name).indexOf(filter) !== -1 || 
-                (restaurant.address).indexOf(filter) !== -1 ||
-                (restaurant.cuisineType).indexOf(filter) !== -1)
+            if((restaurant.name).indexOf(this.state.filter) !== -1 || 
+                (restaurant.address).indexOf(this.state.filter) !== -1 ||
+                (restaurant.cuisineType).indexOf(this.state.filter) !== -1)
                 
-                results.push(
+                this.state.results.push(
                     <Restaurant 
-                    key={restaurant.name}
+                    key={restaurant.name * Math.random()}
                     name={restaurant.name}
                     image={restaurant.image}
                     address={restaurant.address}
@@ -69,29 +70,29 @@ class RestaurantContainer  extends Component {
 
                     /> 
 
-            );
+                );
 
-        });
+            });
 
 
-        if(this.state.filterCategory){
-            console.log("results : "+results[2].props.averageRating);
-            if(filterCategory === 'all'){
-                /* Do nothing */
-            }else{
-                if(this.state.filterCategory === 'highestRated' && results.length > 2){
-                    this.sortByHighestRated(results,results[0]);
-                }else if(this.state.filterCategory === 'mostReviewed' && results.length > 2){
-                    this.sortByMostReviewed(results, results[0]);
+            if(this.state.filterCategory){
+                console.log("results : "+results[2].props.averageRating);
+                if(filterCategory === 'all'){
+                    /* Do nothing */
+                }else{
+                    if(this.state.filterCategory === 'highestRated' && results.length > 2){
+                        this.sortByHighestRated(results,results[0]);
+                    }else if(this.state.filterCategory === 'mostReviewed' && results.length > 2){
+                        this.sortByMostReviewed(results, results[0]);
+                    }
+
                 }
 
             }
 
-        }
-        render(){
             return (
                     <div className="row">
-                          {results} 
+                          {this.state.results} 
                     </div>
             ); 
         }    
