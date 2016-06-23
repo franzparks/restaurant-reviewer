@@ -3,7 +3,6 @@ import Restaurant from './restaurant';
 
 class RestaurantContainer  extends Component {
 
-        //this.state = {resultsq : []};
      
         constructor(props) {
         super(props);
@@ -19,9 +18,6 @@ class RestaurantContainer  extends Component {
         this.sortByMostReviewed = this.sortByMostReviewed.bind(this);
         this.sortResults       = this.sortResults.bind(this);
         }
-
-        //var results = [];
-        //var filter = props.filterText;
 
         getAverageRating = function(restaurant){
             if(restaurant.reviews.length > 1){
@@ -81,9 +77,9 @@ class RestaurantContainer  extends Component {
                     /* Do nothing */
                 }else{
                     if(this.state.filterCategory === 'highestRated' && results.length > 2){
-                        this.sortByHighestRated(results,results[0]);
+                        //this.sortByHighestRated(results,results[0]);
                     }else if(this.state.filterCategory === 'mostReviewed' && results.length > 2){
-                        this.sortByMostReviewed(results, results[0]);
+                        //this.sortByMostReviewed(results, results[0]);
                     }
 
                 }
