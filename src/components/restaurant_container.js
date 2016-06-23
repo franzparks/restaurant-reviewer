@@ -5,6 +5,13 @@ const RestaurantContainer = (props) => {
     
         var results = [];
         var filter = props.filterText;
+        var averageRating = function(restaurant){
+            if(restaurant.props.reviews.length > 1){
+                var sum = restaurant.props.reviews.reduce( (prev,curr) => prev + curr );
+                return sum / restaurant.props.reviews.length;
+            }else
+                return 0; 
+        }
 
         props.restaurants.forEach((restaurant) => {
             //console.log(" restaurant : "+restaurant);
