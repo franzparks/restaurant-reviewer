@@ -26,7 +26,8 @@ class MainLayout extends Component {
     }
 
     handleSelection = function(selection){
-      console.log("selection : "+selection);
+    	this.setState({filterCategory : selection});
+        //console.log("selection : "+selection);
     }
 
 	render() {
