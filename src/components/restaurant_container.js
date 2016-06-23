@@ -17,7 +17,10 @@ class RestaurantContainer  extends Component {
         this.sortByHighestRated = this.sortByHighestRated.bind(this);
         this.sortByMostReviewed = this.sortByMostReviewed.bind(this);
         this.sortResults       = this.sortResults.bind(this);
+        this.loadData(props.restaurants);
         }
+
+        
 
         getAverageRating = (restaurant) => {
             if(restaurant.reviews.length > 1){
