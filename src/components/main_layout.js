@@ -34,7 +34,9 @@ class MainLayout extends Component {
 		
 	    return (
             <div>
-                <Header handleChange={this.handleChange}/>
+                <Header 
+                	handleChange={this.handleChange}
+                />
 		  	    <div className="container">
 		            <div className="row row-offcanvas row-offcanvas-right">
 		                <div className="col-xs-12 col-sm-9">
