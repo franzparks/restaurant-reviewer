@@ -58,6 +58,9 @@ const RestaurantContainer = (props) => {
         });
 
         if(props.filterCategory){
+            if(props.filterCategory === 'all'){
+                /* Do nothing */
+            }
 
         }
 
