@@ -18,6 +18,10 @@ const RestaurantContainer = (props) => {
             return restaurant.reviews.length;
         }
 
+        var sortByHighestRating = (restaurantA,restaurantB) => {
+            return restaurantA.props.numberOfRatings > restaurantB.props.numberOfRatings
+        }
+
         props.restaurants.forEach((restaurant) => {
             //console.log(" restaurant : "+restaurant);
             if((restaurant.name).indexOf(filter) !== -1 || 
