@@ -15,6 +15,7 @@ class MainLayout extends Component {
         super(props);
         this.state = {filterText : '', filterCategory : ''};
         this.handleChange = this.handleChange.bind(this);
+        this.handleSelection = this.handleSelection.bind(this);
     }
 
 	componentWillMount() {
@@ -50,7 +51,7 @@ class MainLayout extends Component {
 
 					    </div>
 					    <Menu 
-					    	handleSelection={this.handleSelection}
+					    	selectionHandler={this.handleSelection}
 					    />	      	        
 		            </div>
 		            <Footer />
