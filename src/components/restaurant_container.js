@@ -19,7 +19,7 @@ class RestaurantContainer  extends Component {
         this.sortResults       = this.sortResults.bind(this);
         }
 
-        getAverageRating = function(restaurant){
+        getAverageRating = (restaurant) => {
             if(restaurant.reviews.length > 1){
                 var sum = restaurant.reviews.reduce( (prev,curr) => prev + curr );
                 return sum / restaurant.reviews.length;
