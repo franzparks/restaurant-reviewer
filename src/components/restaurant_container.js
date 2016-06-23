@@ -71,29 +71,6 @@ class RestaurantContainer  extends Component {
         
         render(){
 
-            /*this.props.restaurants.forEach((restaurant) => {
-            //console.log(" restaurant : "+restaurant);
-            if((restaurant.name).indexOf(this.state.filter) !== -1 || 
-                (restaurant.address).indexOf(this.state.filter) !== -1 ||
-                (restaurant.cuisineType).indexOf(this.state.filter) !== -1)
-                
-                this.state.results.push(
-                    <Restaurant 
-                    key={restaurant.name + Math.random()*10000}
-                    name={restaurant.name}
-                    image={restaurant.image}
-                    address={restaurant.address}
-                    cuisineType={restaurant.cuisineType}
-                    averageRating = {this.getAverageRating(restaurant)}
-                    numberOfRatings={this.getNumberOfRatings(restaurant)}
-
-                    /> 
-
-                );
-
-            });
-
-            */
             if(this.props.restaurants){
                 this.loadData(this.props.restaurants);
             }
