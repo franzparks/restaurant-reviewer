@@ -56,7 +56,7 @@ class RestaurantContainer  extends Component {
                 
                 this.state.results.push(
                     <Restaurant 
-                    key={restaurant.name * Math.random()}
+                    key={restaurant.name + Math.random()*10000}
                     name={restaurant.name}
                     image={restaurant.image}
                     address={restaurant.address}
@@ -72,7 +72,7 @@ class RestaurantContainer  extends Component {
 
 
             if(this.state.filterCategory){
-                console.log("results : "+results[2].props.averageRating);
+                ///console.log("results : "+results[2].props.averageRating);
                 if(filterCategory === 'all'){
                     /* Do nothing */
                 }else{
