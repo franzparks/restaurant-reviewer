@@ -8,14 +8,17 @@ class RestaurantContainer  extends Component {
         constructor(props) {
         super(props);
         this.state = {results : [], filter : props.filterText};
-        //this.handleChange = this.handleChange.bind(this);
-        //this.handleSelection = this.handleSelection.bind(this);
+        this.getAverageRating = this.getAverageRating.bind(this);
+        this.getNumberOfRatings = this.getNumberOfRatings.bind(this);
+        this.sortByHighestRated = this.sortByHighestRated.bind(this);
+        this.sortByMostReviewed = this.sortByMostReviewed.bind(this);
+        this.sortResults       = this.sortResults.bind(this);
         }
 
         //var results = [];
         //var filter = props.filterText;
 
-        var getAverageRating = (restaurant) => {
+        getAverageRating = function(restaurant){
             if(restaurant.reviews.length > 1){
                 var sum = restaurant.reviews.reduce( (prev,curr) => prev + curr );
                 return sum / restaurant.reviews.length;
@@ -23,19 +26,19 @@ class RestaurantContainer  extends Component {
                 return 0; 
         }
 
-        var getNumberOfRatings = (restaurant) => {
+        getNumberOfRatings = (restaurant) => {
             return restaurant.reviews.length;
         }
 
-        var sortByHighestRated = (results,restaurant) => {
-            return sortResults(results, restaurant.props.averageRating);
+        sortByHighestRated = (results,restaurant) => {
+            return this.sortResults(results, restaurant.props.averageRating);
         }
 
-        var sortByMostReviewed = (results, restaurant) => {
-            return sortResults(results, restaurant.props.numberOfRatings);
+        sortByMostReviewed = (results, restaurant) => {
+            return this.sortResults(results, restaurant.props.numberOfRatings);
         }
 
-        var sortResults = (arr, param) => {
+        sortResults = (arr, param) => {
             arr.sort((a,b) => {
                 return a[param] > b[param];
             });
@@ -56,8 +59,8 @@ class RestaurantContainer  extends Component {
                     image={restaurant.image}
                     address={restaurant.address}
                     cuisineType={restaurant.cuisineType}
-                    averageRating = {getAverageRating(restaurant)}
-                    numberOfRatings={getNumberOfRatings(restaurant)}
+                    averageRating = {this.getAverageRating(restaurant)}
+                    numberOfRatings={this.getNumberOfRatings(restaurant)}
 
                     /> 
 
@@ -72,9 +75,9 @@ class RestaurantContainer  extends Component {
                 /* Do nothing */
             }else{
                 if(props.filterCategory === 'highestRated' && results.length > 2){
-                    sortByHighestRated(results,results[0]);
+                    this.sortByHighestRated(results,results[0]);
                 }else if(props.filterCategory === 'mostReviewed' && results.length > 2){
-                    sortByMostReviewed(results, results[0]);
+                    this.sortByMostReviewed(results, results[0]);
                 }
 
             }
