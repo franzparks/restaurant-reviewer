@@ -7,7 +7,12 @@ class RestaurantContainer  extends Component {
      
         constructor(props) {
         super(props);
-        this.state = {results : [], filter : props.filterText};
+        this.state = {
+            results : [], 
+            filter : props.filterText,
+            filterCategory: props.filterCategory,
+            restaurants : props.restaurants
+        };
         this.getAverageRating = this.getAverageRating.bind(this);
         this.getNumberOfRatings = this.getNumberOfRatings.bind(this);
         this.sortByHighestRated = this.sortByHighestRated.bind(this);
@@ -46,7 +51,7 @@ class RestaurantContainer  extends Component {
 
         
 
-        props.restaurants.forEach((restaurant) => {
+        this.state.restaurants.forEach((restaurant) => {
             //console.log(" restaurant : "+restaurant);
             if((restaurant.name).indexOf(filter) !== -1 || 
                 (restaurant.address).indexOf(filter) !== -1 ||
@@ -69,14 +74,14 @@ class RestaurantContainer  extends Component {
         });
 
 
-        if(props.filterCategory){
+        if(filterCategory){
             console.log("results : "+results[2].props.averageRating);
-            if(props.filterCategory === 'all'){
+            if(filterCategory === 'all'){
                 /* Do nothing */
             }else{
-                if(props.filterCategory === 'highestRated' && results.length > 2){
+                if(filterCategory === 'highestRated' && results.length > 2){
                     this.sortByHighestRated(results,results[0]);
-                }else if(props.filterCategory === 'mostReviewed' && results.length > 2){
+                }else if(filterCategory === 'mostReviewed' && results.length > 2){
                     this.sortByMostReviewed(results, results[0]);
                 }
 
