@@ -6,7 +6,7 @@ const RestaurantContainer = (props) => {
         var results = [];
         var filter = props.filterText;
 
-        var getAverageRating = function(restaurant){
+        var getAverageRating = (restaurant) => {
             if(restaurant.reviews.length > 1){
                 var sum = restaurant.reviews.reduce( (prev,curr) => prev + curr );
                 return sum / restaurant.reviews.length;
