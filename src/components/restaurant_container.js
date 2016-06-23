@@ -18,12 +18,12 @@ const RestaurantContainer = (props) => {
             return restaurant.reviews.length;
         }
 
-        var sortByHighestRated = (results,averageRating) => {
-            return sortResults(results, averageRating);
+        var sortByHighestRated = (results,restaurant) => {
+            return sortResults(results, restaurant.props.averageRating);
         }
 
-        var sortByMostReviewed = (results, numberOfRatings) => {
-            return sortResults(results, numberOfRatings);
+        var sortByMostReviewed = (results, restaurant) => {
+            return sortResults(results, restaurant.props.numberOfRatings);
         }
 
         var sortResults = (arr, param) => {
@@ -54,7 +54,12 @@ const RestaurantContainer = (props) => {
 
             );
             console.log("results : "+Object.keys(results[0].props));
+
         });
+
+        if(props.filterCategory){
+
+        }
 
         return (
                 <div className="row">
