@@ -74,14 +74,14 @@ class RestaurantContainer  extends Component {
         });
 
 
-        if(filterCategory){
+        if(this.state.filterCategory){
             console.log("results : "+results[2].props.averageRating);
             if(filterCategory === 'all'){
                 /* Do nothing */
             }else{
-                if(filterCategory === 'highestRated' && results.length > 2){
+                if(this.state.filterCategory === 'highestRated' && results.length > 2){
                     this.sortByHighestRated(results,results[0]);
-                }else if(filterCategory === 'mostReviewed' && results.length > 2){
+                }else if(this.state.filterCategory === 'mostReviewed' && results.length > 2){
                     this.sortByMostReviewed(results, results[0]);
                 }
 
