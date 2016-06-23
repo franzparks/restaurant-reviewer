@@ -20,7 +20,7 @@
 	    "address":"101 Ndola",
 	    "cuisineType":"Zambian",
 	    "operatingHours":{"open":"07","close":"11"},
-		"reviews" : []
+		"reviews" : [1,2,3,4,5,6]
 	},
 	{   "name":"Livingstone",
 	    "image":"image",

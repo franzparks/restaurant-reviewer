@@ -1,8 +1,17 @@
 import React, {Component} from 'react';
 import Restaurant from './restaurant';
 
-const RestaurantContainer = (props) => {
-    
+class RestaurantContainer  extends Component {
+
+        //this.state = {resultsq : []};
+     
+        constructor(props) {
+        super(props);
+        this.state = {filterText : '', filterCategory : ''};
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSelection = this.handleSelection.bind(this);
+        }
+        
         var results = [];
         var filter = props.filterText;
 
@@ -53,11 +62,12 @@ const RestaurantContainer = (props) => {
                     /> 
 
             );
-            console.log("results : "+Object.keys(results[0].props));
 
         });
 
+
         if(props.filterCategory){
+            console.log("results : "+results[2].props.averageRating);
             if(props.filterCategory === 'all'){
                 /* Do nothing */
             }else{
@@ -70,12 +80,13 @@ const RestaurantContainer = (props) => {
             }
 
         }
-
-        return (
-                <div className="row">
-                      {results} 
-                </div>
-        );     
+        render(){
+            return (
+                    <div className="row">
+                          {results} 
+                    </div>
+            ); 
+        }    
 }
 
 export default RestaurantContainer;
