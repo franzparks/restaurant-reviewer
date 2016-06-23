@@ -22,6 +22,10 @@ const RestaurantContainer = (props) => {
             return restaurantA.props.averageRating > restaurantB.props.averageRating;
         }
 
+        var sortByMostRated = (restaurantA,restaurantB) => {
+            return restaurantA.props.numberOfRatings > restaurantB.props.numberOfRatings;
+        }
+
         
 
         props.restaurants.forEach((restaurant) => {
