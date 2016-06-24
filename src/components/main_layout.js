@@ -57,7 +57,7 @@ class MainLayout extends Component {
         	if(param === "highestRated"){
         		return a.props.averageRating < b.props.averageRating;
         	}else
-            return a.props.mostReviewed < b.props.mostReviewed;
+            	return a.props.numberOfRatings < b.props.numberOfRatings;
         });
         //console.log("sorted array "+ sorted);
         return sorted;
