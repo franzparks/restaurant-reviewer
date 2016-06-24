@@ -13,9 +13,6 @@ class RestaurantContainer  extends Component {
             restaurants : props.restaurants
         };
         
-        this.sortByHighestRated = this.sortByHighestRated.bind(this);
-        this.sortByMostReviewed = this.sortByMostReviewed.bind(this);
-        this.sortResults       = this.sortResults.bind(this);
 
         }
 

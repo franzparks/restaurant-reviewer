@@ -20,6 +20,9 @@ class MainLayout extends Component {
         this.getAverageRating = this.getAverageRating.bind(this);
         this.getNumberOfRatings = this.getNumberOfRatings.bind(this);
         this.loadData          = this.loadData.bind(this);
+        this.sortByHighestRated = this.sortByHighestRated.bind(this);
+        this.sortByMostReviewed = this.sortByMostReviewed.bind(this);
+        this.sortResults       = this.sortResults.bind(this);
     }
 
 	componentWillMount() {
@@ -72,7 +75,7 @@ class MainLayout extends Component {
     	}
 
     	if(category){
-
+            this.sortUsingCategoryFilter(category);
     	}
     }
 
