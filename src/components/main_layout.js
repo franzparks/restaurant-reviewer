@@ -51,15 +51,15 @@ class MainLayout extends Component {
     }
 
     sortResults = (arr, param) => {
-    	console.log(" param and array "+ arr + " - "+param);
+    	
         var sorted = arr.sort((a,b) => {
-        	console.log(a.props.averageRating +" - "+b.props.averageRating);
+        	
         	if(param === "highestRated"){
         		return a.props.averageRating < b.props.averageRating;
         	}else
             	return a.props.numberOfRatings < b.props.numberOfRatings;
         });
-        //console.log("sorted array "+ sorted);
+        
         return sorted;
     }
 
