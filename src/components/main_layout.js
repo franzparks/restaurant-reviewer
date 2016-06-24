@@ -124,6 +124,7 @@ class MainLayout extends Component {
 
 	render() {
 		var results = this.loadData(this.props.restaurants);
+		results = filterRestaurants(results, this.state.filterText, this.state.filterCategory);
 	    return (
             <div>
                 <Header 
@@ -139,7 +140,6 @@ class MainLayout extends Component {
 					            filterText={this.state.filterText}
 					            filterCategory={this.state.filterCategory}
 					        />
-
 
 					    </div>
 					    <Menu 
