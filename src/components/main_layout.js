@@ -25,6 +25,7 @@ class MainLayout extends Component {
         this.sortResults       = this.sortResults.bind(this);
         this.sortUsingCategoryFilter = this.sortUsingCategoryFilter.bind(this);
         this.filterRestaurants = this.filterRestaurants.bind(this);
+        this.sortUsingTextFilter = this.sortUsingTextFilter.bind(this);
     }
 
 	componentWillMount() {
@@ -69,6 +70,10 @@ class MainLayout extends Component {
                 }
 
             }
+    }
+
+    sortUsingTextFilter = (text) => {
+
     }
 
     filterRestaurants = (arr, text, category) => {
