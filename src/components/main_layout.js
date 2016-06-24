@@ -71,7 +71,7 @@ class MainLayout extends Component {
             }
     }
 
-    filterRestaurants = (text, category) => {
+    filterRestaurants = (arr, text, category) => {
     	if(text){
     		return //this.s
     	}
