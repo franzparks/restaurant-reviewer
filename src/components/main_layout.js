@@ -82,7 +82,7 @@ class MainLayout extends Component {
 					        <ToggleNav />
 					        <Overview />
 					        <RestaurantContainer 
-					            restaurants={this.props.restaurants}
+					            restaurants={this.loadData(this.props.restaurants)}
 					            filterText={this.state.filterText}
 					            filterCategory={this.state.filterCategory}
 					        />
