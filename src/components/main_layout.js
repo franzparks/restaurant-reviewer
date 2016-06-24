@@ -35,7 +35,6 @@ class MainLayout extends Component {
 
     handleSelection = function(selection){
     	this.setState({filterCategory : selection});
-        //console.log("selection : "+selection);
     }
 
     sortUsingCategoryFilter = (arr,filterCategory) => {
@@ -89,7 +88,7 @@ class MainLayout extends Component {
 
 
     loadData = (data) => {
-            //console.log("I got called : "+data);
+           
             var results = [];
             data.forEach((restaurant) => {
                  
@@ -127,7 +126,7 @@ class MainLayout extends Component {
 	render() {
 		var results = this.loadData(this.props.restaurants);
 		results = this.filterRestaurants(results, this.state.filterText, this.state.filterCategory);
-		//console.log("results : "+results);
+		
 	    return (
             <div>
                 <Header 
@@ -156,7 +155,7 @@ class MainLayout extends Component {
 	}  	
 }
 function mapStateToProps(state) {
-	//console.log("state : "+state.restaurants);
+	
 	return { restaurants : state.restaurants };
 }
 export default connect(mapStateToProps,actions)(MainLayout);
