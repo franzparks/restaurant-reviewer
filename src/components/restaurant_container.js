@@ -60,7 +60,7 @@ class RestaurantContainer  extends Component {
 
             return (
                     <div className="row">
-                          {this.state.results} 
+                          {this.props.restaurants} 
                     </div>
             ); 
         }    
