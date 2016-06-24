@@ -70,12 +70,18 @@ class MainLayout extends Component {
                 /* Do Nothing */
                 return arr;
             }else{
-                if(filterCategory === 'highestRated' && arr.length > 2){
-                	//console.log("here now ... "+arr.length);
-                    return this.sortByHighestRated(arr,arr[0]);
-                }else if(filterCategory === 'mostReviewed' && arr.length > 2){
-                    return this.sortByMostReviewed(arr, arr[0]);
+                var sorted = arr.sort((a,b) => {
+
+	                if(filterCategory === 'highestRated' && arr.length > 2){
+
+	                	return a.props.averageRating < b.props.averageRating;
+
+	                }else if(filterCategory === 'mostReviewed' && arr.length > 2){
+	                    return a.props.numberOfRatings < b.props.numberOfRatings;
+	                }
                 }
+
+                return sorted;
             }
         }else
         	return arr;
