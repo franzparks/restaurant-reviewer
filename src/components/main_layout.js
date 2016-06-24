@@ -78,7 +78,7 @@ class MainLayout extends Component {
 
     filterRestaurants = (arr, text, category) => {
     	if(text){
-    		return //this.s
+    		return this.sortUsingTextFilter(text);
     	}
 
     	if(category){
