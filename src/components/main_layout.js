@@ -41,28 +41,6 @@ class MainLayout extends Component {
         //console.log("selection : "+selection);
     }
 
-    sortByHighestRated = (arr,restaurant) => {
-        //console.log(" and now "+ this.sortResults(arr, restaurant.props.averageRating));
-        return this.sortResults(arr, "highestRated");
-    }
-
-    sortByMostReviewed = (arr, restaurant) => {
-        return this.sortResults(arr, "mostReviewed");
-    }
-
-    sortResults = (arr, param) => {
-    	
-        var sorted = arr.sort((a,b) => {
-        	
-        	if(param === "highestRated"){
-        		return a.props.averageRating < b.props.averageRating;
-        	}else
-            	return a.props.numberOfRatings < b.props.numberOfRatings;
-        });
-        
-        return sorted;
-    }
-
     sortUsingCategoryFilter = (arr,filterCategory) => {
     	var sorted = [];
     	if(filterCategory){
