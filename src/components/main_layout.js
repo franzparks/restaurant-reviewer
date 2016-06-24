@@ -41,12 +41,12 @@ class MainLayout extends Component {
         //console.log("selection : "+selection);
     }
 
-    sortByHighestRated = (results,restaurant) => {
-        return this.sortResults(results, restaurant.props.averageRating);
+    sortByHighestRated = (arr,restaurant) => {
+        return this.sortResults(arr, restaurant.props.averageRating);
     }
 
-    sortByMostReviewed = (results, restaurant) => {
-        return this.sortResults(results, restaurant.props.numberOfRatings);
+    sortByMostReviewed = (arr, restaurant) => {
+        return this.sortResults(arr, restaurant.props.numberOfRatings);
     }
 
     sortResults = (arr, param) => {
@@ -55,7 +55,7 @@ class MainLayout extends Component {
         });
     }
 
-    sortUsingCategoryFilter = (filterCategory) => {
+    sortUsingCategoryFilter = (arr,filterCategory) => {
     	if(filterCategory){
                 ///console.log("results : "+results[2].props.averageRating);
                 if(filterCategory === 'all'){
@@ -72,17 +72,17 @@ class MainLayout extends Component {
             }
     }
 
-    sortUsingTextFilter = (text) => {
+    sortUsingTextFilter = (arr,text) => {
 
     }
 
     filterRestaurants = (arr, text, category) => {
     	if(text){
-    		return this.sortUsingTextFilter(text);
+    		return this.sortUsingTextFilter(arr,text);
     	}
 
     	if(category){
-            this.sortUsingCategoryFilter(category);
+            return this.sortUsingCategoryFilter(arr,category);
     	}
     }
 
