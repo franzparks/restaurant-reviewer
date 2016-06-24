@@ -13,7 +13,7 @@
 	    "address":"101 Lsk",
 	    "cuisineType":"Zambian",
 	    "operatingHours":{"open":"07","close":"11"},
-		"reviews" : []
+		"reviews" : [1,2,3,]
 	},
 	{   "name":"Ndola",
 	    "image":"image",
