@@ -13,7 +13,7 @@ class MainLayout extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {filterText : '', filterCategory : ''};
+        this.state = {filterText : '', filterCategory : '', results : []};
         this.handleChange = this.handleChange.bind(this);
         this.handleSelection = this.handleSelection.bind(this);
     }

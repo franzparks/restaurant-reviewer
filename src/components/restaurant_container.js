@@ -21,8 +21,9 @@ class RestaurantContainer  extends Component {
 
         }
 
-        componentDidMount: function() {
-          this.loadData(this.props.restaurants);
+        componentDidMount() {
+        console.log("am here :"+this.state.restaurants);
+          this.loadData([{"name":"hello","reviews":[]}]);
         }
 
         loadData = (data) => {
@@ -75,9 +76,6 @@ class RestaurantContainer  extends Component {
         
         render(){
 
-            if(this.props.restaurants){
-                
-            }
 
             if(this.state.filterCategory){
                 ///console.log("results : "+results[2].props.averageRating);
