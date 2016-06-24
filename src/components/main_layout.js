@@ -64,7 +64,12 @@ class MainLayout extends Component {
     }
 
     sortUsingTextFilter = (arr,text) => {
-    	return arr;
+    	var filteredArray = arr.map( (restaurant)=>{
+          if(restaurant.name.indexOf(text) !== -1){
+          	return restaurant;
+          }
+    	});
+    	return filteredArray;
     }
 
     filterRestaurants = (arr, text, category = "all") => {
