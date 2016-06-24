@@ -13,7 +13,7 @@ class MainLayout extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {filterText : '', filterCategory : '', results : []};
+        this.state = {filterText : '', filterCategory : ''};
         this.handleChange = this.handleChange.bind(this);
         this.handleSelection = this.handleSelection.bind(this);
         this.getAverageRating = this.getAverageRating.bind(this);
@@ -36,9 +36,10 @@ class MainLayout extends Component {
 
     loadData = (data) => {
            console.log("I got called : "+data);
+            var results = [];
             data.forEach((restaurant) => {
                 //console.log(" restaurant : "+restaurant);     
-                this.state.results.push(
+                results.push(
                     <Restaurant 
                     key={restaurant.name + Math.random()*10000}
                     name={restaurant.name}
@@ -53,6 +54,7 @@ class MainLayout extends Component {
                 );
 
             });
+            return results;
         }
 
         getAverageRating = (restaurant) => {
