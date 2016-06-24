@@ -43,19 +43,23 @@ class MainLayout extends Component {
 
     sortByHighestRated = (arr,restaurant) => {
         //console.log(" and now "+ this.sortResults(arr, restaurant.props.averageRating));
-        return this.sortResults(arr, restaurant.props.averageRating);
+        return this.sortResults(arr, "highestRated");
     }
 
     sortByMostReviewed = (arr, restaurant) => {
-        return this.sortResults(arr, restaurant.props.numberOfRatings);
+        return this.sortResults(arr, "mostReviewed");
     }
 
     sortResults = (arr, param) => {
-    	//console.log(" param and array "+ arr + " - "+param);
+    	console.log(" param and array "+ arr + " - "+param);
         var sorted = arr.sort((a,b) => {
-            return a[param] > b[param];
+        	console.log(a.props.averageRating +" - "+b.props.averageRating);
+        	if(param === "highestRated"){
+        		return a.props.averageRating < b.props.averageRating;
+        	}else
+            return a.props.mostReviewed < b.props.mostReviewed;
         });
-        console.log("sorted array "+ sorted);
+        //console.log("sorted array "+ sorted);
         return sorted;
     }
 
@@ -133,7 +137,7 @@ class MainLayout extends Component {
 	render() {
 		var results = this.loadData(this.props.restaurants);
 		results = this.filterRestaurants(results, this.state.filterText, this.state.filterCategory);
-		console.log("results : "+results);
+		//console.log("results : "+results);
 	    return (
             <div>
                 <Header 
