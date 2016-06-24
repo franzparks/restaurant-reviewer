@@ -64,13 +64,14 @@ class MainLayout extends Component {
     }
 
     sortUsingCategoryFilter = (arr,filterCategory) => {
+    	var sorted = [];
     	if(filterCategory){
             
             if(filterCategory === 'all'){
                 /* Do Nothing */
                 return arr;
             }else{
-                var sorted = arr.sort((a,b) => {
+                    sorted = arr.sort((a,b) => {
 
 	                if(filterCategory === 'highestRated' && arr.length > 2){
 
@@ -79,7 +80,7 @@ class MainLayout extends Component {
 	                }else if(filterCategory === 'mostReviewed' && arr.length > 2){
 	                    return a.props.numberOfRatings < b.props.numberOfRatings;
 	                }
-                }
+                });
 
                 return sorted;
             }
