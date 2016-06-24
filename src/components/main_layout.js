@@ -124,7 +124,7 @@ class MainLayout extends Component {
 
 	render() {
 		var results = this.loadData(this.props.restaurants);
-		results = filterRestaurants(results, this.state.filterText, this.state.filterCategory);
+		results = this.filterRestaurants(results, this.state.filterText, this.state.filterCategory);
 	    return (
             <div>
                 <Header 
