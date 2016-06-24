@@ -49,6 +49,12 @@ class MainLayout extends Component {
         });
     }
 
+    filterRestaurants = (text, category) => {
+    	if(text){
+    		return //this.s
+    	}
+    }
+
 
     loadData = (data) => {
             //console.log("I got called : "+data);
