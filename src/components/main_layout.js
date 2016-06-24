@@ -23,6 +23,8 @@ class MainLayout extends Component {
         this.sortByHighestRated = this.sortByHighestRated.bind(this);
         this.sortByMostReviewed = this.sortByMostReviewed.bind(this);
         this.sortResults       = this.sortResults.bind(this);
+        this.sortUsingCategoryFilter = this.sortUsingCategoryFilter.bind(this);
+        this.filterRestaurants = this.filterRestaurants.bind(this);
     }
 
 	componentWillMount() {
