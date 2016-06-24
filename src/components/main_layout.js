@@ -59,7 +59,8 @@ class MainLayout extends Component {
     	if(filterCategory){
             ///console.log("results : "+results[2].props.averageRating);
             if(filterCategory === 'all'){
-                /* Do nothing */
+                /* Do Nothing */
+                return arr;
             }else{
                 if(filterCategory === 'highestRated' && arr.length > 2){
                     this.sortByHighestRated(arr,arr[0]);
@@ -71,7 +72,7 @@ class MainLayout extends Component {
     }
 
     sortUsingTextFilter = (arr,text) => {
-
+    	return arr;
     }
 
     filterRestaurants = (arr, text, category) => {
