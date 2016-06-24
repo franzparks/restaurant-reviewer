@@ -64,9 +64,9 @@ class MainLayout extends Component {
     }
 
     sortUsingTextFilter = (arr,text) => {
+       /*ToDo : filter better by ignoring case and using contains or something similar*/
 
     	var filteredArray = arr.map( (restaurant)=>{
-    		//console.log(Object.keys(restaurant.props));
     		var R = restaurant.props;
           if(R.name.indexOf(text) !== -1 || R.address.indexOf(text) !== -1  || R.cuisineType.indexOf(text) !== -1){
           	return restaurant;
