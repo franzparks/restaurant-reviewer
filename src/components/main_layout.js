@@ -16,6 +16,9 @@ class MainLayout extends Component {
         this.state = {filterText : '', filterCategory : '', results : []};
         this.handleChange = this.handleChange.bind(this);
         this.handleSelection = this.handleSelection.bind(this);
+        this.getAverageRating = this.getAverageRating.bind(this);
+        this.getNumberOfRatings = this.getNumberOfRatings.bind(this);
+        this.loadData          = this.loadData.bind(this);
     }
 
 	componentWillMount() {
