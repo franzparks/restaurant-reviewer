@@ -72,7 +72,7 @@ class MainLayout extends Component {
     }
 
 	render() {
-		var res = this.loadData(this.props.restaurants);
+		var results = this.loadData(this.props.restaurants);
 	    return (
             <div>
                 <Header 
@@ -84,7 +84,7 @@ class MainLayout extends Component {
 					        <ToggleNav />
 					        <Overview />
 					        <RestaurantContainer 
-					            restaurants={res}
+					            restaurants={results}
 					            filterText={this.state.filterText}
 					            filterCategory={this.state.filterCategory}
 					        />

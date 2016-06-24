@@ -7,21 +7,16 @@ class RestaurantContainer  extends Component {
         constructor(props) {
         super(props);
         this.state = {
-            //results : [], 
+            //restaurants : [], 
             filter : props.filterText,
             filterCategory: props.filterCategory,
-            //restaurants : props.restaurants
+            restaurants : props.restaurants
         };
         
         this.sortByHighestRated = this.sortByHighestRated.bind(this);
         this.sortByMostReviewed = this.sortByMostReviewed.bind(this);
         this.sortResults       = this.sortResults.bind(this);
 
-        }
-
-        componentDidMount() {
-        //console.log("am here :"+this.state.restaurants);
-        //  this.loadData([{"name":"hello","reviews":[]}]);
         }
 
 
