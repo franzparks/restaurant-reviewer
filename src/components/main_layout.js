@@ -34,6 +34,39 @@ class MainLayout extends Component {
         //console.log("selection : "+selection);
     }
 
+    loadData = (data) => {
+           console.log("I got called : "+data);
+            data.forEach((restaurant) => {
+                //console.log(" restaurant : "+restaurant);     
+                this.state.results.push(
+                    <Restaurant 
+                    key={restaurant.name + Math.random()*10000}
+                    name={restaurant.name}
+                    image={restaurant.image}
+                    address={restaurant.address}
+                    cuisineType={restaurant.cuisineType}
+                    averageRating = {this.getAverageRating(restaurant)}
+                    numberOfRatings={this.getNumberOfRatings(restaurant)}
+
+                    /> 
+
+                );
+
+            });
+        }
+
+        getAverageRating = (restaurant) => {
+            if(restaurant.reviews.length > 1){
+                var sum = restaurant.reviews.reduce( (prev,curr) => prev + curr );
+                return sum / restaurant.reviews.length;
+            }else
+                return 0; 
+        }
+
+        getNumberOfRatings = (restaurant) => {
+            return restaurant.reviews.length;
+        }
+
 	render() {
 		
 	    return (
