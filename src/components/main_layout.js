@@ -57,19 +57,17 @@ class MainLayout extends Component {
 
     sortUsingCategoryFilter = (arr,filterCategory) => {
     	if(filterCategory){
-                ///console.log("results : "+results[2].props.averageRating);
-                if(filterCategory === 'all'){
-                    /* Do nothing */
-                }else{
-                    if(this.state.filterCategory === 'highestRated' && results.length > 2){
-                        //this.sortByHighestRated(results,results[0]);
-                    }else if(this.state.filterCategory === 'mostReviewed' && results.length > 2){
-                        //this.sortByMostReviewed(results, results[0]);
-                    }
-
+            ///console.log("results : "+results[2].props.averageRating);
+            if(filterCategory === 'all'){
+                /* Do nothing */
+            }else{
+                if(filterCategory === 'highestRated' && arr.length > 2){
+                    this.sortByHighestRated(arr,arr[0]);
+                }else if(filterCategory === 'mostReviewed' && arr.length > 2){
+                    this.sortByMostReviewed(arr, arr[0]);
                 }
-
             }
+        }
     }
 
     sortUsingTextFilter = (arr,text) => {
