@@ -42,6 +42,7 @@ class MainLayout extends Component {
     }
 
     sortByHighestRated = (arr,restaurant) => {
+        //console.log(" and now "+ this.sortResults(arr, restaurant.props.averageRating));
         return this.sortResults(arr, restaurant.props.averageRating);
     }
 
@@ -50,37 +51,44 @@ class MainLayout extends Component {
     }
 
     sortResults = (arr, param) => {
-        arr.sort((a,b) => {
+    	//console.log(" param and array "+ arr + " - "+param);
+        var sorted = arr.sort((a,b) => {
             return a[param] > b[param];
         });
+        console.log("sorted array "+ sorted);
+        return sorted;
     }
 
     sortUsingCategoryFilter = (arr,filterCategory) => {
     	if(filterCategory){
-            ///console.log("results : "+results[2].props.averageRating);
+            
             if(filterCategory === 'all'){
                 /* Do Nothing */
                 return arr;
             }else{
                 if(filterCategory === 'highestRated' && arr.length > 2){
+                	//console.log("here now ... "+arr.length);
                     return this.sortByHighestRated(arr,arr[0]);
                 }else if(filterCategory === 'mostReviewed' && arr.length > 2){
                     return this.sortByMostReviewed(arr, arr[0]);
                 }
             }
-        }
+        }else
+        	return arr;
     }
 
     sortUsingTextFilter = (arr,text) => {
     	return arr;
     }
 
-    filterRestaurants = (arr, text, category) => {
+    filterRestaurants = (arr, text, category = "all") => {
+    	
     	if(text){
     		return this.sortUsingTextFilter(arr,text);
     	}
 
     	if(category){
+    		console.log("filterCategory : "+category);
             return this.sortUsingCategoryFilter(arr,category);
     	}
     }
@@ -125,6 +133,7 @@ class MainLayout extends Component {
 	render() {
 		var results = this.loadData(this.props.restaurants);
 		results = this.filterRestaurants(results, this.state.filterText, this.state.filterCategory);
+		console.log("results : "+results);
 	    return (
             <div>
                 <Header 
