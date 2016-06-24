@@ -20,9 +20,6 @@ class MainLayout extends Component {
         this.getAverageRating = this.getAverageRating.bind(this);
         this.getNumberOfRatings = this.getNumberOfRatings.bind(this);
         this.loadData          = this.loadData.bind(this);
-        this.sortByHighestRated = this.sortByHighestRated.bind(this);
-        this.sortByMostReviewed = this.sortByMostReviewed.bind(this);
-        this.sortResults       = this.sortResults.bind(this);
         this.sortUsingCategoryFilter = this.sortUsingCategoryFilter.bind(this);
         this.filterRestaurants = this.filterRestaurants.bind(this);
         this.sortUsingTextFilter = this.sortUsingTextFilter.bind(this);
