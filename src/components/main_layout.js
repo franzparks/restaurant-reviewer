@@ -63,9 +63,9 @@ class MainLayout extends Component {
                 return arr;
             }else{
                 if(filterCategory === 'highestRated' && arr.length > 2){
-                    this.sortByHighestRated(arr,arr[0]);
+                    return this.sortByHighestRated(arr,arr[0]);
                 }else if(filterCategory === 'mostReviewed' && arr.length > 2){
-                    this.sortByMostReviewed(arr, arr[0]);
+                    return this.sortByMostReviewed(arr, arr[0]);
                 }
             }
         }
