@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Restaurant from './restaurant';
+
 
 class RestaurantContainer  extends Component {
 
@@ -41,7 +41,7 @@ class RestaurantContainer  extends Component {
 
         
         render(){
-
+            //console.log("restaurants : "+ this.props.restaurants);
 
             if(this.state.filterCategory){
                 ///console.log("results : "+results[2].props.averageRating);

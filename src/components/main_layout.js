@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import * as actions from '../actions';
 
 import RestaurantContainer from './restaurant_container';
+import Restaurant from './restaurant';
 import Overview from './overview';
 import Footer from './footer';
 import Menu from './menu';
@@ -13,7 +14,7 @@ class MainLayout extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {filterText : '', filterCategory : ''};
+        this.state = {filterText : '', filterCategory : '', results : []};
         this.handleChange = this.handleChange.bind(this);
         this.handleSelection = this.handleSelection.bind(this);
         this.getAverageRating = this.getAverageRating.bind(this);
@@ -23,6 +24,13 @@ class MainLayout extends Component {
 
 	componentWillMount() {
 		this.props.fetchRestaurants();
+		//this.setState({ results : this.loadData(this.props.restaurants)});
+	}
+
+	componentDidMount() {
+		//this.props.fetchRestaurants();
+		console.log("props.restaurants : "+this.props.restaurants);
+		this.setState({ results : this.loadData(this.props.restaurants)});
 	}
 
 	handleChange = function(text){
@@ -54,6 +62,7 @@ class MainLayout extends Component {
                 );
 
             });
+            console.log(" returning restaurants : "+results); 
             return results;
         }
 
@@ -70,7 +79,7 @@ class MainLayout extends Component {
         }
 
 	render() {
-		
+		var res = this.loadData(this.props.restaurants);
 	    return (
             <div>
                 <Header 
@@ -82,7 +91,7 @@ class MainLayout extends Component {
 					        <ToggleNav />
 					        <Overview />
 					        <RestaurantContainer 
-					            restaurants={this.loadData(this.props.restaurants)}
+					            restaurants={res}
 					            filterText={this.state.filterText}
 					            filterCategory={this.state.filterCategory}
 					        />
