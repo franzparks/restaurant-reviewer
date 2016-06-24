@@ -14,7 +14,7 @@ class MainLayout extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {filterText : '', filterCategory : '', results : []};
+        this.state = {filterText : '', filterCategory : ''};
         this.handleChange = this.handleChange.bind(this);
         this.handleSelection = this.handleSelection.bind(this);
         this.getAverageRating = this.getAverageRating.bind(this);
@@ -24,13 +24,6 @@ class MainLayout extends Component {
 
 	componentWillMount() {
 		this.props.fetchRestaurants();
-		//this.setState({ results : this.loadData(this.props.restaurants)});
-	}
-
-	componentDidMount() {
-		//this.props.fetchRestaurants();
-		console.log("props.restaurants : "+this.props.restaurants);
-		this.setState({ results : this.loadData(this.props.restaurants)});
 	}
 
 	handleChange = function(text){
@@ -43,10 +36,10 @@ class MainLayout extends Component {
     }
 
     loadData = (data) => {
-           console.log("I got called : "+data);
+            //console.log("I got called : "+data);
             var results = [];
             data.forEach((restaurant) => {
-                //console.log(" restaurant : "+restaurant);     
+                 
                 results.push(
                     <Restaurant 
                     key={restaurant.name + Math.random()*10000}
@@ -62,21 +55,21 @@ class MainLayout extends Component {
                 );
 
             });
-            console.log(" returning restaurants : "+results); 
+           
             return results;
         }
 
-        getAverageRating = (restaurant) => {
-            if(restaurant.reviews.length > 1){
-                var sum = restaurant.reviews.reduce( (prev,curr) => prev + curr );
-                return sum / restaurant.reviews.length;
-            }else
-                return 0; 
-        }
+    getAverageRating = (restaurant) => {
+        if(restaurant.reviews.length > 1){
+            var sum = restaurant.reviews.reduce( (prev,curr) => prev + curr );
+            return sum / restaurant.reviews.length;
+        }else
+            return 0; 
+    }
 
-        getNumberOfRatings = (restaurant) => {
-            return restaurant.reviews.length;
-        }
+    getNumberOfRatings = (restaurant) => {
+        return restaurant.reviews.length;
+    }
 
 	render() {
 		var res = this.loadData(this.props.restaurants);
