@@ -35,6 +35,21 @@ class MainLayout extends Component {
         //console.log("selection : "+selection);
     }
 
+    sortByHighestRated = (results,restaurant) => {
+        return this.sortResults(results, restaurant.props.averageRating);
+    }
+
+    sortByMostReviewed = (results, restaurant) => {
+        return this.sortResults(results, restaurant.props.numberOfRatings);
+    }
+
+    sortResults = (arr, param) => {
+        arr.sort((a,b) => {
+            return a[param] > b[param];
+        });
+    }
+
+
     loadData = (data) => {
             //console.log("I got called : "+data);
             var results = [];

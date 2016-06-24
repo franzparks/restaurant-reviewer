@@ -19,19 +19,8 @@ class RestaurantContainer  extends Component {
 
         }
 
-
-        sortByHighestRated = (results,restaurant) => {
-            return this.sortResults(results, restaurant.props.averageRating);
-        }
-
-        sortByMostReviewed = (results, restaurant) => {
-            return this.sortResults(results, restaurant.props.numberOfRatings);
-        }
-
-        sortResults = (arr, param) => {
-            arr.sort((a,b) => {
-                return a[param] > b[param];
-            });
+        componentDidMount() {
+           // this.setState({ restaurants : this.props.restaurants});
         }
 
         
@@ -55,7 +44,7 @@ class RestaurantContainer  extends Component {
 
             return (
                     <div className="row">
-                          {this.state.restaurants} 
+                          {this.props.restaurants} 
                     </div>
             ); 
         }    
