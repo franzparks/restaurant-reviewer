@@ -30,7 +30,7 @@ class Menu extends Component {
 		var menuItems = [];
 
         Object.keys(vals).forEach((key) => {
-         //console.log(key + " - "+vals[key]);
+         
 	        menuItems.push(	
 				<MenuItem 
 				   key={key}
@@ -47,20 +47,15 @@ class Menu extends Component {
 		return menuItems;
 	}
 
-
 	render() {
         var items = this.displayMenuItems();
-	return (
-		
-
-	    <div className="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
-
-			<div className="list-group">
-			    {items}
-			          
+		return (
+		    <div className="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+				<div className="list-group">
+				    {items}          
+				</div>
 			</div>
-		</div>
-	);	
+		);	
 
 }
 }
