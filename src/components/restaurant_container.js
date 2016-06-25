@@ -5,7 +5,7 @@ const RestaurantContainer = (props) =>  {
 
     return (
         <div className="row">
-              {this.props.restaurants} 
+              {props.restaurants} 
         </div>
     );     
 }
