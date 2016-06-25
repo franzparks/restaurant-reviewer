@@ -1,14 +1,26 @@
-import React from 'react';
+import React,{Component} from 'react';
 
-const Menu = (props) => {
-	var selected = false;
-	var style = "list-group-item active";
-	var handleClick = function(selection){
-        props.handleSelection(selection);
+class Menu extends Component {
+
+	constructor(props) {
+        super(props);
+        this.state = {"style" :"list-group-item"};
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+	//var style = "list-group-item";
+    handleClick (e,selection){
+        //props.selectionHandler(selection);
         //selected = true;
         //style = "list-group-item active";
         //console.log(selected);
+        //ele.style = "list-group-item active";
+        //e.target.className = "list-group-item active";
+        console.log(e.target);
 	}
+
+
+	render() {
 
 	return (
 		
@@ -16,14 +28,16 @@ const Menu = (props) => {
 	    <div className="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
 
 			<div className="list-group">
-			    <a href="#" className={style} onClick={() => props.selectionHandler('all')} >All</a>
+			    <a href="#" name= 'all' className={this.state.style} onClick={this.handleClick} >All</a>
 			    <a href="#" className="list-group-item" onClick={() => props.selectionHandler('highestRated')}>Highest Rated</a>
 			    <a href="#" className="list-group-item" onClick={() => props.selectionHandler('mostReviewed')}>Most Reviewed</a>
-			    <a href="#" className="list-group-item" onClick={() => props.selectionHandler('openNow')}>Open Now</a>      
+			    <a href="#" className="list-group-item" onClick={() => props.selectionHandler('openNow')}>Open Now</a> 
 			          
 			</div>
 		</div>
 	);	
+
+}
 }
 
 export default Menu;
