@@ -40,7 +40,7 @@ class Menu extends Component {
 
 
 	render() {
-        var items = this.displayMenuItems;
+        var items = this.displayMenuItems();
 	return (
 		
 
