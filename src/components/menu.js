@@ -7,6 +7,7 @@ class Menu extends Component {
         super(props);
         this.state = {"selected" :"list-group-item active", "unselected":"list-group-item", "style":""};
         this.handleClick = this.handleClick.bind(this);
+        this.displayMenuItems = this.displayMenuItems.bind(this);
     }
 
     handleClick (e){
@@ -25,23 +26,28 @@ class Menu extends Component {
 
 	displayMenuItems (){
 		var vals = {"all":"All"};
+		var menuItems = [];
+		menuItems.push(
 		<MenuItem 
            label={vals["all"]}
-           style={this.state.style}
+           style={this.state.selected}
            handleClick={this.handleClick}
 
 		/>
+		);
+		return menuItems;
 	}
 
 
 	render() {
-
+        var items = this.displayMenuItems;
 	return (
 		
 
 	    <div className="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
 
 			<div className="list-group">
+			    {items}
 			    <a href="#" name='all' className={this.state.style} onClick={this.handleClick} >All</a>
 			    <a href="#" name='highestRated' className={this.state.style} onClick={this.handleClick}>Highest Rated</a>
 			    <a href="#" name='mostReviewed' className={this.state.style} onClick={this.handleClick}> Most Reviewed</a>
