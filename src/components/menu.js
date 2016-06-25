@@ -1,4 +1,5 @@
 import React,{Component} from 'react';
+import MenuItem from './menuitem';
 
 class Menu extends Component {
 
@@ -10,7 +11,7 @@ class Menu extends Component {
 
     handleClick (e){
         this.props.selectionHandler(e.target.name);
-        this.setState({style :"list-group-item"});
+        //this.setState({style :"list-group-item"});
         if(e.target.className === "list-group-item"){
         	e.target.className = "list-group-item active";
         	//this.setState({style :"list-group-item"});	
