@@ -23,6 +23,16 @@ class Menu extends Component {
         console.log(Object.keys(e));
 	}
 
+	displayMenuItems (){
+		var vals = {"all":"All"};
+		<MenuItem 
+           label={vals["all"]}
+           style={this.state.style}
+           handleClick={this.handleClick}
+
+		/>
+	}
+
 
 	render() {
 
