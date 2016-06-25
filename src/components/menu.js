@@ -13,10 +13,14 @@ class Menu extends Component {
         //props.selectionHandler(selection);
         //selected = true;
         //style = "list-group-item active";
-        //console.log(selected);
+        
         //ele.style = "list-group-item active";
-        e.target.class === "list-group-item" ? "list-group-item active" : "";
-        console.log(e.target);
+        if(e.target.className === "list-group-item"){
+        	e.target.className = "list-group-item active";
+        	console.log("here now " +e.target);
+        }
+        //console.log(e.target.className);
+        console.log(Object.keys(e.target));
 	}
 
 
@@ -28,7 +32,7 @@ class Menu extends Component {
 	    <div className="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
 
 			<div className="list-group">
-			    <a href="#" name= 'all' className={this.state.style} onClick={this.handleClick} >All</a>
+			    <a href="#" name= 'all' className="list-group-item" onClick={this.handleClick} >All</a>
 			    <a href="#" className="list-group-item" onClick={() => props.selectionHandler('highestRated')}>Highest Rated</a>
 			    <a href="#" className="list-group-item" onClick={() => props.selectionHandler('mostReviewed')}>Most Reviewed</a>
 			    <a href="#" className="list-group-item" onClick={() => props.selectionHandler('openNow')}>Open Now</a> 
