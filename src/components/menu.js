@@ -25,16 +25,25 @@ class Menu extends Component {
 	}
 
 	displayMenuItems (){
-		var vals = {"all":"All"};
-		var menuItems = [];
-		menuItems.push(
-		<MenuItem 
-           label={vals["all"]}
-           style={this.state.selected}
-           handleClick={this.handleClick}
+		var vals = {"all":"All","highestRated":"Highest Rated", "mostReviewed":"Most Reviewed", "openNow":"Open Now"};
 
-		/>
-		);
+		var menuItems = [];
+
+        Object.keys(vals).forEach((key) => {
+         //console.log(key + " - "+vals[key]);
+	        menuItems.push(	
+				<MenuItem 
+				   key={key}
+		           label={vals[key]}
+		           name={key}
+		           style={this.state.selected}
+		           handleClick={this.handleClick}
+
+				/>
+			);
+         
+		});	
+
 		return menuItems;
 	}
 
