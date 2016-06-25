@@ -4,15 +4,22 @@ class Menu extends Component {
 
 	constructor(props) {
         super(props);
-        this.state = {"style" :"list-group-item"};
+        this.state = {"selected" :"", "unselected":"", "style":""};
         this.handleClick = this.handleClick.bind(this);
     }
 
     handleClick (e){
         this.props.selectionHandler(e.target.name);
-        if(e.target.className === this.state.style){
+        this.setState({style :"list-group-item"});
+        if(e.target.className === "list-group-item"){
         	e.target.className = "list-group-item active";
+        	//this.setState({style :"list-group-item"});	
+        }else{
+        	//e.target.className = "list-group-item";
         }
+        this.setState({style :"list-group-item"});
+
+        console.log(Object.keys(e));
 	}
 
 
