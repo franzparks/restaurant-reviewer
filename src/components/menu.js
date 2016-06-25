@@ -4,7 +4,7 @@ class Menu extends Component {
 
 	constructor(props) {
         super(props);
-        this.state = {"selected" :"", "unselected":"", "style":""};
+        this.state = {"selected" :"list-group-item active", "unselected":"list-group-item", "style":""};
         this.handleClick = this.handleClick.bind(this);
     }
 
