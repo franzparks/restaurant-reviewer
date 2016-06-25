@@ -8,19 +8,11 @@ class Menu extends Component {
         this.handleClick = this.handleClick.bind(this);
     }
 
-	//var style = "list-group-item";
     handleClick (e){
         this.props.selectionHandler(e.target.name);
-        //selected = true;
-        //style = "list-group-item active";
-        
-        //ele.style = "list-group-item active";
         if(e.target.className === this.state.style){
         	e.target.className = "list-group-item active";
-        	console.log("here now " +e.target);
         }
-        //console.log(e.target.className);
-        console.log(Object.keys(e.target));
 	}
 
 
