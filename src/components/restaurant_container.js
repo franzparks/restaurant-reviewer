@@ -1,35 +1,12 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 
-class RestaurantContainer  extends Component {
+const RestaurantContainer = (props) =>  {
 
-     
-        constructor(props) {
-        super(props);
-        this.state = {
-            //restaurants : [], 
-            filter : props.filterText,
-            filterCategory: props.filterCategory,
-            restaurants : props.restaurants
-        };
-        
-
-        }
-
-        componentDidMount() {
-           // this.setState({ restaurants : this.props.restaurants});
-        }
-
-        
-        render(){
-            //console.log("restaurants : "+ this.props.restaurants);
-
-            return (
-                    <div className="row">
-                          {this.props.restaurants} 
-                    </div>
-            ); 
-        }    
+    return (
+        <div className="row">
+              {this.props.restaurants} 
+        </div>
+    );     
 }
-
 export default RestaurantContainer;
