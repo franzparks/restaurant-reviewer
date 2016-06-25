@@ -25,9 +25,9 @@ class Menu extends Component {
 
 			<div className="list-group">
 			    <a href="#" name='all' className={this.state.style} onClick={this.handleClick} >All</a>
-			    <a href="#" name='highestRated' className={this.state.style} onClick={() => props.selectionHandler('highestRated')}>Highest Rated</a>
-			    <a href="#" name='mostReviewed' className={this.state.style} onClick={() => props.selectionHandler('mostReviewed')}>Most Reviewed</a>
-			    <a href="#" name='openNow' className={this.state.style} onClick={() => props.selectionHandler('openNow')}>Open Now</a> 
+			    <a href="#" name='highestRated' className={this.state.style} onClick={this.handleClick}>Highest Rated</a>
+			    <a href="#" name='mostReviewed' className={this.state.style} onClick={this.handleClick}> Most Reviewed</a>
+			    <a href="#" name='openNow' className={this.state.style} onClick={this.handleClick}>Open Now</a> 
 			          
 			</div>
 		</div>
