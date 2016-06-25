@@ -10,7 +10,7 @@ class Menu extends Component {
 
 	//var style = "list-group-item";
     handleClick (e){
-        //props.selectionHandler(selection);
+        this.props.selectionHandler(e.target.name);
         //selected = true;
         //style = "list-group-item active";
         
