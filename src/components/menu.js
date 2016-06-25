@@ -15,7 +15,7 @@ class Menu extends Component {
         //style = "list-group-item active";
         
         //ele.style = "list-group-item active";
-        if(e.target.className === "list-group-item"){
+        if(e.target.className === this.state.style){
         	e.target.className = "list-group-item active";
         	console.log("here now " +e.target);
         }
