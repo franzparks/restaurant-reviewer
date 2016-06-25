@@ -15,7 +15,7 @@ class Menu extends Component {
         //style = "list-group-item active";
         //console.log(selected);
         //ele.style = "list-group-item active";
-        //e.target.className = "list-group-item active";
+        e.target.class === "list-group-item" ? "list-group-item active" : "";
         console.log(e.target);
 	}
 
