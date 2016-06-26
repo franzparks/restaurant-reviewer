@@ -35,8 +35,6 @@ class MainLayout extends Component {
 
     handleSelection = function(selection){
     	this.setState({filterCategory : selection});
-    	//element.style.color = "blue";
-    	//e.target.className = "list-group-item active";
     }
 
     sortUsingCategoryFilter = (arr,filterCategory) => {
