@@ -11,18 +11,10 @@ class Menu extends Component {
     }
 
     handleClick (e){
-    	//e.preventDefault();
-        this.props.selectionHandler(e.target.name);
-        //this.setState({style :"list-group-item"});
-        //if(e.target.className === "list-group-item active"){
-        //	e.target.className = "list-group-item";
-        	//this.setState({style :"list-group-item"});	
-        //}else{
-        	//e.target.className = "list-group-item";
-        //}
-        //this.setState({style :"list-group-item"});
 
-        //console.log("i was clicked "+ e.target.name);
+        this.props.selectionHandler(e.target.name);
+
+        /* Identify selected item*/
         this.setState({item : e.target.name});
 	}
 
@@ -48,10 +40,9 @@ class Menu extends Component {
 		});	
 
 		menuItems = menuItems.map((item) =>{
-             console.log(item.props);
+           
             if(item.props.name === this.state.item){
-            	console.log("clicked here "+item );
-            	//item.props.style = this.state.selected;
+            	/* copy item props to edit styling */
             	item = <MenuItem 
 				   key={item.key}
 		           label={item.props.label}
