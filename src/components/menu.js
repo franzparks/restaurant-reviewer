@@ -5,7 +5,7 @@ class Menu extends Component {
 
 	constructor(props) {
         super(props);
-        this.state = {"selected" :"list-group-item active", "unselected":"list-group-item", "style":"", "item":""};
+        this.state = {"selected" :"list-group-item active", "unselected":"list-group-item", "style":"", "selectedItem":""};
         this.handleClick = this.handleClick.bind(this);
         this.displayMenuItems = this.displayMenuItems.bind(this);
     }
@@ -15,12 +15,11 @@ class Menu extends Component {
         this.props.selectionHandler(e.target.name);
 
         /* Identify selected item*/
-        this.setState({item : e.target.name});
+        this.setState({selectedItem : e.target.name});
 	}
 
 	displayMenuItems (){
 		var vals = {"all":"All","highestRated":"Highest Rated", "mostReviewed":"Most Reviewed", "openNow":"Open Now"};
-
 
 		var menuItems = [];
 
@@ -41,7 +40,7 @@ class Menu extends Component {
 
 		menuItems = menuItems.map((item) =>{
            
-            if(item.props.name === this.state.item){
+            if(item.props.name === this.state.selectedItem){
             	/* copy item props to edit styling */
             	item = <MenuItem 
 				   key={item.key}
