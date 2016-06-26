@@ -6,7 +6,8 @@ const MenuItem = (props) =>{
 			href="#"
 			name={props.name} 
 		    className={props.style}
-		 	onClick={props.handleClick} >
+		    onClick={props.handleClick}
+		 	>
 		 	{props.label}
 		</a>
 	);
