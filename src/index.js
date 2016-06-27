@@ -6,7 +6,7 @@ import { Router, Route, browserHistory } from 'react-router';
 
 
 import App from './components/app';
-import RestaurantDetails from './components/restaurant_details'
+import RestaurantDetails from './components/restaurant_details';
 import reducers from './reducers';
 import Async from './middlewares/async';
 
