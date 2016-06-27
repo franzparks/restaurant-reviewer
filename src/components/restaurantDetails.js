@@ -1,6 +1,6 @@
 import React from 'react';
 
-conts RestaurantDetails = (props) =>{
+const RestaurantDetails = (props) =>{
 
 	return (
 		<div> Details </div>
