@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const Restaurant = (props) => {
 	
@@ -9,6 +10,7 @@ const Restaurant = (props) => {
 	        <p>Address: {props.address}</p>
 	        <p>Type: {props.cuisineType}</p>
 	        <p><a className="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+
 	    </div>
     );
 }
