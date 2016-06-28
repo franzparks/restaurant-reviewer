@@ -9,9 +9,7 @@ export default class App extends Component {
     render() {
 	    return (
 	        <div>
-	            <MainLayout /> 
-	            {this.props.children} 
-	             
+	            <MainLayout />   
 	        </div>     
 	    );
     }
