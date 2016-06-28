@@ -17,7 +17,9 @@ ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
     <Router history={browserHistory}>
     	<Route path="/" component={App} />
-        <Route path="/" component={RestaurantContainer} />		
+        <Route path="/" component={RestaurantContainer}>
+        	<Route path="details" component={RestaurantDetails} />
+        </Route>		
     </Router>
   </Provider>
   , document.querySelector('#appContainer'));
