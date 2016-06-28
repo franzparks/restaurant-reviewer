@@ -1,7 +1,9 @@
 import React from 'react';
 
 const RestaurantList = (props) => {
-    {props.restaurants}
+	return (
+    	<div>{props.restaurants}</div>
+    );
 
 }
 export default RestaurantList;
