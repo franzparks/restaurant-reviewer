@@ -132,6 +132,7 @@ class MainLayout extends Component {
                 <Header 
                 	handleChange={this.handleChange}
                 />
+                {this.props.children}
 		  	    <div className="container">
 		            <div className="row row-offcanvas row-offcanvas-right">
 		                <div className="col-xs-12 col-sm-9">

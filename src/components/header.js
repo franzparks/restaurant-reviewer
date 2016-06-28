@@ -38,6 +38,7 @@ class Header extends Component {
                             <li className="active"><a href="#">Home</a></li>
                             <li><a href="#about">About</a></li>
                             <li><a href="#">Filter By : </a></li>
+                            
                              
                         </ul>
                         <SearchBar 
