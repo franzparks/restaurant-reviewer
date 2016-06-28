@@ -1,5 +1,5 @@
 import React from 'react';
-
+import RestaurantList from './restaurant_list';
 
 const RestaurantContainer = (props) =>  {
 
