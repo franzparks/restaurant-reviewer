@@ -5,6 +5,7 @@ const RestaurantContainer = (props) =>  {
 
     return (
         <div className="row">
+        	<RestaurantList restuarants={props.restaurants} />
          	{props.children}  
         </div>
     );     
