@@ -23,7 +23,7 @@ ReactDOM.render(
    
 	        <Route  component={RestaurantContainer}>
 	        	<Route  path="list" component={RestaurantListWrapper} />
-	        	<Route path="details" component={RestaurantListWrapper} />
+	        	<Route path="details" component={RestaurantDetails} />
 	        </Route>
         </Route>		
     </Router>
