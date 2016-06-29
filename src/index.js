@@ -6,6 +6,7 @@ import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
 
 import App from './components/app';
+import MainLayout from './components/main_layout';
 import RestaurantContainer from './components/restaurant_container';
 import RestaurantListWrapper from './components/restaurant_list_wrapper';
 import RestaurantDetails from './components/restaurant_details';
@@ -17,10 +18,12 @@ const createStoreWithMiddleware = applyMiddleware(Async)(createStore);
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
     <Router history={browserHistory}>
-    	<Route  path="/" component={App} >
+
+    	<Route  path="/" component={MainLayout} >
+   
 	        <Route  component={RestaurantContainer}>
-	        	<Route  component={RestaurantListWrapper} />
-	        	<Route path="details" component={RestaurantDetails} />
+	        	<Route  path="list" component={RestaurantListWrapper} />
+	        	<Route path="details" component={RestaurantListWrapper} />
 	        </Route>
         </Route>		
     </Router>

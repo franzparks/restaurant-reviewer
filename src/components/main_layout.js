@@ -139,11 +139,10 @@ class MainLayout extends Component {
 		            <div className="row row-offcanvas row-offcanvas-right">
 		                <div className="col-xs-12 col-sm-9">
 					        <ToggleNav />
-					        <Overview />
+					        {/*<Overview /> */}
 					        <RestaurantListWrapper restaurants={results} />
 					        <RestaurantContainer 
 
-					            restaurants={results}
 					            filterText={this.state.filterText}
 					            filterCategory={this.state.filterCategory}
 					        />
