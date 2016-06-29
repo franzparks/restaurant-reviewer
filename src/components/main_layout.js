@@ -146,7 +146,7 @@ class MainLayout extends Component {
 					            filterText={this.state.filterText}
 					            filterCategory={this.state.filterCategory}
 					        />
-					        <RestaurantList restaurants={results} />
+					       
 
 					    </div>
 					    <Menu 

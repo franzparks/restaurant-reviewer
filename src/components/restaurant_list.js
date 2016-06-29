@@ -4,7 +4,7 @@ const RestaurantList = (props) => {
 	
 	return (
     	<div>
-    	<div> content</div>
+    	<div> List content</div>
     	{props.restaurants}
 
     	</div>

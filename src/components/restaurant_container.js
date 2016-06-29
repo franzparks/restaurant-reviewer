@@ -5,6 +5,7 @@ const RestaurantContainer = (props) =>  {
 
     return (
         <div className="row">
+            <div> Container </div>
          	{props.children}  
         </div>
     );     
