@@ -140,18 +140,20 @@ class MainLayout extends Component {
 		                <div className="col-xs-12 col-sm-9">
 					        <ToggleNav />
 					        {/*<Overview /> */}
-					        <RestaurantListWrapper restaurants={results} />
-					        <RestaurantContainer 
+					        	 
+					        <RestaurantListWrapper 
+					        restaurants={results} 
+					        filterText={this.state.filterText}
+					        filterCategory={this.state.filterCategory}
 
-					            filterText={this.state.filterText}
-					            filterCategory={this.state.filterCategory}
 					        />
-					       
+					        
 
 					    </div>
 					    <Menu 
 					    	selectionHandler={this.handleSelection}
-					    />	      	        
+					    />
+					         	        
 		            </div>
 		            <Footer />
 		        </div> 
