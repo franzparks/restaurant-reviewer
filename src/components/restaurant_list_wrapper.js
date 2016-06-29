@@ -3,6 +3,7 @@
 
  const RestaurantListWrapper = (props) => {
  	return (
+ 		<RestaurantList restaurants={props.restaurants} />
  	);
  }
  export default RestaurantListWrapper;
