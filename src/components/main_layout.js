@@ -128,8 +128,10 @@ class MainLayout extends Component {
 	render() {
 		var results = this.loadData(this.props.restaurants);
 		results = this.filterRestaurants(results, this.state.filterText, this.state.filterCategory);
-		
-	    return (
+		//console.log("params"+Object.keys(this.props));
+		//console.log("route"+Object.keys(this.props.route));
+
+        return (
             <div>
                 <Header 
                 	handleChange={this.handleChange}
@@ -142,14 +144,14 @@ class MainLayout extends Component {
 					        {/*<Overview /> */}
 					        	 
 					        {/*how to pass props without explicitly calling child*/}
-					         <RestaurantListWrapper 
+					        {/* <RestaurantListWrapper 
 					        restaurants={results} 
 					        filterText={this.state.filterText}
 					        filterCategory={this.state.filterCategory}
 
-					        />
-					        {this.props.children}
-
+					        /> */}
+					        
+                            {this.props.children}
 					    </div>
 					    <Menu 
 					    	selectionHandler={this.handleSelection}
@@ -157,6 +159,7 @@ class MainLayout extends Component {
 					         	        
 		            </div>
 		            <Footer />
+
 		        </div> 
 	        </div>
 	  	);

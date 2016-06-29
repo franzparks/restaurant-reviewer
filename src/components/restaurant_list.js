@@ -5,6 +5,7 @@ const RestaurantList = (props) => {
 	return (
     	<div>
     	<div> List content</div>
+    	
     	{props.restaurants}
          <Link to="details"> Details</Link>
     	</div>
