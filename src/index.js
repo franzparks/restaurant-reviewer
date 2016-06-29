@@ -7,7 +7,7 @@ import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
 import App from './components/app';
 import RestaurantContainer from './components/restaurant_container';
-import RestaurantList from './components/restaurant_list';
+import RestaurantListWrapper from './components/restaurant_list_wrapper';
 import RestaurantDetails from './components/restaurant_details';
 import reducers from './reducers';
 import Async from './middlewares/async';
