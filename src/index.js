@@ -19,7 +19,7 @@ ReactDOM.render(
     <Router history={browserHistory}>
     	<Route  path="/" component={App} >
 	        <Route  component={RestaurantContainer}>
-	        	<Route  component={RestaurantList} />
+	        	<Route  component={RestaurantListWrapper} />
 	        	<Route path="details" component={RestaurantDetails} />
 	        </Route>
         </Route>		
