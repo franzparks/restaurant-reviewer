@@ -147,7 +147,7 @@ class MainLayout extends Component {
 					        filterCategory={this.state.filterCategory}
 
 					        />
-					        
+					        {this.props.children}
 
 					    </div>
 					    <Menu 
