@@ -18,8 +18,8 @@ ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
     <Router history={browserHistory}>
     	<Route  path="/" component={App} />
-        <Route path="/" component={RestaurantContainer}>
-        	<Route path="/" component={RestaurantList} />
+        <Route  component={RestaurantContainer}>
+        	<Route  component={RestaurantList} />
         	<Route path="details" component={RestaurantDetails} />
         </Route>		
     </Router>
