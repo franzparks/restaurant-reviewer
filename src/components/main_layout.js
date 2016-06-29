@@ -3,6 +3,8 @@ import {connect} from 'react-redux';
 import * as actions from '../actions';
 
 import RestaurantContainer from './restaurant_container';
+import RestaurantList from './restaurant_list';
+
 import Restaurant from './restaurant';
 import Overview from './overview';
 import Footer from './footer';
@@ -132,17 +134,19 @@ class MainLayout extends Component {
                 <Header 
                 	handleChange={this.handleChange}
                 />
-                
+
 		  	    <div className="container">
 		            <div className="row row-offcanvas row-offcanvas-right">
 		                <div className="col-xs-12 col-sm-9">
 					        <ToggleNav />
 					        <Overview />
 					        <RestaurantContainer 
+
 					            restaurants={results}
 					            filterText={this.state.filterText}
 					            filterCategory={this.state.filterCategory}
 					        />
+					        <RestaurantList restaurants={results} />
 
 					    </div>
 					    <Menu 
