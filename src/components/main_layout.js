@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import * as actions from '../actions';
 
 import RestaurantContainer from './restaurant_container';
-import RestaurantList from './restaurant_list';
+import RestaurantListWrapper from './restaurant_list_wrapper';
 
 import Restaurant from './restaurant';
 import Overview from './overview';
