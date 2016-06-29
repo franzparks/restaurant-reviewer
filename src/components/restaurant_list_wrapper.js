@@ -9,7 +9,8 @@
  	}
  	
  	render(){
- 		{console.log("here .. "+Object.keys(this.props))}
+ 		{console.log("here .. "+Object.keys(this.props.params))}
+ 		{console.log("here 2 .. "+this.props.route.component)}
  	return (
  		<div>
  		

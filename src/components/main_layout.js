@@ -151,7 +151,8 @@ class MainLayout extends Component {
 
 					        /> */}
 					        
-                            {this.props.children}
+                            
+                            <div>{React.cloneElement(this.props.children, { restaurants: results })} </div>
 					    </div>
 					    <Menu 
 					    	selectionHandler={this.handleSelection}
