@@ -141,7 +141,8 @@ class MainLayout extends Component {
 					        <ToggleNav />
 					        {/*<Overview /> */}
 					        	 
-					        <RestaurantListWrapper 
+					        {/*how to pass props without explicitly calling child*/}
+					         <RestaurantListWrapper 
 					        restaurants={results} 
 					        filterText={this.state.filterText}
 					        filterCategory={this.state.filterCategory}

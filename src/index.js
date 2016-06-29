@@ -20,12 +20,10 @@ ReactDOM.render(
     <Router history={browserHistory}>
 
     	<Route  path="/" component={MainLayout} >
-   
-	        <Route  component={RestaurantContainer}>
-	        	<Route  path="list" component={RestaurantListWrapper} />
-	        	<Route path="details" component={RestaurantDetails} />
-	        </Route>
-        </Route>		
+	        <Route  component={RestaurantListWrapper} />
+	   	    <Route  path="details" component={RestaurantDetails} />
+	    </Route>
+        		
     </Router>
   </Provider>
   , document.querySelector('#appContainer'));
