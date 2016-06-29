@@ -140,6 +140,7 @@ class MainLayout extends Component {
 		                <div className="col-xs-12 col-sm-9">
 					        <ToggleNav />
 					        <Overview />
+					        <RestaurantListWrapper restaurants={results} />
 					        <RestaurantContainer 
 
 					            restaurants={results}
