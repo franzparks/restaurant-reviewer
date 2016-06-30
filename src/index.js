@@ -20,7 +20,7 @@ ReactDOM.render(
     <Router history={browserHistory}>
 
     	<Route  path="/" component={MainLayout} >
-	        <Route  path="list" component={RestaurantListWrapper}/>
+	        <IndexRoute  component={RestaurantListWrapper}/>
 	   	    <Route  path="details" component={RestaurantDetails} />
 	    </Route>
         		
