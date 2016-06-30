@@ -4,12 +4,6 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
-
-import App from './components/app';
-import MainLayout from './components/main_layout';
-import RestaurantContainer from './components/restaurant_container';
-import RestaurantListWrapper from './components/restaurant_list_wrapper';
-import RestaurantDetails from './components/restaurant_details';
 import routes from './routes';
 
 import reducers from './reducers';
