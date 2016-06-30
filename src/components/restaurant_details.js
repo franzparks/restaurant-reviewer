@@ -9,7 +9,7 @@ const RestaurantDetails = (props) =>{
 	        <p>Address: {props.address}</p>
 	        <p>Type: {props.cuisineType}</p>
 	        <p><a className="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-	        <Link to="details"> Details</Link>
+	        <Link to="/"> Back</Link>
 
 	    </div>
 	);
