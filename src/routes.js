@@ -11,6 +11,7 @@ export default (
   <Route path="/" component={MainLayout}>
     <IndexRoute component={RestaurantListWrapper} />
     <Route  path="restaurants/:name" component={RestaurantDetails} />
+    <Route  path="reviews/new" />
 
   </Route>
 );
