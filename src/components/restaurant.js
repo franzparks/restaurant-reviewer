@@ -10,7 +10,7 @@ const Restaurant = (props) => {
 	        <p>Address: {props.address}</p>
 	        <p>Type: {props.cuisineType}</p>
 	        <p><a className="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-	        <Link to="details" restaurant={props.rawData}> Details</Link>
+	        <Link to="restaurants/"+{props.name} restaurant={props.rawData}> Details</Link>
 
 	    </div>
     );
