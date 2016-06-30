@@ -10,6 +10,8 @@ import MainLayout from './components/main_layout';
 import RestaurantContainer from './components/restaurant_container';
 import RestaurantListWrapper from './components/restaurant_list_wrapper';
 import RestaurantDetails from './components/restaurant_details';
+import routes from './routes';
+
 import reducers from './reducers';
 import Async from './middlewares/async';
 
