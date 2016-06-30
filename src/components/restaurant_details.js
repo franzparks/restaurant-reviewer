@@ -17,7 +17,7 @@ const RestaurantDetails = (props) =>{
 	        <p>{restaurant.props.image}</p>
 	        <p>Address: {restaurant.props.address}</p>
 	        <p>Type: {restaurant.props.cuisineType}</p>
-	        <p><a className="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+	        
 	        <Link to="/"> Back</Link>
 
 	    </div>
