@@ -4,6 +4,7 @@ import { Link } from 'react-router';
 const Restaurant = (props) => {
 	console.log("raw data "+Object.keys(props.rawData));
 	var path = `restaurants/${props.name}`;
+	
 	return(
 	    <div className="col-xs-6 col-lg-4">
 	        <h2>{props.name}</h2>
