@@ -19,7 +19,7 @@ const createStoreWithMiddleware = applyMiddleware(Async)(createStore);
 
 ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
-    <Router history={browserHistory}>
+    <Router history={browserHistory} routes={routes}>
 
     	<Route  path="/" component={MainLayout} >
 	        <IndexRoute  component={RestaurantListWrapper}/>
