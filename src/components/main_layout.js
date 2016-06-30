@@ -95,7 +95,7 @@ class MainLayout extends Component {
                  
                 results.push(
                     <Restaurant 
-                    key={restaurant.name + Math.random()*10000}
+                    key={restaurant.id}
                     name={restaurant.name}
                     image={restaurant.image}
                     address={restaurant.address}
