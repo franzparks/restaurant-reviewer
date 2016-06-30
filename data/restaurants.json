@@ -1,5 +1,5 @@
 [
-	{
+	{   "id": 1,
 		"name":"Zambia",
 		"image" :"image",
 		"address":"101 Santa Clara",
@@ -8,21 +8,24 @@
 		"reviews" : []
 
 	},
-	{   "name":"Lusaka",
+	{   "id": 2,
+		"name":"Lusaka",
 	    "image":"image",
 	    "address":"101 Lsk",
 	    "cuisineType":"Zambian",
 	    "operatingHours":{"open":"07","close":"11"},
 		"reviews" : [1,2,3]
 	},
-	{   "name":"Ndola",
+	{   "id": 3,
+		"name":"Ndola",
 	    "image":"image",
 	    "address":"101 Ndola",
 	    "cuisineType":"Zambian",
 	    "operatingHours":{"open":"07","close":"11"},
 		"reviews" : [1,2,3,4,5,6]
 	},
-	{   "name":"Livingstone",
+	{   "id": 4,
+		"name":"Livingstone",
 	    "image":"image",
 	    "address":"101 Lvstone", 
 	    "cuisineType":"Zambian",
