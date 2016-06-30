@@ -21,7 +21,7 @@ ReactDOM.render(
 
     	<Route  path="/" component={MainLayout} >
 	        <IndexRoute  component={RestaurantListWrapper}/>
-	   	    <Route  path="details" component={RestaurantDetails} />
+	   	    <Route  path="restaurants/:name" component={RestaurantDetails} />
 	    </Route>
         		
     </Router>

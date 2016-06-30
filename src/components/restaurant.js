@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 
 const Restaurant = (props) => {
-	
+	console.log("raw data "+Object.keys(props.rawData));
 	return(
 	    <div className="col-xs-6 col-lg-4">
 	        <h2>{props.name}</h2>
