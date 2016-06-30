@@ -6,7 +6,6 @@ import RestaurantContainer from './restaurant_container';
 import RestaurantListWrapper from './restaurant_list_wrapper';
 
 import Restaurant from './restaurant';
-import Overview from './overview';
 import Footer from './footer';
 import Menu from './menu';
 import ToggleNav from './toggle_nav';
@@ -138,8 +137,7 @@ class MainLayout extends Component {
 		  	    <div className="container">
 		            <div className="row row-offcanvas row-offcanvas-right">
 		                <div className="col-xs-12 col-sm-9">
-					        <ToggleNav />
-                            
+					        <ToggleNav />                  
                             <div>{React.cloneElement(this.props.children, { restaurants: results })} </div>
 					    </div>
 					    <Menu 
