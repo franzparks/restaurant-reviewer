@@ -7,7 +7,6 @@ const RestaurantList = (props) => {
     	<div>
     	<Overview />
     	{props.restaurants}
-         <Link to="details"> Details</Link>
     	</div>
 
     );
