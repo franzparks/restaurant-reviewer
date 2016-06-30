@@ -11,3 +11,7 @@ export function fetchRestaurants() {
 		payload: request
 	};
 }
+
+export function postReview() {
+	
+}
