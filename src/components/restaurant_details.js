@@ -5,7 +5,7 @@ const RestaurantDetails = (props) =>{
 
 	return (
 		<div className="col-xs-6 col-lg-4">
-	        <h2>{props.restaurant.name}</h2>
+	        <h2>{props}</h2>
 	        <p>{props.image}</p>
 	        <p>Address: {props.address}</p>
 	        <p>Type: {props.cuisineType}</p>
