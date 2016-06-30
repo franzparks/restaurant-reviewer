@@ -9,6 +9,10 @@ class Menu extends Component {
         this.handleClick = this.handleClick.bind(this);
         this.displayMenuItems = this.displayMenuItems.bind(this);
     }
+    
+    componentDidMount(){
+        this.props.selectionHandler('all');
+    }
 
     handleClick (e){
 
