@@ -11,7 +11,9 @@ class Menu extends Component {
     }
     
     componentDidMount(){
+    	
         this.props.selectionHandler('all');
+        this.setState({selectedItem : 'all'});
     }
 
     handleClick (e){
