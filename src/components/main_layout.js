@@ -102,7 +102,6 @@ class MainLayout extends Component {
                     cuisineType={restaurant.cuisineType}
                     averageRating = {this.getAverageRating(restaurant)}
                     numberOfRatings={this.getNumberOfRatings(restaurant)}
-                    rawData={restaurant}
 
                     /> 
 

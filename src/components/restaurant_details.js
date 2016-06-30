@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 const RestaurantDetails = (props) =>{
 	//console.log("data : "+Object.keys(props));
-	//console.log("data : "+props.restaurants);
+	console.log("data : "+props.params);
 	var name = props.params.name;
 	var restaurant = props.restaurants.reduce((res) =>{
 		return res.name === name;
