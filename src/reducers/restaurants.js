@@ -3,8 +3,9 @@ import {
 	FETCH_RESTAURANT
 }from '../actions/types';
 
-let INITIAL_STATE = { restaurants = [] ,restaurant = null };
-export default function(state, action){
+var INITIAL_STATE = { restaurants : [] ,restaurant : null };
+
+export default function(state = [], action){
 	switch(action.type) {
 		case FETCH_RESTAURANTS:
 		    console.log(action.payload);
