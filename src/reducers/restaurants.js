@@ -7,6 +7,8 @@ export default function(state = [], action){
 		case FETCH_RESTAURANTS:
 		    console.log(action.payload);
 		    return [ ...state, ...action.payload.data ];
+		case FETCH_RESTAURANT:
+			return {};    
 	}
 
 	return state;
