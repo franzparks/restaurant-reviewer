@@ -2,14 +2,16 @@ import React from 'react';
 import { Link } from 'react-router';
 
 const RestaurantDetails = (props) =>{
-	console.log("data : "+Object.keys(props.restaurants));
+	console.log("data : "+Object.keys(props));
 
-	//console.log("single restaurant from app state : "+props.fetchRestaurant(props.params.id));
+	console.log("single restaurant from app state : "+props.fetchRestaurant(props.params.id));
 
-	var restaurant = props.restaurants.find((res) =>{
+	var restaurant1 = props.restaurants.find((res) =>{
 		
 		return res.props.id === props.params.id;
 	});
+
+	var restaurant = props.fetchRestaurant(props.params.id);
 
 	//to do: display reviews from rawData
 
