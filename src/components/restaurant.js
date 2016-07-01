@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 const Restaurant = (props) => {
 	console.log("raw data "+Object.keys(props.rawData));
-	var path = `restaurants/${props.name}`;
+	var path = `restaurants/${props.id}`;
 	
 	return(
 	    <div className="col-xs-6 col-lg-4">

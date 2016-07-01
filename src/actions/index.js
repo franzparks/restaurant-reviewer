@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 import {
-	FETCH_RESTAURANTS
+	FETCH_RESTAURANTS,
+	FETCH_RESTAURANT
 }from './types';
 
 export function fetchRestaurants() {
