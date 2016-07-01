@@ -3,14 +3,14 @@ import { Link } from 'react-router';
 
 const MenuItem = (props) =>{
 	return (
-		<a 
-			href="#"
+		<Link 
+			to="/"
 			name={props.name} 
 		    className={props.style}
 		    onClick={props.handleClick}
 		 	>
 		 	{props.label}
-		</a>
+		</Link>
 	);
 }
 
