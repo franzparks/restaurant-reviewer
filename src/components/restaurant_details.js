@@ -26,7 +26,7 @@ const RestaurantDetails = (props) =>{
 		        <Link to="/"> Back</Link>
 
 		    </div>
-	    <div>
+	    </div>
 	);
 
 }
