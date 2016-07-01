@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{Component} from 'react';
 import { Link } from 'react-router';
 
 const RestaurantDetails = (props) =>{
@@ -12,7 +12,7 @@ const RestaurantDetails = (props) =>{
 	//});
    props.fetchRestaurant(props.params.id);
 	//var restaurant = props.fetchRestaurant(props.params.id);
-	console.log("keys on restaurant  : "+Object.keys(restaurant.payload));
+	//console.log("keys on restaurant  : "+Object.keys(props.restaurant));
 
 	//to do: display reviews from rawData
 
