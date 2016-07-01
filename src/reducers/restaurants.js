@@ -3,18 +3,20 @@ import {
 	FETCH_RESTAURANT
 }from '../actions/types';
 
-var INITIAL_STATE = { restaurants : [] ,restaurant : null };
+const INITIAL_STATE = { restaurants : [] ,restaurant : null };
 
-export default function(state = [], action){
+export default function(state = INITIAL_STATE, action){
 	switch(action.type) {
 		case FETCH_RESTAURANTS:
 		    console.log(action.payload);
-		    return [ ...state, ...action.payload.data ];
-		    //return { ...INITIAL_STATE, INITIAL_STATE.restaurants.concat(action.payload.data)};
+		    //return [ ...state, ...action.payload.data ];
+		    return { ...state, restaurants: action.payload.data };
 
 		case FETCH_RESTAURANT:
-			return [{}];    
+			return [{}];
+		default: 
+			return INITIAL_STATE;	    
 	}
 
-	return state;
+	//return INITIAL_STATE;
 }
