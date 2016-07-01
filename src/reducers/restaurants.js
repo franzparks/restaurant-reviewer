@@ -12,7 +12,10 @@ export default function(state = INITIAL_STATE, action){
 		    return { ...state, restaurants: action.payload.data };
 
 		case FETCH_RESTAURANT:
-			return { ...state, restaurant : action.payload.data };
+			return { ...state, 
+				restaurant : state.restaurants.find( (restaurant) =>{
+					return restaurant.id === action.id;
+				}) };
 		default: 
 			return state;	    
 	}
