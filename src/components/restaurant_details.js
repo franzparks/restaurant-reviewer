@@ -6,7 +6,7 @@ const RestaurantDetails = (props) =>{
 	//console.log("data : "+props.restaurants[0]);
 	//var name = props.params.name;
 	var restaurant = props.restaurants.find((res) =>{
-		//console.log("name "+Object.keys(res.props));
+		console.log("name "+Object.keys(res.props));
 		return res.props.id === props.params.id;
 	});
 

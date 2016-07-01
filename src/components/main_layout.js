@@ -96,6 +96,7 @@ class MainLayout extends Component {
                 results.push(
                     <Restaurant 
                     key={restaurant.id}
+                    id={restaurant.id}
                     name={restaurant.name}
                     image={restaurant.image}
                     address={restaurant.address}
