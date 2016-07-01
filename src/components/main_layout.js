@@ -156,8 +156,8 @@ class MainLayout extends Component {
 }
 function mapStateToProps(state) {
 
-	console.log("app state : "+state);
+	console.log("app state : "+Object.keys(state));
 	
-	return { restaurants : state.restaurants };
+	return { restaurants : state.restaurants, restaurant: state.restaurant };
 }
 export default connect(mapStateToProps,actions)(MainLayout);
