@@ -155,6 +155,8 @@ class MainLayout extends Component {
 	}  	
 }
 function mapStateToProps(state) {
+
+	console.log("app state : "+state);
 	
 	return { restaurants : state.restaurants };
 }
