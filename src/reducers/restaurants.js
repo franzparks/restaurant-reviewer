@@ -9,7 +9,6 @@ export default function(state = INITIAL_STATE, action){
 	switch(action.type) {
 		case FETCH_RESTAURANTS:
 		    console.log(action.payload);
-		    //return [ ...state, ...action.payload.data ];
 		    return { ...state, restaurants: action.payload.data };
 
 		case FETCH_RESTAURANT:
@@ -17,6 +16,4 @@ export default function(state = INITIAL_STATE, action){
 		default: 
 			return state;	    
 	}
-
-	//return INITIAL_STATE;
 }
