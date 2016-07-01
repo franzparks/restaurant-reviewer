@@ -13,7 +13,7 @@ export default function(state = INITIAL_STATE, action){
 		    return { ...state, restaurants: action.payload.data };
 
 		case FETCH_RESTAURANT:
-			return [{}];
+			return { ...state, restaurant : action.payload.data };
 		default: 
 			return INITIAL_STATE;	    
 	}
