@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import { Link } from 'react-router';
 
-const RestaurantDetails = (props) =>{
+class RestaurantDetails  extends Component{
 	//console.log("data : "+Object.keys(props));
 
 	//console.log("single restaurant from app state : "+props.fetchRestaurant(props.params.id));
