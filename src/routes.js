@@ -10,7 +10,7 @@ import RestaurantDetails from './components/restaurant_details';
 export default (
   <Route path="/" component={MainLayout}>
     <IndexRoute component={RestaurantListWrapper} />
-    <Route  path="restaurants/:name" component={RestaurantDetails} />
+    <Route  path="restaurants/:id" component={RestaurantDetails} />
     <Route  path="reviews/new" />
 
   </Route>

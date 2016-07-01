@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 
 const Restaurant = (props) => {
-	console.log("raw data "+Object.keys(props.rawData));
+	//console.log("raw data "+Object.keys(props.id));
 	var path = `restaurants/${props.id}`;
 	
 	return(
