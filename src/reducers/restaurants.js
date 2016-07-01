@@ -15,7 +15,7 @@ export default function(state = INITIAL_STATE, action){
 		case FETCH_RESTAURANT:
 			return { ...state, restaurant : action.payload.data };
 		default: 
-			return INITIAL_STATE;	    
+			return state;	    
 	}
 
 	//return INITIAL_STATE;
