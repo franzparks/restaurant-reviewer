@@ -16,7 +16,7 @@ export function fetchRestaurants() {
 export function fetchRestaurant(id) {
 	return {
 		type: FETCH_RESTAURANT,
-		payload: id
+		index : id
 	};
 }
 

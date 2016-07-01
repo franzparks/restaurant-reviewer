@@ -12,7 +12,7 @@ const RestaurantDetails = (props) =>{
 	//});
 
 	var restaurant = props.fetchRestaurant(props.params.id);
-	console.log("keys on restaurant  : "+restaurant);
+	console.log("keys on restaurant  : "+Object.keys(restaurant.payload));
 
 	//to do: display reviews from rawData
 

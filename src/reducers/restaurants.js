@@ -14,7 +14,8 @@ export default function(state = INITIAL_STATE, action){
 		case FETCH_RESTAURANT:
 			return { ...state, 
 				restaurant : state.restaurants.find( (restaurant) =>{
-					return restaurant.id === action.payload.id;
+					console.log(" id : "+restaurant.id);
+					return restaurant.id === action.index.id;
 				}) };
 		default: 
 			return state;	    
