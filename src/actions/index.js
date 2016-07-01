@@ -13,6 +13,14 @@ export function fetchRestaurants() {
 	};
 }
 
+export function fetchRestaurant(id) {
+	//const request = axios.get('../../data/restaurants.json');
+	return {
+		type: FETCH_RESTAURANT,
+		payload: id
+	};
+}
+
 export function postReview() {
 	
 }
