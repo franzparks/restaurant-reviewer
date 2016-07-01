@@ -15,23 +15,26 @@ class RestaurantDetails  extends Component{
 	//console.log("keys on restaurant  : "+Object.keys(props.restaurant));
 
 	//to do: display reviews from rawData
+    render(){
+		return (
+			
+			<div>
+				<div className="col-xs-6 col-lg-4">
+					<button>Write A Review </button>
+				</div>
+				<div className="col-xs-6 col-lg-4">
+			        <h2>{restaurant.name}</h2>
+			        <p>{restaurant.image}</p>
+			        <p>Address: {restaurant.address}</p>
+			        <p>Type: {restaurant.cuisineType}</p>
+			        
+			        <Link to="/"> Back</Link>
 
-	return (
-		<div>
-			<div className="col-xs-6 col-lg-4">
-				<button>Write A Review </button>
-			</div>
-			<div className="col-xs-6 col-lg-4">
-		        <h2>{restaurant.name}</h2>
-		        <p>{restaurant.image}</p>
-		        <p>Address: {restaurant.address}</p>
-		        <p>Type: {restaurant.cuisineType}</p>
-		        
-		        <Link to="/"> Back</Link>
-
+			    </div>
 		    </div>
-	    </div>
-	);
+		  
+		);
+    }
 
 }
 export default RestaurantDetails;
