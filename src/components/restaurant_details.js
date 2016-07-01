@@ -10,8 +10,8 @@ const RestaurantDetails = (props) =>{
 		
 	//	return res.props.id === props.params.id;
 	//});
-
-	var restaurant = props.fetchRestaurant(props.params.id);
+   props.fetchRestaurant(props.params.id);
+	//var restaurant = props.fetchRestaurant(props.params.id);
 	console.log("keys on restaurant  : "+Object.keys(restaurant.payload));
 
 	//to do: display reviews from rawData

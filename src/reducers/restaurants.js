@@ -16,7 +16,9 @@ export default function(state = INITIAL_STATE, action){
 				restaurant : state.restaurants.find( (restaurant) =>{
 					console.log(" id : "+restaurant.id);
 					return restaurant.id === action.index.id;
-				}) };
+				}) 
+			};
+			
 		default: 
 			return state;	    
 	}
