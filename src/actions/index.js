@@ -22,7 +22,7 @@ export function fetchRestaurant(restaurant_id) {
 }
 
 export function postReview(props) {
-	const request = props; //{props.name, props.rating, props.comment, props.date}//
+	const request = props;
 	return {
 		type: POST_REVIEW,
 		review : request
