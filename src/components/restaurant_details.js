@@ -22,12 +22,12 @@ class RestaurantDetails  extends Component{
 
 	//to do: display reviews from rawData
     render(){
-    	
+    	var path = `${this.props.params.id}/reviews/new`
 		return (
 			
 			<div>
 				<div className="col-xs-6 col-lg-4">
-					<Link to="reviews/new" className="btn btn-default" >Write A Review </Link>
+					<Link to={path} className="btn btn-default" >Write A Review </Link>
 				</div>
 				<div className="col-xs-6 col-lg-4">
 			       
