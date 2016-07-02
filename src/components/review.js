@@ -5,6 +5,10 @@ import { Link } from 'react-router';
 
 class Review extends Component {
 
+	static contextTypes = {
+    	router: PropTypes.object
+    };
+
 	render(){
 	return (
     <div> Write a review </div>
