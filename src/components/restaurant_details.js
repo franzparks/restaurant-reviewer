@@ -3,7 +3,10 @@ import { Link } from 'react-router';
 
 class RestaurantDetails  extends Component{
 	//console.log("data : "+Object.keys(props));
-
+    constructor(props){
+    	super(props);
+    }
+    
 	componentWillMount(){
 		props.fetchRestaurant(props.params.id);
 	}
