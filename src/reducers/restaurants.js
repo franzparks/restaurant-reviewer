@@ -21,12 +21,12 @@ export default function(state = INITIAL_STATE, action){
 		    return { ...state, restaurants: action.payload.data };
 
         case POST_REVIEW:
-
+            
         	return { ...state,
 				    restaurants : state.restaurants.map( (res) =>{
 				    	if(res.id === action.review.id){
 				    		/* to do: increment review by id count */
-                         	return { ...res.reviews, action.review};
+                         	return { ...res.reviews, ...action.review};
 				    	}
 					    return res;
 				    }) 

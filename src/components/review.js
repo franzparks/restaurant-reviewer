@@ -75,6 +75,13 @@ function validate(values) {
   return errors;
 }
 
+function mapStateToProps(state) {
+	//console.log("app state : "+Object.keys(state.appState));
+	//console.log("restaurants : "+ state.appState.restaurants)
+	console.log("restaurant : "+ state.appState.restaurant)
+	return { id : state.appState.restaurant.id };
+}
+
 
 
 // connect: first argument is mapStateToProps, 2nd is mapDispatchToProps
