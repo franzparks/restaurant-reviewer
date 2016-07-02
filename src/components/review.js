@@ -80,6 +80,12 @@ function validate(values) {
   return errors;
 }
 
+function mapStateToProps(state) {
+	//console.log("app state : "+Object.keys(state.appState));
+	//console.log("restaurants : "+ state.appState.restaurants)
+	//console.log("restaurant : "+ state.appState.restaurant)
+	return { name, rating, comment, date };
+}
 
 // connect: first argument is mapStateToProps, 2nd is mapDispatchToProps
 // reduxForm: 1st is form config, 2nd is mapStateToProps, 3rd is mapDispatchToProps
@@ -87,7 +93,4 @@ export default reduxForm({
   form: 'ReviewsNewForm',
   fields: ['title', 'categories', 'content'],
   validate
-}, null, { postReview })(Review);
-
-
-//export default Review;
+}, mapStateToProps, { postReview })(Review);
