@@ -12,7 +12,7 @@ class Review extends Component {
     onSubmit(props) {
 
     	console.log(props);
-    this.props.postReview(props);
+    this.props.postReview({ ...props, id: this.props.id});
 	    //.then(() => {
 	        // review  has been created, navigate the user to the index
 	        // We navigate by calling this.context.router.push with the
@@ -23,6 +23,8 @@ class Review extends Component {
     }
 
 	render(){
+		console.log(Object.keys(this.props));
+		console.log(" id : "+this.props.id);
 		const { fields: { name, rating, comment }, handleSubmit } = this.props;
 	return (
 	    <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
@@ -88,6 +90,6 @@ function mapStateToProps(state) {
 // reduxForm: 1st is form config, 2nd is mapStateToProps, 3rd is mapDispatchToProps
 export default reduxForm({
   form: 'ReviewsNewForm',
-  fields: ['name', 'rating', 'comment', 'id'],
+  fields: ['name', 'rating', 'comment'],
   validate
 }, mapStateToProps, { postReview })(Review);
