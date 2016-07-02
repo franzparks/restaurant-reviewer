@@ -88,4 +88,4 @@ export default reduxForm({
   form: 'ReviewsNewForm',
   fields: ['name', 'rating', 'comment', 'date'],
   validate
-}, mapStateToProps, { postReview })(Review);
+}, null, { postReview })(Review);
