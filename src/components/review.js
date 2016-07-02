@@ -88,6 +88,6 @@ function mapStateToProps(state) {
 // reduxForm: 1st is form config, 2nd is mapStateToProps, 3rd is mapDispatchToProps
 export default reduxForm({
   form: 'ReviewsNewForm',
-  fields: ['name', 'rating', 'comment'],
+  fields: ['name', 'rating', 'comment', 'id'],
   validate
-}, null, { postReview })(Review);
+}, mapStateToProps, { postReview })(Review);
