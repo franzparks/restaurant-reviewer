@@ -3,7 +3,7 @@ import React from 'react';
 const Stars = (props) => {
 
 return (
-	<fieldset class="rating">
+	<fieldset className="rating">
 	    <legend>Please Rate:</legend>
 	    <input type="radio" id="star5" name="rating" value="5" /><label htmlFor="star5" title="Rocks!">5 stars</label>
 	    <input type="radio" id="star4" name="rating" value="4" /><label htmlFor="star4" title="Pretty good">4 stars</label>
