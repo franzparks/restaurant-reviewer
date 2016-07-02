@@ -20,6 +20,7 @@ class Review extends Component {
     }
 
 	render(){
+		const { fields: { name, rating, comment, date }, handleSubmit } = this.props;
 	return (
     <div> Write a review </div>
 	);
