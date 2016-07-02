@@ -20,23 +20,9 @@ class RestaurantDetails  extends Component{
 	}
 
 
-
-	//console.log("single restaurant from app state : "+props.fetchRestaurant(props.params.id));
-
-	//var restaurant1 = props.restaurants.find((res) =>{
-		
-	//	return res.props.id === props.params.id;
-	//});
-   
-	//var restaurant = props.fetchRestaurant(props.params.id);
-	//console.log("keys on restaurant  : "+Object.keys(props.restaurant));
-
 	//to do: display reviews from rawData
     render(){
-    	//console.log("props : "+ Object.keys(this.props));
-    	//var restaurant = {name:"", image:"",address:"",cuisineType:""};
-    	//restaurant = this.props.restaurant;
-    	//console.log(rest);
+    	
 		return (
 			
 			<div>
