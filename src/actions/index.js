@@ -2,7 +2,8 @@ import axios from 'axios';
 
 import {
 	FETCH_RESTAURANTS,
-	FETCH_RESTAURANT
+	FETCH_RESTAURANT,
+	POST_REVIEW
 }from './types';
 
 export function fetchRestaurants() {
@@ -20,6 +21,10 @@ export function fetchRestaurant(restaurant_id) {
 	};
 }
 
-export function postReview() {
+export function postReview(props) {
+	return {
+		type: POST_REVIEW,
+		review : {props.name, props.rating, props.comment, props.date}
+	}
 	
 }
