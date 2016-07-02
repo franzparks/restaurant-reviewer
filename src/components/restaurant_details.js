@@ -23,6 +23,7 @@ class RestaurantDetails  extends Component{
 
 	//to do: display reviews from rawData
     render(){
+    	console.log("props : "+ Object.keys(this.props));
 		return (
 			
 			<div>

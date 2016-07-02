@@ -143,8 +143,8 @@ class MainLayout extends Component {
                             <div>{React.cloneElement(this.props.children,
 	                            { 
 		                            restaurants: results, 
-		                            fetchRestaurant : this.props.fetchRestaurant,
-		                            restaurant : this.props.restaurant
+		                            fetchRestaurant : this.props.fetchRestaurant
+		                  
 	                            } 
                              )}
                             </div>
@@ -165,6 +165,6 @@ function mapStateToProps(state) {
 	//console.log("app state : "+Object.keys(state));
 	//console.log("restaurants : "+ state.appState.restaurants)
 	//console.log("restaurant : "+ state.appState.restaurant)
-	return { restaurants : state.appState.restaurants, restaurant: state.appState.restaurant };
+	return { restaurants : state.appState.restaurants };
 }
 export default connect(mapStateToProps,actions)(MainLayout);
