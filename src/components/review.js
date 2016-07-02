@@ -87,7 +87,7 @@ export default reduxForm({
   form: 'ReviewsNewForm',
   fields: ['title', 'categories', 'content'],
   validate
-}, null, { createPost })(Review);
+}, null, { postReview })(Review);
 
 
 //export default Review;
