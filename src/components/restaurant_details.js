@@ -15,6 +15,10 @@ class RestaurantDetails  extends Component{
 		this.props.fetchRestaurant(this.props.params.id);
 	}
 
+	componentDidMount(){
+		this.setState({ restaurant: this.props.restaurant });
+	}
+
 
 
 	//console.log("single restaurant from app state : "+props.fetchRestaurant(props.params.id));
