@@ -13,10 +13,10 @@ export function fetchRestaurants() {
 	};
 }
 
-export function fetchRestaurant(id) {
+export function fetchRestaurant(restaurant_id) {
 	return {
 		type: FETCH_RESTAURANT,
-		index : id
+		restaurant_id : restaurant_id
 	};
 }
 

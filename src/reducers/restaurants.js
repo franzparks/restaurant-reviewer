@@ -12,13 +12,14 @@ export default function(state = INITIAL_STATE, action){
 		    return { ...state, restaurants: action.payload.data };
 
 		case FETCH_RESTAURANT:
+		   console.log("action :"+action.restaurant_id);
 			return { ...state, 
 				restaurant : state.restaurants.find( (restaurant) =>{
-					console.log(" id : "+restaurant.id);
-					return restaurant.id === action.index.id;
+					//console.log(" id : "+restaurant.id);
+					return restaurant.id === action.restaurant_id;
 				}) 
 			};
-			
+
 		default: 
 			return state;	    
 	}
