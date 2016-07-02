@@ -64,4 +64,24 @@ class Review extends Component {
     }
 }
 
+function validate(values) {
+  const errors = {};
+
+  if (!values.name) {
+    errors.name = 'Enter a reviewer\'s name';
+  }
+  if (!values.rating) {
+    errors.rating = 'Enter a rating';
+  }
+  if(!values.comment) {
+    errors.comment = 'Enter a review';
+  }
+
+  return errors;
+}
+
+
+
+
+
 export default Review;
