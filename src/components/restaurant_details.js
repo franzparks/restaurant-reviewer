@@ -8,11 +8,14 @@ class RestaurantDetails  extends Component{
 	//console.log("data : "+Object.keys(props));
     constructor(props){
     	super(props);
+    	this.state ={restaurant : {}}
     }
 
 	componentWillMount(){
 		this.props.fetchRestaurant(this.props.params.id);
 	}
+
+
 
 	//console.log("single restaurant from app state : "+props.fetchRestaurant(props.params.id));
 
@@ -27,8 +30,8 @@ class RestaurantDetails  extends Component{
 	//to do: display reviews from rawData
     render(){
     	console.log("props : "+ Object.keys(this.props));
-    	var restaurant = {};
-    	restaurant = this.props.restaurant;
+    	var restaurant = {name:"", image:"",address:"",cuisineType:""};
+    	//restaurant = this.props.restaurant;
     	//console.log(rest);
 		return (
 			
