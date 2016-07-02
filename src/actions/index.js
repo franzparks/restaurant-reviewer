@@ -6,6 +6,8 @@ import {
 	POST_REVIEW
 }from './types';
 
+let nextReviewID = 0
+
 export function fetchRestaurants() {
 	const request = axios.get('../../data/restaurants.json');
 	return {
@@ -25,6 +27,7 @@ export function postReview(props) {
 	const request = props;
 	return {
 		type: POST_REVIEW,
+		rev_id : nextReviewID++,
 		review : request
 	}
 	
