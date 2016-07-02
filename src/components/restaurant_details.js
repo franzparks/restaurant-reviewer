@@ -6,9 +6,9 @@ class RestaurantDetails  extends Component{
     constructor(props){
     	super(props);
     }
-    
+
 	componentWillMount(){
-		props.fetchRestaurant(props.params.id);
+		this.props.fetchRestaurant(props.params.id);
 	}
 
 	//console.log("single restaurant from app state : "+props.fetchRestaurant(props.params.id));
