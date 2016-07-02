@@ -29,8 +29,8 @@ class RestaurantDetails  extends Component{
 
 	//to do: display reviews from rawData
     render(){
-    	console.log("props : "+ Object.keys(this.props));
-    	var restaurant = {name:"", image:"",address:"",cuisineType:""};
+    	//console.log("props : "+ Object.keys(this.props));
+    	//var restaurant = {name:"", image:"",address:"",cuisineType:""};
     	//restaurant = this.props.restaurant;
     	//console.log(rest);
 		return (
@@ -41,10 +41,10 @@ class RestaurantDetails  extends Component{
 				</div>
 				<div className="col-xs-6 col-lg-4">
 			       
-                    <h2>{restaurant.name}</h2>
-			        <p>{restaurant.image}</p>
-			        <p>Address: {restaurant.address}</p>
-			        <p>Type: {restaurant.cuisineType}</p>
+                    <h2>{this.state.restaurant.name}</h2>
+			        <p>{this.state.restaurant.image}</p>
+			        <p>Address: {this.state.restaurant.address}</p>
+			        <p>Type: {this.state.restaurant.cuisineType}</p>
 			        <Link to="/"> Back</Link>
 
 			    </div>
