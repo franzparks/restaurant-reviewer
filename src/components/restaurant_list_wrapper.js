@@ -13,7 +13,7 @@
  	return (
  		<div>
  		
- 		<RestaurantList restaurants={this.props.restaurants} />
+ 		<RestaurantList restaurants={this.props.restaurant_components} />
  	
  		</div>
  	);
