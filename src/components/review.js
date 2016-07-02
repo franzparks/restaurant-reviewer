@@ -11,8 +11,7 @@ class Review extends Component {
 
     onSubmit(props) {
 
-    	console.log(props);
-    this.props.postReview({ ...props, id: this.props.id});
+    this.props.postReview({ ...props, id: this.props.id, date: Date.now() });
 	    //.then(() => {
 	        // review  has been created, navigate the user to the index
 	        // We navigate by calling this.context.router.push with the
@@ -23,8 +22,8 @@ class Review extends Component {
     }
 
 	render(){
-		console.log(Object.keys(this.props));
-		console.log(" id : "+this.props.id);
+		//console.log(Object.keys(this.props));
+		//console.log(" id : "+this.props.id);
 		const { fields: { name, rating, comment }, handleSubmit } = this.props;
 	return (
 	    <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
