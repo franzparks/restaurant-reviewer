@@ -2,7 +2,7 @@ import React from 'react';
 
 const Review = (props) => {
 	return (
-    <div> Write a revew </div>
+    <div> Write a review </div>
 	);
 }
 
