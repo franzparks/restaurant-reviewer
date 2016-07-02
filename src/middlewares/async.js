@@ -3,7 +3,7 @@ export default function({ dispatch }) {
     // If action does not have payload
     // or, the payload does not have a .then property
     // we dont care about it, send it on
-    if (!action.payload || !action.payload.then) {
+    if (!action.payload || !action.payload.then || action.restaurant_id) {
       return next(action);
     }
 
@@ -11,7 +11,7 @@ export default function({ dispatch }) {
     action.payload
       .then(function(response) {
         // create a new action with the old type, but
-        // replace the promise with the reponse data
+        // replace the promise with the response data
         const newAction = { ...action, payload: response };
         dispatch(newAction);
       });

@@ -3,7 +3,7 @@ import {
 	FETCH_RESTAURANT
 }from '../actions/types';
 
-const INITIAL_STATE = { restaurants : [] ,restaurant : null };
+const INITIAL_STATE = { restaurants : [] ,restaurant : {} };
 
 export default function(state = INITIAL_STATE, action){
 	switch(action.type) {
@@ -14,7 +14,7 @@ export default function(state = INITIAL_STATE, action){
 					return res.id === action.restaurant_id;
 				}) 
 			};
-			
+
 		case FETCH_RESTAURANTS:
 		    return { ...state, restaurants: action.payload.data };
 	
