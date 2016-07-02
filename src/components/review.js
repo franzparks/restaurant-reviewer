@@ -10,17 +10,20 @@ class Review extends Component {
     };
 
     onSubmit(props) {
-    this.props.postReview(props)
-	    .then(() => {
+
+    	console.log(props);
+    this.props.postReview(props);
+	    //.then(() => {
 	        // review  has been created, navigate the user to the index
 	        // We navigate by calling this.context.router.push with the
 	        // new path to navigate to.
-	        this.context.router.push('/');
-	    });
+	      //  this.context.router.push('/');
+	    //});
+	    this.context.router.push('/');
     }
 
 	render(){
-		const { fields: { name, rating, comment, date }, handleSubmit } = this.props;
+		const { fields: { name, rating, comment }, handleSubmit } = this.props;
 	return (
 	    <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
 	        <h3>Write a Review</h3>
@@ -46,14 +49,6 @@ class Review extends Component {
 	          <textarea className="form-control" {...comment} />
 	          <div className="text-help">
 	            {comment.touched ? comment.error : ''}
-	          </div>
-	        </div>
-
-	        <div className={`form-group ${date.touched && date.invalid ? 'has-danger' : ''}`}>
-	          <label>Date</label>
-	          <textarea className="form-control" {...date} />
-	          <div className="text-help">
-	            {date.touched ? date.error : ''}
 	          </div>
 	        </div>
 
@@ -86,6 +81,6 @@ function validate(values) {
 // reduxForm: 1st is form config, 2nd is mapStateToProps, 3rd is mapDispatchToProps
 export default reduxForm({
   form: 'ReviewsNewForm',
-  fields: ['name', 'rating', 'comment', 'date'],
+  fields: ['name', 'rating', 'comment'],
   validate
 }, null, { postReview })(Review);
