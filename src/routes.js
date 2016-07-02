@@ -12,7 +12,7 @@ export default (
   <Route path="/" component={MainLayout}>
     <IndexRoute component={RestaurantList} />
     <Route  path="restaurants/:id" component={RestaurantDetails} />
-    <Route  path="reviews/new" component={Review}/>
+    <Route  path="restaurants/:id/reviews/new" component={Review}/>
 
   </Route>
 );
