@@ -41,6 +41,7 @@ class Review extends Component {
 	        <div className={`form-group ${rating.touched && rating.invalid ? 'has-danger' : ''}`}>
 	          <label>Rating</label>
 	          <input type="text" className="form-control" {...rating} />
+	          <Stars />
 	          <div className="text-help">
 	            {rating.touched ? rating.error : ''}
 	          </div>
