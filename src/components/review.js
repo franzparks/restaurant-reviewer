@@ -30,20 +30,20 @@ class Review extends Component {
 	    <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
 	        <h3>Write a Review</h3>
 
+	        <div className={`form-group ${rating.touched && rating.invalid ? 'has-danger' : ''}`}>
+	         {/* <label>Rating</label>
+	          <input type="text" className="form-control" {...rating} />
+	          <div className="text-help">
+	            {rating.touched ? rating.error : ''}
+	          </div>*/}
+	          <Stars />
+	        </div>
+
 	        <div className={`form-group ${name.touched && name.invalid ? 'has-danger' : ''}`}>
 	          <label>Name</label>
 	          <input type="text" className="form-control" {...name} />
 	          <div className="text-help">
 	            {name.touched ? name.error : ''}
-	          </div>
-	        </div>
-
-	        <div className={`form-group ${rating.touched && rating.invalid ? 'has-danger' : ''}`}>
-	          <label>Rating</label>
-	          <input type="text" className="form-control" {...rating} />
-	          <Stars />
-	          <div className="text-help">
-	            {rating.touched ? rating.error : ''}
 	          </div>
 	        </div>
 
