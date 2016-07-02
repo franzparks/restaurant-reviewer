@@ -26,7 +26,10 @@ class RestaurantDetails  extends Component{
 
 	//to do: display reviews from rawData
     render(){
-    	//console.log("props : "+ Object.keys(this.props.restaurant));
+    	console.log("props : "+ Object.keys(this.props));
+    	var restaurant = {};
+    	restaurant = this.props.restaurant;
+    	//console.log(rest);
 		return (
 			
 			<div>
@@ -34,15 +37,11 @@ class RestaurantDetails  extends Component{
 					<button>Write A Review </button>
 				</div>
 				<div className="col-xs-6 col-lg-4">
-			        {
-			        	/*
-                        <h2>{this.props.restaurant.name}</h2>
-			        <p>{this.props.restaurant.image}</p>
-			        <p>Address: {this.props.restaurant.address}</p>
-			        <p>Type: {this.props.restaurant.cuisineType}</p>
-			        	*/
-			        }
-			        
+			       
+                    <h2>{restaurant.name}</h2>
+			        <p>{restaurant.image}</p>
+			        <p>Address: {restaurant.address}</p>
+			        <p>Type: {restaurant.cuisineType}</p>
 			        <Link to="/"> Back</Link>
 
 			    </div>
@@ -54,9 +53,9 @@ class RestaurantDetails  extends Component{
 }
 
 function mapStateToProps(state) {
-	console.log("app state : "+Object.keys(state.appState));
+	//console.log("app state : "+Object.keys(state.appState));
 	//console.log("restaurants : "+ state.appState.restaurants)
-	console.log("restaurant : "+ state.appState.restaurant)
+	//console.log("restaurant : "+ state.appState.restaurant)
 	return { restaurant : state.appState.restaurant };
 }
 export default connect(mapStateToProps,actions)(RestaurantDetails);
