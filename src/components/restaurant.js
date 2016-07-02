@@ -12,7 +12,7 @@ const Restaurant = (props) => {
 	        <p>{props.image}</p>
 	        <p>Address: {props.address}</p>
 	        <p>Type: {props.cuisineType}</p>
-	        <Link to={path} className="btn btn-default" }> View details &raquo;</Link>
+	        <Link to={path} className="btn btn-default"> View details &raquo;</Link>
         
 
 	    </div>
