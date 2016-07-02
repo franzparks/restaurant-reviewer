@@ -27,7 +27,7 @@ class RestaurantDetails  extends Component{
 			
 			<div>
 				<div className="col-xs-6 col-lg-4">
-					<button>Write A Review </button>
+					<Link to="restaurant/review" className="btn btn-primary">Write A Review </Link>
 				</div>
 				<div className="col-xs-6 col-lg-4">
 			       
