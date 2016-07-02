@@ -16,7 +16,7 @@ export default function(state = INITIAL_STATE, action){
 			};
 
 		case FETCH_RESTAURANTS:
-		    console.log("called...");
+		   
 		    return { ...state, restaurants: action.payload.data };
 	
 
