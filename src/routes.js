@@ -5,6 +5,7 @@ import App from './components/app';
 import MainLayout from './components/main_layout';
 import RestaurantList from './components/restaurant_list';
 import RestaurantDetails from './components/restaurant_details';
+import Review from './components/review';
 
 
 export default (
