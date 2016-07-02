@@ -22,7 +22,44 @@ class Review extends Component {
 	render(){
 		const { fields: { name, rating, comment, date }, handleSubmit } = this.props;
 	return (
-    <div> Write a review </div>
+	    <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
+	        <h3>Write a Review</h3>
+
+	        <div className={`form-group ${name.touched && name.invalid ? 'has-danger' : ''}`}>
+	          <label>Name</label>
+	          <input type="text" className="form-control" {...name} />
+	          <div className="text-help">
+	            {name.touched ? name.error : ''}
+	          </div>
+	        </div>
+
+	        <div className={`form-group ${rating.touched && rating.invalid ? 'has-danger' : ''}`}>
+	          <label>Rating</label>
+	          <input type="text" className="form-control" {...rating} />
+	          <div className="text-help">
+	            {rating.touched ? rating.error : ''}
+	          </div>
+	        </div>
+
+	        <div className={`form-group ${comment.touched && comment.invalid ? 'has-danger' : ''}`}>
+	          <label>Comment</label>
+	          <textarea className="form-control" {...comment} />
+	          <div className="text-help">
+	            {comment.touched ? comment.error : ''}
+	          </div>
+	        </div>
+
+	        <div className={`form-group ${date.touched && date.invalid ? 'has-danger' : ''}`}>
+	          <label>Date</label>
+	          <textarea className="form-control" {...date} />
+	          <div className="text-help">
+	            {date.touched ? date.error : ''}
+	          </div>
+	        </div>
+
+	        <button type="submit" className="btn btn-primary">Submit</button>
+	        <Link to="/" className="btn btn-danger">Cancel</Link>
+	    </form>
 	);
     }
 }
