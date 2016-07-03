@@ -11,8 +11,8 @@ class Review extends Component {
     };
 
     onSubmit(props) {
-
-    this.props.postReview({ ...props, id: this.props.id, date: Date.now() });
+    
+    this.props.postReview({ ...props, id: this.props.id, date: Date.now(), rating : this.getRating().bind(this) });
 	    //.then(() => {
 	        // review  has been created, navigate the user to the index
 	        // We navigate by calling this.context.router.push with the
@@ -20,6 +20,10 @@ class Review extends Component {
 	      //  this.context.router.push('/');
 	    //});
 	    this.context.router.push('/');
+    }
+
+    getRating (e){
+      return e.target.value;
     }
 
 	render(){
@@ -34,7 +38,7 @@ class Review extends Component {
 	        <h3>Write a Review</h3>
           
            <div className="form-group">
-           <Stars />
+           <Stars onClick={this.getRating}/>
            </div>
           <br />
            <hr />
