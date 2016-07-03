@@ -46,7 +46,7 @@
    overflow:hidden;  
    white-space:nowrap; 
    cursor:pointer; 
-   font-size:180%;  
+   font-size:150%;  
    line-height:1.2;  
    }
  
@@ -66,7 +66,7 @@
  .rating > input:checked ~ label:hover,
  .rating > input:checked ~ label:hover ~ label,
  .rating > label:hover ~ input:checked ~ label {  
-   color: #ea0;    text-shadow: 1px 1px goldenrod, 1px 1px #B57340, .1em .1em .1em rgba(0,0,0,.5);
+   color: #ea0;    text-shadow: 1px 1px goldenrod, 2px 2px #B57340, .1em .1em .1em rgba(0,0,0,.5);
    width:1.1em;
   }
    
