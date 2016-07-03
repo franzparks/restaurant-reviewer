@@ -2,13 +2,13 @@
   unicode-bidi: bidi-override;
   direction: rtl;
   text-align: left;
-  font-size:200%;
+  font-size:250%;
 }
 .rating > span {
   display: inline-block;
   position: relative;
-  width: 2.1em;
-  height: 2.1em;
+  width: 1.2em;
+  height: 1.2em;
 }
 .rating > span:hover,
 .rating > span:hover ~ span {
