@@ -12,20 +12,21 @@ class Review extends Component {
 
     onSubmit(props) {
     
-    this.props.postReview({ ...props, id: this.props.id, date: Date.now(), rating : this.getRating().bind(this) });
+    this.props.postReview({ ...props, id: this.props.id, date: Date.now(), rating : this.getRating });
 	    //.then(() => {
 	        // review  has been created, navigate the user to the index
 	        // We navigate by calling this.context.router.push with the
 	        // new path to navigate to.
 	      //  this.context.router.push('/');
 	    //});
+
+
 	    this.context.router.push('/');
     }
 
     getRating (e){
-
-       console.log("rating :"+e.target.value);	
-      return e.target.value;
+    	console.log("rating :"+e.target.value);	
+    	return e.target.value;
     }
 
 	render(){
@@ -40,7 +41,7 @@ class Review extends Component {
 	        <h3>Write a Review</h3>
           
            <div className="form-group">
-           <Stars onClick={this.getRating}/>
+           <Stars onClick={this.getRating.bind(this)}/>
            </div>
           <br />
            <hr />
@@ -75,9 +76,7 @@ function validate(values) {
   if (!values.name) {
     errors.name = 'Enter a reviewer\'s name';
   }
-  if (!values.rating) {
-    errors.rating = 'Enter a rating';
-  }
+  
   if(!values.comment) {
     errors.comment = 'Enter a review';
   }
