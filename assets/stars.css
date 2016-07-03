@@ -4,12 +4,6 @@ $filled-star-color: #EF005B;
 $empty-star-color: #F9C8D3;
 $star-size: 17px;
 
-html {
-  height: 100%;
-}
-body {
-  text-align: center;
-}
 
 .rating {
     direction: rtl;

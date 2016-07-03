@@ -4,14 +4,17 @@ const Stars = (props) => {
 
 return (
 	
-	<fieldset className="rating">
-    <legend>Please rate:</legend>
-    <input type="radio" id="star5" name="rating" value="5" /><label htmlFor="star5" title="Rocks!">5 stars</label>
-    <input type="radio" id="star4" name="rating" value="4" /><label htmlFor="star4" title="Pretty good">4 stars</label>
-    <input type="radio" id="star3" name="rating" value="3" /><label htmlFor="star3" title="Meh">3 stars</label>
-    <input type="radio" id="star2" name="rating" value="2" /><label htmlFor="star2" title="Kinda bad">2 stars</label>
-    <input type="radio" id="star1" name="rating" value="1" /><label htmlFor="star1" title="Sucks big time">1 star</label>
-</fieldset>
+	<div>
+	<h1 style="margin: 0">Hover Me</h1>
+
+	<span className="rating">
+  <span className="star" title="5 - I love it"></span>
+  <span className="star" title="4 - I really like it"></span>
+  <span className="star" title="3 - I like it"></span>
+  <span className="star" title="2 - It&#39;s ok"></span>
+  <span className="star" title="1 - Not for me"></span>
+</span>
+	</div>
 	
 );
 
