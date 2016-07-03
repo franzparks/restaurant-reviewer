@@ -1,60 +1,73 @@
+@import "compass/css3";
+
+$filled-star-color: #EF005B;
+$empty-star-color: #F9C8D3;
+$star-size: 17px;
+
+html {
+  height: 100%;
+}
+body {
+  text-align: center;
+}
+
 .rating {
-    float:left;
+    direction: rtl;
+    font-size: $star-size;
+    unicode-bidi: bidi-override;
+    position: relative;
+    span.star {
+        display: inline-block;
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        &:hover {
+            cursor: pointer;
+        }
+        &:before {
+            color: $empty-star-color;
+            content: "\f006";
+        }
+        &:hover:before, 
+        &:hover ~ span.star:before {
+            color: $filled-star-color;
+            content: "\f005";
+        }
+        &:hover:after {
+            direction: ltr;
+            content: attr(title);
+            position: absolute;
+            left: 0;
+            bottom: -22px;
+            white-space: nowrap;
+            font: normal 14px/normal Arial, Helvetica, sans-serif;
+        }
+    }
+}
+.ratings {
+    width: 5*$star-size;
+    height: $star-size;
+    display: inline-block;
+    position: relative;
+    &:before,
+    &:after{
+      display: inline-block;
+      font-family: FontAwesome;
+      font-style: normal;
+      font-weight: normal;
+      font-size: $star-size;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &:before {
+      color: $empty-star-color;
+      content: "\f006\f006\f006\f006\f006";
+    }
+    &:after {
+      color: $filled-star-color;
+      content: "\f005\f005\f005\f005\f005";
+      overflow: hidden;
+    }
 }
 
-
-/* :not(:checked) is a filter, so that browsers that don’t support :checked don’t 
-   follow these rules. Every browser that supports :checked also supports :not(), so
-   it doesn’t make the test unnecessarily selective */
-.rating:not(:checked) > input {
-clip: rect(0px, 0px, 0px, 0px);
-height: 1px;
-margin: -1px;
-overflow: hidden;
-padding: 0;
-position: absolute;
-width: 1px;
-}
-
-.rating:not(:checked) > label {
-    float:right;
-    width:1em;
-    padding:0 .1em;
-    overflow:hidden;
-    white-space:nowrap;
-    cursor:pointer;
-    font-size:200%;
-    line-height:1.2;
-    color:#ddd;
-    text-shadow:1px 1px #bbb, 2px 2px #666, .1em .1em .2em rgba(0,0,0,.5);
-}
-
-.rating:not(:checked) > label:before {
-    content: '★ ';
-}
-
-.rating > input:checked ~ label {
-    color: #f70;
-    text-shadow:1px 1px #c60, 2px 2px #940, .1em .1em .2em rgba(0,0,0,.5);
-}
-
-.rating:not(:checked) > label:hover,
-.rating:not(:checked) > label:hover ~ label {
-    color: gold;
-    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
-}
-
-.rating > input:checked + label:hover,
-.rating > input:checked + label:hover ~ label,
-.rating > input:checked ~ label:hover,
-.rating > input:checked ~ label:hover ~ label,
-.rating > label:hover ~ input:checked ~ label {
-    color: #ea0;
-    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
-}
-
-.rating > label:active {
-    position:relative;
-    top:2px;
-    left:2px;
-}
