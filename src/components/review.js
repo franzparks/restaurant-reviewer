@@ -15,6 +15,9 @@ class Review extends Component {
         this.state = {
          rating : 0
         }
+
+        this.onSubmit = this.onSubmit.bind(this);
+        this.getRating = this.getRating.bind(this);
     }
 
     onSubmit(props) {
