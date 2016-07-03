@@ -1,72 +1,59 @@
-@import "compass/css3";
-
-$filled-star-color: #EF005B;
-$empty-star-color: #F9C8D3;
-$star-size: 17px;
-
-html {
-  height: 100%;
+/*
+ * Style tweaks
+ * --------------------------------------------------
+ */
+html, 
+body {
+  overflow-x: hidden; /* Prevent scroll on narrow devices */
 }
 body {
-  text-align: center;
+  padding-top: 70px;
+}
+footer {
+  padding: 30px 0;
 }
 
-.rating {
-    direction: rtl;
-    font-size: $star-size;
-    unicode-bidi: bidi-override;
+/*
+ * Off Canvas
+ * --------------------------------------------------
+ */
+@media screen and (max-width: 767px) {
+  .row-offcanvas {
     position: relative;
-    span.star {
-        display: inline-block;
-        font-family: FontAwesome;
-        font-style: normal;
-        font-weight: normal;
-        &:hover {
-            cursor: pointer;
-        }
-        &:before {
-            color: $empty-star-color;
-            content: "\f006";
-        }
-        &:hover:before, 
-        &:hover ~ span.star:before {
-            color: $filled-star-color;
-            content: "\f005";
-        }
-        &:hover:after {
-            direction: ltr;
-            content: attr(title);
-            position: absolute;
-            left: 0;
-            bottom: -22px;
-            white-space: nowrap;
-            font: normal 14px/normal Arial, Helvetica, sans-serif;
-        }
-    }
-}
-.ratings {
-    width: 5*$star-size;
-    height: $star-size;
-    display: inline-block;
-    position: relative;
-    &:before,
-    &:after{
-      display: inline-block;
-      font-family: FontAwesome;
-      font-style: normal;
-      font-weight: normal;
-      font-size: $star-size;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-    &:before {
-      color: $empty-star-color;
-      content: "\f006\f006\f006\f006\f006";
-    }
-    &:after {
-      color: $filled-star-color;
-      content: "\f005\f005\f005\f005\f005";
-      overflow: hidden;
-    }
+    -webkit-transition: all .25s ease-out;
+         -o-transition: all .25s ease-out;
+            transition: all .25s ease-out;
+  }
+
+  .row-offcanvas-right {
+    right: 0;
+  }
+
+  .row-offcanvas-left {
+    left: 0;
+  }
+
+  .row-offcanvas-right
+  .sidebar-offcanvas {
+    right: -50%; /* 6 columns */
+  }
+
+  .row-offcanvas-left
+  .sidebar-offcanvas {
+    left: -50%; /* 6 columns */
+  }
+
+  .row-offcanvas-right.active {
+    right: 50%; /* 6 columns */
+  }
+
+  .row-offcanvas-left.active {
+    left: 50%; /* 6 columns */
+  }
+
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+    width: 50%; /* 6 columns */
+  }
 }
