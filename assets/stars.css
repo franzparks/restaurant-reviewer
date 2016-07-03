@@ -1,9 +1,29 @@
+/*
+  Ratings Stars
+  (with as little code as possible)
+*/
 .rating {
   unicode-bidi: bidi-override;
   direction: rtl;
   text-align: center;
-  font-size:200%;
+  font-size:150%;
   float: left;
+}
+.rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+}
+.rating > span:hover,
+.rating > span:hover ~ span {
+  color: transparent;
+}
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+   content: "\2605";
+   position: absolute;
+   left: 0; 
+   color: gold;
 }
 
 .rating:not(:checked) > label:before { 
@@ -16,27 +36,29 @@
    overflow: hidden;  
    padding: 0;  
    position: absolute;  
-   width: 1px;
+   width: 1.1em;
   }
 
 .rating:not(:checked) > label { 
    float:right; 
-   width:.8em;  
+   width:1.1em;  
    padding:0 .1em;   
    overflow:hidden;  
    white-space:nowrap; 
    cursor:pointer; 
-   font-size:200%;  
+   font-size:150%;  
    line-height:1.2;  
    }
  
  .rating > input:checked ~ label {   
-   color: #f70;     
+   color: #f70; 
+   width:1.1em;    
 }
 
 .rating:not(:checked) > label:hover,
 .rating:not(:checked) > label:hover ~ label { 
   color: gold;
+  width:1.1em;
  }
  
  .rating > input:checked + label:hover,
@@ -44,14 +66,13 @@
  .rating > input:checked ~ label:hover,
  .rating > input:checked ~ label:hover ~ label,
  .rating > label:hover ~ input:checked ~ label {  
-   color: #ea0;    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .1em rgba(0,0,0,.5);
+   color: #ea0;    text-shadow: 1px 1px goldenrod, 1px 1px 1px 1px #B57340, .1em .1em .1em rgba(0,0,0,.5);
+   width:1.1em;
   }
    
  .rating > label:active { 
     position:relative;   
     top:2px; 
     left:2px;
+    width:1.1em;
   }
-
-
-
