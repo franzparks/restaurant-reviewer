@@ -1,67 +1,14 @@
-@import "compass/css3";
-
-$filled-star-color: #EF005B;
-$empty-star-color: #F9C8D3;
-$star-size: 17px;
-
-
 .rating {
-    direction: rtl;
-    font-size: $star-size;
-    unicode-bidi: bidi-override;
-    position: relative;
-    span.star {
-        display: inline-block;
-        font-family: FontAwesome;
-        font-style: normal;
-        font-weight: normal;
-        &:hover {
-            cursor: pointer;
-        }
-        &:before {
-            color: $empty-star-color;
-            content: "\f006";
-        }
-        &:hover:before, 
-        &:hover ~ span.star:before {
-            color: $filled-star-color;
-            content: "\f005";
-        }
-        &:hover:after {
-            direction: ltr;
-            content: attr(title);
-            position: absolute;
-            left: 0;
-            bottom: -22px;
-            white-space: nowrap;
-            font: normal 14px/normal Arial, Helvetica, sans-serif;
-        }
-    }
+  unicode-bidi: bidi-override;
+  direction: rtl;
 }
-.ratings {
-    width: 5*$star-size;
-    height: $star-size;
-    display: inline-block;
-    position: relative;
-    &:before,
-    &:after{
-      display: inline-block;
-      font-family: FontAwesome;
-      font-style: normal;
-      font-weight: normal;
-      font-size: $star-size;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-    &:before {
-      color: $empty-star-color;
-      content: "\f006\f006\f006\f006\f006";
-    }
-    &:after {
-      color: $filled-star-color;
-      content: "\f005\f005\f005\f005\f005";
-      overflow: hidden;
-    }
+.rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
 }
-
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+   content: "\2605";
+   position: absolute;
+}
