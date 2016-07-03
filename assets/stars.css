@@ -1,11 +1,13 @@
 .rating {
   unicode-bidi: bidi-override;
   direction: rtl;
+  float: left;
 }
 .rating > span {
   display: inline-block;
   position: relative;
-  width: 1.1em;
+  width: 2.1em;
+  height: 2.1em;
 }
 .rating > span:hover:before,
 .rating > span:hover ~ span:before {
