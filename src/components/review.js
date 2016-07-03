@@ -10,9 +10,16 @@ class Review extends Component {
     	router: PropTypes.object
     };
 
+    constructor(props){
+    	super(props);
+        this.state = {
+         rating : 0
+        }
+    }
+
     onSubmit(props) {
     
-    this.props.postReview({ ...props, id: this.props.id, date: Date.now(), rating : this.getRating });
+    this.props.postReview({ ...props, id: this.props.id, date: Date.now(), rating : this.state.rating });
 	    //.then(() => {
 	        // review  has been created, navigate the user to the index
 	        // We navigate by calling this.context.router.push with the
