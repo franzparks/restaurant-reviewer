@@ -36,7 +36,7 @@ class Review extends Component {
 
     getRating (e){
     	console.log("rating :"+e.target.value);	
-    	this.setSate( {rating: e.target.value});
+    	this.setState( {rating: e.target.value});
     }
 
 	render(){
@@ -51,7 +51,7 @@ class Review extends Component {
 	        <h3>Write a Review</h3>
           
            <div className="form-group">
-           <Stars onClick={this.getRating.bind(this)}/>
+           <Stars onClick={this.getRating}/>
            </div>
           <br />
            <hr />
