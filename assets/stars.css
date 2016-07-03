@@ -1,8 +1,9 @@
 .rating {
   unicode-bidi: bidi-override;
   direction: rtl;
-  text-align: left;
-  font-size:250%;
+  text-align: center;
+  font-size:200%;
+  float: left;
 }
 .rating > span {
   display: inline-block;
@@ -20,5 +21,12 @@
    position: absolute;
    left: 0; 
    color: gold;
+}
+
+
+
+
+.rating:not(:checked) > label:before {
+    content: '★ ';
 }
 
