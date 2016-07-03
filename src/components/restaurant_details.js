@@ -26,10 +26,10 @@ class RestaurantDetails  extends Component{
 		return (
 			
 			<div>
-				<div className="col-xs-6 col-lg-4">
+				<div className="col-xs-6 col-sm-4">
 					<Link to={path} className="btn btn-default" >Write A Review </Link>
 				</div>
-				<div className="col-xs-6 col-lg-4">
+				<div className="col-xs-6 col-sm-4">
 			       
                     <h2>{this.state.restaurant.name}</h2>
 			        <p>{this.state.restaurant.image}</p>

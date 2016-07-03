@@ -27,17 +27,12 @@ class Review extends Component {
 		//console.log(" id : "+this.props.id);
 		const { fields: { name, rating, comment }, handleSubmit } = this.props;
 	return (
-	    <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
-	        <h3>Write a Review</h3>
+		<div>
+		<Stars />
 
-	        <div className={`form-group ${rating.touched && rating.invalid ? 'has-danger' : ''}`}>
-	         {/* <label>Rating</label>
-	          <input type="text" className="form-control" {...rating} />
-	          <div className="text-help">
-	            {rating.touched ? rating.error : ''}
-	          </div>*/}
-	          <Stars />
-	        </div>
+	    {/*<form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
+	        <h3>Write a Review</h3>
+          
 
 	        <div className={`form-group ${name.touched && name.invalid ? 'has-danger' : ''}`}>
 	          <label>Name</label>
@@ -57,7 +52,8 @@ class Review extends Component {
 
 	        <button type="submit" className="btn btn-primary">Submit</button>
 	        <Link to="/" className="btn btn-danger">Cancel</Link>
-	    </form>
+	    </form> */}
+	    </div>
 	);
     }
 }
