@@ -9,8 +9,10 @@ return (
 	<div className="rating">
 <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
 </div>
+<br/>
 
 	</div>
+
 	
 );
 
