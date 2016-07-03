@@ -33,7 +33,7 @@ class Review extends Component {
 
     getRating (e){
     	console.log("rating :"+e.target.value);	
-    	return e.target.value;
+    	this.setSate( {rating: e.target.value});
     }
 
 	render(){
