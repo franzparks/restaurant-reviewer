@@ -5,28 +5,53 @@
   font-size:200%;
   float: left;
 }
-.rating > span {
-  display: inline-block;
-  position: relative;
-  width: 1.2em;
-  height: 1.2em;
-}
-.rating > span:hover,
-.rating > span:hover ~ span {
-  color: transparent;
-}
-.rating > span:hover:before,
-.rating > span:hover ~ span:before {
-   content: "\2605";
-   position: absolute;
-   left: 0; 
-   color: gold;
+
+.rating:not(:checked) > label:before { 
+   content: '\2606';
 }
 
+.rating:not(:checked) > input {    clip: rect(0px, 0px, 0px, 0px);
+   height: 1px;  
+   margin: -1px;  
+   overflow: hidden;  
+   padding: 0;  
+   position: absolute;  
+   width: 1px;
+  }
 
-
-
-.rating:not(:checked) > label:before {
-    content: '★ ';
+.rating:not(:checked) > label { 
+   float:right; 
+   width:.8em;  
+   padding:0 .1em;   
+   overflow:hidden;  
+   white-space:nowrap; 
+   cursor:pointer; 
+   font-size:200%;  
+   line-height:1.2;  
+   }
+ 
+ .rating > input:checked ~ label {   
+   color: #f70;     
 }
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label { 
+  color: gold;
+ }
+ 
+ .rating > input:checked + label:hover,
+ .rating > input:checked + label:hover ~ label,
+ .rating > input:checked ~ label:hover,
+ .rating > input:checked ~ label:hover ~ label,
+ .rating > label:hover ~ input:checked ~ label {  
+   color: #ea0;    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .1em rgba(0,0,0,.5);
+  }
+   
+ .rating > label:active { 
+    position:relative;   
+    top:2px; 
+    left:2px;
+  }
+
+
 
