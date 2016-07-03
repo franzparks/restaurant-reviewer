@@ -2,6 +2,7 @@
   unicode-bidi: bidi-override;
   direction: rtl;
   text-align: left;
+  font-size:200%;
 }
 .rating > span {
   display: inline-block;
