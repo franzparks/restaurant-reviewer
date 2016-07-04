@@ -9,16 +9,16 @@ class RestaurantDetails  extends Component{
 	//console.log("data : "+Object.keys(props));
     constructor(props){
     	super(props);
-    	this.state ={restaurant : {}}
+    	//this.state ={restaurant : {}}
     	this.loadReviews = this.loadReviews.bind(this);
     }
 
 	componentWillMount(){
-		this.props.fetchRestaurant(this.props.params.id);
+		//this.props.fetchRestaurant(this.props.params.id);
 	}
 
 	componentDidMount(){
-		this.setState({ restaurant: this.props.restaurant });
+		//this.setState({ restaurant: this.props.restaurant });
 	}
 
 	loadReviews = (reviews) => {
@@ -47,7 +47,8 @@ class RestaurantDetails  extends Component{
 	//to do: display reviews from rawData
     render(){
     	var path = `restaurants/${this.props.params.id}/reviews/new`;
-    	var reviews = this.loadReviews(this.props.restaurant.reviews);
+    	var restaurant = this.props.fetchRestaurant(this.props.params.id);
+    	var reviews = this.loadReviews(restaurant.reviews);
 		return (
 			
 			<div >
