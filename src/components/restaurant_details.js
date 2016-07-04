@@ -1,8 +1,9 @@
 import React,{Component} from 'react';
 import {connect} from 'react-redux';
 import * as actions from '../actions';
-
 import { Link } from 'react-router';
+
+import Review from './review';
 
 class RestaurantDetails  extends Component{
 	//console.log("data : "+Object.keys(props));
@@ -44,7 +45,8 @@ class RestaurantDetails  extends Component{
 
 	//to do: display reviews from rawData
     render(){
-    	var path = `restaurants/${this.props.params.id}/reviews/new`
+    	var path = `restaurants/${this.props.params.id}/reviews/new`;
+    	var reviews = this.loadReviews(this.state.restaurant);
 		return (
 			
 			<div>
