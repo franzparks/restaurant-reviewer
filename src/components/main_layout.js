@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import * as actions from '../actions';
 
 import Restaurant from './restaurant';
+import RestaurantList from './restaurant_list';
 import Footer from './footer';
 import Menu from './menu';
 import ToggleNav from './toggle_nav';
@@ -152,6 +153,8 @@ class MainLayout extends Component {
 	                            } 
                              )}
                             </div>
+
+                            <RestaurantList restaurant_components= {results} />
 					    </div>
 					    <Menu 
 					    	selectionHandler={this.handleSelection}
