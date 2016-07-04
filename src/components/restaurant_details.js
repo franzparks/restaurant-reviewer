@@ -63,7 +63,7 @@ class RestaurantDetails  extends Component{
 
 			    </div>
 
-			    <div className="col-xs-4 col-sm-4">
+			    <div className="col-xs-4">
 			    {reviews}
 			    </div>
 
