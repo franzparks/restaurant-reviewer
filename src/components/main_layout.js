@@ -2,8 +2,6 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import * as actions from '../actions';
 
-import RestaurantContainer from './restaurant_container';
-
 import Restaurant from './restaurant';
 import Footer from './footer';
 import Menu from './menu';
