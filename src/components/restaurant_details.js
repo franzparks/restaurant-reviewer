@@ -47,6 +47,7 @@ class RestaurantDetails  extends Component{
 	//to do: display reviews from rawData
     render(){
     	var path = `restaurants/${this.props.params.id}/reviews/new`;
+    	console.log("are we getting this ? : "+ this.props.restaurants);
     	var restaurant = this.props.fetchRestaurant(this.props.restaurants,this.props.params.id);
     	var reviews = this.loadReviews(restaurant.reviews);
 		return (
