@@ -81,7 +81,7 @@ class MainLayout extends Component {
     	}
 
     	if(category){
-    		console.log("filterCategory : "+category);
+    		//console.log("filterCategory : "+category);
             return this.sortUsingCategoryFilter(arr,category);
     	}
     }
@@ -90,6 +90,7 @@ class MainLayout extends Component {
     loadData = (data) => {
            
             var results = [];
+
             data.forEach((restaurant) => {
                  
                 results.push(
@@ -115,7 +116,7 @@ class MainLayout extends Component {
 
     getAverageRating = (restaurant) => {
         if(restaurant.reviews.length > 1){
-            var sum = restaurant.reviews.reduce( (prev,curr) => prev + curr );
+            var sum = restaurant.reviews.reduce( (prev,curr) => prev.rating + curr.rating );
             return sum / restaurant.reviews.length;
         }else
             return 0; 
