@@ -9,6 +9,19 @@ class RestaurantList extends Component {
     	super(props);
     }
 
+    renderList() {
+	    return this.props.restaurants.map((restaurant) => {
+	   
+	        <Restaurant
+	          key={restaurant.id}
+	          //onClick={() => this.props.selectBook(book)}
+	          name={restaurant.name}
+	        </Restaurant>
+	      );
+	    });
+    }
+
+
 	render(){
 		return (
 	    	<div>
