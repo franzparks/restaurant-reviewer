@@ -50,11 +50,12 @@ class RestaurantDetails  extends Component{
     	var reviews = this.loadReviews(this.props.restaurant.reviews);
 		return (
 			
-			<div>
+			<div >
 				<div className="col-xs-4 col-sm-4">
 					<Link to={path} className="btn btn-default" >Write A Review </Link>
 				</div>
-
+                
+                <div className="row">
 				<div className="col-xs-4 col-sm-4">
                     <h2>{this.state.restaurant.name}</h2>
 			        <p>{this.state.restaurant.image}</p>
@@ -64,8 +65,10 @@ class RestaurantDetails  extends Component{
 
 			    </div>
 
-			    <div className="col-xs-4">
+			    <div className="">
 			    {reviews}
+			    </div>
+
 			    </div>
 
 		    </div>
