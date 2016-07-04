@@ -31,7 +31,7 @@ export function fetchRestaurant(restaurant_id) {
 		return rest.id === restaurant_id;
 	});
 	return restaurant;
-	/*}
+	*/
 }
 
 export function postReview(props) {
