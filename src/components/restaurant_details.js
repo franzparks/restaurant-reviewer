@@ -47,7 +47,7 @@ class RestaurantDetails  extends Component{
 	//to do: display reviews from rawData
     render(){
     	var path = `restaurants/${this.props.params.id}/reviews/new`;
-    	console.log("are we getting this ? : "+ this.props.restaurants);
+    	//console.log("are we getting this ? : "+ Object.keys(this.props.restaurant));
     	//var restaurant = this.props.fetchRestaurant(this.props.params.id);
     	var reviews = this.loadReviews(this.props.restaurant.reviews);
 		return (
@@ -81,9 +81,9 @@ class RestaurantDetails  extends Component{
 }
 
 function mapStateToProps(state) {
-	//console.log("app state : "+Object.keys(state.appState));
-	//console.log("restaurants : "+ state.appState.restaurants)
-	console.log("restaurant from state: "+ state.appState.restaurant)
+	console.log("app state : "+Object.keys(state.appState));
+	console.log("restaurants : "+ state.appState.restaurants)
+	//console.log("restaurant from state: "+ Object.keys(state.appState.restaurant));
 	return { restaurant : state.appState.restaurant };
 }
 export default connect(mapStateToProps,actions)(RestaurantDetails);
