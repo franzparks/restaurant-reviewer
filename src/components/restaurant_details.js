@@ -31,6 +31,7 @@ class RestaurantDetails  extends Component{
                     <Review 
                     key={review.id}
                     name={review.name}
+                    rating={review.rating}
                     comment={review.comment}
                     date={review.date}
                     /> 
