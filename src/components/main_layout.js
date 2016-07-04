@@ -135,8 +135,9 @@ class MainLayout extends Component {
 
 	render() {
 		//var results = this.loadData(this.props.restaurants);
-		//results = this.filterRestaurants(results, this.state.filterText, this.state.filterCategory);
-		var results = this.props.restaurants;
+        var results = this.props.restaurants;
+		results = this.filterRestaurants(results, this.state.filterText, this.state.filterCategory);
+		
         return (
             <div>
                 <Header 
@@ -154,7 +155,7 @@ class MainLayout extends Component {
                              )}
                             </div> */}
 
-                            <RestaurantList restaurant_components= {results} />
+                            <RestaurantList restaurants={this.props.restaurants} />
 					    </div>
 					    <Menu 
 					    	selectionHandler={this.handleSelection}

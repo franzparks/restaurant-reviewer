@@ -10,12 +10,12 @@ class RestaurantList extends Component {
     	this.renderList = this.renderList.bind(this);
     }
 
-    renderList() {
-	    return this.props.restaurants.map((restaurant) => {
-	   
-	        <Restaurant 
+    renderList(restaurants) {
+    	
+	    return restaurants.map((restaurant) => {
+	    
+	        return <Restaurant 
                 key={restaurant.id}
-                id={restaurant.id}
                 name={restaurant.name}
                 image={restaurant.image}
                 address={restaurant.address}
@@ -26,15 +26,17 @@ class RestaurantList extends Component {
             /> 
 	      
 	    });
+        
     }
 
 
 	render(){
+		
 		return (
 	    	<div>
 	    	{/*<Overview /> */}
 	    	{/*{props.restaurant_components} */}
-	    	{this.renderList}
+	    	{this.renderList(this.props.restaurants)}
 	    	</div>
 
 	    );
