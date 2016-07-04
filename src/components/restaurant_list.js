@@ -10,15 +10,20 @@ class RestaurantList extends Component {
     constructor(props){
     	super(props);
     	this.renderList = this.renderList.bind(this);
+    	this.clickHandler = this.clickHandler.bind(this;
+    }
+
+    clickHandler(restaurant){
+        this.props.fetchRestaurant(restaurant);
     }
 
     renderList(restaurants) {
     	
 	    return restaurants.map((restaurant) => {
-	    
+	        
 	        return <Restaurant 
                 key={restaurant.id}
-                onClick={()=> this.props.fetchRestaurant(restaurant)}
+                clickHandler={this.clickHandler(restaurant)}
                 name={restaurant.name}
                 image={restaurant.image}
                 address={restaurant.address}
