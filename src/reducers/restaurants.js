@@ -26,9 +26,9 @@ export default function(state = INITIAL_STATE, action){
 		    return { ...state, restaurants: action.payload.data };
 
         case POST_REVIEW:
-            console.log(" action : "+ action);
+            console.log(" action keys : "+ Object.keys(action));
             //console.log("got id : "+action.review.id + " ..and date : "+action.review.date +" ..and rating : "+ action.review.rating);
-        	return { ...state }; //, ...state.restaurants, {action.restaurant}
+        	return { ...state , restaurants :[ ...state.restaurants, action.restaurant] }; //, ...state.restaurants, {action.restaurant}
 	
 
 		default: 
