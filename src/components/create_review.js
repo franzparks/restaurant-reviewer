@@ -21,8 +21,11 @@ class Review extends Component {
     }
 
     onSubmit(props) {
+   console.log("props : "+Object.keys(props));
+   var restaurant = this.props.restaurant;
+   restaurant.reviews = [ ...restaurant.reviews, { ...props, date: Date.now(), rating : this.state.rating }]; 	
     
-    this.props.postReview({ ...props, id: this.props.id, date: Date.now(), rating : this.state.rating });
+    this.props.postReview(restaurant);
 	    //.then(() => {
 	        // review  has been created, navigate the user to the index
 	        // We navigate by calling this.context.router.push with the
@@ -42,7 +45,7 @@ class Review extends Component {
 	render(){
 		//console.log(Object.keys(this.props));
 		//console.log(" id : "+this.props.id);
-		const { fields: { name, comment }, handleSubmit } = this.props;
+		const { fields: { name, comment },  handleSubmit } = this.props;
 	return (
 		<div>
 		
@@ -98,7 +101,7 @@ function mapStateToProps(state) {
 	//console.log("app state : "+Object.keys(state.appState));
 	//console.log("restaurants : "+ state.appState.restaurants)
 	console.log("restaurant : "+ state.appState.restaurant)
-	return { id : state.appState.restaurant.id };
+	return { restaurant : state.appState.restaurant };
 }
 
 
