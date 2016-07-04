@@ -7,6 +7,7 @@ class RestaurantList extends Component {
    
     constructor(props){
     	super(props);
+    	this.renderList = this.renderList.bind(this);
     }
 
     renderList() {
@@ -26,7 +27,8 @@ class RestaurantList extends Component {
 		return (
 	    	<div>
 	    	{/*<Overview /> */}
-	    	{props.restaurant_components}
+	    	{/*{props.restaurant_components} */}
+	    	{this.renderList()}
 	    	</div>
 
 	    );
