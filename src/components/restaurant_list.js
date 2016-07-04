@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 import { Link } from 'react-router';
 import Overview from './overview';
 import Restaurant from './restaurant';
@@ -17,7 +18,7 @@ class RestaurantList extends Component {
 	    
 	        return <Restaurant 
                 key={restaurant.id}
-                onClick={ () => this.props.fetchRestaurant(restaurant)}
+                onClick={()=> this.props.fetchRestaurant(restaurant)}
                 name={restaurant.name}
                 image={restaurant.image}
                 address={restaurant.address}

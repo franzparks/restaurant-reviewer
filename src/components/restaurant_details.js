@@ -86,4 +86,6 @@ function mapStateToProps(state) {
 	//console.log("restaurant from state: "+ Object.keys(state.appState.restaurant));
 	return { restaurant : state.appState.restaurant };
 }
+
+
 export default connect(mapStateToProps,actions)(RestaurantDetails);
