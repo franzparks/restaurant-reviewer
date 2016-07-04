@@ -14,7 +14,7 @@ class RestaurantDetails  extends Component{
     }
 
 	componentWillMount(){
-		//this.props.fetchRestaurant(this.props.params.id);
+		this.props.fetchRestaurant(this.props.params.id);
 	}
 
 	componentDidMount(){
@@ -48,7 +48,7 @@ class RestaurantDetails  extends Component{
     render(){
     	var path = `restaurants/${this.props.params.id}/reviews/new`;
     	console.log("are we getting this ? : "+ this.props.restaurants);
-    	var restaurant = this.props.fetchRestaurant(this.props.params.id);
+    	//var restaurant = this.props.fetchRestaurant(this.props.params.id);
     	var reviews = this.loadReviews(restaurant.reviews);
 		return (
 			
@@ -83,7 +83,7 @@ class RestaurantDetails  extends Component{
 function mapStateToProps(state) {
 	//console.log("app state : "+Object.keys(state.appState));
 	//console.log("restaurants : "+ state.appState.restaurants)
-	//console.log("restaurant : "+ state.appState.restaurant)
+	console.log("restaurant from state: "+ state.appState.restaurant)
 	return { restaurant : state.appState.restaurant };
 }
 export default connect(mapStateToProps,actions)(RestaurantDetails);
