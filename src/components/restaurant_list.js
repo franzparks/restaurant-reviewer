@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router';
 import Overview from './overview';
+import Restaurant from './restaurant';
 
 class RestaurantList extends Component {
    
