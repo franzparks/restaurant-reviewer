@@ -6,7 +6,7 @@ import {
 	POST_REVIEW
 }from './types';
 
-let nextReviewID = 0
+let nextReviewID = 5
 
 export function fetchRestaurants() {
 	const request = axios.get('../../data/restaurants.json');

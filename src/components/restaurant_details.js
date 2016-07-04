@@ -29,8 +29,8 @@ class RestaurantDetails  extends Component{
 				<div className="col-xs-4 col-sm-4">
 					<Link to={path} className="btn btn-default" >Write A Review </Link>
 				</div>
+
 				<div className="col-xs-4 col-sm-4">
-			       
                     <h2>{this.state.restaurant.name}</h2>
 			        <p>{this.state.restaurant.image}</p>
 			        <p>Address: {this.state.restaurant.address}</p>
@@ -38,6 +38,11 @@ class RestaurantDetails  extends Component{
 			        <Link to="/"> Back</Link>
 
 			    </div>
+
+			    <div className="col-xs-4 col-sm-4">
+			    Reviews
+			    </div>
+
 		    </div>
 		  
 		);
