@@ -15,7 +15,7 @@ class RestaurantList extends Component {
 
     handleClick(restaurant){
     	console.log(" I have been clicked!");
-        //this.props.fetchRestaurant(restaurant);
+        this.props.fetchRestaurant(restaurant);
     }
 
     renderList(restaurants) {
