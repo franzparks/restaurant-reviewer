@@ -122,7 +122,9 @@ class MainLayout extends Component {
 					        <ToggleNav />                  
                             <div>{React.cloneElement(this.props.children,
 	                            { 
-		                            restaurants: this.props.restaurants
+		                            restaurants: this.props.restaurants,
+                                    getAverageRating: this.getAverageRating,
+                                    getNumberOfRatings: this.getNumberOfRatings
 	                            } 
                              )}
                             </div> 
