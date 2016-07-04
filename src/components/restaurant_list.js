@@ -46,10 +46,5 @@ class RestaurantList extends Component {
 
 }
 
-function mapStateToProps(state) {
-	//console.log("app state : "+Object.keys(state.appState));
-	//console.log("restaurants : "+ state.appState.restaurants)
-	//console.log("restaurant from state: "+ Object.keys(state.appState.restaurant));
-	return { restaurant : state.appState.restaurant };
-}
-export default connect(mapStateToProps,actions)(RestaurantList);
+
+export default connect(null,actions)(RestaurantList);
