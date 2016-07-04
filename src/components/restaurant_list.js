@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { Link } from 'react-router';
 import Overview from './overview';
-const RestaurantList = (props) => {
+
+class RestaurantList extends Component {
 	
 	return (
     	<div>
