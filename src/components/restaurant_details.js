@@ -49,7 +49,7 @@ class RestaurantDetails  extends Component{
     	var path = `restaurants/${this.props.params.id}/reviews/new`;
     	console.log("are we getting this ? : "+ this.props.restaurants);
     	//var restaurant = this.props.fetchRestaurant(this.props.params.id);
-    	var reviews = this.loadReviews(restaurant.reviews);
+    	var reviews = this.loadReviews(this.props.restaurant.reviews);
 		return (
 			
 			<div >
@@ -59,10 +59,10 @@ class RestaurantDetails  extends Component{
                 
                 <div className="row">
 				<div className="col-xs-4 col-sm-4">
-                    <h2>{this.state.restaurant.name}</h2>
-			        <p>{this.state.restaurant.image}</p>
-			        <p>Address: {this.state.restaurant.address}</p>
-			        <p>Type: {this.state.restaurant.cuisineType}</p>
+                    <h2>{this.props.restaurant.name}</h2>
+			        <p>{this.props.restaurant.image}</p>
+			        <p>Address: {this.props.restaurant.address}</p>
+			        <p>Type: {this.props.restaurant.cuisineType}</p>
 			        <Link to="/"> Back</Link>
 
 			    </div>
