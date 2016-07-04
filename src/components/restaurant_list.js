@@ -22,6 +22,8 @@ class RestaurantList extends Component {
     	
 	    return restaurants.map((restaurant) => {
 	        var boundClick = this.handleClick.bind(this, restaurant);
+	        var averageRating = this.props.getAverageRating(restaurant.reviews);
+	        var numberOfRatings=this.props.getNumberOfRatings(restaurant.reviews);
 	        return (
 	          <Restaurant 
                 key={restaurant.id}
@@ -32,8 +34,8 @@ class RestaurantList extends Component {
                 image={restaurant.image}
                 address={restaurant.address}
                 cuisineType={restaurant.cuisineType}
-                //averageRating = {this.getAverageRating(restaurant.reviews)}
-                //numberOfRatings={this.getNumberOfRatings(restaurant.reviews)}
+                averageRating = {averageRating}
+                numberOfRatings={numberOfRatings}
                 
             /> 
             );
