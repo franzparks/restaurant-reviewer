@@ -6,7 +6,7 @@ const Review = (props) => {
 	return(
 	    <div className="col-xs-4">
 	        
-	        <h2>{props.name}</h2>
+	        <h4>{props.name}</h4>
 	        <p>{props.rating}</p>
 	        <p>{props.comment}</p>
 	        <p>Date: </p>
