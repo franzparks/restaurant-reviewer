@@ -42,7 +42,7 @@ class Review extends Component {
 	render(){
 		//console.log(Object.keys(this.props));
 		//console.log(" id : "+this.props.id);
-		const { fields: { name, rating, comment }, handleSubmit } = this.props;
+		const { fields: { name, comment }, handleSubmit } = this.props;
 	return (
 		<div>
 		
@@ -107,6 +107,6 @@ function mapStateToProps(state) {
 // reduxForm: 1st is form config, 2nd is mapStateToProps, 3rd is mapDispatchToProps
 export default reduxForm({
   form: 'ReviewsNewForm',
-  fields: ['name', 'rating', 'comment'],
+  fields: ['name', 'comment'],
   validate
 }, mapStateToProps, { postReview })(Review);
