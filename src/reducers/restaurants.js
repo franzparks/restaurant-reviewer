@@ -4,8 +4,7 @@ import {
 	POST_REVIEW
 }from '../actions/types';
 
-const INITIAL_STATE = { restaurants : [] ,restaurant : {}]
-} };
+const INITIAL_STATE = { restaurants : [] ,restaurant : {} };
 
 export default function(state = INITIAL_STATE, action){
 	switch(action.type) {
