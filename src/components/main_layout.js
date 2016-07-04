@@ -114,9 +114,9 @@ class MainLayout extends Component {
         }
 
     getAverageRating = (reviews) => {
-        //console.log(" for average : "+ Object.keys(reviews[0]));
+       
         if(reviews  && reviews.length > 1){
-            //var sum = reviews.reduce( (prev,curr) => prev.rating + curr.rating );
+            
             var sum = 0;
             reviews.forEach((review) =>{
                 sum += review.rating;
