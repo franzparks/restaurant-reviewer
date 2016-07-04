@@ -18,7 +18,6 @@ class MainLayout extends Component {
         this.handleSelection = this.handleSelection.bind(this);
         this.getAverageRating = this.getAverageRating.bind(this);
         this.getNumberOfRatings = this.getNumberOfRatings.bind(this);
-        this.loadData          = this.loadData.bind(this);
         this.sortUsingCategoryFilter = this.sortUsingCategoryFilter.bind(this);
         this.filterRestaurants = this.filterRestaurants.bind(this);
         this.sortUsingTextFilter = this.sortUsingTextFilter.bind(this);
@@ -84,33 +83,6 @@ class MainLayout extends Component {
             return this.sortUsingCategoryFilter(arr,category);
     	}
     }
-
-
-    loadData = (data) => {
-           
-            var results = [];
-
-            data.forEach((restaurant) => {
-                 
-                results.push(
-                    <Restaurant 
-                    key={restaurant.id}
-                    id={restaurant.id}
-                    name={restaurant.name}
-                    image={restaurant.image}
-                    address={restaurant.address}
-                    cuisineType={restaurant.cuisineType}
-                    averageRating = {this.getAverageRating(restaurant.reviews)}
-                    numberOfRatings={this.getNumberOfRatings(restaurant.reviews)}
-                    
-                    /> 
-
-                );
-
-            });
-           
-            return results;
-        }
 
     getAverageRating = (reviews) => {
        
