@@ -14,7 +14,7 @@ class RestaurantDetails  extends Component{
     }
 
 	componentWillMount(){
-		this.props.fetchRestaurant(this.props.params.id);
+		//this.props.fetchRestaurant(this.props.params.id);
 	}
 
 	componentDidMount(){

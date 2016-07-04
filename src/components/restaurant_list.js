@@ -17,7 +17,7 @@ class RestaurantList extends Component {
 	    
 	        return <Restaurant 
                 key={restaurant.id}
-                onClick={}
+                onClick={ () => this.props.fetchRestaurant(restaurant)}
                 name={restaurant.name}
                 image={restaurant.image}
                 address={restaurant.address}
