@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 const Review = (props) => {
 
 	return(
-	    <div className="col-xs-6">
+	    <div className="col-xs-4">
 	        
 	        <h2>{props.name}</h2>
 	        <p>{props.rating}</p>
