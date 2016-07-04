@@ -115,6 +115,7 @@ class MainLayout extends Component {
         }
 
     getAverageRating = (restaurant) => {
+        console.log(" for average : "+ restaurant.reviews);
         if(restaurant.reviews.length > 1){
             var sum = restaurant.reviews.reduce( (prev,curr) => prev.rating + curr.rating );
             return sum / restaurant.reviews.length;
