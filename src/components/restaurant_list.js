@@ -13,12 +13,18 @@ class RestaurantList extends Component {
     renderList() {
 	    return this.props.restaurants.map((restaurant) => {
 	   
-	        <Restaurant
-	          key={restaurant.id}
-	          //onClick={() => this.props.selectBook(book)}
-	          name={restaurant.name}
-	        </Restaurant>
-	      );
+	        <Restaurant 
+                key={restaurant.id}
+                id={restaurant.id}
+                name={restaurant.name}
+                image={restaurant.image}
+                address={restaurant.address}
+                cuisineType={restaurant.cuisineType}
+                //averageRating = {this.getAverageRating(restaurant.reviews)}
+                //numberOfRatings={this.getNumberOfRatings(restaurant.reviews)}
+                
+            /> 
+	      
 	    });
     }
 
@@ -28,7 +34,7 @@ class RestaurantList extends Component {
 	    	<div>
 	    	{/*<Overview /> */}
 	    	{/*{props.restaurant_components} */}
-	    	{this.renderList()}
+	    	{this.renderList}
 	    	</div>
 
 	    );
