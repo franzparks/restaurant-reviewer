@@ -24,7 +24,7 @@ class RestaurantDetails  extends Component{
 	loadReviews = (reviews) => {
            
             var results = [];
-
+            console.log("we have ..."+ reviews);
             reviews.forEach((review) => {
                  
                 results.push(
@@ -46,7 +46,7 @@ class RestaurantDetails  extends Component{
 	//to do: display reviews from rawData
     render(){
     	var path = `restaurants/${this.props.params.id}/reviews/new`;
-    	var reviews = this.loadReviews(this.state.restaurant.reviews);
+    	var reviews = this.loadReviews(this.props.restaurant.reviews);
 		return (
 			
 			<div>
@@ -64,7 +64,7 @@ class RestaurantDetails  extends Component{
 			    </div>
 
 			    <div className="col-xs-4 col-sm-4">
-			    Reviews
+			    {reviews}
 			    </div>
 
 		    </div>
