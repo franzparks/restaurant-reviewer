@@ -13,13 +13,13 @@ class RestaurantDetails  extends Component{
     	this.loadReviews = this.loadReviews.bind(this);
     }
 
-	componentWillMount(){
+	//componentWillMount(){
 		//this.props.fetchRestaurant(this.props.params.id);
-	}
+	//}
 
-	componentDidMount(){
+	//componentDidMount(){
 		//this.setState({ restaurant: this.props.restaurant });
-	}
+	//}
 
 	loadReviews = (reviews) => {
            

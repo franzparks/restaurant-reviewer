@@ -148,14 +148,13 @@ class MainLayout extends Component {
 		            <div className="row row-offcanvas row-offcanvas-right">
 		                <div className="col-xs-12 col-sm-9">
 					        <ToggleNav />                  
-                            {/*<div>{React.cloneElement(this.props.children,
+                            <div>{React.cloneElement(this.props.children,
 	                            { 
-		                            restaurant_components: results
+		                            restaurants: this.props.restaurants
 	                            } 
                              )}
-                            </div> */}
-
-                            <RestaurantList restaurants={this.props.restaurants} />
+                            </div> 
+                           
 					    </div>
 					    <Menu 
 					    	selectionHandler={this.handleSelection}

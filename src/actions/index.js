@@ -17,7 +17,6 @@ export function fetchRestaurants() {
 }
 
 export function fetchRestaurant(restaurant) {
-
    
     console.log("fetching ...: "+restaurant.name);
 	return {
