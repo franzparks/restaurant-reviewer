@@ -23,7 +23,7 @@ class Review extends Component {
     onSubmit(props) {
    console.log("props : "+Object.keys(props));
    var restaurant = this.props.restaurant;
-   restaurant.reviews = [ ...restaurant.reviews, { ...props, date: Date.now(), rating : this.state.rating }]; 	
+   restaurant.reviews = [ ...restaurant.reviews, { id : (Math.random() * 10000) ,...props, date: Date.now(), rating : this.state.rating }]; 	
     
     this.props.postReview(restaurant);
 	    //.then(() => {
