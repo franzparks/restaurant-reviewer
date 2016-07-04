@@ -10,20 +10,24 @@ class RestaurantList extends Component {
     constructor(props){
     	super(props);
     	this.renderList = this.renderList.bind(this);
-    	this.clickHandler = this.clickHandler.bind(this;
+    	this.handleClick = this.handleClick.bind(this);
     }
 
-    clickHandler(restaurant){
-        this.props.fetchRestaurant(restaurant);
+    handleClick(restaurant){
+    	console.log(" I have been clicked!");
+        //this.props.fetchRestaurant(restaurant);
     }
 
     renderList(restaurants) {
     	
 	    return restaurants.map((restaurant) => {
-	        
-	        return <Restaurant 
+	        var boundClick = this.handleClick.bind(this, restaurant);
+	        return (
+	          <Restaurant 
                 key={restaurant.id}
-                clickHandler={this.clickHandler(restaurant)}
+                id={restaurant.id}
+                data={restaurant}
+                handleClick={boundClick}
                 name={restaurant.name}
                 image={restaurant.image}
                 address={restaurant.address}
@@ -32,6 +36,7 @@ class RestaurantList extends Component {
                 //numberOfRatings={this.getNumberOfRatings(restaurant.reviews)}
                 
             /> 
+            );
 	      
 	    });
         
@@ -44,7 +49,9 @@ class RestaurantList extends Component {
 	    	<div>
 	    	{/*<Overview /> */}
 	    	{/*{props.restaurant_components} */}
+	    	
 	    	{this.renderList(this.props.restaurants)}
+
 	    	</div>
 
 	    );
