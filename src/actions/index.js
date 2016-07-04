@@ -16,11 +16,20 @@ export function fetchRestaurants() {
 	};
 }
 
-export function fetchRestaurant(restaurant_id) {
-	return {
+/* Will temporarily search for restaurant within props until real api is used */
+export function fetchRestaurant(restaurants, restaurant_id) {
+
+	/*return {
 		type: FETCH_RESTAURANT,
 		restaurant_id : restaurant_id
-	};
+	};*/
+
+	/*temp fix */
+	var restaurant = {};
+	restaurant = restaurants.find((rest) => {
+		return rest.id === restaurant_id;
+	});
+	return restaurant;
 }
 
 export function postReview(props) {
