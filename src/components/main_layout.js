@@ -101,10 +101,9 @@ class MainLayout extends Component {
                     image={restaurant.image}
                     address={restaurant.address}
                     cuisineType={restaurant.cuisineType}
-                    averageRating = {this.getAverageRating(restaurant)}
+                    averageRating = {this.getAverageRating(restaurant.reviews)}
                     numberOfRatings={this.getNumberOfRatings(restaurant)}
-                    rawData={restaurant}
-
+                    
                     /> 
 
                 );
@@ -115,10 +114,10 @@ class MainLayout extends Component {
         }
 
     getAverageRating = (restaurant) => {
-        console.log(" for average : "+ restaurant.reviews);
+        console.log(" for average : "+ Object.keys(restaurant.reviews));
         if(restaurant.reviews.length > 1){
-            var sum = restaurant.reviews.reduce( (prev,curr) => prev.rating + curr.rating );
-            return sum / restaurant.reviews.length;
+            //var sum = restaurant.reviews.reduce( (prev,curr) => prev.rating + curr.rating );
+            //return sum / restaurant.reviews.length;
         }else
             return 0; 
     }
