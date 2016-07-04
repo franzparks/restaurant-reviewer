@@ -4,18 +4,12 @@ import {
 	POST_REVIEW
 }from '../actions/types';
 
-const INITIAL_STATE = { restaurants : [] ,restaurant : {"id": "17",
-		"name":"Zambia",
-		"image" :"image",
-		"address":"101 Santa Clara",
-		"cuisineType":"Zambian",
-		"operatingHours":{"open":"07","close":"11"},
-		"reviews" : [{"id": 1, "rating":2,"name":"Reviewer 1", "comment":"I didn't like it so much"}]
+const INITIAL_STATE = { restaurants : [] ,restaurant : {}]
 } };
 
 export default function(state = INITIAL_STATE, action){
 	switch(action.type) {
-
+        /* Will discontinue using until attached to actual api*/
 		case FETCH_RESTAURANT:
 			return { ...state, 
 				    restaurant : state.restaurants.find( (res) =>{

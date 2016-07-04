@@ -5,7 +5,8 @@
 		"address":"101 Santa Clara",
 		"cuisineType":"Zambian",
 		"operatingHours":{"open":"07","close":"11"},
-		"reviews" : [{"id": 1, "rating":2,"name":"Reviewer 1", "comment":"I didn't like it so much"},
+		"reviews" : [{"id": 1, "rating":2,"name":"Reviewer 1", 
+		"comment":"I didn't like it so much I didn't like it so much I didn't like it so much  I didn't like it so much I didn't like it so much"},
 		{"id": 2, "rating":2,"name":"Reviewer 1", "comment":"I didn't like it so much"}]
 
 	},
