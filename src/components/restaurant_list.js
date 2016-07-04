@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { Link } from 'react-router';
 import Overview from './overview';
 import Restaurant from './restaurant';
+import * as actions from '../actions';
 
 class RestaurantList extends Component {
    
@@ -16,6 +17,7 @@ class RestaurantList extends Component {
 	    
 	        return <Restaurant 
                 key={restaurant.id}
+                onClick={}
                 name={restaurant.name}
                 image={restaurant.image}
                 address={restaurant.address}
@@ -43,4 +45,11 @@ class RestaurantList extends Component {
     }
 
 }
-export default RestaurantList;
+
+function mapStateToProps(state) {
+	//console.log("app state : "+Object.keys(state.appState));
+	//console.log("restaurants : "+ state.appState.restaurants)
+	//console.log("restaurant from state: "+ Object.keys(state.appState.restaurant));
+	return { restaurant : state.appState.restaurant };
+}
+export default connect(mapStateToProps,actions)(RestaurantList);
