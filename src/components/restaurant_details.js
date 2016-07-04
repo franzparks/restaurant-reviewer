@@ -9,6 +9,7 @@ class RestaurantDetails  extends Component{
     constructor(props){
     	super(props);
     	this.state ={restaurant : {}}
+    	this.loadReviews = this.loadReviews.bind(this);
     }
 
 	componentWillMount(){
@@ -18,6 +19,27 @@ class RestaurantDetails  extends Component{
 	componentDidMount(){
 		this.setState({ restaurant: this.props.restaurant });
 	}
+
+	loadReviews = (reviews) => {
+           
+            var results = [];
+
+            reviews.forEach((review) => {
+                 
+                results.push(
+                    <Review 
+                    key={review.id}
+                    name={review.name}
+                    comment={review.comment}
+                    date={review.date}
+                    /> 
+
+                );
+
+            });
+           
+            return results;
+        }
 
 
 	//to do: display reviews from rawData
