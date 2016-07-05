@@ -9,7 +9,7 @@ class RestaurantList extends Component {
    
     constructor(props){
     	super(props);
-    	this.state = { restaurants : [] }
+    	//this.state = { restaurants : [] }
     	this.renderList = this.renderList.bind(this);
     	this.handleClick = this.handleClick.bind(this);
 
@@ -24,7 +24,7 @@ class RestaurantList extends Component {
 		this.props.fetchRestaurants();
 	}
 
-	componentDidMount() {
+	/*componentDidMount() {
 	
 		var restaurants = this.props.restaurants.map((res) => {
 			var averageRating = this.getAverageRating(res.reviews);
@@ -33,7 +33,7 @@ class RestaurantList extends Component {
 		} );
 
 		this.setState({ restaurants : this.props.restaurants });
-	}
+	}*/
 
     handleClick(restaurant){
     	//console.log(" I have been clicked!");
@@ -158,7 +158,7 @@ class RestaurantList extends Component {
 	    	<div>
 	    	{/*<Overview /> */}
 	    	
-	    	
+
 	    	{this.renderList(restaurants)}
 
 	    	</div>
