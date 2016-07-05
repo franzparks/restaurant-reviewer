@@ -44,7 +44,7 @@ class MainLayout extends Component {
                 return arr;
             }else{
                     sorted = arr.sort((a,b) => {
-
+                    //console.log("a : "+Object.keys(a));
 	                if(filterCategory === 'highestRated' && arr.length > 2){
 
 	                	return a.props.averageRating < b.props.averageRating;
@@ -64,6 +64,7 @@ class MainLayout extends Component {
        /*ToDo : filter better by ignoring case and using contains or something similar*/
 
     	var filteredArray = arr.map( (restaurant)=>{
+
     		var R = restaurant.props;
           if(R.name.indexOf(text) !== -1 || R.address.indexOf(text) !== -1  || R.cuisineType.indexOf(text) !== -1){
           	return restaurant;
@@ -79,7 +80,7 @@ class MainLayout extends Component {
     	}
 
     	if(category){
-    		//console.log("filterCategory : "+category);
+    		console.log("filterCategory : "+category);
             return this.sortUsingCategoryFilter(arr,category);
     	}
     }
@@ -108,7 +109,7 @@ class MainLayout extends Component {
 	render() {
 		//var results = this.loadData(this.props.restaurants);
         var results = this.props.restaurants;
-		results = this.filterRestaurants(results, this.state.filterText, this.state.filterCategory);
+		//results = this.filterRestaurants(results, this.state.filterText, this.state.filterCategory);
 		
         return (
             <div>
@@ -123,8 +124,8 @@ class MainLayout extends Component {
                             <div>{React.cloneElement(this.props.children,
 	                            { 
 		                            restaurants: this.props.restaurants,
-                                    getAverageRating: this.getAverageRating,
-                                    getNumberOfRatings: this.getNumberOfRatings
+                                    filterText: this.state.filterText,
+                                    filterCategory: this.state.filterCategory
 	                            } 
                              )}
                             </div> 

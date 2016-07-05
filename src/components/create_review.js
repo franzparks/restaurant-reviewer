@@ -23,7 +23,11 @@ class Review extends Component {
     onSubmit(props) {
    //console.log("props : "+Object.keys(props));
    var restaurant = this.props.restaurant;
-   restaurant.reviews = [ ...restaurant.reviews, { id : (Math.random() * 10000) ,...props, date: Date.now(), rating : this.state.rating }]; 	
+        restaurant.reviews = [ ...restaurant.reviews, 
+        { id : (Math.random() * 10000) ,...props, 
+        date: Date.now(),
+        rating : this.state.rating }
+        ]; 	
     
     this.props.postReview(restaurant);
 	    //.then(() => {
@@ -38,7 +42,7 @@ class Review extends Component {
     }
 
     getRating (e){
-    	console.log("rating :"+e.target.value);	
+    	//console.log("rating :"+e.target.value);	
     	this.setState( {rating: e.target.value});
     }
 
@@ -100,7 +104,7 @@ function validate(values) {
 function mapStateToProps(state) {
 	//console.log("app state : "+Object.keys(state.appState));
 	//console.log("restaurants : "+ state.appState.restaurants)
-	console.log("restaurant : "+ state.appState.restaurant)
+	//console.log("restaurant : "+ state.appState.restaurant)
 	return { restaurant : state.appState.restaurant };
 }
 
