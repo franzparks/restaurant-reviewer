@@ -11,6 +11,12 @@ class RestaurantList extends Component {
     	super(props);
     	this.renderList = this.renderList.bind(this);
     	this.handleClick = this.handleClick.bind(this);
+
+        this.getAverageRating = this.getAverageRating.bind(this);
+        this.getNumberOfRatings = this.getNumberOfRatings.bind(this);
+        this.sortUsingCategoryFilter = this.sortUsingCategoryFilter.bind(this);
+        this.filterRestaurants = this.filterRestaurants.bind(this);
+        this.sortUsingTextFilter = this.sortUsingTextFilter.bind(this);
     }
 
     handleClick(restaurant){
