@@ -97,8 +97,10 @@ class RestaurantList extends Component {
 
 
     renderList(restaurants) {
-    	
-	    return restaurants.map((restaurant) => {
+    	var filteredRestaurants = this.props.restaurants;
+		filteredRestaurants = this.filterRestaurants(results, this.props.filterText, this.props.filterCategory);
+		
+	    return filteredRestaurants.map((restaurant) => {
 	        var boundClick = this.handleClick.bind(this, restaurant);
 	        var averageRating = this.getAverageRating(restaurant.reviews);
 	        var numberOfRatings=this.getNumberOfRatings(restaurant.reviews);
