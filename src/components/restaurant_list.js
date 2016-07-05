@@ -24,6 +24,16 @@ class RestaurantList extends Component {
 		this.props.fetchRestaurants();
 	}
 
+	componentDidMount() {
+		//this.props.fetchRestaurants();
+		this.setState({ restaurants : this.props.restaurants.map((res) => {
+			var averageRating = this.getAverageRating(res.reviews);
+	        var numberOfRatings=this.getNumberOfRatings(res.reviews);
+               return { ..res, averageRating :averageRating, numberOfRatings : numberOfRatings   }
+		} )
+		});
+	}
+
     handleClick(restaurant){
     	//console.log(" I have been clicked!");
         this.props.fetchRestaurant(restaurant);
