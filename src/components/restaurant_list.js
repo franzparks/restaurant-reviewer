@@ -68,19 +68,19 @@ class RestaurantList extends Component {
     sortUsingTextFilter = (arr,text) => {
        /*ToDo : filter better by ignoring case and using contains or something similar*/
 
-    	var filteredArray = arr.map( (restaurant)=>{
+    	return arr.map((R) =>{
 
-    		var R = restaurant.props;
           if(R.name.indexOf(text) !== -1 || R.address.indexOf(text) !== -1  || R.cuisineType.indexOf(text) !== -1){
-          	return restaurant;
+          	return R;
           }
     	});
-    	return filteredArray;
+    	return arr;
     }
 
     filterRestaurants = (arr, text, category = "all") => {
     	//console.log("Am I being called? "+arr);
     	if(text){
+    		//console.log("Am I being called? "+text);
     		return this.sortUsingTextFilter(arr,text);
     	}
 
