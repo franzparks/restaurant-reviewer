@@ -63,7 +63,7 @@ class RestaurantList extends Component {
     }
 
     filterRestaurants = (arr, text, category = "all") => {
-    	
+    	console.log("Am I being called? "+arr);
     	if(text){
     		return this.sortUsingTextFilter(arr,text);
     	}
@@ -72,6 +72,8 @@ class RestaurantList extends Component {
     		console.log("filterCategory : "+category);
             return this.sortUsingCategoryFilter(arr,category);
     	}
+
+    	return arr;
     }
 
     getAverageRating = (reviews) => {
@@ -97,8 +99,9 @@ class RestaurantList extends Component {
 
 
     renderList(restaurants) {
-    	var filteredRestaurants = this.props.restaurants;
-		filteredRestaurants = this.filterRestaurants(results, this.props.filterText, this.props.filterCategory);
+    	var filteredRestaurants = [];
+		 filteredRestaurants = this.filterRestaurants(restaurants,
+		 this.props.filterText, this.props.filterCategory);
 		
 	    return filteredRestaurants.map((restaurant) => {
 	        var boundClick = this.handleClick.bind(this, restaurant);
@@ -121,6 +124,8 @@ class RestaurantList extends Component {
             );
 	      
 	    });
+
+	    //return filteredRestaurants;
         
     }
 
