@@ -35,80 +35,10 @@ class MainLayout extends Component {
     	this.setState({filterCategory : selection});
     }
 
-    sortUsingCategoryFilter = (arr,filterCategory) => {
-    	var sorted = [];
-    	if(filterCategory){
-            
-            if(filterCategory === 'all'){
-                /* Do Nothing */
-                return arr;
-            }else{
-                    sorted = arr.sort((a,b) => {
-                    //console.log("a : "+Object.keys(a));
-	                if(filterCategory === 'highestRated' && arr.length > 2){
-
-	                	return a.props.averageRating < b.props.averageRating;
-
-	                }else if(filterCategory === 'mostReviewed' && arr.length > 2){
-	                    return a.props.numberOfRatings < b.props.numberOfRatings;
-	                }
-                });
-
-                return sorted;
-            }
-        }else
-        	return arr;
-    }
-
-    sortUsingTextFilter = (arr,text) => {
-       /*ToDo : filter better by ignoring case and using contains or something similar*/
-
-    	var filteredArray = arr.map( (restaurant)=>{
-
-    		var R = restaurant.props;
-          if(R.name.indexOf(text) !== -1 || R.address.indexOf(text) !== -1  || R.cuisineType.indexOf(text) !== -1){
-          	return restaurant;
-          }
-    	});
-    	return filteredArray;
-    }
-
-    filterRestaurants = (arr, text, category = "all") => {
-    	
-    	if(text){
-    		return this.sortUsingTextFilter(arr,text);
-    	}
-
-    	if(category){
-    		console.log("filterCategory : "+category);
-            return this.sortUsingCategoryFilter(arr,category);
-    	}
-    }
-
-    getAverageRating = (reviews) => {
-       
-        if(reviews  && reviews.length > 1){
-            
-            var sum = 0;
-            reviews.forEach((review) =>{
-                sum += review.rating;
-            });
-
-            return sum / reviews.length;
-        }else
-            return 0; 
-    }
-
-    getNumberOfRatings = (reviews) => {
-        if(reviews  && reviews.length > 1){
-            return reviews.length;
-        }
-        return 0; 
-    }
-
+    
 	render() {
 		//var results = this.loadData(this.props.restaurants);
-        var results = this.props.restaurants;
+        //var results = this.props.restaurants;
 		//results = this.filterRestaurants(results, this.state.filterText, this.state.filterCategory);
 		
         return (
