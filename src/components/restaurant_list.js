@@ -20,7 +20,7 @@ class RestaurantList extends Component {
     }
 
     handleClick(restaurant){
-    	console.log(" I have been clicked!");
+    	//console.log(" I have been clicked!");
         this.props.fetchRestaurant(restaurant);
     }
 
@@ -100,8 +100,8 @@ class RestaurantList extends Component {
     	
 	    return restaurants.map((restaurant) => {
 	        var boundClick = this.handleClick.bind(this, restaurant);
-	        var averageRating = this.props.getAverageRating(restaurant.reviews);
-	        var numberOfRatings=this.props.getNumberOfRatings(restaurant.reviews);
+	        var averageRating = this.getAverageRating(restaurant.reviews);
+	        var numberOfRatings=this.getNumberOfRatings(restaurant.reviews);
 	        return (
 	          <Restaurant 
                 key={restaurant.id}
