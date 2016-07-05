@@ -16,11 +16,11 @@ class MainLayout extends Component {
         this.state = {filterText : '', filterCategory : ''};
         this.handleChange = this.handleChange.bind(this);
         this.handleSelection = this.handleSelection.bind(this);
-        this.getAverageRating = this.getAverageRating.bind(this);
-        this.getNumberOfRatings = this.getNumberOfRatings.bind(this);
-        this.sortUsingCategoryFilter = this.sortUsingCategoryFilter.bind(this);
-        this.filterRestaurants = this.filterRestaurants.bind(this);
-        this.sortUsingTextFilter = this.sortUsingTextFilter.bind(this);
+        //this.getAverageRating = this.getAverageRating.bind(this);
+        //this.getNumberOfRatings = this.getNumberOfRatings.bind(this);
+        //this.sortUsingCategoryFilter = this.sortUsingCategoryFilter.bind(this);
+        //this.filterRestaurants = this.filterRestaurants.bind(this);
+        //this.sortUsingTextFilter = this.sortUsingTextFilter.bind(this);
     }
 
 	componentWillMount() {
