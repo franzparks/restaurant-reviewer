@@ -25,13 +25,14 @@ class RestaurantList extends Component {
 	}
 
 	componentDidMount() {
-		//this.props.fetchRestaurants();
-		this.setState({ restaurants : this.props.restaurants.map((res) => {
+	
+		var restaurants = this.props.restaurants.map((res) => {
 			var averageRating = this.getAverageRating(res.reviews);
 	        var numberOfRatings=this.getNumberOfRatings(res.reviews);
-               return { ..res, averageRating :averageRating, numberOfRatings : numberOfRatings   }
-		} )
-		});
+               return { ...res, averageRating :averageRating, numberOfRatings : numberOfRatings   }
+		} );
+
+		this.setState({ restaurants : this.props.restaurants });
 	}
 
     handleClick(restaurant){
@@ -132,8 +133,8 @@ class RestaurantList extends Component {
                 image={restaurant.image}
                 address={restaurant.address}
                 cuisineType={restaurant.cuisineType}
-                averageRating = {this.getAverageRating(restaurant.reviews)}
-                numberOfRatings={this.getNumberOfRatings(restaurant.reviews)}
+                //averageRating = {this.getAverageRating(restaurant.reviews)}
+                //numberOfRatings={this.getNumberOfRatings(restaurant.reviews)}
                 
             /> 
             );
@@ -146,13 +147,19 @@ class RestaurantList extends Component {
 
 
 	render(){
+
+		var restaurants = this.props.restaurants.map((res) => {
+			var averageRating = this.getAverageRating(res.reviews);
+	        var numberOfRatings=this.getNumberOfRatings(res.reviews);
+               return { ...res, averageRating :averageRating, numberOfRatings : numberOfRatings   }
+		} );
 		
 		return (
 	    	<div>
 	    	{/*<Overview /> */}
-	    	{/*{props.restaurant_components} */}
 	    	
-	    	{this.renderList(this.props.restaurants)}
+	    	
+	    	{this.renderList(restaurants)}
 
 	    	</div>
 
