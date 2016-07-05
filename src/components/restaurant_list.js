@@ -9,6 +9,7 @@ class RestaurantList extends Component {
    
     constructor(props){
     	super(props);
+    	this.state = { restaurants : [] }
     	this.renderList = this.renderList.bind(this);
     	this.handleClick = this.handleClick.bind(this);
 
