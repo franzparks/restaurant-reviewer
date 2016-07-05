@@ -23,9 +23,6 @@ class MainLayout extends Component {
         //this.sortUsingTextFilter = this.sortUsingTextFilter.bind(this);
     }
 
-	componentWillMount() {
-		this.props.fetchRestaurants();
-	}
 
 	handleChange = function(text){
         this.setState({ filterText : text });
@@ -53,7 +50,7 @@ class MainLayout extends Component {
 					        <ToggleNav />                  
                             <div>{React.cloneElement(this.props.children,
 	                            { 
-		                            restaurants: this.props.restaurants,
+		                            //restaurants: this.props.restaurants,
                                     filterText: this.state.filterText,
                                     filterCategory: this.state.filterCategory
 	                            } 
@@ -73,10 +70,6 @@ class MainLayout extends Component {
 	  	);
 	}  	
 }
-function mapStateToProps(state) {
-	//console.log("app state : "+Object.keys(state));
-	//console.log("restaurants : "+ state.appState.restaurants)
-	//console.log("restaurant : "+ state.appState.restaurant)
-	return { restaurants : state.appState.restaurants };
-}
-export default connect(mapStateToProps,actions)(MainLayout);
+
+
+export default connect(null,actions)(MainLayout);

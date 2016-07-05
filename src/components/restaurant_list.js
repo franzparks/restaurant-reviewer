@@ -19,6 +19,10 @@ class RestaurantList extends Component {
         this.sortUsingTextFilter = this.sortUsingTextFilter.bind(this);
     }
 
+    componentWillMount() {
+		this.props.fetchRestaurants();
+	}
+
     handleClick(restaurant){
     	//console.log(" I have been clicked!");
         this.props.fetchRestaurant(restaurant);
@@ -33,13 +37,13 @@ class RestaurantList extends Component {
                 return arr;
             }else{
                     sorted = arr.sort((a,b) => {
-                    //console.log("a : "+Object.keys(a));
+                    console.log("a : "+Object.keys(a));
 	                if(filterCategory === 'highestRated' && arr.length > 2){
 
-	                	return a.props.averageRating < b.props.averageRating;
+	                	return a.averageRating < b.averageRating;
 
 	                }else if(filterCategory === 'mostReviewed' && arr.length > 2){
-	                    return a.props.numberOfRatings < b.props.numberOfRatings;
+	                    return a.numberOfRatings < b.numberOfRatings;
 	                }
                 });
 
@@ -63,7 +67,7 @@ class RestaurantList extends Component {
     }
 
     filterRestaurants = (arr, text, category = "all") => {
-    	console.log("Am I being called? "+arr);
+    	//console.log("Am I being called? "+arr);
     	if(text){
     		return this.sortUsingTextFilter(arr,text);
     	}
@@ -146,5 +150,10 @@ class RestaurantList extends Component {
 
 }
 
-
-export default connect(null,actions)(RestaurantList);
+function mapStateToProps(state) {
+	//console.log("app state : "+Object.keys(state));
+	//console.log("restaurants : "+ state.appState.restaurants)
+	//console.log("restaurant : "+ state.appState.restaurant)
+	return { restaurants : state.appState.restaurants };
+}
+export default connect(mapStateToProps,actions)(RestaurantList);
