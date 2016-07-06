@@ -10,7 +10,6 @@ export default function(state = INITIAL_STATE, action){
 	switch(action.type) {
  
 		case TEXT_FILTER:
-			console.log("action is passing text : "+ action.text);
 			
 			return { ...state, text : action.text };
 
