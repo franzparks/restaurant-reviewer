@@ -138,11 +138,9 @@ class RestaurantList extends Component {
 		
 		return (
 	    	<div>
-	    	{/*<Overview /> */}
-	    	
-
-	    	{this.renderList(restaurants)}
-
+		    	<Overview /> 
+		    	{this.renderList(restaurants)}
+		    	
 	    	</div>
 
 	    );
