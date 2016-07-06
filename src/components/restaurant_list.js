@@ -172,6 +172,10 @@ function mapStateToProps(state) {
 	//console.log("app state : "+Object.keys(state));
 	//console.log("restaurants : "+ state.appState.restaurants)
 	//console.log("restaurant : "+ state.appState.restaurant)
-	return { restaurants : state.appState.restaurants };
+	return { 
+		restaurants : state.appState.restaurants,
+		filterText : state.filterState.text,
+		filterCategory : state.filterState.category
+	};
 }
 export default connect(mapStateToProps,actions)(RestaurantList);
