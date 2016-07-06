@@ -19,7 +19,7 @@ class Menu extends Component {
 
     handleClick (e){
 
-        this.props.selectionHandler(e.target.name);
+        this.props.setCategoryFilter(e.target.name);
 
         /* Identify selected item*/
         this.setState({selectedItem : e.target.name});
