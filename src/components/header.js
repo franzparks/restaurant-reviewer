@@ -61,7 +61,7 @@ class Header extends Component {
 }
 
 function mapStateToProps(state) {
-  return { authenticated: state.authenticated };
+  return { filterText : state.filterState.text };
 }
 
 export default connect(mapStateToProps, actions)(Header);
