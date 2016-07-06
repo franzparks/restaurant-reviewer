@@ -21,7 +21,7 @@ class Review extends Component {
     }
 
     onSubmit(props) {
-   //console.log("props : "+Object.keys(props));
+  
    var restaurant = this.props.restaurant;
         restaurant.reviews = [ ...restaurant.reviews, 
         { id : (Math.random() * 10000) ,...props, 
@@ -42,17 +42,17 @@ class Review extends Component {
     }
 
     getRating (e){
-    	//console.log("rating :"+e.target.value);	
     	this.setState( {rating: e.target.value});
     }
+    
 
 	render(){
-		//console.log(Object.keys(this.props));
-		//console.log(" id : "+this.props.id);
-		const { fields: { name, comment },  handleSubmit } = this.props;
+
+	 const { fields: { name, comment },  handleSubmit } = this.props;
+
 	return (
-		<div>
-		
+
+		<div>	
 
 	    <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
 	        <h3>Write a Review</h3>
@@ -102,12 +102,8 @@ function validate(values) {
 }
 
 function mapStateToProps(state) {
-	//console.log("app state : "+Object.keys(state.appState));
-	//console.log("restaurants : "+ state.appState.restaurants)
-	//console.log("restaurant : "+ state.appState.restaurant)
 	return { restaurant : state.appState.restaurant };
 }
-
 
 
 // connect: first argument is mapStateToProps, 2nd is mapDispatchToProps
