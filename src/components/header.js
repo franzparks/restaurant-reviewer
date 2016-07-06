@@ -10,7 +10,7 @@ class Header extends Component {
     constructor(props) {
         super(props);
         //this.authButton = this.authButton.bind(this);
-        this.state = {filterText : '', filterCategory : ''};
+        //this.state = {filterText : '', filterCategory : ''};
         this.handleChange = this.handleChange.bind(this);
     }
 
@@ -50,7 +50,7 @@ class Header extends Component {
                         </ul>
                         <SearchBar 
                             filterText={this.props.filterText}
-                            handleChange={this.props.handleChange}
+                            handleChange={this.handleChange}
                         />
                     </div>
                 </div>

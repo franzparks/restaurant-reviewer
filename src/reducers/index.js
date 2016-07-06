@@ -6,7 +6,7 @@ import { reducer as formReducer } from 'redux-form';
 const rootReducer = combineReducers({
   appState: restaurantsReducer,
   form: formReducer,
-  filtersReducer: filtersReducer
+  filterState: filtersReducer
 
 });
 
