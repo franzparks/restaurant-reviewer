@@ -6,9 +6,9 @@ import {
 const INITIAL_STATE = { category : 'all' ,text : '' };
 
 export default function(state = INITIAL_STATE, action){
-	switch(action.type) {
 
-     
+	switch(action.type) {
+ 
 		case TEXT_FILTER:
 			//console.log("action is passing id : "+ action.restaurant_id);
 			//var restaurant1 = state.restaurants.find( (res) =>{
@@ -16,9 +16,7 @@ export default function(state = INITIAL_STATE, action){
 			//});k
 			//state.restaurant = restaurant;
 			//console.log(" found : "+restaurant);
-			return { ...state,
-				    text : action.text
-			};
+			return { ...state, text : action.text };
 
 		case CATEGORY_FILTER:
 
