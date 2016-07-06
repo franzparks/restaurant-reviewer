@@ -10,12 +10,10 @@ class Menu extends Component {
         this.state = {"selected" :"list-group-item active", "unselected":"list-group-item", "style":"", "selectedItem":""};
         this.handleClick = this.handleClick.bind(this);
         this.displayMenuItems = this.displayMenuItems.bind(this);
-        //this.handleSelection = this.handleSelection.bind(this);
+        
     }
     
     componentDidMount(){
-    	
-        //this.props.selectionHandler('all');
         this.setState({selectedItem : 'all'});
     }
 
@@ -26,11 +24,6 @@ class Menu extends Component {
         /* Identify selected item*/
         this.setState({selectedItem : e.target.name});
 	}
-
-	//handleSelection = function(selection){
-    //    this.setState({filterCategory : selection});
-    //}
-
 
 	displayMenuItems (){
 		var vals = {"all":"All","highestRated":"Highest Rated", "mostReviewed":"Most Reviewed", "openNow":"Open Now"};
