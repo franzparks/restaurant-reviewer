@@ -18,7 +18,7 @@ const MainLayout = (props) => {
 	                <div className="col-xs-12 col-sm-9">
 				        <ToggleNav />                  
                         <div>
-                        {this.props.children}
+                        {props.children}
                         </div> 
                        
 				    </div>
