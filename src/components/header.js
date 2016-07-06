@@ -12,7 +12,6 @@ class Header extends Component {
         //this.authButton = this.authButton.bind(this);
         this.state = {filterText : '', filterCategory : ''};
         this.handleChange = this.handleChange.bind(this);
-        this.handleSelection = this.handleSelection.bind(this);
     }
 
 	//authButton() {
@@ -25,10 +24,6 @@ class Header extends Component {
 
     handleChange = function(text){
         this.setState({ filterText : text });
-    }
-
-    handleSelection = function(selection){
-        this.setState({filterCategory : selection});
     }
 
 

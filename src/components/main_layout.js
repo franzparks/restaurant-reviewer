@@ -52,7 +52,7 @@ class MainLayout extends Component {
                            
 					    </div>
 					    <Menu 
-					    	selectionHandler={this.handleSelection}
+					    	//selectionHandler={this.handleSelection}
 					    />
 					         	        
 		            </div>
