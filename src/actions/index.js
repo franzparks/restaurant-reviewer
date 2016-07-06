@@ -46,7 +46,7 @@ export function setTextFilter(text){
 
 export function setCategoryFilter(category){
 	return {
-		type : TEXT_FILTER,
+		type : CATEGORY_FILTER,
 		category : category
 	}
 }
