@@ -10,12 +10,8 @@ export default function(state = INITIAL_STATE, action){
 	switch(action.type) {
  
 		case TEXT_FILTER:
-			//console.log("action is passing id : "+ action.restaurant_id);
-			//var restaurant1 = state.restaurants.find( (res) =>{
-			//		return res.id === action.restaurant_id;
-			//});k
-			//state.restaurant = restaurant;
-			//console.log(" found : "+restaurant);
+			console.log("action is passing text : "+ action.text);
+			
 			return { ...state, text : action.text };
 
 		case CATEGORY_FILTER:
