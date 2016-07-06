@@ -78,10 +78,9 @@ class RestaurantList extends Component {
     	//return arr;
     }
 
-    filterRestaurants = (arr, text, category = "all") => {
-    	//console.log("Am I being called? "+arr);
+    filterRestaurants = (arr, text, category) => {
+    
     	if(text){
-    		//console.log("Am I being called? "+text);
     		return this.sortUsingTextFilter(arr,text);
     	}
 
