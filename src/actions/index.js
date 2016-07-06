@@ -3,7 +3,9 @@ import axios from 'axios';
 import {
 	FETCH_RESTAURANTS,
 	FETCH_RESTAURANT,
-	POST_REVIEW
+	POST_REVIEW,
+	TEXT_FILTER,
+	CATEGORY_FILTER
 }from './types';
 
 let nextReviewID = 5
