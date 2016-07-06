@@ -23,7 +23,8 @@ class Header extends Component {
     //}
 
     handleChange = function(text){
-        this.setState({ filterText : text });
+        //this.setState({ filterText : text });
+        this.props.setTextFilter(text);
     }
 
 
