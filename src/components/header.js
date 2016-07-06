@@ -9,21 +9,10 @@ class Header extends Component {
 
     constructor(props) {
         super(props);
-        //this.authButton = this.authButton.bind(this);
-        //this.state = {filterText : '', filterCategory : ''};
         this.handleChange = this.handleChange.bind(this);
     }
 
-	//authButton() {
-    //    if (this.props.authenticated) {
-    //        return <button onClick={() => this.props.authenticate(false)}>Sign Out</button>;
-    //    }
-
-    //    return <button onClick={() => this.props.authenticate(true)}>Sign In</button>;
-    //}
-
     handleChange = function(text){
-        //this.setState({ filterText : text });
         this.props.setTextFilter(text);
     }
 
