@@ -34,7 +34,7 @@ class MainLayout extends Component {
         return (
             <div>
                 <Header 
-                	handleChange={this.handleChange}
+                	//handleChange={this.handleChange}
                 />
 
 		  	    <div className="container">
@@ -44,8 +44,8 @@ class MainLayout extends Component {
                             <div>{React.cloneElement(this.props.children,
 	                            { 
 		                            //restaurants: this.props.restaurants,
-                                    filterText: this.state.filterText,
-                                    filterCategory: this.state.filterCategory
+                                   // filterText: this.state.filterText,
+                                    //filterCategory: this.state.filterCategory
 	                            } 
                              )}
                             </div> 
