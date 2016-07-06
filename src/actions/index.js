@@ -35,3 +35,10 @@ export function postReview(restaurant) {
 	}
 	
 }
+
+export function setTextFilter(text){
+	return {
+		type : TEXT_FILTER,
+		text : text
+	}
+}
