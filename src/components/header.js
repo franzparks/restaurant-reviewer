@@ -10,6 +10,9 @@ class Header extends Component {
     constructor(props) {
         super(props);
         //this.authButton = this.authButton.bind(this);
+        this.state = {filterText : '', filterCategory : ''};
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSelection = this.handleSelection.bind(this);
     }
 
 	//authButton() {
@@ -17,8 +20,17 @@ class Header extends Component {
     //        return <button onClick={() => this.props.authenticate(false)}>Sign Out</button>;
     //    }
 
-        return <button onClick={() => this.props.authenticate(true)}>Sign In</button>;
+    //    return <button onClick={() => this.props.authenticate(true)}>Sign In</button>;
+    //}
+
+    handleChange = function(text){
+        this.setState({ filterText : text });
     }
+
+    handleSelection = function(selection){
+        this.setState({filterCategory : selection});
+    }
+
 
 	render () {
 		return (

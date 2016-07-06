@@ -13,9 +13,9 @@ class MainLayout extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {filterText : '', filterCategory : ''};
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSelection = this.handleSelection.bind(this);
+        //this.state = {filterText : '', filterCategory : ''};
+        //this.handleChange = this.handleChange.bind(this);
+        //this.handleSelection = this.handleSelection.bind(this);
         //this.getAverageRating = this.getAverageRating.bind(this);
         //this.getNumberOfRatings = this.getNumberOfRatings.bind(this);
         //this.sortUsingCategoryFilter = this.sortUsingCategoryFilter.bind(this);
@@ -24,14 +24,7 @@ class MainLayout extends Component {
     }
 
 
-	handleChange = function(text){
-        this.setState({ filterText : text });
-    }
-
-    handleSelection = function(selection){
-    	this.setState({filterCategory : selection});
-    }
-
+	
     
 	render() {
 		//var results = this.loadData(this.props.restaurants);
