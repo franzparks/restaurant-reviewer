@@ -1,7 +1,4 @@
 import React from 'react';
-
-//import Restaurant from './restaurant';
-//import RestaurantList from './restaurant_list';
 import Footer from './footer';
 import Menu from './menu';
 import ToggleNav from './toggle_nav';
