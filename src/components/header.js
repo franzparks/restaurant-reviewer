@@ -9,13 +9,13 @@ class Header extends Component {
 
     constructor(props) {
         super(props);
-        this.authButton = this.authButton.bind(this);
+        //this.authButton = this.authButton.bind(this);
     }
 
-	authButton() {
-        if (this.props.authenticated) {
-            return <button onClick={() => this.props.authenticate(false)}>Sign Out</button>;
-        }
+	//authButton() {
+    //    if (this.props.authenticated) {
+    //        return <button onClick={() => this.props.authenticate(false)}>Sign Out</button>;
+    //    }
 
         return <button onClick={() => this.props.authenticate(true)}>Sign In</button>;
     }

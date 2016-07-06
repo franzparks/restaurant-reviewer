@@ -74,7 +74,7 @@ class RestaurantList extends Component {
           	return R;
           }
     	});
-    	return arr;
+    	//return arr;
     }
 
     filterRestaurants = (arr, text, category = "all") => {
