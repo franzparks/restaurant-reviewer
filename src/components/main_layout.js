@@ -1,44 +1,36 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
-import * as actions from '../actions';
+import React from 'react';
 
-import Restaurant from './restaurant';
-import RestaurantList from './restaurant_list';
+//import Restaurant from './restaurant';
+//import RestaurantList from './restaurant_list';
 import Footer from './footer';
 import Menu from './menu';
 import ToggleNav from './toggle_nav';
 import Header from './header';
 
-class MainLayout extends Component {
+const MainLayout = (props) => {
 
-    constructor(props) {
-        super(props);
-    }
+   	
+    return (
+        <div>
+            <Header />
+	  	    <div className="container">
+	            <div className="row row-offcanvas row-offcanvas-right">
+	                <div className="col-xs-12 col-sm-9">
+				        <ToggleNav />                  
+                        <div>
+                        {this.props.children}
+                        </div> 
+                       
+				    </div>
+				    <Menu />
+				         	        
+	            </div>
+	            <Footer />
 
-	render() {
-		
-        return (
-            <div>
-                <Header />
-		  	    <div className="container">
-		            <div className="row row-offcanvas row-offcanvas-right">
-		                <div className="col-xs-12 col-sm-9">
-					        <ToggleNav />                  
-                            <div>
-                            {this.props.children}
-                            </div> 
-                           
-					    </div>
-					    <Menu />
-					         	        
-		            </div>
-		            <Footer />
-
-		        </div> 
-	        </div>
-	  	);
-	}  	
+	        </div> 
+        </div>
+  	);
+	 	
 }
 
-
-export default connect(null,actions)(MainLayout);
+export default MainLayout;
