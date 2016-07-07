@@ -27,7 +27,7 @@
 }
 
 .rating:not(:checked) > label:before { 
-   content: '\2606';
+   content: '\2605';
 }
 
 .rating:not(:checked) > input {    clip: rect(0px, 0px, 0px, 0px);
