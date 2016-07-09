@@ -19,6 +19,8 @@
   color: transparent;
   background: #E91E63
 }
+
+.rating > span:focus,
 .rating > span:hover:before,
 .rating > span:hover ~ span:before {
    content: "\2605";
@@ -31,7 +33,8 @@
    content: '\2606';
 }
 
-.rating:not(:checked) > input {    clip: rect(0px, 0px, 0px, 0px);
+.rating:not(:checked) > input {    
+   clip: rect(0px, 0px, 0px, 0px);
    height: 1px;  
    margin: -1px;  
    overflow: hidden;  
