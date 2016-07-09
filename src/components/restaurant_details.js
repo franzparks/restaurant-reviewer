@@ -53,7 +53,7 @@ class RestaurantDetails  extends Component{
                     <h2>{this.props.restaurant.name}</h2>
 
 			        <p>
-                    <img src={this.props.restaurant.image}>
+                    <img src={this.props.restaurant.image} className="img-responsive">
                     </img>
                     </p>
 
