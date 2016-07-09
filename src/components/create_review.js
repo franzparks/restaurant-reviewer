@@ -56,14 +56,14 @@ class Review extends Component {
 
 	    <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
 	        <h3>Write a Review</h3>
+          <hr />
           
-           <div className="form-group">
-
-           <label htmlFor="ratings">Rate Restaurant</label>
+          <label htmlFor="ratings" className="form-group">Rate Restaurant</label>
+          <div className="form-group">
            <Stars onClick={this.getRating} tabindex="1"  id="ratings"/>
            </div>
           <br />
-           <hr />
+          <hr />
 
 	        <div className={`form-group ${name.touched && name.invalid ? 'has-danger' : ''}`}>
 	          <label htmlFor="name-input">Name</label>
