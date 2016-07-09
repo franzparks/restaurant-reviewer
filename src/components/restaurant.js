@@ -27,6 +27,7 @@ const Restaurant = (props) => {
             <p aria-label="Average Rating"><Stars /></p>
             <br />
             <hr />
+            <br />
             <p aria-label="Cuisine Type">Cuisine Type: {props.cuisineType}</p>
 	        <p aria-label="Address">Address: {props.address}</p>
 	       
