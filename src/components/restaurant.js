@@ -24,7 +24,9 @@ const Restaurant = (props) => {
 	        </Link>
 	        </p>
             
-            <p aria-label="Average Rating">Average Rating: <Stars /> {props.numberOfRatings}</p>
+            <p aria-label="Average Rating"><Stars /> {props.numberOfRatings}</p>
+            <br />
+            
             <p aria-label="Cuisine Type">Cuisine Type: {props.cuisineType}</p>
 	        <p aria-label="Address">Address: {props.address}</p>
 	       
