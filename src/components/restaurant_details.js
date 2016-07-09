@@ -16,7 +16,7 @@ class RestaurantDetails  extends Component{
 	loadReviews = (reviews) => {
            
             var results = [];
-            console.log("we have ..."+ reviews);
+        
             reviews.forEach((review) => {
                  
                 results.push(
