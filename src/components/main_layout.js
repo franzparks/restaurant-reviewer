@@ -11,6 +11,8 @@ const MainLayout = (props) => {
         <div>
             <Header />
 	  	    <div className="container">
+	  	       {props.children}
+	  	       {/*
 	            <div className="row row-offcanvas row-offcanvas-right">
 	                <div className="col-xs-12 col-sm-9">
 				        <ToggleNav />                  
@@ -19,9 +21,10 @@ const MainLayout = (props) => {
                         </div> 
                        
 				    </div>
-				    <Menu />
+				    <Menu /> 
 				         	        
 	            </div>
+	            */}
 	            <Footer />
 
 	        </div> 

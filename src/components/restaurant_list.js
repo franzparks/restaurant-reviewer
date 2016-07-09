@@ -2,7 +2,9 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import { Link } from 'react-router';
 import Overview from './overview';
+import ToggleNav from './toggle_nav';
 import Restaurant from './restaurant';
+import Menu from './menu';
 import * as actions from '../actions';
 
 class RestaurantList extends Component {
@@ -110,6 +112,8 @@ class RestaurantList extends Component {
 	        var boundClick = this.handleClick.bind(this, restaurant);
 	        
 	        return (
+              <div>
+                
 	          <Restaurant 
                 key={restaurant.id}
                 id={restaurant.id}
@@ -121,6 +125,8 @@ class RestaurantList extends Component {
                 cuisineType={restaurant.cuisineType}
                
             /> 
+            
+            </div>
             );
 	      
 	    });
@@ -138,8 +144,11 @@ class RestaurantList extends Component {
 		
 		return (
 	    	<div>
-		    	<Overview /> 
-		    	{this.renderList(restaurants)}
+                <Menu /> 
+		    	<Overview />
+                
+		    	
+                {/*{this.renderList(restaurants)}*/}
 		    	
 	    	</div>
 
