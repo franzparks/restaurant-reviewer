@@ -65,7 +65,7 @@ class RestaurantDetails  extends Component{
                     <Link to={path} className="btn btn-default" >Write A Review </Link>
                 </div>
 
-			    <div className="">
+			    <div >
 			    {reviews}
 			    </div>
 
