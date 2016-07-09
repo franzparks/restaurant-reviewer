@@ -43,7 +43,7 @@ class RestaurantDetails  extends Component{
 
 		return (
 			
-			<div >
+			<div className="row">
 				
                 <div className="row">
 
@@ -51,11 +51,11 @@ class RestaurantDetails  extends Component{
                     <h2>{this.props.restaurant.name}</h2>
 
 			        <p>
-                    <img src={this.props.restaurant.image} className="img-responsive">
+                    <img src={this.props.restaurant.image} className="img-responsive" >
                     </img>
                     </p>
 
-			        <p>Address: {this.props.restaurant.address}</p>
+			        <p aria-label="Address">Address: {this.props.restaurant.address}</p>
 			        <p>Type: {this.props.restaurant.cuisineType}</p>
 			        <Link to="/"> Back</Link>
 
@@ -70,6 +70,8 @@ class RestaurantDetails  extends Component{
 			    </div>
 
 			    </div>
+
+
 
 		    </div>
 		  
