@@ -68,7 +68,7 @@ class Review extends Component {
 	        <div className={`form-group ${name.touched && name.invalid ? 'has-danger' : ''}`}>
 	          <label htmlFor="name-input">Name</label>
 	          <input type="text" className="form-control" {...name}  id="name-input"/>
-	          <div className="text-help">
+	          <div className="text-danger">
 	            {name.touched ? name.error : ''}
 	          </div>
 	        </div>
@@ -76,7 +76,7 @@ class Review extends Component {
            <label htmlFor="comment">Comment</label>
 	        <div className={`form-group ${comment.touched && comment.invalid ? 'has-danger' : ''}`}>
 	          <textarea className="form-control" {...comment} id="comment"/>
-	          <div className="text-help">
+	          <div className="text-danger">
 	            {comment.touched ? comment.error : ''}
 	          </div>
 	        </div>
