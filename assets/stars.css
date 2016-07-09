@@ -17,6 +17,7 @@
 .rating > span:hover,
 .rating > span:hover ~ span {
   color: transparent;
+  background: #E91E63
 }
 .rating > span:hover:before,
 .rating > span:hover ~ span:before {
@@ -27,7 +28,7 @@
 }
 
 .rating:not(:checked) > label:before { 
-   content: '\2605';
+   content: '\2606';
 }
 
 .rating:not(:checked) > input {    clip: rect(0px, 0px, 0px, 0px);
