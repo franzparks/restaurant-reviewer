@@ -10,7 +10,11 @@ const Restaurant = (props) => {
 	    <div className="col-xs-6 col-lg-6">
 	        
 	        <h3>{props.name}</h3>
-	        <p>{props.image}</p>
+	        <p>
+	        <img src="{props.image}">
+	        
+	        </img>
+	        </p>
 	        <p>Address: {props.address}</p>
 	        <p>Type: {props.cuisineType}</p>
 	       
