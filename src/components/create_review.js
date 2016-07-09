@@ -58,7 +58,9 @@ class Review extends Component {
 	        <h3>Write a Review</h3>
           
            <div className="form-group">
-           <Stars onClick={this.getRating} tabindex="1" />
+
+           <label for="ratings">Rate Restaurant</label>
+           <Stars onClick={this.getRating} tabindex="1"  id="rating"/>
            </div>
           <br />
            <hr />
