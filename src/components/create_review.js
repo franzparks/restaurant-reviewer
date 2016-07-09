@@ -60,14 +60,14 @@ class Review extends Component {
            <div className="form-group">
 
            <label for="ratings">Rate Restaurant</label>
-           <Stars onClick={this.getRating} tabindex="1"  id="rating"/>
+           <Stars onClick={this.getRating} tabindex="1"  id="ratings"/>
            </div>
           <br />
            <hr />
 
 	        <div className={`form-group ${name.touched && name.invalid ? 'has-danger' : ''}`}>
-	          <label for="name">Name</label>
-	          <input type="text" className="form-control" {...name}  id="name"/>
+	          <label for="name-input">Name</label>
+	          <input type="text" className="form-control" {...name}  id="name-input"/>
 	          <div className="text-help">
 	            {name.touched ? name.error : ''}
 	          </div>
