@@ -44,12 +44,10 @@ class RestaurantDetails  extends Component{
 		return (
 			
 			<div >
-				<div className="col-xs-3 col-sm-3">
-					<Link to={path} className="btn btn-default" >Write A Review </Link>
-				</div>
-                
+				
                 <div className="row">
-				<div className="col-xs-6 col-sm-6">
+
+				<div className="col-xs-4 col-sm-6">
                     <h2>{this.props.restaurant.name}</h2>
 
 			        <p>
@@ -62,6 +60,10 @@ class RestaurantDetails  extends Component{
 			        <Link to="/"> Back</Link>
 
 			    </div>
+
+                <div className="col-xs-4 col-sm-6">
+                    <Link to={path} className="btn btn-default" >Write A Review </Link>
+                </div>
 
 			    <div className="">
 			    {reviews}
