@@ -17,9 +17,9 @@ const Restaurant = (props) => {
 	        
 	        </img>
 	        </p>
-	        
-	        <p aria-label="Address">Address: {props.restaurant.address}</p>
-			<p aria-label="Cuisine Type">Cuisine Type: {props.restaurant.cuisineType}</p>
+
+	        <p aria-label="Address">Address: {props.address}</p>
+			<p aria-label="Cuisine Type">Cuisine Type: {props.cuisineType}</p>
 	       
 	        <Link 
 	        to={path} 
