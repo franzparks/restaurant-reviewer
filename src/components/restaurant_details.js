@@ -51,7 +51,12 @@ class RestaurantDetails  extends Component{
                 <div className="row">
 				<div className="col-xs-4 col-sm-4">
                     <h2>{this.props.restaurant.name}</h2>
-			        <p>{this.props.restaurant.image}</p>
+                    
+			        <p>
+                    <img src={this.props.restaurant.image}
+                    </img>
+                    </p>
+
 			        <p>Address: {this.props.restaurant.address}</p>
 			        <p>Type: {this.props.restaurant.cuisineType}</p>
 			        <Link to="/"> Back</Link>
