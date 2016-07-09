@@ -115,7 +115,7 @@ class RestaurantList extends Component {
               <div>
                 
 	          <Restaurant 
-                key={restaurant.id}
+                key={restaurant.id * Math.random() * 1000}
                 id={restaurant.id}
                 data={restaurant}
                 handleClick={boundClick}
