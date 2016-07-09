@@ -7,15 +7,20 @@ const Restaurant = (props) => {
 	
 	return(
 		
+	
 	    <div className="col-xs-6 col-lg-6">
 	        
 	        <h3>{props.name}</h3>
 	        <p>
+	        <Link 
+	        to={path} 
+	        onClick={props.handleClick} >
 	        <img src={props.image} 
 	        className="img-responsive"
 	        alt="Image of restaurant cuisine type">
 	        
 	        </img>
+	        </Link>
 	        </p>
             
             <p aria-label="Average Rating">Average Rating: </p>
@@ -32,6 +37,7 @@ const Restaurant = (props) => {
 	     
        
 	    </div>
+
     );
 }
 export default Restaurant;
