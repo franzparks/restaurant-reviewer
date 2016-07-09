@@ -29,6 +29,12 @@
    color: gold;
 }
 
+.rating > span:focus {
+  outline: 0;
+  box-shadow: 0 0 8px 3px
+  rgba(255, 255, 255, 0.8);
+}
+
 .rating:not(:checked) > label:before { 
    content: '\2606';
 }
