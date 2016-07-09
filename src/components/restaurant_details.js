@@ -57,7 +57,7 @@ class RestaurantDetails  extends Component{
                 
                     </img>
                     </p>
-                
+                    <p aria-label="Average Rating"><Stars /></p>
                     <p aria-label="Cuisine Type">Cuisine Type: {this.props.restaurant.cuisineType}</p>
 			        <p aria-label="Address">Address: {this.props.restaurant.address}</p>
 			        <Link to="/"> Back</Link>
