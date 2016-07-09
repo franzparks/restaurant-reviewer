@@ -12,21 +12,7 @@ const MainLayout = (props) => {
             <Header />
 	  	    <div className="container">
 	  	       {props.children}
-	  	       {/*
-	            <div className="row row-offcanvas row-offcanvas-right">
-	                <div className="col-xs-12 col-sm-9">
-				        <ToggleNav />                  
-                        <div>
-                        {props.children}
-                        </div> 
-                       
-				    </div>
-				    <Menu /> 
-				         	        
-	            </div>
-	            */}
-	            <Footer />
-
+	           <Footer />
 	        </div> 
         </div>
   	);
