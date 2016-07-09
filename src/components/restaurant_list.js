@@ -144,11 +144,19 @@ class RestaurantList extends Component {
 		
 		return (
 	    	<div>
-                <Menu /> 
-		    	<Overview />
-                
-		    	
-                {/*{this.renderList(restaurants)}*/}
+
+                <div className="row row-offcanvas row-offcanvas-right">
+                    <div className="col-xs-12 col-sm-9">
+                        <ToggleNav />
+                        <Overview />                  
+                        <div>
+                        {this.renderList(restaurants)}
+                        </div> 
+                       
+                    </div>
+                    <Menu /> 
+                                    
+                </div>
 		    	
 	    	</div>
 
