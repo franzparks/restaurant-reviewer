@@ -11,7 +11,9 @@ const Restaurant = (props) => {
 	        
 	        <h3>{props.name}</h3>
 	        <p>
-	        <img src={props.image} className="img-responsive">
+	        <img src={props.image} 
+	        className="img-responsive"
+	        alt="Image of restaurant cuisine type">
 	        
 	        </img>
 	        </p>
