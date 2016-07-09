@@ -59,11 +59,15 @@ class RestaurantDetails  extends Component{
                     </img>
                     </p>
                     <p aria-label="Average Rating"><Stars /></p>
-                    <p aria-label="Cuisine Type">Cuisine Type: {this.props.restaurant.cuisineType}</p>
-			        <p aria-label="Address">Address: {this.props.restaurant.address}</p>
+                    
 			        <Link to="/"> Back</Link>
 
 			    </div>
+
+                <div className="col-xs-4 col-sm-6">
+                    <p aria-label="Cuisine Type">Cuisine Type: {this.props.restaurant.cuisineType}</p>
+                    <p aria-label="Address">Address: {this.props.restaurant.address}</p>
+                </div>
 
                 <div className="col-xs-4 col-sm-6">
                     <Link to={path} className="btn btn-default" >Write A Review </Link>
