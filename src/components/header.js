@@ -33,7 +33,6 @@ class Header extends Component {
                     <div id="navbar" className="collapse navbar-collapse">
                         <ul className="nav navbar-nav">
                             <li className="active"><a href="#">Home</a></li>
-                            <li><a href="#about">About</a></li>
                             <li><a href="#">Filter By : </a></li>                       
                              
                         </ul>
