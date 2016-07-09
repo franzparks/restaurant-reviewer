@@ -74,8 +74,8 @@ class Review extends Component {
 	        </div>
 
 	        <div className={`form-group ${comment.touched && comment.invalid ? 'has-danger' : ''}`}>
-	          <label>Comment</label>
-	          <textarea className="form-control" {...comment} />
+	          <label for="comment">Comment</label>
+	          <textarea className="form-control" {...comment} id="comment"/>
 	          <div className="text-help">
 	            {comment.touched ? comment.error : ''}
 	          </div>
