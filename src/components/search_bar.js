@@ -9,8 +9,10 @@ const SearchBar = (props) => {
 
     return (
         <form className="navbar-form navbar-center" role="search" >
-	        <div className="form-group">	        
+	        <div className="form-group">
+
 	        	<input
+	        	    aria-label="Search Bar"
 	        	    className="form-control"
 	        	    type="text"
 	        	    placeholder=" Name, Location"
