@@ -66,8 +66,8 @@ class RestaurantDetails  extends Component{
 			    </div>
 
                 <div className="col-xs-4 col-sm-4">
-                    <p aria-label="Cuisine Type">Cuisine Type: {this.props.restaurant.cuisineType}</p>
-                    <p aria-label="Address">Address: {this.props.restaurant.address}</p>
+                    <p aria-label="Cuisine Type"><strong>Cuisine Type:</strong> {this.props.restaurant.cuisineType}</p>
+                    <p aria-label="Address"><strong>Address:</strong> {this.props.restaurant.address}</p>
                 </div>
 
                 <div className="col-xs-4 col-sm-4">

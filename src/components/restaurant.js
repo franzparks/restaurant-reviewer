@@ -30,8 +30,8 @@ const Restaurant = (props) => {
              </div>
 
             <div className="row">
-            <p aria-label="Cuisine Type" className="">Cuisine Type: {props.cuisineType}</p>
-	        <p aria-label="Address">Address: {props.address}</p>
+            <p aria-label="Cuisine Type" className=""><strong>Cuisine Type:</strong> {props.cuisineType}</p>
+	        <p aria-label="Address"><strong>Address:</strong> {props.address}</p>
 	        
 	       
 	        <Link 
