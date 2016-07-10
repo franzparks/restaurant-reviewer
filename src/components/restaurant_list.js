@@ -123,6 +123,7 @@ class RestaurantList extends Component {
                 image={restaurant.image}
                 address={restaurant.address}
                 cuisineType={restaurant.cuisineType}
+                hours={restaurant.operatingHours}
                
             /> 
             
