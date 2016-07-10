@@ -61,7 +61,7 @@ class RestaurantDetails  extends Component{
                     <p aria-label="Average Rating"><Stars /></p>
                     
                     <div className="row" />
-			        <Link to="/"> Back</Link>
+			        <Link to="/" className="btn btn-primary"> Back</Link>
 
 			    </div>
 
