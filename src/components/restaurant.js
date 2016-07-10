@@ -37,7 +37,7 @@ const Restaurant = (props) => {
 	        <Link 
 	        to={path} 
 	        onClick={props.handleClick}
-	        className="btn btn-default"
+	        className="btn btn-primary"
 	        > 
 	        View Details &raquo;
 	        </Link>
