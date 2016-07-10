@@ -10,6 +10,7 @@ const Restaurant = (props) => {
 		
 	
 	    <div className="col-xs-6 col-lg-6">
+	        <div className="row">
 	        
 	        <h3>{props.name}</h3>
 	        <p>
@@ -24,12 +25,14 @@ const Restaurant = (props) => {
 	        </Link>
 	        </p>
             
-            <p aria-label="Average Rating"><Stars /></p>
-            <br />
-            <hr />
-            <br />
-            <p aria-label="Cuisine Type">Cuisine Type: {props.cuisineType}</p>
+            <p aria-label="Average Rating" ><Stars /></p>
+             
+             </div>
+
+            <div className="row">
+            <p aria-label="Cuisine Type" className="">Cuisine Type: {props.cuisineType}</p>
 	        <p aria-label="Address">Address: {props.address}</p>
+	        
 	       
 	        <Link 
 	        to={path} 
@@ -38,6 +41,9 @@ const Restaurant = (props) => {
 	        > 
 	        View details &raquo;
 	        </Link>
+
+	        </div>
+
 	     
        
 	    </div>
