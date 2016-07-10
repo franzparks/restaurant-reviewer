@@ -14,13 +14,13 @@
   position: relative;
   width: 1.1em;
 }
-.rating > span:hover,
+.rating > span:hover,span:focus,
 .rating > span:hover ~ span {
   color: transparent;
   background: #E91E63
 }
 
-.rating > label:focus,
+
 .rating > span:focus:hover:before,
 .rating > span:hover ~ span:before {
    content: "\2605";
