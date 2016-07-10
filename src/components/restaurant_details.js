@@ -68,6 +68,7 @@ class RestaurantDetails  extends Component{
                 <div className="col-xs-4 col-sm-4">
                     <p aria-label="Cuisine Type"><strong>Cuisine Type:</strong> {this.props.restaurant.cuisineType}</p>
                     <p aria-label="Address"><strong>Address:</strong> {this.props.restaurant.address}</p>
+                    <p aria-label="Hours Open"><strong>Hours Open:</strong> {props.hours.open} To {props.hours.close }</p>
                 </div>
 
                 <div className="col-xs-2 col-sm-2">
