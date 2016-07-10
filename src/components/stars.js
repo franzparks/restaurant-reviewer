@@ -5,7 +5,7 @@ const Stars = (props) => {
 
 return (
 
-	<div className="rating" tabindex="0">
+	<div className={props.style} tabindex="0">
 		<input type="radio" id="star5" name="rating" value="5" onClick={props.onClick} />
 			<label htmlFor="star5" title="Rocks!" >5 stars</label>
 		<input type="radio" id="star4" name="rating" value="4" onClick={props.onClick} />

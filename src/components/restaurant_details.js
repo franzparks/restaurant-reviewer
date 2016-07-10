@@ -58,7 +58,7 @@ class RestaurantDetails  extends Component{
                 
                     </img>
                     </p>
-                    <div aria-label="Average Rating"><Stars /></div>
+                    <div aria-label="Average Rating"><Stars style={'rating'}/></div>
                     
                     <div className="row" />
 			        <Link to="/" className="btn btn-primary"> Back</Link>

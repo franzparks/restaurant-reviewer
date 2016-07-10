@@ -65,22 +65,22 @@
    width:1.1em;    
 }
 
-.rating:not(:checked) > label:hover,
-.rating:not(:checked) > label:hover ~ label { 
+.rating_edit:not(:checked) > label:hover,
+.rating_edit:not(:checked) > label:hover ~ label { 
   color: gold;
   width:1.1em;
  }
  
- .rating > input:checked + label:hover,
- .rating > input:checked + label:hover ~ label,
- .rating > input:checked ~ label:hover,
- .rating > input:checked ~ label:hover ~ label,
- .rating > label:hover ~ input:checked ~ label {  
+ .rating_edit > input:checked + label:hover,
+ .ratingedit > input:checked + label:hover ~ label,
+ .rating_edit > input:checked ~ label:hover,
+ .rating_edit > input:checked ~ label:hover ~ label,
+ .rating_edit > label:hover ~ input:checked ~ label {  
    color: #ea0;    text-shadow: 1px 1px goldenrod, 2px 2px #B57340, .1em .1em .1em rgba(0,0,0,.5);
    width:1.1em;
   }
    
- .rating > label:active { 
+ .rating_edit > label:active { 
     position:relative;   
     top:2px; 
     left:2px;
