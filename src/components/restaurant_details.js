@@ -44,7 +44,7 @@ class RestaurantDetails  extends Component{
 
 		return (
 			
-			<div className="row">
+			<div>
 				
                 <div className="row">
 
@@ -70,8 +70,8 @@ class RestaurantDetails  extends Component{
                     <p aria-label="Address"><strong>Address:</strong> {this.props.restaurant.address}</p>
                 </div>
 
-                <div className="col-xs-4 col-sm-4">
-                    <Link to={path} className="btn btn-default" >Write A Review </Link>
+                <div className="col-xs-2 col-sm-2">
+                    <Link to={path} className="btn btn-primary" >Write A Review </Link>
                 </div>
 
 			    <div >
