@@ -4,7 +4,7 @@
 		"image" :"../data/images/image1.jpg",
 		"address":"101 Santa Clara",
 		"cuisineType":"Italian",
-		"operatingHours":{"open":"07","close":"11"},
+		"operatingHours":{"open":"07 AM","close":"11 PM"},
 		"reviews" : [{"id": 1, "rating":2,"name":"Reviewer 1", 
 		"comment":"I didn't like it so much I didn't like it so much I didn't like it so much  I didn't like it so much I didn't like it so much",
 	    "date":"02/17/2016"},
@@ -16,7 +16,7 @@
 	    "image":"../data/images/icecream.jpg",
 	    "address":"101 San Jose",
 	    "cuisineType":"American",
-	    "operatingHours":{"open":"07","close":"11"},
+	    "operatingHours":{"open":"07 AM","close":"11 PM"},
 		"reviews" : [{"id": 1,"rating":3,"name":"Reviewer 2", "comment":"I didn't like it so so much","date":"02/19/2016"},
          {"id": 2, "rating":2,"name":"Reviewer 1", "comment":"I didn't like it so much", "date":"01/07/2016"}
 		]
@@ -26,7 +26,7 @@
 	    "image":"../data/images/bagel.jpg",
 	    "address":"101 Mountain View",
 	    "cuisineType":"English",
-	    "operatingHours":{"open":"07","close":"11"},
+	    "operatingHours":{"open":"07 AM","close":"11 PM"},
 		"reviews" : [{"id": 1,"rating":4,"name":"Reviewer 3", "comment":"I kind of liked it","date":"09/27/2014"},
 		{"id": 2, "rating":2,"name":"Reviewer 1", "comment":"I didn't like it so much","date":"02/11/2015"}]
 	},
@@ -35,7 +35,7 @@
 	    "image":"../data/images/grill.jpg",
 	    "address":"101 Livingstone", 
 	    "cuisineType":"Zambian",
-	    "operatingHours":{"open":"07","close":"11"},
+	    "operatingHours":{"open":"07 AM","close":"11 PM"},
 		"reviews" : [{"id": 1,"rating":5,"name":"Reviewer 4", "comment":"I liked it so much!","date":"08/16/2013"},
 		{"id": 2, "rating":4,"name":"Reviewer 1", "comment":"I loved it!!", "date":"06/23/2016"}]
 	}
