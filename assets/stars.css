@@ -20,8 +20,8 @@
   background: #E91E63
 }
 
-.rating > span:focus,
-.rating > span:hover:before,
+.rating > label:focus,
+.rating > span:focus:hover:before,
 .rating > span:hover ~ span:before {
    content: "\2605";
    position: absolute;

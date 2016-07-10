@@ -60,7 +60,7 @@ class Review extends Component {
           
           <label htmlFor="ratings" className="form-group">Rate Restaurant</label>
           <div className="form-group">
-           <Stars onClick={this.getRating} tabindex="1"  id="ratings"/>
+           <Stars onClick={this.getRating}   id="ratings"/>
            </div>
           <br />
           <hr />
