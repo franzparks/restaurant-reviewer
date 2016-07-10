@@ -7,9 +7,9 @@ const Review = (props) => {
 	    <div className="col-xs-8">
 	        <hr />
 	        <h4>{props.name}</h4>
-	        <p>Rating : {props.rating}</p>
-	        <p>Comment: {props.comment}</p>
-	        <p>Date: </p>
+	        <p><strong>Rating : </strong> {props.rating}</p>
+	        <p><strong>Comment: </strong> {props.comment}</p>
+	        <p><strong>Date: </strong> {props.date}</p>
 	        
 
 	    </div>
