@@ -39,7 +39,7 @@ const Restaurant = (props) => {
 	        onClick={props.handleClick}
 	        className="btn btn-default"
 	        > 
-	        View details &raquo;
+	        View Details &raquo;
 	        </Link>
 
 	        </div>
