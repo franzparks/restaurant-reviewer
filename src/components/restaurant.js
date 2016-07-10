@@ -32,6 +32,7 @@ const Restaurant = (props) => {
             <div className="row">
             <p aria-label="Cuisine Type"><strong>Cuisine Type:</strong> {props.cuisineType}</p>
 	        <p aria-label="Address"><strong>Address:</strong> {props.address}</p>
+	        <p aria-label="Hours Open"><strong>Hours Open:</strong> {props.operatingHours.open} To {props.operatingHours.close }</p>
 	        
 	       
 	        <Link 
