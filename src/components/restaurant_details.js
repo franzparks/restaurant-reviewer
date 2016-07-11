@@ -64,7 +64,10 @@ class RestaurantDetails  extends Component{
                             style={'rating'}
                             condition={false} 
                             checked={'checked'}
-                            keys={[Math.random() * 100000,Math.random() * 100000,Math.random() * 100000,Math.random() * 100000,Math.random() * 100000]}
+                            keys={[
+                                () => props.keyGen ,()=>props.keyGen,()=>props.keyGen,
+                                () => props.keyGen,() => props.keyGen
+                            ]}
                         />
                     </div>
                     
@@ -108,7 +111,9 @@ class RestaurantDetails  extends Component{
 
 function mapStateToProps(state) {
 	
-	return { restaurant : state.appState.restaurant };
+	return { 
+        restaurant : state.appState.restaurant, 
+        keyGen : state.appState.keyGen };
 }
 
 
