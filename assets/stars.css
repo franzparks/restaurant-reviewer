@@ -55,7 +55,7 @@
    line-height:1.2;  
    }
  
- .rating_edit > input:checked ~ label {   
+ .rating > input:checked ~ label {   
    color: #f97; 
    width:1.1em;    
 }
