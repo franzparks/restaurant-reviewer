@@ -7,51 +7,61 @@ return (
 
 	<div className={props.style} tabIndex="0">
 		<input type="radio"
-			id={props.keys[0]} 
+			id={props.keys[0]}
+			key={props.keys[0]} 
 			name="rating" 
 			value="5" 
 			onClick={props.onClick}  
-			readOnly={props.condition} 
-			key={props.keys[0]}
+			readOnly={props.condition}
+			onChange={ props.condition ? () =>{} : () =>{} }
+			checked={props.checked_star === '5' ? 'checked' : ''}  
+			
 		/>
 		<label htmlFor={props.keys[0]} title="Rocks!" >5 stars</label>
 
 		<input type="radio" 
-			id={props.keys[1]} 
+			id={props.keys[1]}
+			key={props.keys[1]} 
 			name="rating" 
 			value="4" 
 			onClick={props.onClick}  
-			readOnly={props.condition}  
-			key={props.keys[1]}
+			readOnly={props.condition}
+			onChange={ props.condition ? () =>{} : () =>{} }
+			checked={props.checked_star === '4' ? 'checked' : ''}   
+			
 		/>
 		<label htmlFor={props.keys[1]} title="Pretty Good!">4 stars</label>
 
 		<input type="radio"
 			id={props.keys[2]}
+			key={props.keys[2]}
 			name="rating" 
 			value="3"
 			onClick={props.onClick} 
 			readOnly={props.condition}  
-			key={props.keys[2]}
+			onChange={ props.condition ? () =>{} : () =>{} }
+			checked={props.checked_star === '3' ? 'checked' : ''} 
 		/>
 		<label htmlFor={props.keys[2]} title="Meh!">3 stars</label>
 
 		<input type="radio" 
 			id={props.keys[3]}
+			key={props.keys[3]}
 			name="rating" 
 			value="2"
 			onClick={props.onClick}
 			readOnly={props.condition}
-			key={props.keys[3]} 
+			onChange={ props.condition ? () =>{} : () =>{} }
+			checked={props.checked_star === '2' ? 'checked' : ''} 
 		/>
 		<label htmlFor={props.keys[3]} title="Kinda Bad">2 stars</label>
 
 		<input type="radio" 
-			id={props.keys[4]} name="rating" 
+			id={props.keys[4]} name="rating"
+			key={props.keys[4]} 
 			value="1" onClick={props.onClick} 
-			readOnly={props.condition}
-			onChange={ props.condition ? () =>{} : () =>{} }  
-			key={props.keys[4]}
+			readOnly={props.condition}  
+			onChange={ props.condition ? () =>{} : () =>{} }
 			checked={props.checked_star === '1' ? 'checked' : ''} //this is just to fulfill react api requirement 
 		/>
 		<label htmlFor={props.keys[4]} title="Sucks big time"> 1 star</label>
