@@ -124,7 +124,7 @@ class RestaurantList extends Component {
                 address={restaurant.address}
                 cuisineType={restaurant.cuisineType}
                 hours={restaurant.operatingHours}
-                averageRating={restaurant.averageRating} //this will be average rating
+                averageRating={restaurant.averageRating}
                 numberOfRatings={restaurant.numberOfRatings}
                 checked_star={'5'}
                

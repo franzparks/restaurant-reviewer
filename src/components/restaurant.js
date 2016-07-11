@@ -33,7 +33,7 @@ const Restaurant = (props) => {
             	/>
             	<div>
                 {props.numberOfRatings} Reviews
-            	<div>
+            	</div>
             </div>
              
              </div>
