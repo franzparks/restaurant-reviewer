@@ -63,6 +63,7 @@ class RestaurantDetails  extends Component{
                             style={'rating'}
                             condition={false} 
                             checked={'checked'}
+                            keys={[Math.random() * 100000,Math.random() * 100000,Math.random() * 100000,Math.random() * 100000,Math.random() * 100000]}
                         />
                     </div>
                     
