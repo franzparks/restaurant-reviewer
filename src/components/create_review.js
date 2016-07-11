@@ -60,9 +60,13 @@ class Review extends Component {
           
           <label htmlFor="ratings" className="form-group">Rate Restaurant</label>
           <div className="form-group">
-            <Stars onClick={this.getRating}
-              id="ratingss" 
-              style={'rating rating_edit'}
+            <Stars 
+              onClick={this.getRating}
+              id="ratings"
+              key={Math.random() * 10000}
+              style={'rating'}
+              condition={false} 
+              checked={'checked'}
               keys={[Math.random() * 100000,Math.random() * 100000,Math.random() * 100000,Math.random() * 100000,Math.random() * 100000]}
             />
           </div>

@@ -59,7 +59,8 @@ class RestaurantDetails  extends Component{
                     </img>
                     </p>
                     <div aria-label="Average Rating">
-                        <Stars key={Math.random() * 10000}
+                        <Stars 
+                            key={Math.random() * 10000}
                             style={'rating'}
                             condition={false} 
                             checked={'checked'}

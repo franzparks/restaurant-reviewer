@@ -6,7 +6,8 @@ import { reducer as formReducer } from 'redux-form';
 const rootReducer = combineReducers({
   appState: restaurantsReducer,
   form: formReducer,
-  filterState: filtersReducer
+  filterState: filtersReducer,
+  keyGen: Math.random() * 100000
 
 });
 
