@@ -71,7 +71,7 @@ class Review extends Component {
               key={Math.random() * 10000}
               style={'rating rating_edit'}
               condition={false} 
-              check_condition={this.state.check_condition}
+              checked_star={this.state.checked_star}
               keys={[Math.random() * 100000,Math.random() * 100000,Math.random() * 100000,Math.random() * 100000,Math.random() * 100000]}
             />
           </div>
