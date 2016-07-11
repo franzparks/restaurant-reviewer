@@ -13,7 +13,8 @@ class Review extends Component {
     constructor(props){
     	super(props);
         this.state = {
-         rating : 0
+         rating : 0,
+         check_condition : ['','','','','','']
         }
 
         this.onSubmit = this.onSubmit.bind(this);
@@ -42,8 +43,11 @@ class Review extends Component {
     }
 
     getRating (e){
-      console.log(e.target);
-    	this.setState( {rating: e.target.value});
+      //console.log(e.target);
+    	this.setState( {rating: e.target.value, 
+        check_condition[e.target.value]
+      });
+
     }
     
 

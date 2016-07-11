@@ -18,7 +18,13 @@ return (
 		<input type="radio" id={props.keys[3]} name="rating" value="2" onClick={props.onClick} readOnly={props.condition} key={props.keys[3]} />
 			<label htmlFor={props.keys[3]} title="Kinda Bad">2 stars</label>
 
-		<input type="radio" id={props.keys[4]} name="rating" value="1" onClick={props.onClick} readOnly={props.condition}  key={props.keys[4]} />
+		<input type="radio" 
+			id={props.keys[4]} name="rating" 
+			value="1" onClick={props.onClick} 
+			readOnly={props.condition}  
+			key={props.keys[4]}
+			checked={true}
+		/>
 			<label htmlFor={props.keys[4]} title="Sucks big time"> 1 star</label>
 
      </div>
