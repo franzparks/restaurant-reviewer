@@ -64,7 +64,7 @@ class Review extends Component {
               onClick={this.getRating}
               id="ratings"
               key={Math.random() * 10000}
-              style={'rating'}
+              style={'rating rating_edit'}
               condition={false} 
               checked={'checked'}
               keys={[Math.random() * 100000,Math.random() * 100000,Math.random() * 100000,Math.random() * 100000,Math.random() * 100000]}

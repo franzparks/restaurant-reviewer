@@ -72,7 +72,7 @@
  }
  
  .rating_edit > input:checked + label:hover,
- .ratingedit > input:checked + label:hover ~ label,
+ .rating_edit > input:checked + label:hover ~ label,
  .rating_edit > input:checked ~ label:hover,
  .rating_edit > input:checked ~ label:hover ~ label,
  .rating_edit > label:hover ~ input:checked ~ label {  
