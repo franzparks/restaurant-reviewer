@@ -23,7 +23,7 @@ return (
 			value="1" onClick={props.onClick} 
 			readOnly={props.condition}  
 			key={props.keys[4]}
-			checked={props.check_condition[1]}
+			checked={props.checked_star === 1 ? 'checked' : ''}
 		/>
 			<label htmlFor={props.keys[4]} title="Sucks big time"> 1 star</label>
 
