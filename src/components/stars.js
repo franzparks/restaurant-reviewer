@@ -9,7 +9,7 @@ return (
 		<input type="radio" id={props.keys[0]} name="rating" value="5" onClick={props.onClick}  readOnly={props.condition} key={props.keys[0]}/>
 			<label htmlFor={props.keys[0]} title="Rocks!" >5 stars</label>
 
-		<input type="radio" id={props.keys[1]}  name="rating" value="4" onClick={props.onClick}  readOnly={props.condition} checked={props.checked} key={props.keys[1]}/>
+		<input type="radio" id={props.keys[1]}  name="rating" value="4" onClick={props.onClick}  readOnly={props.condition}  key={props.keys[1]}/>
 			<label htmlFor={props.keys[1]} title="Pretty Good!">4 stars</label>
 
 		<input type="radio" id={props.keys[2]} name="rating" value="3" onClick={props.onClick}  readOnly={props.condition} key={props.keys[2]}/>
