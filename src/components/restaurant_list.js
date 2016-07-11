@@ -124,7 +124,7 @@ class RestaurantList extends Component {
                 address={restaurant.address}
                 cuisineType={restaurant.cuisineType}
                 hours={restaurant.operatingHours}
-                checked={'checked'}
+                checked_star={'5'}
                
             /> 
             
