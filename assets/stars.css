@@ -81,3 +81,9 @@
     left:2px;
     width:1.1em;
   }
+
+
+.number-of-reviews {
+  flex-direction: row;
+  padding: 10px 0px 0px 35px;
+}
