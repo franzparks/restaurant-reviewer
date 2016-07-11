@@ -14,7 +14,7 @@ class Review extends Component {
     	super(props);
         this.state = {
          rating : 0,
-         check_condition : ['','','','','','']
+         checked_star : 0
         }
 
         this.onSubmit = this.onSubmit.bind(this);
@@ -44,9 +44,9 @@ class Review extends Component {
 
     getRating (e){
       //console.log(e.target);
-    	this.setState( {rating: e.target.value, 
-        check_condition[e.target.value]
-      });
+      const val = e.target.value;
+
+    	this.setState( {rating: val, checked_star : val });
 
     }
     
@@ -71,7 +71,7 @@ class Review extends Component {
               key={Math.random() * 10000}
               style={'rating rating_edit'}
               condition={false} 
-              checked={'checked'}
+              check_condition={this.state.check_condition}
               keys={[Math.random() * 100000,Math.random() * 100000,Math.random() * 100000,Math.random() * 100000,Math.random() * 100000]}
             />
           </div>
