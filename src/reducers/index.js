@@ -7,9 +7,8 @@ const rootReducer = combineReducers({
   appState: restaurantsReducer,
   form: formReducer,
   filterState: filtersReducer,
-  keyGen: () => {
-  	return Math.random() * 100000;
-  }
+  keyGen: Math.random() * 100000
+
 
 });
 

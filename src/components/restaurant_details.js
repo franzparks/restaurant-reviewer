@@ -65,8 +65,8 @@ class RestaurantDetails  extends Component{
                             condition={false} 
                             checked={'checked'}
                             keys={[
-                                () => props.keyGen ,()=>props.keyGen,()=>props.keyGen,
-                                () => props.keyGen,() => props.keyGen
+                                this.props.key ,this.props.key,this.props.key,
+                                this.props.key,this.props.key
                             ]}
                         />
                     </div>
@@ -113,7 +113,7 @@ function mapStateToProps(state) {
 	
 	return { 
         restaurant : state.appState.restaurant, 
-        keyGen : state.appState.keyGen };
+        key : state.appState.keyGen };
 }
 
 
