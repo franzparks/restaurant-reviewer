@@ -25,7 +25,13 @@ const Restaurant = (props) => {
 	        </Link>
 	        </p>
             
-            <div aria-label="Average Rating" ><Stars style={'rating'} condition={'true'}/></div>
+            <div aria-label="Average Rating" >
+            	<Stars  style={'rating'} 
+            		condition={true}  
+            		checked={props.checked}
+            		keys={[Math.random() * 100000,Math.random() * 100000,Math.random() * 100000,Math.random() * 100000,Math.random() * 100000]}
+            	/>
+            </div>
              
              </div>
 

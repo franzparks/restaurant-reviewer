@@ -11,6 +11,7 @@
 		{"id": 2, "rating":2,"name":"Reviewer 1", "comment":"I didn't like it so much","date":"04/10/2016"}]
 
 	},
+
 	{   "id": "2",
 		"name":"The Icecream Place",
 	    "image":"../data/images/icecream.jpg",

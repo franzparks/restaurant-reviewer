@@ -6,16 +6,20 @@ const Stars = (props) => {
 return (
 
 	<div className={props.style} tabIndex="0">
-		<input type="radio" id="star5" name="rating" value="5" onClick={props.onClick}  disabled={props.condition}/>
-			<label htmlFor="star5" title="Rocks!" >5 stars</label>
-		<input type="radio" id="star4" name="rating" value="4" onClick={props.onClick}  disabled={props.condition}/>
-			<label htmlFor="star4" title="Pretty Good!">4 stars</label>
-		<input type="radio" id="star3" name="rating" value="3" onClick={props.onClick}  disabled={props.condition}/>
-			<label htmlFor="star3" title="Meh!">3 stars</label>
-		<input type="radio" id="star2" name="rating" value="2" onClick={props.onClick}  disabled={props.condition}/>
-			<label htmlFor="star2" title="Kinda Bad">2 stars</label>
-		<input type="radio" id="star1" name="rating" value="1" onClick={props.onClick}  disabled={props.condition}/>
-			<label htmlFor="star1" title="Sucks big time" >1 star</label>
+		<input type="radio" id={props.keys[0]} name="rating" value="5" onClick={props.onClick}  readOnly={props.condition} key={props.keys[0]}/>
+			<label htmlFor={props.keys[0]} title="Rocks!" >5 stars</label>
+
+		<input type="radio" id={props.keys[1]}  name="rating" value="4" onClick={props.onClick}  readOnly={props.condition} checked={props.checked} key={props.keys[1]}/>
+			<label htmlFor={props.keys[1]} title="Pretty Good!">4 stars</label>
+
+		<input type="radio" id={props.keys[2]} name="rating" value="3" onClick={props.onClick}  readOnly={props.condition} key={props.keys[2]}/>
+			<label htmlFor={props.keys[2]} title="Meh!">3 stars</label>
+
+		<input type="radio" id={props.keys[3]} name="rating" value="2" onClick={props.onClick}  readOnly={props.condition} key={props.keys[3]} />
+			<label htmlFor={props.keys[3]} title="Kinda Bad">2 stars</label>
+
+		<input type="radio" id={props.keys[4]} name="rating" value="1" onClick={props.onClick}  readOnly={props.condition} key={props.keys[4]} />
+			<label htmlFor={props.keys[4]} title="Sucks big time" >1 star</label>
 
      </div>
 

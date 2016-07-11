@@ -115,8 +115,8 @@ class RestaurantList extends Component {
               <div>
                 
 	          <Restaurant 
-                key={restaurant.id * Math.random() * 1000}
-                id={restaurant.id}
+                key={Math.random() * 100000}
+                id={restaurant.id +(Math.random() * 100000)}
                 data={restaurant}
                 handleClick={boundClick}
                 name={restaurant.name}
@@ -124,6 +124,7 @@ class RestaurantList extends Component {
                 address={restaurant.address}
                 cuisineType={restaurant.cuisineType}
                 hours={restaurant.operatingHours}
+                checked={'checked'}
                
             /> 
             
