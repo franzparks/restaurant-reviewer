@@ -43,7 +43,7 @@ class Review extends Component {
     }
 
     getRating (e){
-      //console.log(e.target);
+      console.log(e.target);
       const val = e.target.value;
 
     	this.setState( {rating: val, checked_star : val });

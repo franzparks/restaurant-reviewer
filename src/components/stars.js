@@ -21,9 +21,10 @@ return (
 		<input type="radio" 
 			id={props.keys[4]} name="rating" 
 			value="1" onClick={props.onClick} 
-			readOnly={props.condition}  
+			readOnly={props.condition}
+			onChange={ props.condition ? () =>{} : () =>{} }  
 			key={props.keys[4]}
-			checked={props.checked_star === 1 ? 'checked' : ''}
+			checked={props.checked_star === '1' ? 'checked' : ''} //this is just to fulfill react api requirement 
 		/>
 			<label htmlFor={props.keys[4]} title="Sucks big time"> 1 star</label>
 
