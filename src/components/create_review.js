@@ -4,6 +4,8 @@ import { postReview } from '../actions/index';
 import { Link } from 'react-router';
 import Stars from './stars';
 
+import {getCurrentDate} from '../utils/utils';
+
 class Review extends Component {
 
 	static contextTypes = {
@@ -21,28 +23,22 @@ class Review extends Component {
     }
 
     onSubmit(props) {
-      //console.log("got submitted");
+
       var path = `/restaurants/${this.props.params.id}`;
-      var newDate = new Date();
-      const mm = newDate.getMonth() + 1;
-      const dd = newDate.getDate();
-      const yy = newDate.getFullYear();
-      const date = mm + "/" + dd + "/" + yy;
+      
+      const review = {
+        id : Math.random() * 10000 ,
+        ...props, 
+        date: getCurrentDate(),
+        rating : this.state.rating 
+      };
 
-      const review = {id : Math.random() * 10000 ,...props, 
-        date: date,
-        rating : this.state.rating };
-
-        //console.log("got submitted with keys: "+Object.keys(review));
-
-        //console.log("got submitted with rating: "+review.rating);
       var restaurant = this.props.restaurant;
         restaurant.reviews = [ ...restaurant.reviews, review];
-
-        //console.log("got submitted with : "+restaurant.reviews); 
+ 
         this.props.postReview(restaurant);	
 
-	     this.context.router.push(path);
+	    this.context.router.push(path);
     }
 
     getRating (e){
