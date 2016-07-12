@@ -4,7 +4,6 @@ import * as actions from '../actions';
 import { Link } from 'react-router';
 import Stars from './stars';
 
-import Review from './review';
 import {
     getAverageRating,
     loadReviews
@@ -14,11 +13,7 @@ class RestaurantDetails  extends Component{
 	
     constructor(props){
     	super(props);
-   
-    	//this.loadReviews = this.loadReviews.bind(this);
     }
-
-	
 
 
     render(){
