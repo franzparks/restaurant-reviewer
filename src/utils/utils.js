@@ -1,3 +1,7 @@
+
+import React from 'react';
+import Review from '../components/review';
+
 export  const getAverageRating = (reviews) => {
        
     if(reviews  && reviews.length > 1){
@@ -75,12 +79,10 @@ export const getNumberOfRatings = (reviews) => {
 
 
 export const loadReviews = (reviews) => {
-           
-    var results = [];
 
-    reviews.forEach((review) => {
+    return reviews.map((review) => {
          
-        results.push(
+        return(
             <Review 
             key={review.id}
             name={review.name}
@@ -93,5 +95,4 @@ export const loadReviews = (reviews) => {
 
     });
    
-    return results;
 }
