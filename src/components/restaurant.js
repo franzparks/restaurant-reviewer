@@ -26,8 +26,8 @@ const Restaurant = (props) => {
 	        </p>
             
             <div aria-label="Average Rating"  className="">
-            	<Stars  style={'rating'} 
-            		condition={true}  
+            	<Stars  style={'rating rating_edit'} 
+            		condition={false}  
             		checked_star={props.checked_star}
             		keys={[Math.random() * 100000,Math.random() * 100000,Math.random() * 100000,Math.random() * 100000,Math.random() * 100000]}
             	/>
@@ -35,8 +35,9 @@ const Restaurant = (props) => {
                 {props.numberOfRatings} Reviews
             	</div>
             </div>
+
              
-             </div>
+            </div>
 
             <div className="row">
             <p aria-label="Cuisine Type"><strong>Cuisine Type:</strong> {props.cuisineType}</p>

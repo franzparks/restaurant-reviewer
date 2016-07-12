@@ -6,6 +6,7 @@ import ToggleNav from './toggle_nav';
 import Restaurant from './restaurant';
 import Menu from './menu';
 import * as actions from '../actions';
+import Stars from './stars';
 
 class RestaurantList extends Component {
    
@@ -90,7 +91,7 @@ class RestaurantList extends Component {
                 sum += review.rating;
             });
 
-            return sum / reviews.length;
+            return Math.floor(sum / reviews.length);
         }else
             return 0; 
     }
@@ -112,11 +113,11 @@ class RestaurantList extends Component {
 	        var boundClick = this.handleClick.bind(this, restaurant);
 	        
 	        return (
-              <div>
-                
+              <div className="">
+               
 	          <Restaurant 
                 key={Math.random() * 100000}
-                id={restaurant.id +(Math.random() * 100000)}
+                id={restaurant.id }
                 data={restaurant}
                 handleClick={boundClick}
                 name={restaurant.name}
@@ -126,7 +127,7 @@ class RestaurantList extends Component {
                 hours={restaurant.operatingHours}
                 averageRating={restaurant.averageRating}
                 numberOfRatings={restaurant.numberOfRatings}
-                checked_star={'5'}
+                checked_star={restaurant.averageRating}
                
             /> 
             
@@ -142,6 +143,7 @@ class RestaurantList extends Component {
 
 		var restaurants = this.props.restaurants.map((res) => {
 			var averageRating = this.getAverageRating(res.reviews);
+            console.log("averageRating : "+ averageRating);
 	        var numberOfRatings=this.getNumberOfRatings(res.reviews);
                return { ...res, averageRating :averageRating, numberOfRatings : numberOfRatings   }
 		} );
@@ -151,10 +153,39 @@ class RestaurantList extends Component {
 
                 <div className="row row-offcanvas row-offcanvas-right">
                     <div className="col-xs-12 col-sm-9">
-                        <ToggleNav />
+                        <ToggleNav key={Math.random()}/>
                         {/*<Overview /> */}                 
                         <div>
-                        {this.renderList(restaurants)}
+                        {this.renderList(restaurants)} 
+
+                        {/*<div className="row">
+                        <Stars 
+                        key={1234}
+                        some={321}
+                         style={'rating1 rating_edit'} 
+                            condition={true}  
+                            checked_star={'3'}
+                            keys={[Math.random() * 100000,
+                        Math.random() * 100000,Math.random() * 100000,
+                        Math.random() * 100000,Math.random() * 100000]}
+                        />
+                        </div>
+                       <div className="row">
+                        <Stars  
+                          key={3454}
+                          some={123}
+                        style={'rating1 rating_edit'} 
+                            condition={true}  
+                            checked_star={'1'}
+                            keys={[Math.random() * 1000,
+                        Math.random() * 1000,Math.random() * 1000,
+                        Math.random() * 1000,Math.random() * 1000]}
+                        />
+
+                        </div>
+                    */}
+
+
                         </div> 
                        
                     </div>
