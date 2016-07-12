@@ -25,7 +25,7 @@ return (
 			id={props.keys[1]}
 			key={props.keys[1]} 
 			name="rating" 
-			value="4" 
+			value="4"
 			onClick={props.onClick}  
 			readOnly={props.condition}
 			onChange={ props.condition ? () =>{} : () =>{} }
@@ -38,7 +38,7 @@ return (
 			id={props.keys[2]}
 			key={props.keys[2]}
 			name="rating" 
-			value="3"
+			value="3" 
 			onClick={props.onClick} 
 			readOnly={props.condition}  
 			onChange={ props.condition ? () =>{} : () =>{} }
@@ -51,7 +51,7 @@ return (
 			id={props.keys[3]}
 			key={props.keys[3]}
 			name="rating" 
-			value="2"
+			value="2" 
 			onClick={props.onClick}
 			readOnly={props.condition}
 			onChange={ props.condition ? () =>{} : () =>{} }
@@ -63,7 +63,7 @@ return (
 			id={props.keys[4]} 
 			name="rating"
 			key={props.keys[4]} 
-			value="1" 
+			value="1"  
 			onClick={props.onClick} 
 			readOnly={props.condition}  
 			onChange={ props.condition ? () =>{} : () =>{} }

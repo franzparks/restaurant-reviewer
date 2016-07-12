@@ -21,9 +21,10 @@ class Review extends Component {
     }
 
     onSubmit(props) {
-  
+  console.log("submitted : "+props.rating);
    var restaurant = this.props.restaurant;
-        restaurant.reviews = [ ...restaurant.reviews, 
+        restaurant.reviews = [ 
+        ...restaurant.reviews, 
         { id : this.props.key ,...props, 
         date: Date.now(),
         rating : this.state.rating }
