@@ -46,7 +46,7 @@ class Review extends Component {
       console.log(e.target);
       const val = parseInt(e.target.value);
 
-    	this.setState( {rating: val, checked_star : val });
+    	this.setState( {rating: e.target.value, checked_star : val });
 
     }
     

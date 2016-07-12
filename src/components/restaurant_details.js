@@ -64,7 +64,7 @@ class RestaurantDetails  extends Component{
                             style={'rating'}
                             condition={false}
                             checked_star={this.props.checked_star} 
-                            type={'radio'}
+                            type={'checkbox'}
                             keys={[
                                 this.props.key ,this.props.key,this.props.key,
                                 this.props.key,this.props.key
