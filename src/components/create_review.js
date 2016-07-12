@@ -43,10 +43,10 @@ class Review extends Component {
     }
 
     getRating (e){
-      console.log(e.target);
+      console.log("value of : "+e.target.value);
       const val = parseInt(e.target.value);
 
-    	this.setState( {rating: e.target.value, checked_star : val });
+    	this.setState( {rating: val, checked_star : val });
 
     }
     
@@ -72,7 +72,7 @@ class Review extends Component {
               key={Math.random() * 10000}
               style={'rating rating_edit'}
               condition={false} 
-              checked_star={this.state.checked_star}
+              checked_star={this.state.rating}
               keys={[Math.random() * 100000,Math.random() * 100000,Math.random() * 100000,Math.random() * 100000,Math.random() * 100000]}
             />
           </div>

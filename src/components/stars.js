@@ -7,8 +7,9 @@ const Stars = (props) => {
 return (
 
 	<div className={props.style} tabIndex="0">
+
 		<input type={props.type}
-			id={props.some}
+			id={props.keys[0]}
 			key={props.keys[0]} 
 			name="rating" 
 			value="5" 
@@ -47,7 +48,7 @@ return (
 
 		<input 
 			type={props.type} 
-			id={props.some}
+			id={props.keys[3]}
 			key={props.keys[3]}
 			name="rating" 
 			value="2"
@@ -59,9 +60,11 @@ return (
 		<label htmlFor={props.keys[3]} title="Kinda Bad">2 stars</label>
 
 		<input type={props.type} 
-			id={props.keys[4]} name="rating"
+			id={props.keys[4]} 
+			name="rating"
 			key={props.keys[4]} 
-			value="1" onClick={props.onClick} 
+			value="1" 
+			onClick={props.onClick} 
 			readOnly={props.condition}  
 			onChange={ props.condition ? () =>{} : () =>{} }
 			checked={props.checked_star === 1 ? true : false} //this is just to fulfill react api requirement 
