@@ -24,7 +24,7 @@ class Review extends Component {
   
    var restaurant = this.props.restaurant;
         restaurant.reviews = [ ...restaurant.reviews, 
-        { id : (this.props.key ,...props, 
+        { id : this.props.key ,...props, 
         date: Date.now(),
         rating : this.state.rating }
         ]; 	
