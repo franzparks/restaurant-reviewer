@@ -118,7 +118,7 @@ function validate(values) {
 }
 
 function mapStateToProps(state) {
-	return { restaurant : state.appState.restaurant };
+	return { restaurant : state.appState.restaurant, key : state.appState.keyGen };
 }
 
 
