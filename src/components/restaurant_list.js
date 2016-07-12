@@ -7,6 +7,13 @@ import Restaurant from './restaurant';
 import Menu from './menu';
 import * as actions from '../actions';
 import Stars from './stars';
+import {
+    getAverageRating,
+    sortUsingCategoryFilter,
+    sortUsingTextFilter,
+    filterRestaurants,
+    getNumberOfRatings
+} from '../utils/utils';
 
 class RestaurantList extends Component {
    

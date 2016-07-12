@@ -64,3 +64,11 @@ export const  filterRestaurants = (arr, text, category) => {
 
 	return arr;
 }
+
+
+export const getNumberOfRatings = (reviews) => {
+    if(reviews  && reviews.length > 1){
+        return reviews.length;
+    }
+    return 0; 
+}
