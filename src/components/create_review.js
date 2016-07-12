@@ -31,14 +31,10 @@ class Review extends Component {
 
        console.log("got submitted with rating: "+review.rating);
       var restaurant = this.props.restaurant;
-        restaurant.reviews = [ 
-        ...restaurant.reviews, 
-        { id : 9999 ,...props, 
-        date: Date.now(),
-        rating : this.state.rating }
-        ];
+        restaurant.reviews = [ ...restaurant.reviews, review];
 
-        //console.log("got submitted with : "+restaurant.reviews); 	
+        //console.log("got submitted with : "+restaurant.reviews); 
+        this.props.postReview(restaurant);	
 
 	     this.context.router.push('/');
     }
