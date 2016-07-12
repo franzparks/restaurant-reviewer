@@ -62,7 +62,8 @@ class RestaurantDetails  extends Component{
                         <Stars 
                             key={Math.random() * 10000}
                             style={'rating'}
-                            condition={false} 
+                            condition={false}
+                            checked_star={props.checked_star} 
                             type={'radio'}
                             keys={[
                                 this.props.key ,this.props.key,this.props.key,
