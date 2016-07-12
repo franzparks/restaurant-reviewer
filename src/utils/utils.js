@@ -55,11 +55,11 @@ export const  sortUsingTextFilter = (arr,text) => {
 export const  filterRestaurants = (arr, text, category) => {
     
 	if(text){
-		return this.sortUsingTextFilter(arr,text);
+		return sortUsingTextFilter(arr,text);
 	}
 
 	if(category){
-        return this.sortUsingCategoryFilter(arr,category);
+        return sortUsingCategoryFilter(arr,category);
 	}
 
 	return arr;
