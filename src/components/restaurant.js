@@ -26,7 +26,7 @@ const Restaurant = (props) => {
 	        </p>
             
             <div aria-label="Average Rating"  className="">
-            	<Stars  style={'rating rating_edit'} 
+            	<Stars  style={'rating'} 
             		condition={true}
             		type={props.type}  
             		checked_star={props.checked_star}
