@@ -114,7 +114,8 @@ function mapStateToProps(state) {
 	
 	return { 
         restaurant : state.appState.restaurant, 
-        key : state.appState.keyGen };
+        key : state.appState.keyGen 
+    };
 }
 
 
