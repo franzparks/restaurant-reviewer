@@ -13,8 +13,7 @@ class Review extends Component {
     constructor(props){
     	super(props);
         this.state = {
-         rating : 0,
-         checked_star : 0
+         rating : 0
         }
 
         this.onSubmit = this.onSubmit.bind(this);
@@ -25,7 +24,7 @@ class Review extends Component {
   
    var restaurant = this.props.restaurant;
         restaurant.reviews = [ ...restaurant.reviews, 
-        { id : (Math.random() * 10000) ,...props, 
+        { id : (this.props.key ,...props, 
         date: Date.now(),
         rating : this.state.rating }
         ]; 	
@@ -43,10 +42,10 @@ class Review extends Component {
     }
 
     getRating (e){
-      console.log("value of : "+e.target.value);
+      //console.log("value of : "+e.target.value);
       const val = parseInt(e.target.value);
 
-    	this.setState( {rating: val, checked_star : val });
+    	this.setState( {rating: val});
 
     }
     
@@ -69,11 +68,16 @@ class Review extends Component {
               onClick={this.getRating}
               id="ratings"
               type={'radio'}
-              key={Math.random() * 10000}
+              key={this.props.key}
               style={'rating rating_edit'}
               condition={false} 
               checked_star={this.state.rating}
-              keys={[Math.random() * 100000,Math.random() * 100000,Math.random() * 100000,Math.random() * 100000,Math.random() * 100000]}
+              keys={[
+                this.props.key,
+                this.props.key,
+                this.props.key,
+                this.props.key,this.props.key
+                ]}
             />
           </div>
           <br />
