@@ -72,3 +72,26 @@ export const getNumberOfRatings = (reviews) => {
     }
     return 0; 
 }
+
+
+export const loadReviews = (reviews) => {
+           
+    var results = [];
+
+    reviews.forEach((review) => {
+         
+        results.push(
+            <Review 
+            key={review.id}
+            name={review.name}
+            rating={review.rating}
+            comment={review.comment}
+            date={review.date}
+            /> 
+
+        );
+
+    });
+   
+    return results;
+}

@@ -5,43 +5,26 @@ import { Link } from 'react-router';
 import Stars from './stars';
 
 import Review from './review';
-import {getAverageRating} from '../utils/utils';
+import {
+    getAverageRating,
+    loadReviews
+} from '../utils/utils';
 
 class RestaurantDetails  extends Component{
 	
     constructor(props){
     	super(props);
    
-    	this.loadReviews = this.loadReviews.bind(this);
+    	//this.loadReviews = this.loadReviews.bind(this);
     }
 
-	loadReviews = (reviews) => {
-           
-            var results = [];
-        
-            reviews.forEach((review) => {
-                 
-                results.push(
-                    <Review 
-                    key={review.id}
-                    name={review.name}
-                    rating={review.rating}
-                    comment={review.comment}
-                    date={review.date}
-                    /> 
-
-                );
-
-            });
-           
-            return results;
-        }
+	
 
 
     render(){
 
     	var path = `restaurants/${this.props.params.id}/reviews/new`;
-    	var reviews = this.loadReviews(this.props.restaurant.reviews);
+    	var reviews = loadReviews(this.props.restaurant.reviews);
 
 		return (
 			
