@@ -63,7 +63,7 @@ class RestaurantDetails  extends Component{
                             key={Math.random() * 10000}
                             style={'rating'}
                             condition={false} 
-                            checked={'checked'}
+                            type={'radio'}
                             keys={[
                                 this.props.key ,this.props.key,this.props.key,
                                 this.props.key,this.props.key
