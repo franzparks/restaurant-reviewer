@@ -41,14 +41,11 @@ class Review extends Component {
 	    this.context.router.push(path);
     }
 
-    getRating (e){
+  getRating (e){
       //console.log("value of : "+e.target.value);
       const val = parseInt(e.target.value);
-
-    	this.setState( {rating: val});
-
-    }
-    
+      this.setState( {rating: val});
+  }  
 
 	render(){
 
