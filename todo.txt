@@ -1,0 +1,1 @@
+1. Conditionally fetch data from api in order to show recently added reviews on index page
