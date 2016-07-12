@@ -52,7 +52,7 @@ class Review extends Component {
 
 	render(){
 
-	 const { fields: { name, comment },  handleSubmit } = this.props;
+	 const { fields: { name, comment, rating },  handleSubmit } = this.props;
 
 	return (
 
@@ -130,6 +130,6 @@ function mapStateToProps(state) {
 // reduxForm: 1st is form config, 2nd is mapStateToProps, 3rd is mapDispatchToProps
 export default reduxForm({
   form: 'ReviewsNewForm',
-  fields: ['name', 'comment'],
+  fields: ['name', 'comment', 'rating'],
   validate
 }, mapStateToProps, { postReview })(Review);
