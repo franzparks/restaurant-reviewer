@@ -27,7 +27,7 @@ const Restaurant = (props) => {
             
             <div aria-label="Average Rating"  className="">
             	<Stars  style={'rating rating_edit'} 
-            		condition={false}
+            		condition={true}
             		type={props.type}  
             		checked_star={props.checked_star}
             		keys={[Math.random() * 100000,Math.random() * 100000,Math.random() * 100000,Math.random() * 100000,Math.random() * 100000]}
