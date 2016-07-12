@@ -7,7 +7,7 @@ const Stars = (props) => {
 return (
 
 	<div className={props.style} tabIndex="0">
-		<input type="checkbox"
+		<input type={props.type}
 			id={props.some}
 			key={props.keys[0]} 
 			name="rating" 
@@ -20,7 +20,7 @@ return (
 		/>
 		<label htmlFor={props.keys[0]} title="Rocks!" >5 stars</label>
 
-		<input type="checkbox" 
+		<input type={props.type} 
 			id={props.keys[1]}
 			key={props.keys[1]} 
 			name="rating" 
@@ -33,7 +33,7 @@ return (
 		/>
 		<label htmlFor={props.keys[1]} title="Pretty Good!">4 stars</label>
 
-		<input type="checkbox"
+		<input type={props.type}
 			id={props.keys[2]}
 			key={props.keys[2]}
 			name="rating" 
@@ -46,7 +46,7 @@ return (
 		<label htmlFor={props.keys[2]} title="Meh!">3 stars</label>
 
 		<input 
-			type="checkbox" 
+			type={props.type} 
 			id={props.some}
 			key={props.keys[3]}
 			name="rating" 
@@ -58,7 +58,7 @@ return (
 		/>
 		<label htmlFor={props.keys[3]} title="Kinda Bad">2 stars</label>
 
-		<input type="checkbox" 
+		<input type={props.type} 
 			id={props.keys[4]} name="rating"
 			key={props.keys[4]} 
 			value="1" onClick={props.onClick} 
