@@ -144,7 +144,6 @@ class RestaurantList extends Component {
 
 		var restaurants = this.props.restaurants.map((res) => {
 			var averageRating = this.getAverageRating(res.reviews);
-            console.log("averageRating : "+ averageRating);
 	        var numberOfRatings=this.getNumberOfRatings(res.reviews);
                return { ...res, averageRating :averageRating, numberOfRatings : numberOfRatings   }
 		} );
@@ -158,34 +157,6 @@ class RestaurantList extends Component {
                         {/*<Overview /> */}                 
                         <div>
                         {this.renderList(restaurants)} 
-
-                        {/*<div className="row">
-                        <Stars 
-                        key={1234}
-                        some={321}
-                         style={'rating1 rating_edit'} 
-                            condition={true}  
-                            checked_star={'3'}
-                            keys={[Math.random() * 100000,
-                        Math.random() * 100000,Math.random() * 100000,
-                        Math.random() * 100000,Math.random() * 100000]}
-                        />
-                        </div>
-                       <div className="row">
-                        <Stars  
-                          key={3454}
-                          some={123}
-                        style={'rating1 rating_edit'} 
-                            condition={true}  
-                            checked_star={'1'}
-                            keys={[Math.random() * 1000,
-                        Math.random() * 1000,Math.random() * 1000,
-                        Math.random() * 1000,Math.random() * 1000]}
-                        />
-
-                        </div>
-                    */}
-
 
                         </div> 
                        
