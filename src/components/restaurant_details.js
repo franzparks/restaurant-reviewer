@@ -5,7 +5,7 @@ import { Link } from 'react-router';
 import Stars from './stars';
 
 import Review from './review';
-
+import {getAverageRating} from './utils';
 
 class RestaurantDetails  extends Component{
 	
@@ -64,7 +64,7 @@ class RestaurantDetails  extends Component{
                             key={Math.random() * 10000}
                             style={'rating'}
                             condition={false}
-                            checked_star={this.props.checked_star} 
+                            checked_star={getAverageRating(this.props.restaurant.reviews)} 
                             type={'checkbox'}
                             keys={[
                                 this.props.key ,this.props.key,this.props.key,
