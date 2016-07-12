@@ -1,7 +1,4 @@
-/*
-  Ratings Stars
-  (with as little code as possible)
-*/
+
 .rating {
   unicode-bidi: bidi-override;
   direction: rtl;
