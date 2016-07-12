@@ -6,6 +6,7 @@ import Stars from './stars';
 
 import Review from './review';
 
+
 class RestaurantDetails  extends Component{
 	
     constructor(props){
