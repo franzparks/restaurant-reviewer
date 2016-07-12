@@ -22,7 +22,7 @@ class Review extends Component {
 
     onSubmit(props) {
       //console.log("got submitted");
-      var path = `restaurants/${this.props.params.id}`;
+      var path = `/restaurants/${this.props.params.id}`;
 
       const review = {id : Math.random() * 10000 ,...props, 
         date: Date.now(),
