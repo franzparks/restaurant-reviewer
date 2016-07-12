@@ -68,6 +68,7 @@ class Review extends Component {
             <Stars 
               onClick={this.getRating}
               id="ratings"
+              type={'radio'}
               key={Math.random() * 10000}
               style={'rating rating_edit'}
               condition={false} 
