@@ -150,8 +150,8 @@ class RestaurantList extends Component {
 	render(){
 
 		var restaurants = this.props.restaurants.map((res) => {
-			var averageRating = this.getAverageRating(res.reviews);
-	        var numberOfRatings=this.getNumberOfRatings(res.reviews);
+			var averageRating = getAverageRating(res.reviews);
+	        var numberOfRatings= getNumberOfRatings(res.reviews);
                return { ...res, averageRating :averageRating, numberOfRatings : numberOfRatings   }
 		} );
 		
