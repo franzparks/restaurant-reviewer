@@ -113,7 +113,7 @@ class RestaurantList extends Component {
 
     renderList(restaurants) {
     	var filteredRestaurants = [];
-			filteredRestaurants = this.filterRestaurants(restaurants,
+			filteredRestaurants = filterRestaurants(restaurants,
 			this.props.filterText, this.props.filterCategory);
 		
 	    return filteredRestaurants.map((restaurant) => {
