@@ -21,26 +21,27 @@ class Review extends Component {
     }
 
     onSubmit(props) {
-      console.log("got submitted");
+      //console.log("got submitted");
+      var path = `restaurants/${this.props.params.id}`;
 
       const review = {id : Math.random() * 10000 ,...props, 
         date: Date.now(),
         rating : this.state.rating };
 
-        console.log("got submitted with keys: "+Object.keys(review));
+        //console.log("got submitted with keys: "+Object.keys(review));
 
-       console.log("got submitted with rating: "+review.rating);
+        //console.log("got submitted with rating: "+review.rating);
       var restaurant = this.props.restaurant;
         restaurant.reviews = [ ...restaurant.reviews, review];
 
         //console.log("got submitted with : "+restaurant.reviews); 
         this.props.postReview(restaurant);	
 
-	     this.context.router.push('/');
+	     this.context.router.push(path);
     }
 
     getRating (e){
-      console.log("value of : "+e.target.value);
+      //console.log("value of : "+e.target.value);
       const val = parseInt(e.target.value);
 
     	this.setState( {rating: val});

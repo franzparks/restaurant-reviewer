@@ -25,6 +25,7 @@ class RestaurantList extends Component {
     }
 
     componentWillMount() {
+        console.log("called componentWillMount of list");
 		this.props.fetchRestaurants();
 	}
 
