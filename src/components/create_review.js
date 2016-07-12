@@ -23,9 +23,14 @@ class Review extends Component {
     onSubmit(props) {
       //console.log("got submitted");
       var path = `/restaurants/${this.props.params.id}`;
+      var newDate = new Date();
+      const mm = newDate.getMonth() + 1;
+      const dd = newDate.getDate();
+      const yy = newDate.getFullYear();
+      const date = mm + "/" + dd + "/" + yy;
 
       const review = {id : Math.random() * 10000 ,...props, 
-        date: Date.now(),
+        date: date,
         rating : this.state.rating };
 
         //console.log("got submitted with keys: "+Object.keys(review));

@@ -96,3 +96,11 @@ export const loadReviews = (reviews) => {
     });
    
 }
+
+export const getCurrentDate =()=>{
+    var newDate = new Date();
+        const mm = newDate.getMonth() + 1;
+        const dd = newDate.getDate();
+        const yy = newDate.getFullYear();
+    return  mm + "/" + dd + "/" + yy;
+}
