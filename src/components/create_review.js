@@ -21,25 +21,26 @@ class Review extends Component {
     }
 
     onSubmit(props) {
-  console.log("submitted : "+props.rating);
-   var restaurant = this.props.restaurant;
+      console.log("got submitted");
+
+      const review = {id : Math.random() * 10000 ,...props, 
+        date: Date.now(),
+        rating : this.state.rating };
+
+        console.log("got submitted with keys: "+Object.keys(review));
+
+       console.log("got submitted with rating: "+review.rating);
+      var restaurant = this.props.restaurant;
         restaurant.reviews = [ 
         ...restaurant.reviews, 
-        { id : this.props.key ,...props, 
+        { id : 9999 ,...props, 
         date: Date.now(),
         rating : this.state.rating }
-        ]; 	
-    
-    this.props.postReview(restaurant);
-	    //.then(() => {
-	        // review  has been created, navigate the user to the index
-	        // We navigate by calling this.context.router.push with the
-	        // new path to navigate to.
-	      //  this.context.router.push('/');
-	    //});
+        ];
 
+        //console.log("got submitted with : "+restaurant.reviews); 	
 
-	    this.context.router.push('/');
+	     this.context.router.push('/');
     }
 
     getRating (e){
@@ -53,7 +54,7 @@ class Review extends Component {
 
 	render(){
 
-	 const { fields: { name, comment, rating },  handleSubmit } = this.props;
+	 const { fields: { name, comment },  handleSubmit } = this.props;
 
 	return (
 
@@ -131,6 +132,6 @@ function mapStateToProps(state) {
 // reduxForm: 1st is form config, 2nd is mapStateToProps, 3rd is mapDispatchToProps
 export default reduxForm({
   form: 'ReviewsNewForm',
-  fields: ['name', 'comment', 'rating'],
+  fields: ['name', 'comment'],
   validate
 }, mapStateToProps, { postReview })(Review);
