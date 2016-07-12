@@ -5,7 +5,7 @@ import { Link } from 'react-router';
 import Stars from './stars';
 
 import Review from './review';
-import {getAverageRating} from './utils';
+import {getAverageRating} from '../utils/utils';
 
 class RestaurantDetails  extends Component{
 	
