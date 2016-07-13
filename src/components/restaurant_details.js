@@ -68,9 +68,9 @@ class RestaurantDetails  extends Component{
                         {this.props.restaurant.address}
                     </p>
                     <p aria-label="Hours Open"><strong>Hours Open:</strong>  
-                        {this.props.restaurant.operatingHours.open} to  
+                        {this.props.restaurant.operatingHours.open} AM to  
                          
-                        {this.props.restaurant.operatingHours.close }
+                        {this.props.restaurant.operatingHours.close } PM
                     </p>
                 </div>
 
