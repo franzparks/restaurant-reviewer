@@ -1,1 +1,4 @@
+To do items which are not part of project rubric
+
 1. Conditionally fetch data from api in order to show recently added reviews on index page
+2.  Filter better with text by ignoring case and using contains or something similar
