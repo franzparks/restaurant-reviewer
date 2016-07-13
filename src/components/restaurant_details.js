@@ -23,21 +23,18 @@ class RestaurantDetails  extends Component{
     	var reviews = loadReviews(this.props.restaurant.reviews);
 
 		return (
-			
-			<div>
-				
-                <div className="row">
 
-				<div className="col-xs-6 col-lg-6">
+            <div className="row">
+					
+            <div className="col-xs-6 col-lg-6 ">
+
+				<div className="row">
                     <h2>{this.props.restaurant.name}</h2>
-
-			        <div>
-
+		            <div>
                     <img src={this.props.restaurant.image} 
                     className="img-responsive" 
                     alt="Image of restaurant cuisine type">
                     </img>
-
                     </div>
 
                     <div aria-label="Average Rating" className="flex-container">
@@ -56,8 +53,10 @@ class RestaurantDetails  extends Component{
                             {getNumberOfRatings(this.props.restaurant.reviews)} Reviews
                         </div>
                     </div>
+
+                </div>
                     
-                    <div className="row">
+                <div className="row">
 
                     <div aria-label="Cuisine Type" className="flex-item"><strong>Cuisine Type:</strong>
                      {this.props.restaurant.cuisineType}
@@ -74,44 +73,12 @@ class RestaurantDetails  extends Component{
 
 			        <Link to="/" className="btn btn-primary flex-item"> Back</Link>
 
-			       </div>
-
-                {/*<div className="flex-container">
- 
-                    <div className="col-sm-6 col-lg-3">
-
-                    <Link to={path} className="btn btn-primary" >Write A Review </Link>
-
-                    </div>
-
-                    <div className="col-sm-6 col-lg-3">
-
-                    <div aria-label="Cuisine Type"><strong>Cuisine Type:</strong> 
-                        {this.props.restaurant.cuisineType}
-                    </div>
-                    <div aria-label="Address"><strong>Address:</strong>
-                        {this.props.restaurant.address}
-                    </div>
-                    <div aria-label="Hours Open"><strong>Hours Open:</strong>  
-                        {this.props.restaurant.operatingHours.open} AM to  
-                         
-                        {this.props.restaurant.operatingHours.close } PM
-                    </div>
-
-                    </div>
-                
-                    
-
-                </div> */}
-			    <div className="">
-			    {reviews}
 			    </div>
 
-                </div>
 
-			    </div>
+			</div>
 
-		    </div>
+            </div>
 		  
 		);
     }
