@@ -49,8 +49,7 @@ class Review extends Component {
 
 	render(){
 
-	 const { fields: { name, comment ,rating},  handleSubmit } = this.props;
-   //rating = this.state.rating;
+	 const { fields: { name, comment },  handleSubmit } = this.props;
 
 	return (
 
@@ -104,7 +103,7 @@ class Review extends Component {
 	          </div>
 	        </div>
 
-	        <button type="submit" className="btn btn-primary" disabled={this.state.rating === 0}>Submit</button>
+	        <button type="submit" className="btn btn-primary" disabled={this.state.rating === 0 }>Submit</button>
 	        <Link to="/" className="btn btn-danger">Cancel</Link>
 	    </form>
 	    </div>
@@ -114,7 +113,6 @@ class Review extends Component {
 
 function validate(values) {
   const errors = {};
-  //console.log(" values : ");
 
   if (!values.name) {
     errors.name = 'Enter a reviewer\'s name';
@@ -124,9 +122,9 @@ function validate(values) {
     errors.comment = 'Enter a review';
   }
 
-  if(values.comment && values.name){
-    errors.rating = 'Select star to  rate restaurant';
-  }
+  //if(values.comment && values.name){
+  //  errors.rating = 'Select star to  rate restaurant';
+  //}
 
   return errors;
 }
@@ -140,6 +138,6 @@ function mapStateToProps(state) {
 // reduxForm: 1st is form config, 2nd is mapStateToProps, 3rd is mapDispatchToProps
 export default reduxForm({
   form: 'ReviewsNewForm',
-  fields: ['name', 'comment', 'rating'],
+  fields: ['name', 'comment'],
   validate
 }, mapStateToProps, { postReview })(Review);
