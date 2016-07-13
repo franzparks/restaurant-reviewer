@@ -9,7 +9,7 @@ const Review = (props) => {
 	        <hr />
 	        <h4>{props.name}</h4>
 	        <div className="flex-container">
-	        <strong>Rating : </strong> 
+	        <p className="extra-padding"><strong>Rating : </strong> </p>
 	       
 	        <div aria-label="Reviewer's Rating" >
                         <Stars 
