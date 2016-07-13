@@ -78,7 +78,7 @@ class Review extends Component {
             />
 
             <div className="number-of-reviews text-danger">
-              {comment.touched && name.touched  && this.state.rating === 0 ? rating.error : ''}
+              {/*{comment.touched && name.touched  && this.state.rating === 0 ? rating.error : ''} */}
             </div>
 
           </div>
