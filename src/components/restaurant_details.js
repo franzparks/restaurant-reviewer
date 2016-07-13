@@ -58,19 +58,37 @@ class RestaurantDetails  extends Component{
                     </div>
                     
                     <div className="row" />
-			        <Link to="/" className="btn btn-primary"> Back</Link>
 
-			    </div>
+                    <div aria-label="Cuisine Type" className="flex-item"><strong>Cuisine Type:</strong> 
+                        {this.props.restaurant.cuisineType}
+                    </div>
+                    <div aria-label="Address" className="flex-item"><strong>Address:</strong>
+                        {this.props.restaurant.address}
+                    </div>
+                    <div aria-label="Hours Open" className="flex-item"><strong>Hours Open:</strong>  
+                        {this.props.restaurant.operatingHours.open} AM to  
+                         
+                        {this.props.restaurant.operatingHours.close } PM
+                    </div>
 
-                <div className="col-sm-6 col-lg-6">
 
-                    <div className="flex-item">
+
+                    
+			        <Link to="/" className="btn btn-primary flex-item"> Back</Link>
+
+			       </div>
+
+
+
+                {/*<div className="flex-container">
+ 
+                    <div className="col-sm-6 col-lg-3">
 
                     <Link to={path} className="btn btn-primary" >Write A Review </Link>
 
                     </div>
 
-                    <div className="flex-item">
+                    <div className="col-sm-6 col-lg-3">
 
                     <div aria-label="Cuisine Type"><strong>Cuisine Type:</strong> 
                         {this.props.restaurant.cuisineType}
@@ -88,9 +106,9 @@ class RestaurantDetails  extends Component{
                 
                     
 
-                </div>
+                </div> */}
 
-			    <div className="col-sm-6 col-sm-6">
+			    <div className="">
 			    {reviews}
 			    </div>
 
