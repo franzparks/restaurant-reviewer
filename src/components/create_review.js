@@ -78,12 +78,14 @@ class Review extends Component {
                 ]}
             />
 
+            <div className="number-of-reviews text-danger">
+              {comment.touched && name.touched  && this.state.rating === 0 ? rating.error : ''}
+            </div>
+
           </div>
 
           <br />
-          <div className="form-group text-danger">
-              {comment.touched && name.touched  && this.state.rating === 0 ? rating.error : ''}
-          </div>
+        
           <hr />
 
 	        <div className={`form-group ${name.touched && name.invalid ? 'has-danger' : ''}`}>
