@@ -29,7 +29,9 @@
 	    "cuisineType":"English",
 	    "operatingHours":{"open":"07 AM","close":"11 PM"},
 		"reviews" : [{"id": 1,"rating":4,"name":"Reviewer 3", "comment":"I kind of liked it","date":"09/27/2014"},
-		{"id": 2, "rating":2,"name":"Reviewer 1", "comment":"I didn't like it so much","date":"02/11/2015"}]
+		{"id": 2, "rating":2,"name":"Reviewer 1", "comment":"I didn't like it so much","date":"02/11/2015"},
+		{"id": 3, "rating":5,"name":"Reviewer 6", "comment":"I didn't like it so much but hey!","date":"03/12/2015"}
+	]
 	},
 	{   "id": "4",
 		"name":"Joe's Bar And Grill",
