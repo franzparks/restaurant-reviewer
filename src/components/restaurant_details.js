@@ -38,7 +38,7 @@ class RestaurantDetails  extends Component{
                 
                     </img>
                     </p>
-                    <div aria-label="Average Rating">
+                    <div aria-label="Average Rating" className="flex-container">
                         <Stars 
                             key={Math.random() * 10000}
                             style={'rating'}
@@ -60,7 +60,7 @@ class RestaurantDetails  extends Component{
 
 			    </div>
 
-                <div className="col-xs-4 col-sm-4">
+                <div className="col-xs-6 col-sm-4">
                     <p aria-label="Cuisine Type"><strong>Cuisine Type:</strong> 
                         {this.props.restaurant.cuisineType}
                     </p>
