@@ -97,10 +97,15 @@ export const loadReviews = (reviews) => {
    
 }
 
-export const getCurrentDate =()=>{
+export const getCurrentDate = () =>{
     var newDate = new Date();
         const mm = newDate.getMonth() + 1;
         const dd = newDate.getDate();
         const yy = newDate.getFullYear();
     return  mm + "/" + dd + "/" + yy;
+}
+
+export const getCurrentHour = () => {
+    var newDate = new Date();
+    return newDate.getHours();
 }
