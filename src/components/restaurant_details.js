@@ -82,7 +82,13 @@ class RestaurantDetails  extends Component{
 
                     <Link to={path} className="btn btn-primary" >Write A Review </Link>
 
+                    
                 </div>
+
+                <div className="col-sm-6 col-lg-6">
+                        {reviews}
+                    </div>
+
 
             </div>
 		  
