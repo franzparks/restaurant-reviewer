@@ -60,9 +60,9 @@ class RestaurantDetails  extends Component{
                     <div className="row">
 
                     <div aria-label="Cuisine Type" className="flex-item"><strong>Cuisine Type:</strong>
-                     {this.props.restaurantprops.cuisineType}
+                     {this.props.restaurant.cuisineType}
                     </div>
-                    
+
                     <div aria-label="Address" className="flex-item"><strong>Address:</strong>
                         {this.props.restaurant.address}
                     </div>
@@ -75,8 +75,6 @@ class RestaurantDetails  extends Component{
 			        <Link to="/" className="btn btn-primary flex-item"> Back</Link>
 
 			       </div>
-
-
 
                 {/*<div className="flex-container">
  
@@ -105,14 +103,13 @@ class RestaurantDetails  extends Component{
                     
 
                 </div> */}
-
 			    <div className="">
 			    {reviews}
 			    </div>
 
+                </div>
+
 			    </div>
-
-
 
 		    </div>
 		  
