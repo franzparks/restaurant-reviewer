@@ -28,16 +28,18 @@ class RestaurantDetails  extends Component{
 				
                 <div className="row">
 
-				<div className="col-xs-4 col-sm-4">
+				<div className="col-xs-6 col-lg-6">
                     <h2>{this.props.restaurant.name}</h2>
 
-			        <p>
+			        <div>
+
                     <img src={this.props.restaurant.image} 
                     className="img-responsive" 
                     alt="Image of restaurant cuisine type">
-                
                     </img>
-                    </p>
+
+                    </div>
+
                     <div aria-label="Average Rating" className="flex-container">
                         <Stars 
                             key={Math.random() * 10000}
@@ -50,7 +52,7 @@ class RestaurantDetails  extends Component{
                                 this.props.key,this.props.key
                             ]}
                         />
-                        <div className="number-of-reviews">
+                        <div className="flex-item">
                             {getNumberOfRatings(this.props.restaurant.reviews)} Reviews
                         </div>
                     </div>
@@ -60,25 +62,35 @@ class RestaurantDetails  extends Component{
 
 			    </div>
 
-                <div className="col-sm-6 col-lg-4">
-                    <p aria-label="Cuisine Type"><strong>Cuisine Type:</strong> 
+                <div className="col-sm-6 col-lg-6">
+
+                    <div className="flex-item">
+
+                    <Link to={path} className="btn btn-primary" >Write A Review </Link>
+
+                    </div>
+
+                    <div className="flex-item">
+
+                    <div aria-label="Cuisine Type"><strong>Cuisine Type:</strong> 
                         {this.props.restaurant.cuisineType}
-                    </p>
-                    <p aria-label="Address"><strong>Address:</strong>
+                    </div>
+                    <div aria-label="Address"><strong>Address:</strong>
                         {this.props.restaurant.address}
-                    </p>
-                    <p aria-label="Hours Open"><strong>Hours Open:</strong>  
+                    </div>
+                    <div aria-label="Hours Open"><strong>Hours Open:</strong>  
                         {this.props.restaurant.operatingHours.open} AM to  
                          
                         {this.props.restaurant.operatingHours.close } PM
-                    </p>
+                    </div>
+
+                    </div>
+                
+                    
+
                 </div>
 
-                <div className="col-xs-2 col-sm-2">
-                    <Link to={path} className="btn btn-primary" >Write A Review </Link>
-                </div>
-
-			    <div className="col-sm-6">
+			    <div className="col-sm-6 col-sm-6">
 			    {reviews}
 			    </div>
 
