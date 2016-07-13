@@ -30,12 +30,12 @@ class RestaurantDetails  extends Component{
 
 				<div className="row">
                     <h2>{this.props.restaurant.name}</h2>
-		            <div>
+		            <p>
                     <img src={this.props.restaurant.image} 
                     className="img-responsive" 
                     alt="Image of restaurant cuisine type">
                     </img>
-                    </div>
+                    </p>
 
                     <div aria-label="Average Rating" className="flex-container">
                         <Stars 
