@@ -6,6 +6,7 @@ import Stars from './stars';
 
 import {
     getAverageRating,
+    getNumberOfRatings,
     loadReviews
 } from '../utils/utils';
 
@@ -49,6 +50,9 @@ class RestaurantDetails  extends Component{
                                 this.props.key,this.props.key
                             ]}
                         />
+                        <div className="number-of-reviews">
+                            {getNumberOfRatings(this.props.restaurant.reviews)} Reviews
+                        </div>
                     </div>
                     
                     <div className="row" />
