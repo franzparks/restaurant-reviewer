@@ -49,7 +49,8 @@ class Review extends Component {
 
 	render(){
 
-	 const { fields: { name, comment },  handleSubmit } = this.props;
+	 const { fields: { name, comment ,rating},  handleSubmit } = this.props;
+   //rating = this.state.rating;
 
 	return (
 
@@ -76,11 +77,13 @@ class Review extends Component {
                 Math.random() * 10000,Math.random() * 10000
                 ]}
             />
+
           </div>
-          <div className="text-danger">
-              {comment.touched && name.touched ? rating.error : ''}
-            </div>
+
           <br />
+          <div className="form-group text-danger">
+              {comment.touched && name.touched  && this.state.rating === 0 ? rating.error : ''}
+          </div>
           <hr />
 
 	        <div className={`form-group ${name.touched && name.invalid ? 'has-danger' : ''}`}>
@@ -109,6 +112,7 @@ class Review extends Component {
 
 function validate(values) {
   const errors = {};
+  //console.log(" values : ");
 
   if (!values.name) {
     errors.name = 'Enter a reviewer\'s name';
@@ -118,7 +122,7 @@ function validate(values) {
     errors.comment = 'Enter a review';
   }
 
-  if(this.state.rating === 0){
+  if(values.comment && values.name){
     errors.rating = 'Select star to  rate restaurant';
   }
 
@@ -134,6 +138,6 @@ function mapStateToProps(state) {
 // reduxForm: 1st is form config, 2nd is mapStateToProps, 3rd is mapDispatchToProps
 export default reduxForm({
   form: 'ReviewsNewForm',
-  fields: ['name', 'comment'],
+  fields: ['name', 'comment', 'rating'],
   validate
 }, mapStateToProps, { postReview })(Review);
