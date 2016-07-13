@@ -94,7 +94,7 @@
   
 }
 
-.number-of-reviews {
+.flex-item {
   justify-content: center;
   padding: 5px;
   flex-direction: row;

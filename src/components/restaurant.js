@@ -38,7 +38,7 @@ const Restaurant = (props) => {
             			Math.random() * 100000,Math.random() * 100000
             		]}
             	/>
-            	<div className="number-of-reviews">
+            	<div className="flex-item">
                 {props.numberOfRatings} Reviews
             	</div>
             </div>
@@ -47,15 +47,20 @@ const Restaurant = (props) => {
             </div>
 
             <div className="row">
-            <p aria-label="Cuisine Type"><strong>Cuisine Type:</strong> {props.cuisineType}</p>
-	        <p aria-label="Address"><strong>Address:</strong> {props.address}</p>
-	        <p aria-label="Hours Open"><strong>Hours Open:</strong> {props.hours.open} AM to {props.hours.close } PM</p>
+            <div aria-label="Cuisine Type" className="flex-item"><strong>Cuisine Type:</strong> {props.cuisineType}</div>
+	        <div aria-label="Address" className="flex-item"><strong>Address:</strong> {props.address}</div>
+	        <div aria-label="Hours Open" className="flex-item">
+	        	<strong>Hours Open:</strong> 
+	        	<div>
+	        	{props.hours.open} AM to {props.hours.close } PM
+	        	</div>
+	        </div>
 	        
 	       
 	        <Link 
 	        to={path} 
 	        onClick={props.handleClick}
-	        className="btn btn-primary"
+	        className="btn btn-primary flex-item"
 	        > 
 	        View Details &raquo;
 	        </Link>
