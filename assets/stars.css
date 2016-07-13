@@ -3,7 +3,6 @@
   unicode-bidi: bidi-override;
   direction: rtl;
   text-align: center;
-  font-size:150%;
   float: left;
 }
 .rating > span {
@@ -78,9 +77,13 @@
     left:2px;
     width:1.1em;
   }
+  .rating_font {
+    font-size:150%;
+  }
 
 
 .number-of-reviews {
   flex-direction: row;
   padding: 10px 0px 0px 35px;
 }
+

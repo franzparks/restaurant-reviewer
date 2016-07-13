@@ -66,7 +66,7 @@ class Review extends Component {
               id="ratings"
               type={'radio'}
               key={this.props.key * 10}
-              style={'rating rating_edit'}
+              style={'rating rating_edit rating_font'}
               condition={false} 
               checked_star={this.state.rating}
               keys={[
