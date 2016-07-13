@@ -20,21 +20,19 @@ export  const getAverageRating = (reviews) => {
 export const sortUsingCategoryFilter = (arr,filterCategory) => {
 	var sorted = [];
     const timeNow = getCurrentHour();
-    console.log('time now : '+ timeNow);
 
 	if(filterCategory){
         
         if(filterCategory === 'openNow' && arr.length > 2){
             
             sorted =  arr.filter(res => {
-                console.log('closing time : '+ res.operatingHours.close);
+
                 if(res.operatingHours.open <= timeNow && res.operatingHours.close > timeNow){
                     return res;
                 }
-                //return res;
                  
             });
-            console.log('sorted now : '+ sorted);
+        
             return sorted;
 
         }else{
@@ -60,7 +58,6 @@ export const sortUsingCategoryFilter = (arr,filterCategory) => {
 
 
 export const  sortUsingTextFilter = (arr,text) => {
-   /*ToDo : filter better by ignoring case and using contains or something similar*/
   
 	return arr.filter((R) =>{
 
