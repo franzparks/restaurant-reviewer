@@ -60,7 +60,7 @@ class RestaurantDetails  extends Component{
 
 			    </div>
 
-                <div className="col-xs-6 col-sm-4">
+                <div className="col-sm-6 col-lg-4">
                     <p aria-label="Cuisine Type"><strong>Cuisine Type:</strong> 
                         {this.props.restaurant.cuisineType}
                     </p>
@@ -78,7 +78,7 @@ class RestaurantDetails  extends Component{
                     <Link to={path} className="btn btn-primary" >Write A Review </Link>
                 </div>
 
-			    <div >
+			    <div className="col-sm-6">
 			    {reviews}
 			    </div>
 

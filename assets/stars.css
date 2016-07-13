@@ -83,12 +83,21 @@
 
 
 .flex-container {
-  display: flex; /* or inline-flex */
-  flex-direction: row 
-  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
 }
 
-.number-of-reviews {
+.number-of-reviews1 {
   justify-content: flex-end;
   padding: 5px 0px 0px 35px;
   flex-direction: row;
