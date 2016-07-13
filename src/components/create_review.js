@@ -77,6 +77,9 @@ class Review extends Component {
                 ]}
             />
           </div>
+          <div className="text-danger">
+              {comment.touched && name.touched ? rating.error : ''}
+            </div>
           <br />
           <hr />
 
@@ -113,6 +116,10 @@ function validate(values) {
   
   if(!values.comment) {
     errors.comment = 'Enter a review';
+  }
+
+  if(this.state.rating === 0){
+    errors.rating = 'Select star to  rate restaurant';
   }
 
   return errors;
