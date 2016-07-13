@@ -19,15 +19,21 @@ export  const getAverageRating = (reviews) => {
 
 export const sortUsingCategoryFilter = (arr,filterCategory) => {
 	var sorted = [];
-    const now = getCurrentHour();
+    const now = parseInt(getCurrentHour());
 
 	if(filterCategory){
         
         if(filterCategory === 'openNow' && arr.length > 2){
             
-            return arr.map(res => {
-                return res.operatingHours.open <= now && res.operatingHours.close < now; 
+            sorted =  arr.map(res => {
+                if(res.operatingHours.open <= now && res.operatingHours.close > now){
+                    return res;
+                }
+                //return res;
+                 
             });
+
+            return sorted;
 
         }else{
                 sorted = arr.sort((a,b) => {
@@ -115,5 +121,34 @@ export const getCurrentDate = () =>{
 
 export const getCurrentHour = () => {
     var newDate = new Date();
-    return newDate.getHours();
+    var time = parseInt(newDate.getHours());
+    switch(time){
+        case 13:
+            return 1;
+        case 14:
+            return 2;
+        case 15:
+            return 3;
+        case 16:
+            return 4;
+        case 17:
+            return 5;
+        case 18:
+            return 6;
+        case 19:
+            return 7;
+        case 20:
+            return 8;
+        case 21:
+            return 9;
+        case 22:
+            return 10;
+        case 23:
+            return 11;
+        case 00:
+            return 12;                    
+        default: 
+            return time;   
+    }
+    
 }
