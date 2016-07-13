@@ -58,16 +58,16 @@ class RestaurantDetails  extends Component{
                     
                 <div className="row">
 
-                    <div aria-label="Cuisine Type" className="flex-item"><strong>Cuisine Type:</strong>
-                     {this.props.restaurant.cuisineType}
+                    <div aria-label="Cuisine Type" className="flex-item">
+                        <strong>Cuisine Type:</strong>  {this.props.restaurant.cuisineType}
                     </div>
 
-                    <div aria-label="Address" className="flex-item"><strong>Address:</strong>
-                        {this.props.restaurant.address}
+                    <div aria-label="Address" className="flex-item">
+                        <strong>Address:</strong>  {this.props.restaurant.address}
                     </div>
-                    <div aria-label="Hours Open" className="flex-item"><strong>Hours Open:</strong>  
-                        {this.props.restaurant.operatingHours.open} AM to  
-                         
+
+                    <div aria-label="Hours Open" className="flex-item">
+                        <strong>Hours Open:</strong>  {this.props.restaurant.operatingHours.open} AM to        
                         {this.props.restaurant.operatingHours.close } PM
                     </div>
 
