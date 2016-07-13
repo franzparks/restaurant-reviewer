@@ -82,8 +82,15 @@
   }
 
 
+.flex-container {
+  display: flex; /* or inline-flex */
+  flex-direction: row 
+  justify-content: space-between;
+}
+
 .number-of-reviews {
-  flex-direction: row;
+  justify-content: flex-end;
   padding: 5px 0px 0px 35px;
+  flex-direction: row;
 }
 

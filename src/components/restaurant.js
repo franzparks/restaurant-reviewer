@@ -25,7 +25,7 @@ const Restaurant = (props) => {
 	        </Link>
 	        </p>
             
-            <div aria-label="Average Rating"  className="">
+            <div aria-label="Average Rating"  className="flex-container">
             	<Stars  
             		style={'rating'} 
             		condition={true}
@@ -60,9 +60,7 @@ const Restaurant = (props) => {
 	        View Details &raquo;
 	        </Link>
 
-	        </div>
-
-	     
+	        </div>	     
        
 	    </div>
 
