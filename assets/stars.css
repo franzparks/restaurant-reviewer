@@ -105,4 +105,12 @@
   padding: 0px 5px 0px 0px;
 }
 
+.extra-padding-left {
+  padding: 0px 0px 0px 10px;
+}
+
+.extra-margin-bottom {
+  margin: 0px 0px 10px 0px;
+
+
 

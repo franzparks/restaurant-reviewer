@@ -81,7 +81,7 @@ class RestaurantList extends Component {
 	    	<div>
 
                 <div className="row row-offcanvas row-offcanvas-right">
-                    <div className="col-xs-12 col-sm-9">
+                    <div className="col-xs-12 col-sm-6">
                         <ToggleNav key={Math.random()}/>
                         <Overview />                
                         <div>
