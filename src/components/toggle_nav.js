@@ -1,6 +1,13 @@
 import React, {Component} from 'react';
 
 class ToggleNav extends Component {
+
+	componentDidMount() {
+
+      $( this.refs.toggleInput.getDOMNode() ).bootstrapToggle();
+
+    }
+
 	render(){
 		return (
 			<p className="pull-right visible-xs">
