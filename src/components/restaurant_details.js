@@ -26,7 +26,7 @@ class RestaurantDetails  extends Component{
 
             <div className="row">
 					
-                <div className="col-sm-12 col-lg-6 ">
+                <div className="col-xs-12 col-lg-6 ">
 
     				<div className="row">
                         <h4>{this.props.restaurant.name}</h4>
@@ -49,7 +49,7 @@ class RestaurantDetails  extends Component{
                                     this.props.key,this.props.key
                                 ]}
                             />
-                            <div className="flex-item">
+                            <div className="number-of-reviews">
                                 {getNumberOfRatings(this.props.restaurant.reviews)} Reviews
                             </div>
                         </div>
@@ -71,18 +71,22 @@ class RestaurantDetails  extends Component{
                             {this.props.restaurant.operatingHours.close } PM
                         </div>
 
-    			         <Link to="/" className="btn btn-primary flex-item extra-margin-bottom"> Back</Link>
+                        <div className="flex-item">
+
+    			        <Link to="/" 
+                            className="btn btn-primary  extra-margin-bottom ">
+                             Back
+                        </Link>
+
+                        </div>
 
     			    </div>
 
-
-
-
     			</div>
 
-                 <div className="col-sm-12 col-lg-6 extra-padding" >
+                 <div className="col-xs-12 col-lg-6 flex-item" >
 
-                    <Link to={path} className="btn btn-primary" >Write A Review </Link>
+                    <Link to={path} className="btn btn-primary " >Write A Review </Link>
                       
                 </div>
 
