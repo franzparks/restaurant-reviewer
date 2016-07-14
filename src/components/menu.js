@@ -69,8 +69,8 @@ class Menu extends Component {
 	render() {
         var items = this.displayMenuItems();
 		return (
-		    <div className="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
-				<div className="list-group">
+		    <div className="col-xs-6 col-sm-3 sidebar-offcanvas " id="sidebar">
+				<div className="list-group ">
 				    {items}          
 				</div>
 			</div>

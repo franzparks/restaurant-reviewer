@@ -3,7 +3,8 @@ import { Link } from 'react-router';
 
 const MenuItem = (props) =>{
 	return (
-		<Link 
+		<Link
+		    
 			to="/"
 			name={props.name} 
 		    className={props.style}
