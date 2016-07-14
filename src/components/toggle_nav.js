@@ -2,16 +2,21 @@ import React, {Component} from 'react';
 
 class ToggleNav extends Component {
 
+	constructor(props){
+		super(props);
+	}
+
 	componentDidMount() {
 
-      $( this.refs.toggleInput.getDOMNode() ).bootstrapToggle();
+      //this.refs.toggleInput.getDOMNode().bootstrapToggle();
+      $('.toggleInput').bootstrapToggle();
 
     }
 
 	render(){
 		return (
 			<p className="pull-right visible-xs">
-			    <button  ref="toggleInput" className="btn btn-primary btn-xs" 
+			    <button className="toggleInput" className="btn btn-primary btn-xs" 
 			    	data-toggle="offcanvas" data-on="On" data-off="Off">
 			        Toggle nav
 			    </button>
