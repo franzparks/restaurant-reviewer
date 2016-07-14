@@ -38,7 +38,7 @@ const Restaurant = (props) => {
             			Math.random() * 100000,Math.random() * 100000
             		]}
             	/>
-            	<div className="flex-item">
+            	<div className="number-of-reviews">
                 {props.numberOfRatings} Reviews
             	</div>
             </div>
