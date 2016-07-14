@@ -11,7 +11,7 @@ class ToggleNav extends Component {
 	render(){
 		return (
 			<p className="pull-right visible-xs">
-			    <button  className="btn btn-primary btn-xs" 
+			    <button  ref="toggleInput" className="btn btn-primary btn-xs" 
 			    	data-toggle="offcanvas" data-on="On" data-off="Off">
 			        Toggle nav
 			    </button>
