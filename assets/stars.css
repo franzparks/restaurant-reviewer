@@ -52,7 +52,7 @@
    }
  
  .rating > input:checked ~ label {   
-   color: #f97; 
+   color: #c70000; 
    width:1.1em;    
 }
 
