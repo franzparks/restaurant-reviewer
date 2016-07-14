@@ -26,10 +26,10 @@ class RestaurantDetails  extends Component{
 
             <div className="row">
 					
-                <div className="col-xs-6 col-lg-6 ">
+                <div className="col-sm-6 col-lg-3 ">
 
     				<div className="row">
-                        <h2>{this.props.restaurant.name}</h2>
+                        <h4>{this.props.restaurant.name}</h4>
     		            <p>
                         <img src={this.props.restaurant.image} 
                         className="img-responsive" 
@@ -71,14 +71,16 @@ class RestaurantDetails  extends Component{
                             {this.props.restaurant.operatingHours.close } PM
                         </div>
 
-    			        <Link to="/" className="btn btn-primary flex-item"> Back</Link>
+    			         <Link to="/" className="btn btn-primary flex-item"> Back</Link>
 
     			    </div>
 
 
+
+
     			</div>
 
-                 <div className="col-sm-6 col-lg-6">
+                 <div className="col-sm-6 col-lg-3">
 
                     <Link to={path} className="btn btn-primary" >Write A Review </Link>
                       

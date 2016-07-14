@@ -12,7 +12,7 @@ const Restaurant = (props) => {
 	    <div className="col-xs-6 col-lg-6">
 	        <div className="row">
 	        
-	        <h3>{props.name}</h3>
+	        <h4>{props.name}</h4>
 	        <p>
 	        <Link 
 	        to={path} 
