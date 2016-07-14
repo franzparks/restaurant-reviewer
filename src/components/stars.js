@@ -1,11 +1,11 @@
 import React from 'react';
 
 const Stars = (props) => {
-	//console.log(" got this: "+props.checked_star);
+
 
 return (
 
-	<div className={props.style} >
+	<div className={props.style}>
 
 		<input type={props.type}
 			id={props.keys[0]}
@@ -65,8 +65,8 @@ return (
 			value="1"  
 			onClick={props.onClick} 
 			readOnly={props.condition}  
-			onChange={ props.condition ? () =>{} : () =>{} }
-			checked={props.checked_star === 1 ? true : false} //this is just to fulfill react api requirement 
+			onChange={ props.condition ? () =>{} : () =>{} } //this is just to fulfill react api requirement
+			checked={props.checked_star === 1 ? true : false}  
 		/>
 		<label htmlFor={props.keys[4]} title="Sucks big time"> 1 star</label>
 
