@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-var $ = require ('jquery')
+import * as $ from 'jquery/dist/jquery';
 
 class ToggleNav extends Component {
 
@@ -10,12 +10,12 @@ class ToggleNav extends Component {
 	componentDidMount() {
 
       //this.refs.toggleInput.getDOMNode().bootstrapToggle();
-      $('.toggleInput').bootstrapToggle();
+      //$('.toggleInput').bootstrapToggle();
 
     }
 
     componentDidUpdate(){
-    	$('.toggleInput').bootstrapToggle();
+    	//$('.toggleInput').bootstrapToggle();
     }
 
 	render(){
