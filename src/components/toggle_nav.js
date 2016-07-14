@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import ButtonGroup, {DropdownButton,MenuItem, Button} from 'react-bootstrap';
+import SampleMenu from './menu_sample';
 import * as $ from 'jquery/dist/jquery';
 
 import Menu from './menu';
@@ -30,7 +32,7 @@ class ToggleNav extends Component {
 			        Toggle nav
 			    </button>
 			</p>
-
+           <SampleMenu />
 
 			</div>
 		);
