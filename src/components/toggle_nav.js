@@ -20,12 +20,16 @@ class ToggleNav extends Component {
 
 	render(){
 		return (
+
+			<div>
 			<p className="pull-right visible-xs">
-			    <button className="toggleInput" className="btn btn-primary btn-xs" 
-			    	data-toggle="offcanvas" data-on="On" data-off="Off">
+			    <button  className="btn btn-primary btn-xs dropdown-toggle" 
+			    	data-toggle="offcanvas" >
 			        Toggle nav
 			    </button>
 			</p>
+
+			</div>
 		);
     }
 }

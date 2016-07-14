@@ -4,8 +4,7 @@ import { Link } from 'react-router';
 const MenuItem = (props) =>{
 	return (
 		<Link
-		    data-toggle="offcanvas" 
-		    data-on="On" data-off="Off"
+		    key={Math.random() * 10000}
 			to="/"
 			name={props.name} 
 		    className={props.style}
