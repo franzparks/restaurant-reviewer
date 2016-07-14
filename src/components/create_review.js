@@ -104,7 +104,7 @@ class Review extends Component {
 	        </div>
 
 	        <button type="submit" className="btn btn-primary" disabled={this.state.rating === 0 }>Submit</button>
-	        <Link to="/" className="btn btn-danger">Cancel</Link>
+	        <Link to="/" className="btn btn-danger extra-margin-left">Cancel</Link>
 	    </form>
 	    </div>
 	);
