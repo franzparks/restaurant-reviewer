@@ -13,6 +13,10 @@ class ToggleNav extends Component {
 
     }
 
+    componentDidUpdate(){
+    	$('.toggleInput').bootstrapToggle();
+    }
+
 	render(){
 		return (
 			<p className="pull-right visible-xs">
