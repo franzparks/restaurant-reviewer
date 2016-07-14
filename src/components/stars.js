@@ -1,5 +1,4 @@
 import React from 'react';
-import FontAwesome from 'react-fontawesome';
 
 const Stars = (props) => {
 	//console.log(" got this: "+props.checked_star);
