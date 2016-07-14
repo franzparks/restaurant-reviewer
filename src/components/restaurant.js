@@ -46,7 +46,7 @@ const Restaurant = (props) => {
              
             </div>
 
-            <div className="row">
+            <div className="row" tabIndex="0">
             <div aria-label="Cuisine Type" className="flex-item"><strong>Cuisine Type:</strong> {props.cuisineType}</div>
 	        <div aria-label="Address" className="flex-item"><strong>Address:</strong> {props.address}</div>
 	        <div aria-label="Hours Open" className="flex-item">

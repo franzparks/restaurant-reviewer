@@ -42,7 +42,7 @@ class RestaurantList extends Component {
 	        var boundClick = this.handleClick.bind(this, restaurant);
 	        
 	        return (
-              <div className="">
+              <div>
                
 	          <Restaurant 
                 key={Math.random() * 100000}

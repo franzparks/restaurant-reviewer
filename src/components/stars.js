@@ -5,7 +5,7 @@ const Stars = (props) => {
 
 return (
 
-	<div className={props.style} tabIndex="0">
+	<div className={props.style} >
 
 		<input type={props.type}
 			id={props.keys[0]}
