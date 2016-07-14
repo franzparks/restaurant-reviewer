@@ -1,13 +1,16 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-const ToggleNav = () => {
-	return (
-		<p className="pull-right visible-xs " id="some">
-		    <button  className="btn btn-primary btn-xs" data-toggle="offcanvas" data-on="On" data-off="Off">
-		        Toggle nav
-		    </button>
-		</p>
-	);
+class ToggleNav extends Component {
+	render(){
+		return (
+			<p className="pull-right visible-xs">
+			    <button  className="btn btn-primary btn-xs" 
+			    	data-toggle="offcanvas" data-on="On" data-off="Off">
+			        Toggle nav
+			    </button>
+			</p>
+		);
+    }
 }
 
 export default ToggleNav;
