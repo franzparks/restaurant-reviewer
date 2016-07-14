@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+var $ = require ('jquery')
 
 class ToggleNav extends Component {
 
