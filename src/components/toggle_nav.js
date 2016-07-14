@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import * as $ from 'jquery/dist/jquery';
 
+import Menu from './menu';
+
 class ToggleNav extends Component {
 
 	constructor(props){
@@ -23,11 +25,12 @@ class ToggleNav extends Component {
 
 			<div>
 			<p className="pull-right visible-xs">
-			    <button  className="btn btn-primary btn-xs dropdown-toggle" 
+			    <button  className="btn btn-primary btn-xs " 
 			    	data-toggle="offcanvas" >
 			        Toggle nav
 			    </button>
 			</p>
+
 
 			</div>
 		);

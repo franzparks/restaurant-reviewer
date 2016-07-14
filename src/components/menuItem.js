@@ -3,7 +3,9 @@ import { Link } from 'react-router';
 
 const MenuItem = (props) =>{
 	return (
+	   
 		<Link
+		    
 		    key={Math.random() * 10000}
 			to="/"
 			name={props.name} 
@@ -12,6 +14,7 @@ const MenuItem = (props) =>{
 		 	>
 		 	{props.label}
 		</Link>
+		
 	);
 }
 

@@ -33,14 +33,18 @@ class Menu extends Component {
         Object.keys(vals).forEach((key) => {
          
 	        menuItems.push(	
-				<MenuItem 
-				   key={key}
-		           label={vals[key]}
-		           name={key}
-		           style={this.state.unselected}
-		           handleClick={this.handleClick}
 
-				/>
+			<MenuItem 
+
+			   key={key}
+			   
+	           label={vals[key]}
+	           name={key}
+	           style={this.state.unselected}
+	           handleClick={this.handleClick}
+
+				/>	
+
 			);
          
 		});	
@@ -69,9 +73,9 @@ class Menu extends Component {
 	render() {
         var items = this.displayMenuItems();
 		return (
-		    <div className="col-xs-6 col-sm-3 sidebar-offcanvas " id="sidebar">
+		    <div className="col-xs-6 col-sm-3 " id="sidebar">
 				<div className="list-group">
-				    {items}          
+				    {items}        
 				</div>
 			</div>
 		);	
