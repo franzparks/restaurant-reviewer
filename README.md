@@ -15,5 +15,5 @@ The focus of the application is accessibility
 
 4. To build for production run `webpack`. Optionally you can add version information with the command
 
-- assets will be in dist/bundle.js 
+- assets will be in /bundle.js 
 
