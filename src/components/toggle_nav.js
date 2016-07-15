@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import ButtonGroup, {DropdownButton,MenuItem, Button} from 'react-bootstrap';
-import DropDownMenu from './menu_sample';
+import DropDownMenu from './drop_down_menu';
 import * as $ from 'jquery/dist/jquery';
 
 import Menu from './menu';
