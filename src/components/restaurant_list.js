@@ -42,7 +42,7 @@ class RestaurantList extends Component {
 	        var boundClick = this.handleClick.bind(this, restaurant);
 	        
 	        return (
-              <div>
+              
                
 	          <Restaurant 
                 key={Math.random() * 100000}
@@ -61,7 +61,7 @@ class RestaurantList extends Component {
                
             /> 
             
-            </div>
+            
             );
 	      
 	    });
@@ -81,7 +81,7 @@ class RestaurantList extends Component {
 	    	<div>
 
                 <div className="row row-offcanvas row-offcanvas-right">
-                    <div className="col-xs-12 col-sm-6">
+                    <div className="col-xs-12 col-sm-12 col-md-6">
                         <ToggleNav key={Math.random()}/>
                         <Overview key={Math.random()}/>                
                         <div key={Math.random()}>
