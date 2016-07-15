@@ -11,6 +11,26 @@ import {
 
 class SampleMenu extends Component{
 
+  constructor(props) {
+        super(props);
+        this.state = {"selected" :"list-group-item active", "unselected":"list-group-item", "style":"", "selectedItem":""};
+        this.handleClick = this.handleClick.bind(this);
+        this.displayMenuItems = this.displayMenuItems.bind(this);
+        
+    }
+    
+    componentDidMount(){
+        this.setState({selectedItem : 'all'});
+    }
+
+    handleClick (e){
+
+        this.props.setCategoryFilter(e.target.name);
+
+        /* Identify selected item*/
+        this.setState({selectedItem : e.target.name});
+  }
+
 
   render(){
 
