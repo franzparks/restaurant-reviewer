@@ -36,9 +36,9 @@ class SampleMenu extends Component{
   render(){
 
      return (
-        <ButtonToolbar justified>
+        <ButtonToolbar>
         <DropdownButton bsStyle={'primary'} title={'Toggle Nav'} key={Math.random() * 1000} id={'dropdown-basic-0'}>
-          <MenuItem name="all" onClick={this.handleClick} active={this.state.selected === 'all'}>All</MenuItem>
+          <MenuItem name="all" onClick={this.handleClick} active={this.state.selected === 'all'} >All</MenuItem>
           <MenuItem divider />
           <MenuItem  name="highestRated" onClick={this.handleClick} active={this.state.selected === 'highestRated'}>Highest Rated</MenuItem>
           <MenuItem name="mostReviewed" onClick={this.handleClick} active={this.state.selected === 'mostReviewed'}>Most Reviewed</MenuItem>

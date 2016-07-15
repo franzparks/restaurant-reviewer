@@ -25,17 +25,11 @@ class ToggleNav extends Component {
 	render(){
 		return (
 
-			<div>
-			<div className="pull-right visible-xs" >
-			    {/*<button  className="btn btn-primary btn-xs " 
-			    	data-toggle="offcanvas" >
-			        Toggle nav
-			    </button>*/}
+			<div className="visible-xs" >
+			    
 			    <SampleMenu />
 			</div>
            
-
-			</div>
 		);
     }
 }
