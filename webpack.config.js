@@ -1,9 +1,8 @@
-
 module.exports = {
-  entry: {
-    javascript: './src/index.js',
-    html: './index.html'
-  },
+  entry: [
+    './src/index.js',
+    './index.html'
+  ],
   output: {
     path: __dirname,
     publicPath: '/',
@@ -23,23 +22,6 @@ module.exports = {
   },
   devServer: {
     historyApiFallback: true,
-    contentBase: './',
-    hot: true,
-    //enable gzip compression for assets
-    compress: true
-
-    
-  },
-
-  /*'webpack-dev-server': {
-      options: {
-        hot: true,
-        port: 8000,
-        webpack: webpackDevConfig,
-        publicPath: '/',
-        //__webpack_public_path__ : 'window.resourceBaseUrl',
-        contentBase: './<%= pkg.src %>/',
-        historyApiFallback: true
-    }*/
-    
+    contentBase: './'
+  }
 };
