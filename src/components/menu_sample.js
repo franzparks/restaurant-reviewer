@@ -13,7 +13,7 @@ class SampleMenu extends Component{
 
   constructor(props) {
         super(props);
-        this.state = {"selected" :"list-group-item active", "unselected":"list-group-item", "style":"", "selectedItem":""};
+        this.state = {"selected" :"all"};
         this.handleClick = this.handleClick.bind(this);
         //this.displayMenuItems = this.displayMenuItems.bind(this);
         
@@ -38,11 +38,11 @@ class SampleMenu extends Component{
      return (
         <ButtonToolbar>
         <DropdownButton bsStyle={'primary'} title={'Toggle Nav'} key={Math.random() * 1000} id={'dropdown-basic-0'}>
-          <MenuItem eventKey="1" name="all" onClick={this.handleClick}>All</MenuItem>
+          <MenuItem name="all" onClick={this.handleClick} active={this.state.selected === 'all'}>All</MenuItem>
           <MenuItem divider />
-          <MenuItem eventKey="2" name="highestRated" onClick={this.handleClick}>Highest Rated</MenuItem>
-          <MenuItem eventKey="3" name="mostReviewed" onClick={this.handleClick}>Most Reviewd</MenuItem>
-          <MenuItem eventKey="4" name="openNow" onClick={this.handleClick}>Open Now</MenuItem>
+          <MenuItem  name="highestRated" onClick={this.handleClick} active={this.state.selected === 'highestRated'}>Highest Rated</MenuItem>
+          <MenuItem name="mostReviewed" onClick={this.handleClick} active={this.state.selected === 'mostReviewed'}>Most Reviewed</MenuItem>
+          <MenuItem name="openNow" onClick={this.handleClick} active={this.state.selected === 'openNow'}>Open Now</MenuItem>
         </DropdownButton>
         </ButtonToolbar>
      );
