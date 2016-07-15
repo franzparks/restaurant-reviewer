@@ -23,6 +23,7 @@ class ToggleNav extends Component {
     }
 
 	render(){
+		
 		return (
 
 			<div className="visible-xs" >

@@ -11,11 +11,10 @@ import {
 
 class SampleMenu extends Component{
 
-  constructor(props) {
+    constructor(props) {
         super(props);
         this.state = {"selected" :""};
         this.handleClick = this.handleClick.bind(this);
-        //this.displayMenuItems = this.displayMenuItems.bind(this);
         
     }
     
@@ -24,25 +23,38 @@ class SampleMenu extends Component{
     }
 
     handleClick (e){
+      this.props.setCategoryFilter(e.target.name);
 
-        this.props.setCategoryFilter(e.target.name);
-
-        /* Identify selected item*/
-        this.setState({selected : e.target.name});
-        //console.log(e.target.name);
-  }
-
+      /* Identify selected item*/
+      this.setState({selected : e.target.name});
+    }
 
   render(){
 
      return (
         <ButtonToolbar>
-        <DropdownButton bsStyle={'primary'} title={'Toggle Nav'} key={Math.random() * 1000} id={'dropdown-basic-0'}>
-          <MenuItem name="all" onClick={this.handleClick} active={this.state.selected === 'all'} >All</MenuItem>
+        <DropdownButton bsStyle={'primary'} title={'Menu'} key={Math.random() * 1000} id={'dropdown-basic-0'}>
+          <MenuItem name="all" 
+            onClick={this.handleClick}
+            active={this.state.selected === 'all'}>
+            All
+          </MenuItem>
           <MenuItem divider />
-          <MenuItem  name="highestRated" onClick={this.handleClick} active={this.state.selected === 'highestRated'}>Highest Rated</MenuItem>
-          <MenuItem name="mostReviewed" onClick={this.handleClick} active={this.state.selected === 'mostReviewed'}>Most Reviewed</MenuItem>
-          <MenuItem name="openNow" onClick={this.handleClick} active={this.state.selected === 'openNow'}>Open Now</MenuItem>
+          <MenuItem  name="highestRated" 
+            onClick={this.handleClick} 
+            active={this.state.selected === 'highestRated'}>
+            Highest Rated
+          </MenuItem>
+          <MenuItem name="mostReviewed" 
+            onClick={this.handleClick} 
+            active={this.state.selected === 'mostReviewed'}>
+            Most Reviewed
+          </MenuItem>
+          <MenuItem name="openNow"
+            onClick={this.handleClick} 
+            active={this.state.selected === 'openNow'}>
+            Open Now
+          </MenuItem>
         </DropdownButton>
         </ButtonToolbar>
      );
