@@ -9,7 +9,7 @@ import {
 } from 'react-bootstrap';
 
 
-class SampleMenu extends Component{
+class DropDownMenu extends Component{
 
     constructor(props) {
         super(props);
@@ -63,4 +63,4 @@ class SampleMenu extends Component{
 } 
 
 
-export default connect(null, actions)(SampleMenu);
+export default connect(null, actions)(DropDownMenu);
