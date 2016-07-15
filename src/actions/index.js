@@ -11,7 +11,7 @@ import {
 let nextReviewID = 5
 
 export function fetchRestaurants() {
-	const request = axios.get('../../data/restaurants.json');
+	const request = axios.get('../../src/data/restaurants.json');
 	return {
 		type: FETCH_RESTAURANTS,
 		payload: request
