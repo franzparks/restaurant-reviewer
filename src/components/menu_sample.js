@@ -29,14 +29,14 @@ class SampleMenu extends Component{
 
         /* Identify selected item*/
         this.setState({selected : e.target.name});
-        console.log(e.target.name);
+        //console.log(e.target.name);
   }
 
 
   render(){
 
      return (
-        <ButtonToolbar>
+        <ButtonToolbar justified>
         <DropdownButton bsStyle={'primary'} title={'Toggle Nav'} key={Math.random() * 1000} id={'dropdown-basic-0'}>
           <MenuItem name="all" onClick={this.handleClick} active={this.state.selected === 'all'}>All</MenuItem>
           <MenuItem divider />

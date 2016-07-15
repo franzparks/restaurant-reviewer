@@ -37,7 +37,7 @@ class Menu extends Component {
 			<MenuItem 
 
 			   key={key}
-			   
+
 	           label={vals[key]}
 	           name={key}
 	           style={this.state.unselected}
@@ -73,11 +73,13 @@ class Menu extends Component {
 	render() {
         var items = this.displayMenuItems();
 		return (
-		    <div className="col-xs-6 col-sm-3 " id="sidebar">
-				<div className="list-group">
+			
+		    <div className="col-sm-6 col-lg-3 visible-md visible-lg" id="sidebar">
+				<div className="list-group ">
 				    {items}        
 				</div>
 			</div>
+			
 		);	
 
 }

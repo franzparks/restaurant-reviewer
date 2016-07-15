@@ -26,13 +26,14 @@ class ToggleNav extends Component {
 		return (
 
 			<div>
-			<p className="pull-right visible-xs">
-			    <button  className="btn btn-primary btn-xs " 
+			<div className="pull-right visible-xs" >
+			    {/*<button  className="btn btn-primary btn-xs " 
 			    	data-toggle="offcanvas" >
 			        Toggle nav
-			    </button>
-			</p>
-           <SampleMenu />
+			    </button>*/}
+			    <SampleMenu />
+			</div>
+           
 
 			</div>
 		);
