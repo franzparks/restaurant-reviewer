@@ -1,5 +1,12 @@
 import React, {Component} from 'react';
-import ButtonGroup, {DropdownButton,MenuItem, ButtonToolbar} from 'react-bootstrap';
+import { connect } from 'react-redux';
+import * as actions from '../actions';
+import {
+  ButtonGroup,
+  DropdownButton,
+  MenuItem, 
+  ButtonToolbar
+} from 'react-bootstrap';
 
 
 class SampleMenu extends Component{
