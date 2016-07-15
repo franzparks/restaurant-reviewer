@@ -9,7 +9,7 @@ const Restaurant = (props) => {
 	return(
 		
 	
-	    <div className="col-xs-12 col-lg-6">
+	    <div className="col-xs-12 col-md-6 col-sm-6">
 	        <div className="row">
 	        
 	        <h4>{props.name}</h4>
