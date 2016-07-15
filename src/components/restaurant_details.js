@@ -25,12 +25,12 @@ class RestaurantDetails  extends Component{
 		return (
 
             <div className="row">
-					
+                    
                 <div className="col-xs-12 col-lg-6 ">
 
-    				<div className="row">
+                    <div className="row">
                         <h4>{this.props.restaurant.name}</h4>
-    		            <p>
+                        <p>
                         <img src={this.props.restaurant.image} 
                         className="img-responsive" 
                         alt="Image of restaurant cuisine type">
@@ -73,16 +73,16 @@ class RestaurantDetails  extends Component{
 
                         <div className="flex-item">
 
-    			        <Link to="/" 
+                        <Link to="/" 
                             className="btn btn-primary  extra-margin-bottom ">
                              Back
                         </Link>
 
                         </div>
 
-    			    </div>
+                    </div>
 
-    			</div>
+                </div>
 
                  <div className="col-xs-12 col-lg-6 flex-item" >
 
@@ -94,10 +94,10 @@ class RestaurantDetails  extends Component{
                     {reviews}
                 </div>
 
-                
+            
 
-
-            </div>
+            </div> 
+            
 		  
 		);
     }
