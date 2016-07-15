@@ -5,7 +5,7 @@ const ToggleNav = () => {
 
 	return (
 
-		<div className="visible-xs" >    
+		<div className="visible-xs visible-sm" >    
 		    <DropDownMenu />
 		</div>
 	);
