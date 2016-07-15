@@ -1,38 +1,14 @@
 import React, {Component} from 'react';
-import ButtonGroup, {DropdownButton,MenuItem, Button} from 'react-bootstrap';
-import DropDownMenu from './drop_down_menu';
-import * as $ from 'jquery/dist/jquery';
 
-import Menu from './menu';
+const ToggleNav = () => {
 
-class ToggleNav extends Component {
+	return (
 
-	constructor(props){
-		super(props);
-	}
-
-	componentDidMount() {
-
-      //this.refs.toggleInput.getDOMNode().bootstrapToggle();
-      //$('.toggleInput').bootstrapToggle();
-
-    }
-
-    componentDidUpdate(){
-    	//$('.toggleInput').bootstrapToggle();
-    }
-
-	render(){
-		
-		return (
-
-			<div className="visible-xs" >
-			    
-			    <DropDownMenu />
-			</div>
-           
-		);
-    }
+		<div className="visible-xs" >    
+		    <DropDownMenu />
+		</div>
+	);
+    
 }
 
 export default ToggleNav;
