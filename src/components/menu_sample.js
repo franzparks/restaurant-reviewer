@@ -13,22 +13,22 @@ class SampleMenu extends Component{
 
   constructor(props) {
         super(props);
-        this.state = {"selected" :"all"};
+        this.state = {"selected" :""};
         this.handleClick = this.handleClick.bind(this);
         //this.displayMenuItems = this.displayMenuItems.bind(this);
         
     }
     
     componentDidMount(){
-        this.setState({selectedItem : 'all'});
+        this.setState({selected : 'all'});
     }
 
     handleClick (e){
 
-        //this.props.setCategoryFilter(e.target.name);
+        this.props.setCategoryFilter(e.target.name);
 
         /* Identify selected item*/
-        //this.setState({selectedItem : e.target.name});
+        this.setState({selected : e.target.name});
         console.log(e.target.name);
   }
 
