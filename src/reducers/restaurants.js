@@ -18,8 +18,7 @@ export default function(state = INITIAL_STATE, action){
 		    return { ...state, restaurants:  action.payload.data  };
 
         case POST_REVIEW:
-            //console.log("posted restaurant and  reviews : "+ action.restaurant.reviews.length );
-            //console.log("posted restaurant id : "+ action.restaurant.id );
+            
         	return { ...state , restaurants :[ ...state.restaurants, action.restaurant] };
 	
 
