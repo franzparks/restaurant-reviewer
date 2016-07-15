@@ -42,7 +42,6 @@ class Review extends Component {
     }
 
   getRating (e){
-      //console.log("value of : "+e.target.value);
       const val = parseInt(e.target.value);
       this.setState( {rating: val});
   }  
