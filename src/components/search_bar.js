@@ -15,7 +15,7 @@ const SearchBar = (props) => {
 	        	    aria-label="Search Bar"
 	        	    className="form-control"
 	        	    type="text"
-	        	    placeholder=" Filter by : Name, Location"
+	        	    placeholder="Search"
 	        	    onChange={handleOnChange.bind(this)}
 	        	    value={props.filterText}
 	        	    
