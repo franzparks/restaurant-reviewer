@@ -25,7 +25,7 @@ class RestaurantList extends Component {
     }
 
     componentWillMount() {
-        //console.log("called componentWillMount of list");
+
 		this.props.fetchRestaurants();
 	}
 
@@ -90,9 +90,7 @@ class RestaurantList extends Component {
                         </div> 
                        
                     </div>
-                    <div >
                     <Menu /> 
-                    </div>
                                     
                 </div>
 		    	
