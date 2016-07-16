@@ -20,7 +20,7 @@ class RestaurantDetails  extends Component{
     	super(props);
     }
 
-    componentDidUnMount() {
+    componentWillMount() {
         console.log("componentWillUnMount");
         //this.props.fetchRestaurant(this.props.restaurant);
         //this.context.router.push('/restaurants/2');
