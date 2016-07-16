@@ -21,63 +21,29 @@ class RestaurantDetails  extends Component{
     }
 
     componentWillMount() {
-        console.log("componentWillUnMount");
+        //console.log("componentWillUnMount");
         this.props.fetchRestaurant(this.props.params.id); //this.props.params.id
         //this.context.router.push('/restaurants/2');
 
     }
 
 
-    renderRestaurant(restaurants){
+    renderRestaurant(restaurants,path){
 
         return restaurants.map((restaurant) => {
+           
+           var reviews = loadReviews(restaurant.reviews);
             
             return (
 
-                <Restaurant 
-                key={Math.random() * 100000}
-                id={restaurant.id }
-                data={restaurant}
-                //handleClick={boundClick}
-                name={restaurant.name}
-                image={restaurant.image}
-                address={restaurant.address}
-                cuisineType={restaurant.cuisineType}
-                hours={restaurant.operatingHours}
-                averageRating={restaurant.averageRating}
-                numberOfRatings={restaurant.numberOfRatings}
-                checked_star={restaurant.averageRating}
-                type={'checkbox'}
-                />
-
-            );
-        });
-
-    }
-
-
-    render(){
-        //console.log("got rest :"+ this.props.restaurant);
-    	//var path = `restaurants/${this.props.params.id}/reviews/new`;
-    	//var reviews = loadReviews(this.props.restaurant.reviews);
-
-
-            //{console.log(Object.keys(this.props.restaurant))}
-            //var rest = {};
-            //rest = renderRestaurant(this.props.restaurant);
-        
-
-		return (
-            <div>
-            <div>{this.renderRestaurant(this.props.restaurant)}</div>
-            {/*<div className="row">
+                <div className="row">
                     
                 <div className="col-xs-12 col-lg-6 ">
 
                     <div className="row">
-                        <h4>{this.props.restaurant.name}</h4>
+                        <h4>{restaurant.name}</h4>
                         <p>
-                        <img src={this.props.restaurant.image} 
+                        <img src={restaurant.image} 
                         className="img-responsive" 
                         alt="Image of restaurant cuisine type">
                         </img>
@@ -88,7 +54,7 @@ class RestaurantDetails  extends Component{
                                 key={Math.random() * 10000}
                                 style={'rating'}
                                 condition={false}
-                                checked_star={getAverageRating(this.props.restaurant.reviews)} 
+                                checked_star={getAverageRating(restaurant.reviews)} 
                                 type={'checkbox'}
                                 keys={[
                                     this.props.key ,this.props.key,this.props.key,
@@ -96,7 +62,7 @@ class RestaurantDetails  extends Component{
                                 ]}
                             />
                             <div className="number-of-reviews">
-                                {getNumberOfRatings(this.props.restaurant.reviews)} Reviews
+                                {getNumberOfRatings(restaurant.reviews)} Reviews
                             </div>
                         </div>
 
@@ -105,16 +71,16 @@ class RestaurantDetails  extends Component{
                     <div className="row">
 
                         <div aria-label="Cuisine Type" className="flex-item">
-                            <strong>Cuisine Type:</strong>  {this.props.restaurant.cuisineType}
+                            <strong>Cuisine Type:</strong>  {restaurant.cuisineType}
                         </div>
 
                         <div aria-label="Address" className="flex-item">
-                            <strong>Address:</strong>  {this.props.restaurant.address}
+                            <strong>Address:</strong>  {restaurant.address}
                         </div>
 
                         <div aria-label="Hours Open" className="flex-item">
-                            <strong>Hours Open:</strong>  {this.props.restaurant.operatingHours.open} AM to        
-                            {this.props.restaurant.operatingHours.close } PM
+                            <strong>Hours Open:</strong>  {restaurant.operatingHours.open} AM to        
+                            {restaurant.operatingHours.close } PM
                         </div>
 
                         <div className="flex-item">
@@ -142,10 +108,25 @@ class RestaurantDetails  extends Component{
 
             
 
-            </div> */}
-            
+            </div>
 
-		  </div>
+            );
+        });
+
+    }
+
+
+    render(){
+        //console.log("got rest :"+ this.props.restaurant);
+    	var path = `restaurants/${this.props.params.id}/reviews/new`;
+    	//var reviews = loadReviews(this.props.restaurant.reviews);
+        
+		return (
+            <div>
+            
+                {this.renderRestaurant(this.props.restaurant,path)}  
+
+		    </div>
 		);
     }
 
