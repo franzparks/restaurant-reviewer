@@ -18,19 +18,15 @@ import {
 class RestaurantList extends Component {
    
     constructor(props){
+        
     	super(props);
 
     	this.renderList = this.renderList.bind(this);
-    	//this.handleClick = this.handleClick.bind(this);
     }
 
     componentWillMount() {
 		this.props.fetchRestaurants();
 	}
-
-    handleClick(restaurant){
-        //this.props.fetchRestaurant(restaurant);
-    }
 
     renderList(restaurants) {
     	var filteredRestaurants = [];
@@ -38,7 +34,6 @@ class RestaurantList extends Component {
 			this.props.filterText, this.props.filterCategory);
 		
 	    return filteredRestaurants.map((restaurant) => {
-	        //var boundClick = this.handleClick.bind(this, restaurant);
 	        
 	        return (
               
@@ -47,7 +42,6 @@ class RestaurantList extends Component {
                 key={Math.random() * 100000}
                 id={restaurant.id }
                 data={restaurant}
-                //handleClick={boundClick}
                 name={restaurant.name}
                 image={restaurant.image}
                 address={restaurant.address}
@@ -101,7 +95,7 @@ class RestaurantList extends Component {
 }
 
 function mapStateToProps(state) {
-	//console.log("anything ? "+state.appState.restaurants);
+	
 	return { 
 		restaurants : state.appState.restaurants,
 		filterText : state.filterState.text,

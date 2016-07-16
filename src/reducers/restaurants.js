@@ -10,7 +10,7 @@ export default function(state = INITIAL_STATE, action){
 	switch(action.type) {
 
 		case FETCH_RESTAURANT:
-		    //console.log("data :"+action.payload.data);
+
 			return { ...state,  restaurant : action.payload.data.filter( 
 				(res) => {
 			    	return res.id === action.restaurant_id;
@@ -25,7 +25,6 @@ export default function(state = INITIAL_STATE, action){
         case POST_REVIEW:
             
         	return { ...state , restaurants :[ ...state.restaurants, action.restaurant] };
-	
 
 		default: 
 			return state;	    

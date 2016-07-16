@@ -14,7 +14,7 @@ const Restaurant = (props) => {
 	        
 	        <h4>{props.name}</h4>
 	        <p>
-	        <Link to={path}  > {/*onClick={props.handleClick}*/}
+	        <Link to={path}  >
 	        <img src={props.image} 
 	        	className="img-responsive"
 	        	alt="Image of restaurant cuisine type">
@@ -36,7 +36,7 @@ const Restaurant = (props) => {
             		]}
             	/>
             	<div className="number-of-reviews">
-                {props.numberOfRatings} Reviews
+                	{props.numberOfRatings} Reviews
             	</div>
             </div>
 
