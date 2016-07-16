@@ -22,11 +22,13 @@ class ReviewForm extends Component {
 
         this.onSubmit = this.onSubmit.bind(this);
         this.getRating = this.getRating.bind(this);
-        this.renderForm = this.renderForm.bind(this);
+        //this.renderForm = this.renderForm.bind(this);
     }
 
     onSubmit(props) {
 
+      console.log("props : "+ props);
+     console.log("restaurant : "+ Object.keys(this.props.restaurant[0]));
       var path = `/restaurants/${this.props.params.id}`;
       
       const review = {
@@ -36,7 +38,7 @@ class ReviewForm extends Component {
         //rating : this.state.rating 
       };
 
-      var restaurant = this.props.restaurant;
+      var restaurant = this.props.restaurant[0];
         restaurant.reviews = [ ...restaurant.reviews, review];
  
         this.props.postReview(restaurant);  
@@ -134,4 +136,4 @@ ReviewForm.propTypes = {
 export default reduxForm({
   form: 'review',
   fields
-}, , mapStateToProps, { postReview })(ReviewForm)
+}, mapStateToProps, { postReview })(ReviewForm)
