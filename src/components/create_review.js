@@ -55,7 +55,7 @@ class ReviewForm extends Component {
 
     return (
         <div className="col-xs-12 col-lg-6">
-        <form onSubmit={handleSubmit(this.onSubmit.bind(this))} >
+        <form onSubmit={handleSubmit(this.onSubmit.bind(this))} className="form-horizontal">
             
             <div className="form-group">
                 <label htmlFor="name" className="control-label">Name</label>
