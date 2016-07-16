@@ -1,8 +1,53 @@
-import React, { Component, PropTypes } from 'react'
-import { reduxForm } from 'redux-form'
-export const fields = [ 'name', 'rating', 'comment' ]
+import React, { Component, PropTypes } from 'react';
+import { reduxForm } from 'redux-form';
+import { postReview } from '../actions/index';
+import { Link } from 'react-router';
+import Stars from './stars';
+
+import {getCurrentDate} from '../utils/utils';
+
+export const fields = [ 'name', 'rating', 'comment' ];
 
 class ReviewForm extends Component {
+
+   static contextTypes = {
+      router: PropTypes.object
+    };
+
+    constructor(props){
+      super(props);
+        this.state = {
+         rating : 0
+        }
+
+        this.onSubmit = this.onSubmit.bind(this);
+        this.getRating = this.getRating.bind(this);
+        this.renderForm = this.renderForm.bind(this);
+    }
+
+    onSubmit(props) {
+
+      var path = `/restaurants/${this.props.params.id}`;
+      
+      const review = {
+        id : Math.random() * 10000 ,
+        ...props, 
+        date: getCurrentDate(),
+        rating : this.state.rating 
+      };
+
+      var restaurant = this.props.restaurant;
+        restaurant.reviews = [ ...restaurant.reviews, review];
+ 
+        this.props.postReview(restaurant);  
+
+      this.context.router.push(path);
+    }
+
+  getRating (e){
+      const val = parseInt(e.target.value);
+      this.setState( {rating: val});
+  }
 
 
   render() {
@@ -18,7 +63,7 @@ class ReviewForm extends Component {
 
     return (
 
-      <form onSubmit={handleSubmit} className="form-group">
+      <form onSubmit={handleSubmit(this.onSubmit.bind(this))} className="form-group">
         <div>
           <label>Name</label>
           <div>
@@ -71,6 +116,10 @@ class ReviewForm extends Component {
       </form>
     )
   }
+}
+
+function mapStateToProps(state) {
+  return { restaurant : state.appState.restaurant, key : state.appState.keyGen };
 }
 
 ReviewForm.propTypes = {
