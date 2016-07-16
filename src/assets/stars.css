@@ -1,126 +1,37 @@
-
 .rating {
-  unicode-bidi: bidi-override;
-  direction: rtl;
-  text-align: center;
-  float: left;
-}
-.rating > span {
-  display: inline-block;
-  position: relative;
-  width: 1.1em;
-}
-.rating > span:hover,
-.rating > span:hover ~ span {
-  color: transparent;
-  background: #E91E63
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    width: 8em;
 }
 
-
-.rating > span:hover:before,
-.rating > span:hover ~ span:before {
-   content: "\2605";
-   position: absolute;
-   left: 0; 
-   color: gold;
+.rating input {
+    position: absolute;
+    left: -999999px;
 }
 
-
-.rating:not(:checked) > label:before { 
-   content: '\2606';
+.rating label {
+    display: inline-block;
+    font-size: 0;
 }
 
-.rating:not(:checked) > input {    
-   clip: rect(0px, 0px, 0px, 0px);
-   height: 1px;  
-   margin: -1px;  
-   overflow: hidden;  
-   padding: 0;  
-   position: absolute;  
-   width: 1.1em;
-  }
-
-.rating:not(:checked) > label { 
-   float:right; 
-   width:1.1em;  
-   padding:0 .1em;   
-   overflow:hidden;  
-   white-space:nowrap; 
-   cursor:pointer; 
-   font-size:150%;  
-   line-height:1.2;  
-   }
- 
- .rating > input:checked ~ label {   
-   color: #c70000; 
-   width:1.1em;    
+.rating > label:before {
+    position: relative;
+    font: 24px/1 FontAwesome;
+    display: block;
+    content: "\f005";
+    color: #ccc;
+    background: -webkit-linear-gradient(-45deg, #d9d9d9 0%, #b3b3b3 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.rating_edit:not(:checked) > label:hover,
-.rating_edit:not(:checked) > label:hover ~ label { 
-  color: gold;
-  width:1.1em;
- }
- 
- .rating_edit > input:checked + label:hover,
- .rating_edit > input:checked + label:hover ~ label,
- .rating_edit > input:checked ~ label:hover,
- .rating_edit > input:checked ~ label:hover ~ label,
- .rating_edit > label:hover ~ input:checked ~ label {  
-   color: #ea0;    text-shadow: 1px 1px goldenrod, 2px 2px #B57340, .1em .1em .1em rgba(0,0,0,.5);
-   width:1.1em;
-  }
-   
- .rating_edit > label:active { 
-    position:relative;   
-    top:2px; 
-    left:2px;
-    width:1.1em;
-  }
-  .rating_font {
-    font-size:150%;
-  }
-
-
-.flex-container {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  
+.rating > label:hover:before,
+.rating > label:hover ~ label:before,
+.rating > label.selected:before,
+.rating > label.selected ~ label:before {
+    color: #f0ad4e;
+    background: -webkit-linear-gradient(-45deg, #fcb551 0%, #d69a45 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
-
-.flex-item {
-  justify-content: center;
-  padding: 5px;
-  flex-direction: row;
-  
-}
-
-.extra-padding {
-  padding: 0px 5px 0px 0px;
-}
-
-.extra-margin-left {
-  margin: 0px 0px 0px 10px;
-}
-
-.extra-margin-bottom-min {
-  margin: 0px 0px 5px 0px;
-}
-
-.extra-margin-bottom {
-  margin: 0px 0px 10px 0px;
-}
-
-.number-of-reviews {
-  margin: 5px 0px 5px 10px;
-}
-
-
-
 
