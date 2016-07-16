@@ -49,8 +49,8 @@ class Review extends Component {
 
   renderForm(){
     return (
-      
-      <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
+
+      <form onSubmit={handleSubmit(this.onSubmit.bind(this))} key={Math.random() * 10000}>
           <h3>Write a Review</h3>
           <hr />
           

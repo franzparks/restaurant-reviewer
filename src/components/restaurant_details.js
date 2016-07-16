@@ -113,7 +113,7 @@ class RestaurantDetails  extends Component{
 
     render(){
 
-    	var path = `restaurants/${this.props.params.id}/reviews/new`;
+    	var path = `${this.props.params.id}/reviews/new`;
      
 		return (
             <div>
