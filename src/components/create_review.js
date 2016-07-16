@@ -65,9 +65,9 @@ class ReviewForm extends Component {
             </div>
         
             <div className="form-group">
-                <label >Rate Restaurant</label>
+                <label htmlFor="rate-restaurant">Rate Restaurant</label>
 
-                <div className="rating">
+                <div className="rating" id="rate-restaurant">
                     
                     <label htmlFor="5">
                         <input type="radio" {...rating} 
