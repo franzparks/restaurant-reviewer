@@ -20,11 +20,12 @@ export function fetchRestaurants() {
 	};
 }
 
-export function fetchRestaurant(restaurant) {
+export function fetchRestaurant(restaurant_id) {
    
 	return {
 		type: FETCH_RESTAURANT,
-		restaurant : restaurant
+		payload: request,
+		restaurant_id : restaurant_id
 	}
 
 }
