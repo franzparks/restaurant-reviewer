@@ -20,6 +20,7 @@ class Review extends Component {
 
         this.onSubmit = this.onSubmit.bind(this);
         this.getRating = this.getRating.bind(this);
+        this.renderForm = this.renderForm.bind(this);
     }
 
     onSubmit(props) {
@@ -44,18 +45,13 @@ class Review extends Component {
   getRating (e){
       const val = parseInt(e.target.value);
       this.setState( {rating: val});
-  }  
+  }
 
-	render(){
-
-	 const { fields: { name, comment },  handleSubmit } = this.props;
-
-	return (
-
-		<div>	
-
-	    <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
-	        <h3>Write a Review</h3>
+  renderForm(){
+    return (
+      
+      <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
+          <h3>Write a Review</h3>
           <hr />
           
           <label htmlFor="ratings" className="form-group">Rate Restaurant</label>
@@ -86,26 +82,37 @@ class Review extends Component {
         
           <hr />
 
-	        <div className={`form-group ${name.touched && name.invalid ? 'has-danger' : ''}`}>
-	          <label htmlFor="name-input">Name</label>
-	          <input type="text" className="form-control" {...name}  id="name-input"/>
-	          <div className="text-danger">
-	            {name.touched ? name.error : ''}
-	          </div>
-	        </div>
+          <div className={`form-group ${name.touched && name.invalid ? 'has-danger' : ''}`}>
+            <label htmlFor="name-input">Name</label>
+            <input type="text" className="form-control" {...name}  id="name-input"/>
+            <div className="text-danger">
+              {name.touched ? name.error : ''}
+            </div>
+          </div>
 
            <label htmlFor="comment">Comment</label>
-	        <div className={`form-group ${comment.touched && comment.invalid ? 'has-danger' : ''}`}>
-	          <textarea className="form-control" {...comment} id="comment"/>
-	          <div className="text-danger">
-	            {comment.touched ? comment.error : ''}
-	          </div>
-	        </div>
+          <div className={`form-group ${comment.touched && comment.invalid ? 'has-danger' : ''}`}>
+            <textarea className="form-control" {...comment} id="comment"/>
+            <div className="text-danger">
+              {comment.touched ? comment.error : ''}
+            </div>
+          </div>
 
-	        <button type="submit" className="btn btn-primary" disabled={this.state.rating === 0 }>Submit</button>
-	        <Link to="/" className="btn btn-danger extra-margin-left">Cancel</Link>
-	    </form>
-	    </div>
+          <button type="submit" className="btn btn-primary" disabled={this.state.rating === 0 }>Submit</button>
+          <Link to="/" className="btn btn-danger extra-margin-left">Cancel</Link>
+      </form>
+    );
+  }  
+
+	render(){
+
+	 const { fields: { name, comment },  handleSubmit } = this.props;
+
+	return (
+
+		<div>
+    {this.renderForm()}
+	  </div>
 	);
     }
 }
