@@ -12,9 +12,6 @@ import {
 
 class RestaurantDetails  extends Component{
 
-    static contextTypes = {
-        router: PropTypes.object
-    };
 	
     constructor(props){
     	super(props);
@@ -22,16 +19,16 @@ class RestaurantDetails  extends Component{
 
     componentWillMount() {
         console.log("componentWillUnMount");
-        this.props.fetchRestaurant(this.props.params.id);
+        this.props.fetchRestaurant("2"); //this.props.params.id
         //this.context.router.push('/restaurants/2');
 
     }
 
 
     render(){
-
+        console.log("got rest :"+ this.props.restaurant);
     	var path = `restaurants/${this.props.params.id}/reviews/new`;
-    	var reviews = loadReviews(this.props.restaurant.reviews);
+    	var reviews; //= loadReviews(this.props.restaurant.reviews);
 
 		return (
 
@@ -116,7 +113,7 @@ class RestaurantDetails  extends Component{
 }
 
 function mapStateToProps(state) {
-	
+	console.log("anything ? "+state.appState.restaurant);
 	return { 
         restaurant : state.appState.restaurant, 
         key : state.appState.keyGen 

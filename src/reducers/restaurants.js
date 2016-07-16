@@ -4,16 +4,19 @@ import {
 	POST_REVIEW
 }from '../actions/types';
 
-const INITIAL_STATE = { restaurants : [] ,restaurant : null };
+const INITIAL_STATE = { restaurants : [] ,restaurant : [] };
 
 export default function(state = INITIAL_STATE, action){
 	switch(action.type) {
 
 		case FETCH_RESTAURANT:
-		
-			return { ...state,  restaurant : action.payload.data.filter( res => {
-				return res.id === action.restaurant_id})
+		    //console.log("data :"+action.payload.data);
+			return { ...state,  restaurant : action.payload.data.filter( 
+				(res) => {
+			    	return res.id === action.restaurant_id;
+			    })
 			};
+
 
 		case FETCH_RESTAURANTS:
             

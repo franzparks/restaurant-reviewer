@@ -3,7 +3,7 @@ export default function({ dispatch }) {
     // If action does not have payload
     // or, the payload does not have a .then property
     // we dont care about it, send it on
-    if (!action.payload || !action.payload.then || action.restaurant_id) {
+    if (!action.payload || !action.payload.then || !action.restaurant_id) {
       return next(action);
     }
 
