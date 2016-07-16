@@ -16,9 +16,8 @@ const Restaurant = (props) => {
 	        <p>
 	        <Link to={path}  > {/*onClick={props.handleClick}*/}
 	        <img src={props.image} 
-	        className="img-responsive"
-	        alt="Image of restaurant cuisine type">
-	        
+	        	className="img-responsive"
+	        	alt="Image of restaurant cuisine type">
 	        </img>
 	        </Link>
 	        </p>

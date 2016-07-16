@@ -22,7 +22,7 @@ class RestaurantDetails  extends Component{
 
     componentWillMount() {
         console.log("componentWillUnMount");
-        //this.props.fetchRestaurant(this.props.restaurant);
+        this.props.fetchRestaurant(this.props.params.id);
         //this.context.router.push('/restaurants/2');
 
     }
