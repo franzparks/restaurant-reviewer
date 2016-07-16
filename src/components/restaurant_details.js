@@ -13,7 +13,6 @@ import {
 } from '../utils/utils';
 
 class RestaurantDetails  extends Component{
-
 	
     constructor(props){
     	super(props);
@@ -21,9 +20,7 @@ class RestaurantDetails  extends Component{
     }
 
     componentWillMount() {
-        //console.log("componentWillUnMount");
-        this.props.fetchRestaurant(this.props.params.id); //this.props.params.id
-        //this.context.router.push('/restaurants/2');
+        this.props.fetchRestaurant(this.props.params.id);
 
     }
 
@@ -106,8 +103,6 @@ class RestaurantDetails  extends Component{
                   {reviews}
                 </div>
 
-            
-
             </div>
 
             );
@@ -117,10 +112,9 @@ class RestaurantDetails  extends Component{
 
 
     render(){
-        //console.log("got rest :"+ this.props.restaurant);
+
     	var path = `restaurants/${this.props.params.id}/reviews/new`;
-    	//var reviews = loadReviews(this.props.restaurant.reviews);
-        
+     
 		return (
             <div>
             
@@ -133,7 +127,7 @@ class RestaurantDetails  extends Component{
 }
 
 function mapStateToProps(state) {
-	console.log("anything ? "+state.appState.restaurant);
+	
 	return { 
         restaurant : state.appState.restaurant, 
         key : state.appState.keyGen 
