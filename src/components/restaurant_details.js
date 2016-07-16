@@ -1,4 +1,4 @@
-import React,{Component} from 'react';
+import React,{Component, PropTypes} from 'react';
 import {connect} from 'react-redux';
 import * as actions from '../actions';
 import { Link } from 'react-router';
@@ -11,9 +11,20 @@ import {
 } from '../utils/utils';
 
 class RestaurantDetails  extends Component{
+
+    static contextTypes = {
+        router: PropTypes.object
+    };
 	
     constructor(props){
     	super(props);
+    }
+
+    componentDidUnMount() {
+        console.log("componentWillUnMount");
+        //this.props.fetchRestaurant(this.props.restaurant);
+        //this.context.router.push('/restaurants/2');
+
     }
 
 

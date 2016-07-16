@@ -11,7 +11,9 @@ export default function(state = INITIAL_STATE, action){
 
 		case FETCH_RESTAURANT:
 		
-			return { ...state,  restaurant : action.restaurant };
+			return { ...state,  restaurant : action.payload.data.filter( res => {
+				return res.id === action.restaurant_id})
+			};
 
 		case FETCH_RESTAURANTS:
             

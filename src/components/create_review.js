@@ -8,7 +8,7 @@ import {getCurrentDate} from '../utils/utils';
 
 class Review extends Component {
 
-	static contextTypes = {
+	  static contextTypes = {
     	router: PropTypes.object
     };
 
