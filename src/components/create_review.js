@@ -16,9 +16,9 @@ class ReviewForm extends Component {
 
     constructor(props){
       super(props);
-        this.state = {
-         rating : 0
-        }
+        //this.state = {
+        // rating : 0
+        //}
 
         this.onSubmit = this.onSubmit.bind(this);
         this.getRating = this.getRating.bind(this);
@@ -32,8 +32,8 @@ class ReviewForm extends Component {
       const review = {
         id : Math.random() * 10000 ,
         ...props, 
-        date: getCurrentDate(),
-        rating : this.state.rating 
+        date: getCurrentDate()
+        //rating : this.state.rating 
       };
 
       var restaurant = this.props.restaurant;
