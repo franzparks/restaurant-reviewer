@@ -47,8 +47,8 @@ class Review extends Component {
       this.setState( {rating: val});
   }
 
-  renderForm(){
-    const { fields: { name, comment },  handleSubmit } = this.props;
+  renderForm(props){
+    const { fields: { name, comment },  handleSubmit } = props;
     return (
 
       <form onSubmit={handleSubmit(this.onSubmit.bind(this))} key={Math.random() * 10000}>
@@ -110,7 +110,7 @@ class Review extends Component {
 	return (
 
 		<div key={Math.random() * 10000}>
-    {this.renderForm()}
+      {this.renderForm(this.props)}
 	  </div>
 	);
     }
