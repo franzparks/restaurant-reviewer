@@ -10,8 +10,10 @@ import {
 
 let nextReviewID = 5
 
+const request = axios.get('../../src/data/restaurants.json');
+
 export function fetchRestaurants() {
-	const request = axios.get('../../src/data/restaurants.json');
+	
 	return {
 		type: FETCH_RESTAURANTS,
 		payload: request
