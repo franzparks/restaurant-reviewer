@@ -33,7 +33,7 @@ class RestaurantDetails  extends Component{
             
             return (
 
-                <div className="row">
+                <div className="row" key={Math.random() * 100000}>
                     
                 <div className="col-xs-12 col-lg-6 ">
 
