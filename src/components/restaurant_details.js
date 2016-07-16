@@ -4,6 +4,8 @@ import * as actions from '../actions';
 import { Link } from 'react-router';
 import Stars from './stars';
 
+import Restaurant from './restaurant';
+
 import {
     getAverageRating,
     getNumberOfRatings,
@@ -15,24 +17,60 @@ class RestaurantDetails  extends Component{
 	
     constructor(props){
     	super(props);
+        this.renderRestaurant = this.renderRestaurant.bind(this);
     }
 
     componentWillMount() {
         console.log("componentWillUnMount");
-        this.props.fetchRestaurant("2"); //this.props.params.id
+        this.props.fetchRestaurant(this.props.params.id); //this.props.params.id
         //this.context.router.push('/restaurants/2');
 
     }
 
 
+    renderRestaurant(restaurants){
+
+        return restaurants.map((restaurant) => {
+            
+            return (
+
+                <Restaurant 
+                key={Math.random() * 100000}
+                id={restaurant.id }
+                data={restaurant}
+                //handleClick={boundClick}
+                name={restaurant.name}
+                image={restaurant.image}
+                address={restaurant.address}
+                cuisineType={restaurant.cuisineType}
+                hours={restaurant.operatingHours}
+                averageRating={restaurant.averageRating}
+                numberOfRatings={restaurant.numberOfRatings}
+                checked_star={restaurant.averageRating}
+                type={'checkbox'}
+                />
+
+            );
+        });
+
+    }
+
+
     render(){
-        console.log("got rest :"+ this.props.restaurant);
-    	var path = `restaurants/${this.props.params.id}/reviews/new`;
-    	var reviews; //= loadReviews(this.props.restaurant.reviews);
+        //console.log("got rest :"+ this.props.restaurant);
+    	//var path = `restaurants/${this.props.params.id}/reviews/new`;
+    	//var reviews = loadReviews(this.props.restaurant.reviews);
+
+
+            //{console.log(Object.keys(this.props.restaurant))}
+            //var rest = {};
+            //rest = renderRestaurant(this.props.restaurant);
+        
 
 		return (
-
-            <div className="row">
+            <div>
+            <div>{this.renderRestaurant(this.props.restaurant)}</div>
+            {/*<div className="row">
                     
                 <div className="col-xs-12 col-lg-6 ">
 
@@ -99,14 +137,15 @@ class RestaurantDetails  extends Component{
                 </div>
 
                 <div>
-                    {reviews}
+                  {reviews}
                 </div>
 
             
 
-            </div> 
+            </div> */}
             
-		  
+
+		  </div>
 		);
     }
 

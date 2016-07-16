@@ -21,12 +21,11 @@ class RestaurantList extends Component {
     	super(props);
 
     	this.renderList = this.renderList.bind(this);
-    	this.handleClick = this.handleClick.bind(this);
+    	//this.handleClick = this.handleClick.bind(this);
     }
 
     componentWillMount() {
-
-		this.props.fetchRestaurant("2");
+		this.props.fetchRestaurants();
 	}
 
     handleClick(restaurant){
@@ -102,9 +101,9 @@ class RestaurantList extends Component {
 }
 
 function mapStateToProps(state) {
-	
+	//console.log("anything ? "+state.appState.restaurants);
 	return { 
-		restaurants : state.appState.restaurant,
+		restaurants : state.appState.restaurants,
 		filterText : state.filterState.text,
 		filterCategory : state.filterState.category
 	};

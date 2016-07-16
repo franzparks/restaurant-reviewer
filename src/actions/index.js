@@ -21,7 +21,7 @@ export function fetchRestaurants() {
 }
 
 export function fetchRestaurant(restaurant_id) {
-    console.log(" id : "+restaurant_id);
+    //console.log(" id : "+restaurant_id);
 	return {
 		type: FETCH_RESTAURANT,
 		payload: request,
