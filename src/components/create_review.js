@@ -1,148 +1,86 @@
-import React, { Component, PropTypes } from 'react';
-import { reduxForm } from 'redux-form';
-import { postReview } from '../actions/index';
-import { Link } from 'react-router';
-import Stars from './stars';
+import React, { Component, PropTypes } from 'react'
+import { reduxForm } from 'redux-form'
+export const fields = [ 'name', 'rating', 'comment' ]
 
-import {getCurrentDate} from '../utils/utils';
+class ReviewForm extends Component {
 
-class Review extends Component {
 
-	  static contextTypes = {
-    	router: PropTypes.object
-    };
+  render() {
 
-    constructor(props){
-    	super(props);
-        this.state = {
-         rating : 0
-        }
 
-        this.onSubmit = this.onSubmit.bind(this);
-        this.getRating = this.getRating.bind(this);
-        this.renderForm = this.renderForm.bind(this);
-    }
+    const {
+      fields: { name, rating, comment },
+      handleSubmit,
+      resetForm,
+      submitting
+      } = this.props
 
-    onSubmit(props) {
 
-      var path = `/restaurants/${this.props.params.id}`;
-      
-      const review = {
-        id : Math.random() * 10000 ,
-        ...props, 
-        date: getCurrentDate(),
-        rating : this.state.rating 
-      };
-
-      var restaurant = this.props.restaurant;
-        restaurant.reviews = [ ...restaurant.reviews, review];
- 
-        this.props.postReview(restaurant);	
-
-	    this.context.router.push(path);
-    }
-
-  getRating (e){
-      const val = parseInt(e.target.value);
-      this.setState( {rating: val});
-  }
-
-  renderForm(props){
-    const { fields: { name, comment },  handleSubmit } = props;
     return (
 
-      <form onSubmit={handleSubmit(this.onSubmit.bind(this))} key={Math.random() * 10000}>
-          <h3>Write a Review</h3>
-          <hr />
-          
-          <label htmlFor="ratings" className="form-group">Rate Restaurant</label>
-          <div className="form-group">
-            <Stars 
-              onClick={this.getRating}
-              id="ratings"
-              type={'radio'}
-              key={Math.random() * 10000}
-              style={'rating rating_edit rating_font'}
-              condition={false} 
-              checked_star={this.state.rating}
-              keys={[
-                Math.random() * 10000,
-                Math.random() * 10000,
-                Math.random() * 10000,
-                Math.random() * 10000,Math.random() * 10000
-                ]}
-            />
-
-            <div className="number-of-reviews text-danger">
-              {/*{comment.touched && name.touched  && this.state.rating === 0 ? rating.error : ''}  */}
-            </div>
-
+      <form onSubmit={handleSubmit} className="form-group">
+        <div>
+          <label>Name</label>
+          <div>
+            <input type="text" placeholder="Name" {...name}/>
           </div>
-
-          <br />
+        </div>
         
-          <hr />
-
-          <div className={`form-group ${name.touched && name.invalid ? 'has-danger' : ''}`}>
-            <label htmlFor="name-input">Name</label>
-            <input type="text" className="form-control" {...name}  id="name-input"/>
-            <div className="text-danger">
-              {name.touched ? name.error : ''}
-            </div>
+        <div>
+          <label>Rate</label>
+          <div>
+            <label>
+              <input type="radio" {...rating} value="5" checked={rating.value === '5'} className="rating"/> 5 stars
+            </label>
+            <label>
+              <input type="radio" {...rating} value="4" checked={rating.value === '4'} className="rating"/> 4 stars
+            </label>
+            <label>
+              <input type="radio" {...rating} value="3" checked={rating.value === '3'} className="rating"/> 3 stars
+            </label>
+            <label>
+              <input type="radio" {...rating} value="2" checked={rating.value === '2'} className="rating"/> 2 stars
+            </label>
+            <label>
+              <input type="radio" {...rating} value="1" checked={rating.value === '1'} className="rating"/> 1 stars
+            </label>
           </div>
-
-           <label htmlFor="comment">Comment</label>
-          <div className={`form-group ${comment.touched && comment.invalid ? 'has-danger' : ''}`}>
-            <textarea className="form-control" {...comment} id="comment"/>
-            <div className="text-danger">
-              {comment.touched ? comment.error : ''}
-            </div>
+        </div>  
+       
+        <div>
+          <label>Comment</label>
+          <div>
+            <textarea
+              {...comment}
+              // required for reset form to work (only on textarea's)
+              // see: https://github.com/facebook/react/issues/2533
+              value={comment.value || ''}/>
           </div>
-
-          <button type="submit" className="btn btn-primary" disabled={this.state.rating === 0 }>Submit</button>
-          <Link to="/" className="btn btn-danger extra-margin-left">Cancel</Link>
+        </div>
+        <div>
+          <button type="submit" disabled={submitting}>
+            {submitting ? <i/> : <i/>} Submit
+          </button>
+          <button type="button" disabled={submitting} onClick={resetForm}>
+            Clear Values
+          </button>
+          <button type="button" disabled={submitting} onClick={resetForm}>
+            Cancel
+          </button>
+        </div>
       </form>
-    );
-  }  
-
-	render(){
-
-	return (
-
-		<div key={Math.random() * 10000}>
-      {this.renderForm(this.props)}
-	  </div>
-	);
-    }
-}
-
-function validate(values) {
-  const errors = {};
-
-  if (!values.name) {
-    errors.name = 'Enter a reviewer\'s name';
+    )
   }
-  
-  if(!values.comment) {
-    errors.comment = 'Enter a review';
-  }
-
-  //if(values.comment && values.name){
-  //  errors.rating = 'Select star to  rate restaurant';
-  //}
-
-  return errors;
 }
 
-function mapStateToProps(state) {
-	return { restaurant : state.appState.restaurant, key : state.appState.keyGen };
+ReviewForm.propTypes = {
+  fields: PropTypes.object.isRequired,
+  handleSubmit: PropTypes.func.isRequired,
+  resetForm: PropTypes.func.isRequired,
+  submitting: PropTypes.bool.isRequired
 }
 
-
-// connect: first argument is mapStateToProps, 2nd is mapDispatchToProps
-// reduxForm: 1st is form config, 2nd is mapStateToProps, 3rd is mapDispatchToProps
 export default reduxForm({
-  form: 'ReviewsNewForm',
-  fields: ['name', 'comment'],
-  validate
-}, mapStateToProps, { postReview })(Review);
+  form: 'review',
+  fields
+})(ReviewForm)
