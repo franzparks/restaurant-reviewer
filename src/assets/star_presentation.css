@@ -72,6 +72,10 @@
   margin: 5px 0px 5px 10px;
 }
 
-
+.text-font {
+  color: lime;
+  background-color: black;
+  font-family: Monaco, 'Lucida Console', monospace;
+}
 
 
