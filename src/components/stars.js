@@ -15,7 +15,8 @@ return (
 			value="5" 
 			role="presentation"
 			readOnly
-			checked={checked === '5' ? true : false}  	
+			checked={checked === '5' ? true : false}
+			aria-label="Reviewer's Rating"  	
 		/>
 
 		<label htmlFor={props.keys[1]} className={checked === '4' ? 'selected' : ''}></label>
@@ -26,7 +27,8 @@ return (
 			value="4" 
 			role="presentation"
 			readOnly
-			checked={checked === '4' ? true : false}  
+			checked={checked === '4' ? true : false}
+			aria-label="Reviewer's Rating"  
 			
 		/>
 
@@ -38,7 +40,8 @@ return (
 			value="3" 
 			role="presentation"
 			readOnly
-			checked={checked === '3' ? true : false}  
+			checked={checked === '3' ? true : false}
+			aria-label="Reviewer's Rating"  
 			
 		/>
 
@@ -50,7 +53,8 @@ return (
 			value="2" 
 			role="presentation"
 			readOnly
-			checked={checked === '2' ? true : false}  
+			checked={checked === '2' ? true : false}
+			aria-label="Reviewer's Rating"  
 			
 		/>
 
@@ -63,6 +67,7 @@ return (
 			role="presentation"
 			readOnly
 			checked={checked === '1' ? true : false}
+			aria-label="Reviewer's Rating"
 		/>
 
      </div>
