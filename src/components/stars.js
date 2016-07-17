@@ -14,6 +14,7 @@ return (
 			name="rating" 
 			value="5" 
 			role="presentation"
+			readOnly
 			checked={checked === '5' ? true : false}  	
 		/>
 
@@ -24,6 +25,7 @@ return (
 			name="rating" 
 			value="4" 
 			role="presentation"
+			readOnly
 			checked={checked === '4' ? true : false}  
 			
 		/>
@@ -35,6 +37,7 @@ return (
 			name="rating" 
 			value="3" 
 			role="presentation"
+			readOnly
 			checked={checked === '3' ? true : false}  
 			
 		/>
@@ -46,6 +49,7 @@ return (
 			name="rating" 
 			value="2" 
 			role="presentation"
+			readOnly
 			checked={checked === '2' ? true : false}  
 			
 		/>
@@ -57,6 +61,7 @@ return (
 			name="rating" 
 			value="1" 
 			role="presentation"
+			readOnly
 			checked={checked === '1' ? true : false}
 		/>
 
