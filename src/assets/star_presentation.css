@@ -1,20 +1,20 @@
-.rating {
+.rated {
     unicode-bidi: bidi-override;
     direction: rtl;
     width: 8em;
 }
 
-.rating input {
+.rated input {
     position: absolute;
     left: -999999px;
 }
 
-.rating label {
+.rated label {
     display: inline-block;
     font-size: 0;
 }
 
-.rating > label:before {
+.rated > label:before {
     position: relative;
     font: 24px/1 FontAwesome;
     display: block;
@@ -25,8 +25,8 @@
     -webkit-text-fill-color: transparent;
 }
 
-.rating > label.selected:before,
-.rating > label.selected ~ label:before {
+.rated > label.selected:before,
+.rated > label.selected ~ label:before {
     color: #f0ad4e;
     background: -webkit-linear-gradient(-45deg, #fcb551 0%, #d69a45 100%);
     -webkit-background-clip: text;

@@ -5,7 +5,7 @@ const Stars = (props) => {
 const checked = props.checked_star + "";
 return (
 
-	<div className="rating">
+	<div className="rated">
 
         <label htmlFor="5" className={checked === '5' ? 'selected' : ''}></label>
 		<input type="radio"
