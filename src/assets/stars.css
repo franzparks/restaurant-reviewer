@@ -35,3 +35,26 @@
     -webkit-text-fill-color: transparent;
 }
 
+
+.button1 {
+    background-color: #89c4f4;
+    color: black;
+    
+}
+
+.button1:hover {
+    background-color: #446cb3;
+    color: white;
+}
+
+.button2 {
+    background-color: #446cb3;
+    color: white;
+}
+
+.button2:hover {
+    background-color: #446cb3;
+    color: white;
+}
+
+

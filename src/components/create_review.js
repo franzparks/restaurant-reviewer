@@ -140,10 +140,10 @@ class ReviewForm extends Component {
                 <button type="submit" disabled={submitting} className="btn btn-primary btn-lg">
                     {submitting ? <i className="fa fa-paper-plane" /> : <i className="fa fa-paper-plane"/>} Submit
                 </button>
-                <button type="button" disabled={submitting} onClick={resetForm} className="btn btn-default btn-lg">
+                <button type="button" disabled={submitting} onClick={resetForm} className="btn btn-default btn-lg button2">
                     Clear Values
                 </button>
-                <button type="button" disabled={submitting} onClick={resetForm} className="btn btn-default btn-lg">
+                <button type="button" disabled={submitting} onClick={resetForm} className="btn btn-default btn-lg button1" >
                     Cancel
                 </button>
             </div>
