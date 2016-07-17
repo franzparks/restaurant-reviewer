@@ -22,12 +22,6 @@ class ReviewForm extends Component {
         this.onSubmit = this.onSubmit.bind(this);
         this.cancel = this.cancel.bind(this);
         this.hover = this.hover.bind(this);
-        //this.renderForm = this.renderForm.bind(this);
-        this.state = {selected: false};
-    }
-
-    hover() {
-        this.setState({selected: true});
     }
 
 
@@ -59,8 +53,6 @@ class ReviewForm extends Component {
 
   render() {
 
-    let classes = classnames( {selected: this.state.selected}); //, {selected: this.state.selected}
-
     const {
         fields: { name, rating, comment },
         handleSubmit,
@@ -91,8 +83,7 @@ class ReviewForm extends Component {
                             id="5"
                             checked={rating.value === '5'} 
                             name="rating" 
-                            title="Rocks!"
-                            
+                            title="Rocks!"     
                             /> 5 stars
                     </label>
             
@@ -102,8 +93,7 @@ class ReviewForm extends Component {
                             id="4"
                             checked={rating.value === '4'} 
                             name="rating" 
-                            title="Pretty Good!"
-                            
+                            title="Pretty Good!"                
                         /> 4 stars
                     </label>
 
@@ -114,7 +104,6 @@ class ReviewForm extends Component {
                             checked={rating.value === '3'}
                             name="rating" 
                             title="Meh!"
-                            
                         /> 3 stars
                     </label>
 
@@ -124,8 +113,7 @@ class ReviewForm extends Component {
                             id="2" 
                             checked={rating.value === '2'} 
                             name="rating" 
-                            title="Kinda Bad"
-                            
+                            title="Kinda Bad"                     
                         /> 2 stars
                     </label>
 
@@ -135,8 +123,7 @@ class ReviewForm extends Component {
                             id="1" 
                             checked={rating.value === '1'} 
                             name="rating" 
-                            title="Sucks big time"
-                            
+                            title="Sucks big time"                    
                         /> 1 stars
                     </label>
 
