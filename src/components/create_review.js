@@ -1,5 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { reduxForm } from 'redux-form';
+import classNames from 'classnames';
+
 import { postReview } from '../actions/index';
 import { Link } from 'react-router';
 import Stars from './stars';
