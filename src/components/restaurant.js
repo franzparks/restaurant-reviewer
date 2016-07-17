@@ -24,17 +24,9 @@ const Restaurant = (props) => {
             
             <div aria-label="Average Rating"  className="flex-container">
             	<Stars  
-            		style={'rating'} 
-            		condition={true}
-            		type={props.type}  
             		checked_star={props.checked_star}
-            		keys={[
-            			Math.random() * 100000,
-            			Math.random() * 100000,
-            			Math.random() * 100000,
-            			Math.random() * 100000,Math.random() * 100000
-            		]}
             	/>
+            	
             	<div className="number-of-reviews">
                 	{props.numberOfRatings} Reviews
             	</div>
