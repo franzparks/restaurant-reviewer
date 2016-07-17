@@ -76,7 +76,7 @@ class ReviewForm extends Component {
                             checked={rating.value === '5'} 
                             name="rating" 
                             title="Rocks!"     
-                            /> 5 stars
+                        /> 5 stars
                     </label>
             
                     <label htmlFor="4" className={rating.value === '4' ? 'selected' : ''}>
