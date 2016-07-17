@@ -8,7 +8,8 @@ export  const getAverageRating = (reviews) => {
         
         var sum = 0;
         reviews.forEach((review) =>{
-            sum += review.rating;
+            const rating = parseInt(review.rating);
+            sum += rating;
         });
 
         return Math.floor(sum / reviews.length);
@@ -97,11 +98,11 @@ export const loadReviews = (reviews) => {
          
         return(
             <Review 
-            key={review.id}
-            name={review.name}
-            rating={review.rating}
-            comment={review.comment}
-            date={review.date}
+                key={review.id}
+                name={review.name}
+                rating={review.rating}
+                comment={review.comment}
+                date={review.date}
             /> 
 
         );
