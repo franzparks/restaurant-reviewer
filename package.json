@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": "https://github.com/franzparks/restaurant-reviewer.git",
   "scripts": {
-    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --history-api-fallback --optimize-minimize --hot --inline",
+    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --history-api-fallback --optimize-minimize --compress --module-bind 'css=style!css' --hot --inline",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
     "test:watch": "npm run test -- --watch"
   },
