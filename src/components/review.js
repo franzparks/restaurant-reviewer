@@ -5,7 +5,7 @@ import Stars from './stars';
 const Review = (props) => {
 
 	return(
-	    <div className="col-xs-12 col-lg-6" tabIndex="0">
+	    <div className="col-xs-12 col-lg-6">
 	        <hr />
 	        <h4>{props.name}</h4>
 	        <div className="flex-container">
