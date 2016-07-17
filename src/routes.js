@@ -10,7 +10,7 @@ import CreateReview from './components/create_review';
 
 export default (
   <Route path="/" component={MainLayout}>
-    <IndexRoute component={CreateReview} />
+    <IndexRoute component={RestaurantList} />
     <Route  path="restaurants/:id" component={RestaurantDetails} />
     <Route  path=":id/new" component={CreateReview} />
     <Route  path="restaurants/:id/new" component={CreateReview} />

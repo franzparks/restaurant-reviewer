@@ -50,7 +50,7 @@ class RestaurantList extends Component {
                 averageRating={restaurant.averageRating}
                 numberOfRatings={restaurant.numberOfRatings}
                 checked_star={restaurant.averageRating}
-                type={'checkbox'}
+                type={'radio'}
                
             /> 
             
