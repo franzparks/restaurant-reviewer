@@ -7,9 +7,9 @@ return (
 
 	<div className="rated">
 
-        <label htmlFor="5" className={checked === '5' ? 'selected' : ''}></label>
+        <label htmlFor={props.keys[0]} className={checked === '5' ? 'selected' : ''}></label>
 		<input type="radio"
-			id={"5"}
+			id={props.keys[0]}
 			key={Math.random() * 10000} 
 			name="rating" 
 			value="5" 
@@ -18,9 +18,9 @@ return (
 			checked={checked === '5' ? true : false}  	
 		/>
 
-		<label htmlFor="4" className={checked === '4' ? 'selected' : ''}></label>
+		<label htmlFor={props.keys[1]} className={checked === '4' ? 'selected' : ''}></label>
 		<input type="radio"
-			id={"4"}
+			id={props.keys[1]}
 			key={Math.random() * 10000} 
 			name="rating" 
 			value="4" 
@@ -30,9 +30,9 @@ return (
 			
 		/>
 
-		<label htmlFor="3" className={checked === '3' ? 'selected' : ''}></label>
+		<label htmlFor={props.keys[2]} className={checked === '3' ? 'selected' : ''}></label>
 		<input type="radio"
-			id={"3"}
+			id={props.keys[2]}
 			key={Math.random() * 10000} 
 			name="rating" 
 			value="3" 
@@ -42,9 +42,9 @@ return (
 			
 		/>
 
-		<label htmlFor="2" className={checked === '2' ? 'selected' : ''} ></label>
+		<label htmlFor={props.keys[3]} className={checked === '2' ? 'selected' : ''} ></label>
 		<input type="radio"
-			id={"2"}
+			id={props.keys[3]}
 			key={Math.random() * 10000} 
 			name="rating" 
 			value="2" 
@@ -54,9 +54,9 @@ return (
 			
 		/>
 
-		<label htmlFor="1" className={checked === '1' ? 'selected' : ''} ></label>
+		<label htmlFor={props.keys[4]} className={checked === '1' ? 'selected' : ''} ></label>
 		<input type="radio"
-			id={"1"}
+			id={props.keys[4]}
 			key={Math.random() * 10000} 
 			name="rating" 
 			value="1" 

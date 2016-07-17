@@ -49,9 +49,15 @@ class RestaurantDetails  extends Component{
                         <div aria-label="Average Rating" className="flex-container">
                             <Stars 
                                 key={Math.random() * 10000}
-                                checked_star={getAverageRating(restaurant.reviews)} 
+                                checked_star={getAverageRating(restaurant.reviews)}
+                                keys={[
+                                    Math.random() * 10000,
+                                    Math.random() * 10000,
+                                    Math.random() * 10000,
+                                    Math.random() * 10000,Math.random() * 10000
+                                ]} 
                             />
-                            
+
                             <div className="number-of-reviews">
                                 {getNumberOfRatings(restaurant.reviews)} Reviews
                             </div>

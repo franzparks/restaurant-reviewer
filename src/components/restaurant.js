@@ -26,6 +26,12 @@ const Restaurant = (props) => {
             	<Stars 
             	    key={Math.random() * 10000} 
             		checked_star={props.checked_star}
+            		keys={[
+		                Math.random() * 10000,
+		                Math.random() * 10000,
+		                Math.random() * 10000,
+		                Math.random() * 10000,Math.random() * 10000
+                    ]}
             	/>
 
             	<div className="number-of-reviews">
