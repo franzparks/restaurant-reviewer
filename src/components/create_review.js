@@ -21,7 +21,6 @@ class ReviewForm extends Component {
 
         this.onSubmit = this.onSubmit.bind(this);
         this.cancel = this.cancel.bind(this);
-        this.hover = this.hover.bind(this);
     }
 
 
@@ -64,13 +63,6 @@ class ReviewForm extends Component {
     return (
         <div className="col-xs-12 col-lg-6">
         <form onSubmit={handleSubmit(this.onSubmit.bind(this))} className="form-horizontal">
-            
-            <div className="form-group">
-                <label htmlFor="name" className="control-label">Name</label>
-                <div>
-                    <input type="text" placeholder="Name" {...name} id="name" className="form-control"/>
-                </div>
-            </div>
         
             <div className="form-group">
                 <label htmlFor="rate-restaurant">Rate Restaurant</label>
@@ -121,12 +113,19 @@ class ReviewForm extends Component {
                         <input type="radio" {...rating}
                             value="1"
                             id="1" 
-                            checked={rating.value === '1'} 
+                            checked={rating.value === "1"} 
                             name="rating" 
                             title="Sucks big time"                    
                         /> 1 stars
                     </label>
 
+                </div>
+            </div>
+
+            <div className="form-group">
+                <label htmlFor="name" className="control-label">Name</label>
+                <div>
+                    <input type="text" placeholder="Name" {...name} id="name" className="form-control"/>
                 </div>
             </div>  
        
