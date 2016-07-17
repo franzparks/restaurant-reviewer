@@ -18,7 +18,7 @@ class ReviewForm extends Component {
         super(props);
 
         this.onSubmit = this.onSubmit.bind(this);
-        //this.getRating = this.getRating.bind(this);
+        this.cancel = this.cancel.bind(this);
         //this.renderForm = this.renderForm.bind(this);
     }
 
@@ -39,6 +39,11 @@ class ReviewForm extends Component {
 
         this.props.postReview(restaurant);  
 
+        this.context.router.push(path);
+    }
+
+    cancel(){
+        var path = `/restaurants/${this.props.params.id}`;
         this.context.router.push(path);
     }
 
@@ -143,7 +148,7 @@ class ReviewForm extends Component {
                 <button type="button" disabled={submitting} onClick={resetForm} className="btn btn-default btn-lg button2">
                     Clear Values
                 </button>
-                <button type="button" disabled={submitting} onClick={resetForm} className="btn btn-default btn-lg button1" >
+                <button type="button" disabled={submitting} onClick={this.cancel} className="btn btn-default btn-lg button1" >
                     Cancel
                 </button>
             </div>
