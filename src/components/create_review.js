@@ -25,10 +25,6 @@ class ReviewForm extends Component {
 
 
     onSubmit(props) {
-
-        //console.log("props : "+ props);
-        //console.log("restaurant : "+ Object.keys(this.props.restaurant[0]));
-        var path = `/restaurants/${this.props.params.id}`;
           
         const review = {
             id : Math.random() * 10000 ,
@@ -39,13 +35,15 @@ class ReviewForm extends Component {
         var restaurant = this.props.restaurant[0];
             restaurant.reviews = [ ...restaurant.reviews, review];
 
-        this.props.postReview(restaurant);  
+        this.props.postReview(restaurant); 
+ 
+        var path = `/restaurants/${restaurant.id}`; 
 
         this.context.router.push(path);
     }
 
     cancel(){
-        var path = `/restaurants/${this.props.params.id}`;
+        var path = '/';
         this.context.router.push(path);
     }
 
