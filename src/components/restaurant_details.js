@@ -49,15 +49,9 @@ class RestaurantDetails  extends Component{
                         <div aria-label="Average Rating" className="flex-container">
                             <Stars 
                                 key={Math.random() * 10000}
-                                style={'rating'}
-                                condition={false}
                                 checked_star={getAverageRating(restaurant.reviews)} 
-                                type={'checkbox'}
-                                keys={[
-                                    this.props.key ,this.props.key,this.props.key,
-                                    this.props.key,this.props.key
-                                ]}
                             />
+                            
                             <div className="number-of-reviews">
                                 {getNumberOfRatings(restaurant.reviews)} Reviews
                             </div>
