@@ -122,12 +122,20 @@ class ReviewForm extends Component {
                     </label>
 
                 </div>
+                
             </div>
 
-            <div className="form-group">
-                <label htmlFor="name" className="control-label">Name</label>
+            <div className="text-danger">
+              {name.touched && rating.untouched ? name.error : ''}
+            </div>
+
+            <div className={`form-group ${name.touched  && name.invalid ? 'has-danger' : ''}`} >
+                <label htmlFor="name-input" className="control-label">Name</label>
                 <div>
-                    <input type="text" placeholder="Name" {...name} id="name" className="form-control"/>
+                    <input type="text" placeholder="Name" {...name} id="name-input" className="form-control"/>
+                </div>
+                <div className="text-danger">
+                  {name.touched ? name.error : ''}
                 </div>
             </div>  
        
@@ -146,7 +154,7 @@ class ReviewForm extends Component {
             </div>
 
             <div className="form-group">
-                <button type="submit" disabled={submitting} 
+                <button type="submit" disabled={!rating.value} 
                     className="btn btn-primary btn-lg">
                     {submitting ? <i className="fa fa-paper-plane" /> : <i className="fa fa-paper-plane"/>} Submit
                 </button>
@@ -177,9 +185,25 @@ ReviewForm.propTypes = {
   submitting: PropTypes.bool.isRequired
 }
 
+const validate = values => {
+  const errors = {}
+  if (!values.name) {
+    errors.name = 'Required'
+  } else if (values.name.length > 15) {
+    errors.name = 'Must be 15 characters or less'
+  }
+  
+  if (!values.rating) {
+    errors.rating = 'Required'
+  }
+  
+  return errors
+}
+
 // connect: first argument is mapStateToProps, 2nd is mapDispatchToProps
 // reduxForm: 1st is form config, 2nd is mapStateToProps, 3rd is mapDispatchToProps
 export default reduxForm({
   form: 'review',
-  fields
+  fields,
+  validate
 }, mapStateToProps, { postReview })(ReviewForm)
