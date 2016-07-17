@@ -14,10 +14,7 @@ const Review = (props) => {
 	        <div aria-label="Reviewer's Rating" >
                         <Stars 
                             key={Math.random() * 10000}
-                            style={'rating'}
-                            condition={false}
                             checked_star={props.rating} 
-                            type={'checkbox'}
                             keys={[
             					Math.random() * 100000,
             					Math.random() * 100000,
