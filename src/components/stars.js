@@ -2,7 +2,7 @@ import React from 'react';
 
 const Stars = (props) => {
 
-
+const checked = props.checked_star + "";
 return (
 
 	<div className="rating">
@@ -13,7 +13,7 @@ return (
 			name="rating" 
 			value="5" 
 			readOnly={true}
-			checked={props.checked_star === '5' ? true : false}  
+			checked={checked === '5' ? true : false}  
 			
 		/>
 
@@ -23,7 +23,7 @@ return (
 			name="rating" 
 			value="4" 
 			readOnly={true}
-			checked={props.checked_star === '4' ? true : false}  
+			checked={checked === '4' ? true : false}  
 			
 		/>
 
@@ -33,7 +33,7 @@ return (
 			name="rating" 
 			value="3" 
 			readOnly={true}
-			checked={props.checked_star === '3' ? true : false}  
+			checked={checked === '3' ? true : false}  
 			
 		/>
 	
@@ -43,7 +43,7 @@ return (
 			name="rating" 
 			value="2" 
 			readOnly={true}
-			checked={props.checked_star === '2' ? true : false}  
+			checked={checked === '2' ? true : false}  
 			
 		/>
 
@@ -53,7 +53,7 @@ return (
 			name="rating" 
 			value="1" 
 			readOnly={true}
-			checked={props.checked_star === '1' ? true : false}  	
+			checked={checked === '1' ? true : false}  	
 		/>
 
      </div>
