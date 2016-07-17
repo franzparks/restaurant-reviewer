@@ -11,20 +11,21 @@ const Review = (props) => {
 	        <div className="flex-container">
 	        <p className="extra-padding"><strong>Rating : </strong> </p>
 	       
-	        <div aria-label="Reviewer's Rating" >
-                        <Stars 
-                            key={Math.random() * 10000}
-                            checked_star={props.rating} 
-                            keys={[
-            					Math.random() * 100000,
-            					Math.random() * 100000,
-            					Math.random() * 100000,
-            					Math.random() * 100000,Math.random() * 100000
-            				]}
-                        />
+	        <div>
+                <Stars 
+                    key={Math.random() * 10000}
+                    checked_star={props.rating} 
+                    keys={[
+    					Math.random() * 100000,
+    					Math.random() * 100000,
+    					Math.random() * 100000,
+    					Math.random() * 100000,Math.random() * 100000
+    				]}
+                />
                        
-                    </div>
-	        </div>
+            </div>
+            </div>
+	        
 	        <p><strong>Comment: </strong> {props.comment}</p>
 	        <p><strong>Date: </strong> {props.date}</p>
 	        
