@@ -30,6 +30,10 @@ module.exports = {
         {   
             test: /\.jpg$/,
             loader: "file-loader"
+        },
+        {
+            test: /\.html$/,
+            loader: "html-loader"
         } 
   
 
