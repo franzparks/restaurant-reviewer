@@ -25,6 +25,10 @@ class ReviewForm extends Component {
 
 
     onSubmit(props) {
+
+        if(!props.restaurant){ //temporary fix to handle form page refresh
+            this.context.router.push('/');
+        }
           
         const review = {
             id : Math.random() * 10000 ,
@@ -142,13 +146,16 @@ class ReviewForm extends Component {
             </div>
 
             <div className="form-group">
-                <button type="submit" disabled={submitting} className="btn btn-primary btn-lg">
+                <button type="submit" disabled={submitting} 
+                    className="btn btn-primary btn-lg">
                     {submitting ? <i className="fa fa-paper-plane" /> : <i className="fa fa-paper-plane"/>} Submit
                 </button>
-                <button type="button" disabled={submitting} onClick={resetForm} className="btn btn-default btn-lg button2">
+                <button type="button" disabled={submitting} onClick={resetForm} 
+                    className="btn btn-default btn-lg button2">
                     Clear Values
                 </button>
-                <button type="button" disabled={submitting} onClick={this.cancel} className="btn btn-default btn-lg button1" >
+                <button type="button" disabled={submitting} onClick={this.cancel} 
+                    className="btn btn-default btn-lg button1">
                     Cancel
                 </button>
             </div>
