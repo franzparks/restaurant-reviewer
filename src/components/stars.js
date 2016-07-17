@@ -13,9 +13,8 @@ return (
 			key={Math.random() * 10000} 
 			name="rating" 
 			value="5" 
-			readOnly={true}
-			checked={checked === '5' ? true : false}  
-			
+			role="presentation"
+			checked={checked === '5' ? true : false}  	
 		/>
 
 		<label htmlFor="4" className={checked === '4' ? 'selected' : ''}></label>
@@ -24,7 +23,7 @@ return (
 			key={Math.random() * 10000} 
 			name="rating" 
 			value="4" 
-			readOnly={true}
+			role="presentation"
 			checked={checked === '4' ? true : false}  
 			
 		/>
@@ -35,7 +34,7 @@ return (
 			key={Math.random() * 10000} 
 			name="rating" 
 			value="3" 
-			readOnly={true}
+			role="presentation"
 			checked={checked === '3' ? true : false}  
 			
 		/>
@@ -46,7 +45,7 @@ return (
 			key={Math.random() * 10000} 
 			name="rating" 
 			value="2" 
-			readOnly={true}
+			role="presentation"
 			checked={checked === '2' ? true : false}  
 			
 		/>
@@ -57,8 +56,8 @@ return (
 			key={Math.random() * 10000} 
 			name="rating" 
 			value="1" 
-			readOnly={true}
-			checked={checked === '1' ? true : false}  	
+			role="presentation"
+			checked={checked === '1' ? true : false}
 		/>
 
      </div>
