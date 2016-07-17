@@ -33,3 +33,45 @@
     -webkit-text-fill-color: transparent;
 }
 
+.flex-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  
+}
+
+.flex-item {
+  justify-content: center;
+  padding: 5px;
+  flex-direction: row;
+  
+}
+
+.extra-padding {
+  padding: 0px 5px 0px 0px;
+}
+
+.extra-margin-left {
+  margin: 0px 0px 0px 10px;
+}
+
+.extra-margin-bottom-min {
+  margin: 0px 0px 5px 0px;
+}
+
+.extra-margin-bottom {
+  margin: 0px 0px 10px 0px;
+}
+
+.number-of-reviews {
+  margin: 5px 0px 5px 10px;
+}
+
+
+
+
