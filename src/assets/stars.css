@@ -39,6 +39,7 @@
 .button1 {
     background-color: #89c4f4;
     color: black;
+    margin-left: 10px;
     
 }
 
@@ -50,11 +51,21 @@
 .button2 {
     background-color: #446cb3;
     color: white;
+    margin-left: 10px;
 }
 
 .button2:hover {
     background-color: #446cb3;
     color: white;
+}
+
+.disabled-button {
+    background-color: #446cb3;
+    color: white;
+    border: 1px;
+    
+}
+
 }
 
 

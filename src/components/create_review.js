@@ -155,7 +155,7 @@ class ReviewForm extends Component {
 
             <div className="form-group">
                 <button type="submit" disabled={!rating.value} 
-                    className="btn btn-primary btn-lg">
+                    className={ rating.value ? 'btn btn-primary btn-lg' : 'btn-lg disabled-button'  }>
                     {submitting ? <i className="fa fa-paper-plane" /> : <i className="fa fa-paper-plane"/>} Submit
                 </button>
                 <button type="button" disabled={submitting} onClick={resetForm} 

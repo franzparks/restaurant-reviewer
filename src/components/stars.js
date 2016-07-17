@@ -16,7 +16,8 @@ return (
 			role="presentation"
 			readOnly
 			checked={checked === '5' ? true : false}
-			aria-label="Reviewer's Rating"  	
+			aria-label="Reviewer's Rating" 
+				
 		/>
 
 		<label htmlFor={props.keys[1]} className={checked === '4' ? 'selected' : ''}></label>
