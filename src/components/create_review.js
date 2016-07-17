@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { reduxForm } from 'redux-form';
-import classNames from 'classnames';
+import classnames from 'classnames';
 
 import { postReview } from '../actions/index';
 import { Link } from 'react-router';
@@ -21,8 +21,15 @@ class ReviewForm extends Component {
 
         this.onSubmit = this.onSubmit.bind(this);
         this.cancel = this.cancel.bind(this);
+        this.hover = this.hover.bind(this);
         //this.renderForm = this.renderForm.bind(this);
+        this.state = {selected: false};
     }
+
+    hover() {
+        this.setState({selected: true});
+    }
+
 
     onSubmit(props) {
 
@@ -52,6 +59,8 @@ class ReviewForm extends Component {
 
   render() {
 
+    let classes = classnames( {selected: this.state.selected}); //, {selected: this.state.selected}
+
     const {
         fields: { name, rating, comment },
         handleSubmit,
@@ -76,53 +85,58 @@ class ReviewForm extends Component {
 
                 <div className="rating" id="rate-restaurant">
                     
-                    <label htmlFor="5">
+                    <label htmlFor="5" className={rating.value === '5' ? 'selected' : ''}>
                         <input type="radio" {...rating} 
                             value="5" 
                             id="5"
                             checked={rating.value === '5'} 
                             name="rating" 
                             title="Rocks!"
+                            
                             /> 5 stars
                     </label>
             
-                    <label htmlFor="4">
+                    <label htmlFor="4" className={rating.value === '4' ? 'selected' : ''}>
                         <input type="radio" {...rating} 
                             value="4" 
                             id="4"
                             checked={rating.value === '4'} 
                             name="rating" 
                             title="Pretty Good!"
+                            
                         /> 4 stars
                     </label>
 
-                    <label htmlFor="3">
+                    <label htmlFor="3" className={rating.value === '3' ? 'selected' : ''}>
                         <input type="radio" {...rating} 
                             value="3"
                             id="3" 
                             checked={rating.value === '3'}
                             name="rating" 
                             title="Meh!"
+                            
                         /> 3 stars
                     </label>
 
-                    <label htmlFor="2">
+                    <label htmlFor="2" className={rating.value === '2' ? 'selected' : ''}>
                         <input type="radio" {...rating}
                             value="2"
                             id="2" 
                             checked={rating.value === '2'} 
                             name="rating" 
                             title="Kinda Bad"
+                            
                         /> 2 stars
                     </label>
 
-                    <label htmlFor="1">
+                    <label htmlFor="1" className={rating.value === '1' ? 'selected' : ''}>
                         <input type="radio" {...rating}
                             value="1"
                             id="1" 
                             checked={rating.value === '1'} 
                             name="rating" 
                             title="Sucks big time"
+                            
                         /> 1 stars
                     </label>
 
