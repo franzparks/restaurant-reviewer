@@ -7,11 +7,13 @@ import {
   ButtonGroup,
   DropdownButton,
   MenuItem, 
-  ButtonToolbar
+  ButtonToolbar,
+  Menu
+
 } from 'react-bootstrap';
 
 
-class Menu extends Component {
+class FilterMenu extends Component {
 
 	constructor(props) {
         super(props);
@@ -20,7 +22,7 @@ class Menu extends Component {
     }
     
     componentDidMount(){
-        this.setState({selectedItem : 'all'});
+        this.setState({selected : 'all'});
     }
 
     handleClick (e){
@@ -28,7 +30,7 @@ class Menu extends Component {
         this.props.setCategoryFilter(e.target.name);
 
         /* Identify selected item*/
-        this.setState({selectedItem : e.target.name});
+        this.setState({selected : e.target.name});
 	}
 
 	render() {
@@ -36,33 +38,43 @@ class Menu extends Component {
 		return (
 			
 		    <div className="col-md-3 col-lg-3  visible-md visible-lg" id="sidebar">
-				<div className="list-group ">
-				    <ButtonToolbar>
-				        <DropdownButton bsStyle={'primary'} title={'Menu'} key={Math.random() * 1000} id={'dropdown-basic-0'}>
-				          <MenuItem name="all" 
-				            onClick={this.handleClick}
-				            active={this.state.selected === 'all'}>
-				            All
-				          </MenuItem>
-				          <MenuItem divider />
-				          <MenuItem  name="highestRated" 
-				            onClick={this.handleClick} 
-				            active={this.state.selected === 'highestRated'}>
-				            Highest Rated
-				          </MenuItem>
-				          <MenuItem name="mostReviewed" 
-				            onClick={this.handleClick} 
-				            active={this.state.selected === 'mostReviewed'}>
-				            Most Reviewed
-				          </MenuItem>
-				          <MenuItem name="openNow"
-				            onClick={this.handleClick} 
-				            active={this.state.selected === 'openNow'}>
-				            Open Now
-				          </MenuItem>
-				        </DropdownButton>
-				        </ButtonToolbar>      
+				<div className="list-group">
+			
+				  <ButtonToolbar>
+			        <DropdownButton bsStyle={'link open'}  key={Math.random() * 1000} id={'dropdown-basic-0'}>
+			          <MenuItem name="all" 
+			            onClick={this.handleClick}
+			            active={this.state.selected === 'all'}
+			            className={this.state.selected === 'all' ? 'active' : ''} >
+			            All
+			          </MenuItem>
+			          <MenuItem divider />
+			          <MenuItem  name="highestRated" 
+			            onClick={this.handleClick} 
+			            active={this.state.selected === 'highestRated'}
+			            className={this.state.selected === 'highestRated' ? 'active' : ''}
+			            >
+			            Highest Rated
+			          </MenuItem>
+			          <MenuItem name="mostReviewed" 
+			            onClick={this.handleClick} 
+			            active={this.state.selected === 'mostReviewed'}
+			            className={this.state.selected === 'mostReviewed' ? 'active' : ''}
+			            >
+			            Most Reviewed
+			          </MenuItem>
+			          <MenuItem name="openNow"
+			            onClick={this.handleClick} 
+			            active={this.state.selected === 'openNow'}
+			            className={this.state.selected === 'openNow' ? 'active' : ''}
+			            >
+			            Open Now
+			          </MenuItem>
+			        </DropdownButton>
+			        </ButtonToolbar>
 				</div>
+
+				   
 			</div>
 			
 		);	
@@ -70,4 +82,4 @@ class Menu extends Component {
 }
 }
 
-export default connect(null, actions)(Menu);
+export default connect(null, actions)(FilterMenu);

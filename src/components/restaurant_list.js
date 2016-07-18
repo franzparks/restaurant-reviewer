@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 import Overview from './overview';
 import ToggleNav from './toggle_nav';
 import Restaurant from './restaurant';
-import Menu from './menu';
+import FilterMenu from './menu';
 import * as actions from '../actions';
 import Stars from './stars';
 import {
@@ -74,15 +74,15 @@ class RestaurantList extends Component {
 
                 <div className="row row-offcanvas row-offcanvas-right">
                     <div className="col-xs-12 col-sm-12 col-md-6">
-                        <ToggleNav key={Math.random()}/>
-                        <Overview key={Math.random()}/>             
+                        {/*<ToggleNav key={Math.random()}/>
+                        <Overview key={Math.random()}/>  */}           
                         <div key={Math.random()}>
                         {this.renderList(restaurants)} 
 
                         </div> 
                        
                     </div>
-                    <Menu key={Math.random()} /> 
+                    <FilterMenu key={Math.random()} /> 
                                     
                 </div>
 		    	
