@@ -17,6 +17,19 @@ h2 {
   margin-top: -7px;
 }
 
+button:hover,
+button:focus{
+    background-color: #E91E63
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+button:focus {
+    outline: 0;
+    box-shadow: 0 0 8px 3px
+    rgba(255 255 255 0.8);
+}
+
 /*
  * Off Canvas
  * --------------------------------------------------
