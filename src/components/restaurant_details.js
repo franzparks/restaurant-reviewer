@@ -41,7 +41,7 @@ class RestaurantDetails  extends Component{
                         <h4>{restaurant.name}</h4>
                         <p>
                         <img src={restaurant.image} 
-                        className="img-responsive img-focused" 
+                        className="img-responsive" 
                         alt="Image of restaurant cuisine type">
                         </img>
                         </p>
