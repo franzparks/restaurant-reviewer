@@ -71,53 +71,58 @@ class ReviewForm extends Component {
 
                 <div className="rating" id="rate-restaurant">
                     
-                    <label htmlFor="5" className={rating.value === '5' ? 'selected' : ''}>
-                        <input type="radio" {...rating} 
+                    <label  htmlFor="5" className={rating.value === '5' ? 'selected' : ''} >
+                        <input
+                            tabIndex="-1" 
+                            type="radio" {...rating} 
                             value="5" 
                             id="5"
                             checked={rating.value === '5'} 
                             name="rating" 
-                            title="Rocks!"     
+                            title="Rocks!"
+    
                         /> 5 stars
                     </label>
             
-                    <label htmlFor="4" className={rating.value === '4' ? 'selected' : ''}>
-                        <input type="radio" {...rating} 
+                    <label  htmlFor="4" className={rating.value === '4' ? 'selected' : ''}>
+                        <input tabIndex="-1" type="radio" {...rating} 
                             value="4" 
                             id="4"
                             checked={rating.value === '4'} 
                             name="rating" 
-                            title="Pretty Good!"                
+                            title="Pretty Good!"               
                         /> 4 stars
                     </label>
 
                     <label htmlFor="3" className={rating.value === '3' ? 'selected' : ''}>
-                        <input type="radio" {...rating} 
+                        <input tabIndex="-1" type="radio" {...rating} 
                             value="3"
                             id="3" 
                             checked={rating.value === '3'}
                             name="rating" 
                             title="Meh!"
+                            
                         /> 3 stars
                     </label>
 
                     <label htmlFor="2" className={rating.value === '2' ? 'selected' : ''}>
-                        <input type="radio" {...rating}
+                        <input tabIndex="-1" type="radio" {...rating}
                             value="2"
                             id="2" 
                             checked={rating.value === '2'} 
                             name="rating" 
-                            title="Kinda Bad"                     
+                            title="Kinda Bad"
+                                                 
                         /> 2 stars
                     </label>
 
                     <label htmlFor="1" className={rating.value === '1' ? 'selected' : ''}>
-                        <input type="radio" {...rating}
+                        <input tabIndex="-1" type="radio" {...rating}
                             value="1"
                             id="1" 
                             checked={rating.value === "1"} 
                             name="rating" 
-                            title="Sucks big time"                    
+                            title="Sucks big time"                   
                         /> 1 stars
                     </label>
 

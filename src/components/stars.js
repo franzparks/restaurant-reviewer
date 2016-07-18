@@ -17,7 +17,7 @@ return (
 			readOnly
 			checked={checked === '5' ? true : false}
 			aria-label="Reviewer's Rating" 
-				
+			tabIndex="-1"	
 		/>
 
 		<label htmlFor={props.keys[1]} className={checked === '4' ? 'selected' : ''}></label>
@@ -29,7 +29,8 @@ return (
 			role="presentation"
 			readOnly
 			checked={checked === '4' ? true : false}
-			aria-label="Reviewer's Rating"  
+			aria-label="Reviewer's Rating"
+			tabIndex="-1"  
 			
 		/>
 
@@ -42,7 +43,8 @@ return (
 			role="presentation"
 			readOnly
 			checked={checked === '3' ? true : false}
-			aria-label="Reviewer's Rating"  
+			aria-label="Reviewer's Rating"
+			tabIndex="-1"  
 			
 		/>
 
@@ -55,12 +57,15 @@ return (
 			role="presentation"
 			readOnly
 			checked={checked === '2' ? true : false}
-			aria-label="Reviewer's Rating"  
+			aria-label="Reviewer's Rating"
+			tabIndex="-1"  
 			
 		/>
 
 		<label htmlFor={props.keys[4]} className={checked === '1' ? 'selected' : ''} ></label>
-		<input type="radio"
+	
+		<input 
+			type="radio"
 			id={props.keys[4]}
 			key={Math.random() * 10000} 
 			name="rating" 
@@ -69,7 +74,9 @@ return (
 			readOnly
 			checked={checked === '1' ? true : false}
 			aria-label="Reviewer's Rating"
+			tabIndex="-1"
 		/>
+	
 
      </div>
 
