@@ -87,6 +87,12 @@ class RestaurantList extends Component {
 	    	<div>
 
                 <div className="row row-offcanvas row-offcanvas-right">
+                    <FilterMenu key={Math.random()} 
+                        handleClick={this.handleClick}
+                        handleSelected={this.handleSelected}
+                        selected={this.state.selected}
+
+                    /> 
                     <div className="col-xs-12 col-sm-12 col-md-6">
                         <ToggleNav key={Math.random()}/>
                         <Overview key={Math.random()}/>           
@@ -96,12 +102,7 @@ class RestaurantList extends Component {
                         </div> 
                        
                     </div>
-                    <FilterMenu key={Math.random()} 
-                        handleClick={this.handleClick}
-                        handleSelected={this.handleSelected}
-                        selected={this.state.selected}
-
-                    /> 
+                    
                                     
                 </div>
 		    	
