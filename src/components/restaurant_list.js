@@ -22,11 +22,25 @@ class RestaurantList extends Component {
     	super(props);
 
     	this.renderList = this.renderList.bind(this);
+
+        this.state = {"selected" :"" };
+        this.handleClick = this.handleClick.bind(this);
+        this.handleSelected = this.handleSelected.bind(this);
     }
 
     componentWillMount() {
 		this.props.fetchRestaurants();
 	}
+
+    handleClick (eventKey){
+
+        /* Identify selected item*/
+        this.setState({selected : eventKey});
+    }
+
+    handleSelected(eventKey){
+        this.setState({selected : eventKey});
+    }
 
     renderList(restaurants) {
     	var filteredRestaurants = [];
@@ -82,7 +96,12 @@ class RestaurantList extends Component {
                         </div> 
                        
                     </div>
-                    <FilterMenu key={Math.random()} /> 
+                    <FilterMenu key={Math.random()} 
+                        handleClick={this.handleClick}
+                        handleSelected={this.handleSelected}
+                        selected={this.state.selected}
+
+                    /> 
                                     
                 </div>
 		    	

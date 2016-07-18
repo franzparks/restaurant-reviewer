@@ -17,11 +17,11 @@ class FilterMenu extends Component {
 
 	constructor(props) {
         super(props);
-        this.state = {"selected" :"" };
         this.handleClick = this.handleClick.bind(this);
+        this.renderMenu = this.renderMenu.bind(this);
     }
     
-    componentDidMount(){
+    componentWillMount(){
         this.setState({selected : 'all'});
     }
 
@@ -30,7 +30,54 @@ class FilterMenu extends Component {
         this.props.setCategoryFilter(e.target.name);
 
         /* Identify selected item*/
-        this.setState({selected : e.target.name});
+        this.props.handleClick(e.target.name);
+	}
+
+
+	renderMenu(props){
+		console.log(props.selected);
+		return(
+			<ButtonToolbar>
+	        <DropdownButton bsStyle={'link'} open noCaret  title={''} key={Math.random() * 1000} id={'dropdown-basic-0'} >
+	          <MenuItem 
+	            name="all" 
+	            eventKey={"all"}
+	            onClick={this.handleClick}
+	            active={props.selected === 'all'}
+	            >
+	            All
+	          </MenuItem>
+	          <MenuItem divider />
+	          <MenuItem  
+	          	name="highestRated" 
+	          	eventKey={"highestRated"}
+	            onClick={this.handleClick} 
+	            active={props.selected === 'highestRated'}
+	            
+	            >
+	            Highest Rated
+	          </MenuItem>
+	          <MenuItem 
+	          	name="mostReviewed" 
+	          	eventKey={"mostReviewed"}
+	            onClick={this.handleClick} 
+	            active={props.selected === 'mostReviewed'}
+	            
+	            >
+	            Most Reviewed
+	          </MenuItem>
+	          <MenuItem 
+	          	name="openNow"
+	          	eventKey={"openNow"}
+	            onClick={this.handleClick} 
+	            active={props.selected === 'openNow' }
+	            
+	            >
+	            Open Now
+	          </MenuItem>
+	        </DropdownButton>
+	        </ButtonToolbar>
+        );
 	}
 
 	render() {
@@ -40,38 +87,7 @@ class FilterMenu extends Component {
 		    <div className="col-md-3 col-lg-3  visible-md visible-lg" id="sidebar">
 				<div className="list-group">
 			
-				  <ButtonToolbar>
-			        <DropdownButton bsStyle={'link open'}  key={Math.random() * 1000} id={'dropdown-basic-0'}>
-			          <MenuItem name="all" 
-			            onClick={this.handleClick}
-			            active={this.state.selected === 'all'}
-			            className={this.state.selected === 'all' ? 'active' : ''} >
-			            All
-			          </MenuItem>
-			          <MenuItem divider />
-			          <MenuItem  name="highestRated" 
-			            onClick={this.handleClick} 
-			            active={this.state.selected === 'highestRated'}
-			            className={this.state.selected === 'highestRated' ? 'active' : ''}
-			            >
-			            Highest Rated
-			          </MenuItem>
-			          <MenuItem name="mostReviewed" 
-			            onClick={this.handleClick} 
-			            active={this.state.selected === 'mostReviewed'}
-			            className={this.state.selected === 'mostReviewed' ? 'active' : ''}
-			            >
-			            Most Reviewed
-			          </MenuItem>
-			          <MenuItem name="openNow"
-			            onClick={this.handleClick} 
-			            active={this.state.selected === 'openNow'}
-			            className={this.state.selected === 'openNow' ? 'active' : ''}
-			            >
-			            Open Now
-			          </MenuItem>
-			        </DropdownButton>
-			        </ButtonToolbar>
+				  {this.renderMenu(this.props)}
 				</div>
 
 				   
