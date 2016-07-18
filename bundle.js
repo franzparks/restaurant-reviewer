@@ -27087,15 +27087,15 @@
 
 			var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(FilterMenu).call(this, props));
 
-			_this.state = { "selected": "" };
 			_this.handleClick = _this.handleClick.bind(_this);
+			_this.renderMenu = _this.renderMenu.bind(_this);
 			return _this;
 		}
 
 		_createClass(FilterMenu, [{
-			key: 'componentDidMount',
-			value: function componentDidMount() {
-				this.setState({ selectedItem: 'all' });
+			key: 'componentWillMount',
+			value: function componentWillMount() {
+				this.setState({ selected: 'all' });
 			}
 		}, {
 			key: 'handleClick',
@@ -27104,7 +27104,64 @@
 				this.props.setCategoryFilter(e.target.name);
 
 				/* Identify selected item*/
-				this.setState({ selectedItem: e.target.name });
+				this.props.handleClick(e.target.name);
+			}
+		}, {
+			key: 'renderMenu',
+			value: function renderMenu(props) {
+				console.log(props.selected);
+				return _react2.default.createElement(
+					_reactBootstrap.ButtonToolbar,
+					null,
+					_react2.default.createElement(
+						_reactBootstrap.DropdownButton,
+						{ bsStyle: 'link', open: true, noCaret: true, title: '', key: Math.random() * 1000, id: 'dropdown-basic-0' },
+						_react2.default.createElement(
+							_reactBootstrap.MenuItem,
+							{
+								name: 'all',
+								eventKey: "all",
+								onClick: this.handleClick,
+								active: props.selected === 'all'
+							},
+							'All'
+						),
+						_react2.default.createElement(_reactBootstrap.MenuItem, { divider: true }),
+						_react2.default.createElement(
+							_reactBootstrap.MenuItem,
+							{
+								name: 'highestRated',
+								eventKey: "highestRated",
+								onClick: this.handleClick,
+								active: props.selected === 'highestRated'
+
+							},
+							'Highest Rated'
+						),
+						_react2.default.createElement(
+							_reactBootstrap.MenuItem,
+							{
+								name: 'mostReviewed',
+								eventKey: "mostReviewed",
+								onClick: this.handleClick,
+								active: props.selected === 'mostReviewed'
+
+							},
+							'Most Reviewed'
+						),
+						_react2.default.createElement(
+							_reactBootstrap.MenuItem,
+							{
+								name: 'openNow',
+								eventKey: "openNow",
+								onClick: this.handleClick,
+								active: props.selected === 'openNow'
+
+							},
+							'Open Now'
+						)
+					)
+				);
 			}
 		}, {
 			key: 'render',
@@ -27115,48 +27172,8 @@
 					{ className: 'col-md-3 col-lg-3  visible-md visible-lg', id: 'sidebar' },
 					_react2.default.createElement(
 						'div',
-						{ className: 'list-group ' },
-						_react2.default.createElement(
-							_reactBootstrap.ButtonToolbar,
-							null,
-							_react2.default.createElement(
-								_reactBootstrap.DropdownButton,
-								{ bsStyle: 'primary', title: 'Menu', key: Math.random() * 1000, id: 'dropdown-basic-1' },
-								_react2.default.createElement(
-									_reactBootstrap.ButtonToolbar,
-									null,
-									_react2.default.createElement(
-										_reactBootstrap.MenuItem,
-										{ name: 'all',
-											onClick: this.handleClick,
-											active: this.state.selected === 'all' },
-										'All'
-									),
-									_react2.default.createElement(_reactBootstrap.MenuItem, { divider: true }),
-									_react2.default.createElement(
-										_reactBootstrap.MenuItem,
-										{ name: 'highestRated',
-											onClick: this.handleClick,
-											active: this.state.selected === 'highestRated' },
-										'Highest Rated'
-									),
-									_react2.default.createElement(
-										_reactBootstrap.MenuItem,
-										{ name: 'mostReviewed',
-											onClick: this.handleClick,
-											active: this.state.selected === 'mostReviewed' },
-										'Most Reviewed'
-									),
-									_react2.default.createElement(
-										_reactBootstrap.MenuItem,
-										{ name: 'openNow',
-											onClick: this.handleClick,
-											active: this.state.selected === 'openNow' },
-										'Open Now'
-									)
-								)
-							)
-						)
+						{ className: 'list-group' },
+						this.renderMenu(this.props)
 					)
 				);
 			}
@@ -47782,39 +47799,43 @@
 	    value: function render() {
 
 	      return _react2.default.createElement(
-	        _reactBootstrap.ButtonToolbar,
+	        'div',
 	        null,
 	        _react2.default.createElement(
-	          _reactBootstrap.DropdownButton,
-	          { bsStyle: 'primary', title: 'Menu', key: Math.random() * 1000, id: 'dropdown-basic-0' },
+	          _reactBootstrap.ButtonToolbar,
+	          null,
 	          _react2.default.createElement(
-	            _reactBootstrap.MenuItem,
-	            { name: 'all',
-	              onClick: this.handleClick,
-	              active: this.state.selected === 'all' },
-	            'All'
-	          ),
-	          _react2.default.createElement(_reactBootstrap.MenuItem, { divider: true }),
-	          _react2.default.createElement(
-	            _reactBootstrap.MenuItem,
-	            { name: 'highestRated',
-	              onClick: this.handleClick,
-	              active: this.state.selected === 'highestRated' },
-	            'Highest Rated'
-	          ),
-	          _react2.default.createElement(
-	            _reactBootstrap.MenuItem,
-	            { name: 'mostReviewed',
-	              onClick: this.handleClick,
-	              active: this.state.selected === 'mostReviewed' },
-	            'Most Reviewed'
-	          ),
-	          _react2.default.createElement(
-	            _reactBootstrap.MenuItem,
-	            { name: 'openNow',
-	              onClick: this.handleClick,
-	              active: this.state.selected === 'openNow' },
-	            'Open Now'
+	            _reactBootstrap.DropdownButton,
+	            { bsStyle: 'primary', title: 'MainMenu', id: 'dropdown-basic' },
+	            _react2.default.createElement(
+	              _reactBootstrap.MenuItem,
+	              { name: 'all', label: 'MenuItem',
+	                onClick: this.handleClick,
+	                active: this.state.selected === 'all' },
+	              'All'
+	            ),
+	            _react2.default.createElement(_reactBootstrap.MenuItem, { divider: true }),
+	            _react2.default.createElement(
+	              _reactBootstrap.MenuItem,
+	              { name: 'highestRated',
+	                onClick: this.handleClick,
+	                active: this.state.selected === 'highestRated' },
+	              'Highest Rated'
+	            ),
+	            _react2.default.createElement(
+	              _reactBootstrap.MenuItem,
+	              { name: 'mostReviewed',
+	                onClick: this.handleClick,
+	                active: this.state.selected === 'mostReviewed' },
+	              'Most Reviewed'
+	            ),
+	            _react2.default.createElement(
+	              _reactBootstrap.MenuItem,
+	              { name: 'openNow',
+	                onClick: this.handleClick,
+	                active: this.state.selected === 'openNow' },
+	              'Open Now'
+	            )
 	          )
 	        )
 	      );
@@ -48057,6 +48078,10 @@
 	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(RestaurantList).call(this, props));
 
 	    _this.renderList = _this.renderList.bind(_this);
+
+	    _this.state = { "selected": "" };
+	    _this.handleClick = _this.handleClick.bind(_this);
+	    _this.handleSelected = _this.handleSelected.bind(_this);
 	    return _this;
 	  }
 
@@ -48064,6 +48089,18 @@
 	    key: 'componentWillMount',
 	    value: function componentWillMount() {
 	      this.props.fetchRestaurants();
+	    }
+	  }, {
+	    key: 'handleClick',
+	    value: function handleClick(eventKey) {
+
+	      /* Identify selected item*/
+	      this.setState({ selected: eventKey });
+	    }
+	  }, {
+	    key: 'handleSelected',
+	    value: function handleSelected(eventKey) {
+	      this.setState({ selected: eventKey });
 	    }
 	  }, {
 	    key: 'renderList',
@@ -48114,7 +48151,12 @@
 	              this.renderList(restaurants)
 	            )
 	          ),
-	          _react2.default.createElement(_menu2.default, { key: Math.random() })
+	          _react2.default.createElement(_menu2.default, { key: Math.random(),
+	            handleClick: this.handleClick,
+	            handleSelected: this.handleSelected,
+	            selected: this.state.selected
+
+	          })
 	        )
 	      );
 	    }

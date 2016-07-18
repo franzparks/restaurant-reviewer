@@ -32,9 +32,13 @@ class DropDownMenu extends Component{
   render(){
 
      return (
+      <div>
+        
         <ButtonToolbar>
-        <DropdownButton bsStyle={'primary'} title={'Menu'} key={Math.random() * 1000} id={'dropdown-basic-0'}>
-          <MenuItem name="all" 
+        
+        <DropdownButton bsStyle={'primary'} title="MainMenu" id="dropdown-basic" key={Math.random() * 1000}>
+
+          <MenuItem name="all" label="MenuItem"
             onClick={this.handleClick}
             active={this.state.selected === 'all'}>
             All
@@ -55,8 +59,12 @@ class DropDownMenu extends Component{
             active={this.state.selected === 'openNow'}>
             Open Now
           </MenuItem>
+
         </DropdownButton>
+    
         </ButtonToolbar>
+        
+        </div>
      );
  }
 

@@ -38,7 +38,8 @@ class FilterMenu extends Component {
 		console.log(props.selected);
 		return(
 			<ButtonToolbar>
-	        <DropdownButton bsStyle={'link'} open noCaret  title={''} key={Math.random() * 1000} id={'dropdown-basic-0'} >
+	        <DropdownButton bsStyle={'link'} open noCaret 
+	         title={'Menu'} key={Math.random() * 1000} id={'dropdown-basic-0'} >
 	          <MenuItem 
 	            name="all" 
 	            eventKey={"all"}
