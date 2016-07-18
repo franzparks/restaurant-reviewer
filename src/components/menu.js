@@ -1,16 +1,22 @@
+
 import React,{Component} from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
-import MenuItem from './menuitem';
+
+import {
+  ButtonGroup,
+  DropdownButton,
+  MenuItem, 
+  ButtonToolbar
+} from 'react-bootstrap';
+
 
 class Menu extends Component {
 
 	constructor(props) {
         super(props);
-        this.state = {"selected" :"list-group-item active", "unselected":"list-group-item", "style":"", "selectedItem":""};
+        this.state = {"selected" :"" };
         this.handleClick = this.handleClick.bind(this);
-        this.displayMenuItems = this.displayMenuItems.bind(this);
-        
     }
     
     componentDidMount(){
@@ -25,58 +31,37 @@ class Menu extends Component {
         this.setState({selectedItem : e.target.name});
 	}
 
-	displayMenuItems (){
-		var vals = {"all":"All","highestRated":"Highest Rated", "mostReviewed":"Most Reviewed", "openNow":"Open Now"};
-
-		var menuItems = [];
-
-        Object.keys(vals).forEach((key) => {
-         
-	        menuItems.push(	
-
-			<MenuItem 
-
-			   key={key}
-
-	           label={vals[key]}
-	           name={key}
-	           style={this.state.unselected}
-	           handleClick={this.handleClick}
-
-				/>	
-
-			);
-         
-		});	
-
-		menuItems = menuItems.map((item) =>{
-           
-            if(item.props.name === this.state.selectedItem){
-            	/* copy item props to edit styling */
-            	item = <MenuItem 
-				   key={item.key}
-		           label={item.props.label}
-		           name={item.name}
-		           style={this.state.selected}
-		           handleClick={this.handleClick}
-
-				/>;
-            	return item;
-            }
-
-            return item;   
-		});
-
-		return menuItems;
-	}
-
 	render() {
-        var items = this.displayMenuItems();
+       
 		return (
 			
 		    <div className="col-md-3 col-lg-3  visible-md visible-lg" id="sidebar">
 				<div className="list-group ">
-				    {items}        
+				    <ButtonToolbar>
+				        <DropdownButton bsStyle={'primary'} title={'Menu'} key={Math.random() * 1000} id={'dropdown-basic-0'}>
+				          <MenuItem name="all" 
+				            onClick={this.handleClick}
+				            active={this.state.selected === 'all'}>
+				            All
+				          </MenuItem>
+				          <MenuItem divider />
+				          <MenuItem  name="highestRated" 
+				            onClick={this.handleClick} 
+				            active={this.state.selected === 'highestRated'}>
+				            Highest Rated
+				          </MenuItem>
+				          <MenuItem name="mostReviewed" 
+				            onClick={this.handleClick} 
+				            active={this.state.selected === 'mostReviewed'}>
+				            Most Reviewed
+				          </MenuItem>
+				          <MenuItem name="openNow"
+				            onClick={this.handleClick} 
+				            active={this.state.selected === 'openNow'}>
+				            Open Now
+				          </MenuItem>
+				        </DropdownButton>
+				        </ButtonToolbar>      
 				</div>
 			</div>
 			
