@@ -60,24 +60,12 @@
 .disabled-button {
     background-color: #446cb3;
     color: white;
-    border: 1px;
     
 }
 
 /*Experiments*/
 
-button1:hover,
-button1:focus{
-    background-color: #E91E63
-    color: #FFFFFF;
-    text-decoration: underline;
-}
 
-button1:focus {
-    outline: 0;
-    box-shadow: 0 0 8px 3px
-    rgba(255 255 255 0.8);
-}
 
 }
 
