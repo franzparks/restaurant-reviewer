@@ -47916,7 +47916,7 @@
 	                        { className: 'navbar-header' },
 	                        _react2.default.createElement(
 	                            'button',
-	                            { type: 'button', className: 'navbar-toggle collapsed button1', 'data-toggle': 'collapse',
+	                            { type: 'button', className: 'navbar-toggle collapsed button1 ', 'data-toggle': 'collapse',
 	                                'data-target': '#navbar', 'aria-expanded': 'false', 'aria-controls': 'navbar' },
 	                            _react2.default.createElement(
 	                                'span',
