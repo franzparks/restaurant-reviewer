@@ -18,10 +18,7 @@ module.exports = {
             }
       
         },
-        {   
-            test: /\.css$/, 
-            loader: "css-loader!autoprefixer-loader"
-        },
+        
         {   
             test: /\.png$/,
             loader: "url-loader?limit=100000"
@@ -34,6 +31,9 @@ module.exports = {
         {
             test: /\.html$/,
             loader: "html-loader"
+        },
+        { test: /\.css$/, 
+            loader: 'style-loader!css-raw-loader' 
         } 
   
 

@@ -22,7 +22,7 @@ class Header extends Component {
 			<nav className="navbar navbar-fixed-top navbar-inverse">
                 <div className="container">
                     <div className="navbar-header">
-                        <button type="button" className="navbar-toggle collapsed button1" data-toggle="collapse" 
+                        <button type="button" className="navbar-toggle collapsed button1 " data-toggle="collapse" 
                             data-target="#navbar" aria-expanded="false" aria-controls="navbar" >
                             <span className="sr-only sr-only-focusable text-font">Toggle navigation</span>
                             <span className="icon-bar"></span>

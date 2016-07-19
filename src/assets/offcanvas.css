@@ -115,3 +115,12 @@ nav, a:focus {
 
 
 
+.navbar-inverse .navbar-toggle:focus, 
+.navbar-inverse .navbar-toggle:hover {
+    background-color: red;
+}
+
+.navbar-toggle:focus {
+    outline: 0;
+}
+

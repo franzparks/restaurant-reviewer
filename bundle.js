@@ -27112,10 +27112,11 @@
 				console.log(props.selected);
 				return _react2.default.createElement(
 					_reactBootstrap.ButtonToolbar,
-					null,
+					{ tabIndex: '-1' },
 					_react2.default.createElement(
 						_reactBootstrap.DropdownButton,
-						{ bsStyle: 'link', open: true, noCaret: true, title: '', key: Math.random() * 1000, id: 'dropdown-basic-0' },
+						{ bsStyle: 'link', open: true, noCaret: true,
+							title: 'Menu', key: Math.random() * 1000, id: 'dropdown-basic-0' },
 						_react2.default.createElement(
 							_reactBootstrap.MenuItem,
 							{
@@ -47806,7 +47807,7 @@
 	          null,
 	          _react2.default.createElement(
 	            _reactBootstrap.DropdownButton,
-	            { bsStyle: 'primary', title: 'MainMenu', id: 'dropdown-basic' },
+	            { bsStyle: 'primary', title: 'MainMenu', id: 'dropdown-basic', key: Math.random() * 1000 },
 	            _react2.default.createElement(
 	              _reactBootstrap.MenuItem,
 	              { name: 'all', label: 'MenuItem',
@@ -48142,21 +48143,23 @@
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'row row-offcanvas row-offcanvas-right' },
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'col-xs-12 col-sm-12 col-md-6' },
-	            _react2.default.createElement(
-	              'div',
-	              { key: Math.random() },
-	              this.renderList(restaurants)
-	            )
-	          ),
 	          _react2.default.createElement(_menu2.default, { key: Math.random(),
 	            handleClick: this.handleClick,
 	            handleSelected: this.handleSelected,
 	            selected: this.state.selected
 
-	          })
+	          }),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'col-xs-12 col-sm-12 col-md-6' },
+	            _react2.default.createElement(_toggle_nav2.default, { key: Math.random() }),
+	            _react2.default.createElement(_overview2.default, { key: Math.random() }),
+	            _react2.default.createElement(
+	              'div',
+	              { key: Math.random() },
+	              this.renderList(restaurants)
+	            )
+	          )
 	        )
 	      );
 	    }
@@ -48252,9 +48255,9 @@
 					null,
 					_react2.default.createElement(
 						_reactRouter.Link,
-						{ to: path },
+						{ to: path, className: 'img-focused' },
 						_react2.default.createElement('img', { src: props.image,
-							className: 'img-responsive',
+							className: 'img-responsive ',
 							alt: 'Image of restaurant cuisine type' })
 					)
 				),
@@ -48352,7 +48355,7 @@
 		return _react2.default.createElement(
 			"div",
 			{ className: "rated" },
-			_react2.default.createElement("label", { htmlFor: props.keys[0], className: checked === '5' ? 'selected' : '' }),
+			_react2.default.createElement("label", { htmlFor: props.keys[0], className: checked === '5' ? 'selected' : '', "aria-label": "Reviewer's Rating" }),
 			_react2.default.createElement("input", { type: "radio",
 				id: props.keys[0],
 				key: Math.random() * 10000,
@@ -48361,10 +48364,10 @@
 				role: "presentation",
 				readOnly: true,
 				checked: checked === '5' ? true : false,
-				"aria-label": "Reviewer's Rating",
 				tabIndex: "-1"
+
 			}),
-			_react2.default.createElement("label", { htmlFor: props.keys[1], className: checked === '4' ? 'selected' : '' }),
+			_react2.default.createElement("label", { htmlFor: props.keys[1], className: checked === '4' ? 'selected' : '', "aria-label": "Reviewer's Rating" }),
 			_react2.default.createElement("input", { type: "radio",
 				id: props.keys[1],
 				key: Math.random() * 10000,
@@ -48373,11 +48376,10 @@
 				role: "presentation",
 				readOnly: true,
 				checked: checked === '4' ? true : false,
-				"aria-label": "Reviewer's Rating",
 				tabIndex: "-1"
 
 			}),
-			_react2.default.createElement("label", { htmlFor: props.keys[2], className: checked === '3' ? 'selected' : '' }),
+			_react2.default.createElement("label", { htmlFor: props.keys[2], className: checked === '3' ? 'selected' : '', "aria-label": "Reviewer's Rating" }),
 			_react2.default.createElement("input", { type: "radio",
 				id: props.keys[2],
 				key: Math.random() * 10000,
@@ -48386,11 +48388,10 @@
 				role: "presentation",
 				readOnly: true,
 				checked: checked === '3' ? true : false,
-				"aria-label": "Reviewer's Rating",
 				tabIndex: "-1"
 
 			}),
-			_react2.default.createElement("label", { htmlFor: props.keys[3], className: checked === '2' ? 'selected' : '' }),
+			_react2.default.createElement("label", { htmlFor: props.keys[3], className: checked === '2' ? 'selected' : '', "aria-label": "Reviewer's Rating" }),
 			_react2.default.createElement("input", { type: "radio",
 				id: props.keys[3],
 				key: Math.random() * 10000,
@@ -48399,11 +48400,9 @@
 				role: "presentation",
 				readOnly: true,
 				checked: checked === '2' ? true : false,
-				"aria-label": "Reviewer's Rating",
 				tabIndex: "-1"
-
 			}),
-			_react2.default.createElement("label", { htmlFor: props.keys[4], className: checked === '1' ? 'selected' : '' }),
+			_react2.default.createElement("label", { htmlFor: props.keys[4], className: checked === '1' ? 'selected' : '', "aria-label": "Reviewer's Rating" }),
 			_react2.default.createElement("input", {
 				type: "radio",
 				id: props.keys[4],
@@ -48413,7 +48412,6 @@
 				role: "presentation",
 				readOnly: true,
 				checked: checked === '1' ? true : false,
-				"aria-label": "Reviewer's Rating",
 				tabIndex: "-1"
 			})
 		);
@@ -48981,9 +48979,8 @@
 	                            { className: 'rating', id: 'rate-restaurant' },
 	                            _react2.default.createElement(
 	                                'label',
-	                                { htmlFor: '5', className: rating.value === '5' ? 'selected' : '' },
+	                                { htmlFor: '5', id: 'fiveStars', className: rating.value === '5' ? 'selected' : '' },
 	                                _react2.default.createElement('input', _extends({
-	                                    tabIndex: '-1',
 	                                    type: 'radio' }, rating, {
 	                                    value: '5',
 	                                    id: '5',
@@ -48996,8 +48993,9 @@
 	                            ),
 	                            _react2.default.createElement(
 	                                'label',
-	                                { htmlFor: '4', className: rating.value === '4' ? 'selected' : '' },
-	                                _react2.default.createElement('input', _extends({ tabIndex: '-1', type: 'radio' }, rating, {
+	                                { htmlFor: '4', id: 'fourStars', className: rating.value === '4' ? 'selected' : '' },
+	                                _react2.default.createElement('input', _extends({
+	                                    type: 'radio' }, rating, {
 	                                    value: '4',
 	                                    id: '4',
 	                                    checked: rating.value === '4',
@@ -49008,8 +49006,9 @@
 	                            ),
 	                            _react2.default.createElement(
 	                                'label',
-	                                { htmlFor: '3', className: rating.value === '3' ? 'selected' : '' },
-	                                _react2.default.createElement('input', _extends({ tabIndex: '-1', type: 'radio' }, rating, {
+	                                { htmlFor: '3', id: 'threeStars', className: rating.value === '3' ? 'selected' : '' },
+	                                _react2.default.createElement('input', _extends({
+	                                    type: 'radio' }, rating, {
 	                                    value: '3',
 	                                    id: '3',
 	                                    checked: rating.value === '3',
@@ -49021,8 +49020,9 @@
 	                            ),
 	                            _react2.default.createElement(
 	                                'label',
-	                                { htmlFor: '2', className: rating.value === '2' ? 'selected' : '' },
-	                                _react2.default.createElement('input', _extends({ tabIndex: '-1', type: 'radio' }, rating, {
+	                                { htmlFor: '2', id: 'twoStars', className: rating.value === '2' ? 'selected' : '' },
+	                                _react2.default.createElement('input', _extends({
+	                                    type: 'radio' }, rating, {
 	                                    value: '2',
 	                                    id: '2',
 	                                    checked: rating.value === '2',
@@ -49034,8 +49034,9 @@
 	                            ),
 	                            _react2.default.createElement(
 	                                'label',
-	                                { htmlFor: '1', className: rating.value === '1' ? 'selected' : '' },
-	                                _react2.default.createElement('input', _extends({ tabIndex: '-1', type: 'radio' }, rating, {
+	                                { htmlFor: '1', id: 'oneStar', className: rating.value === '1' ? 'selected' : '' },
+	                                _react2.default.createElement('input', _extends({
+	                                    type: 'radio' }, rating, {
 	                                    value: '1',
 	                                    id: '1',
 	                                    checked: rating.value === "1",
