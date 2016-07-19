@@ -137,7 +137,7 @@ class ReviewForm extends Component {
             <div className={`form-group ${name.touched  && name.invalid ? 'has-danger' : ''}`} >
                 <label htmlFor="name-input" className="control-label">Name</label>
                 <div>
-                    <input type="text" placeholder="Name" {...name} id="name-input" className="form-control input-focused"/>
+                    <input type="text" placeholder="Name" {...name} id="name-input" className="form-control "/>
                 </div>
                 <div className="text-danger">
                   {name.touched ? name.error : ''}
@@ -153,7 +153,7 @@ class ReviewForm extends Component {
                         // required for reset form to work (only on textarea's)
                         // see: https://github.com/facebook/react/issues/2533
                         value={comment.value || ''}
-                        className="form-control input-focused"
+                        className="form-control"
                     />
                 </div>
             </div>

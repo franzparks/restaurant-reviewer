@@ -78,8 +78,6 @@ h2 {
 }
 
 
-
-
 .img-focused {
     display: inline-block;
     border: 1px solid #ddd;
@@ -97,7 +95,16 @@ h2 {
 
 input[type=text]:hover,
 input[type=text]:focus {
+
     border: 2px solid red;
     border-radius: 4px;
 }
+
+textarea.form-control:focus {
+    outline: none;
+    border: 2px solid #f10b48;
+}
+
+
+
 
