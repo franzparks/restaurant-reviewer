@@ -24,6 +24,15 @@ class ReviewForm extends Component {
     }
 
 
+    componentDidUpdate (prevProps) {
+    // respond to parameter change in scenario 3
+    let oldId = prevProps.params;
+    console.log("prevProps : "+ oldId);
+    //let newId = this.props.params.invoiceId
+    //if (newId !== oldId)
+    //  this.fetchInvoice()
+    }
+
     onSubmit(props) {
 
         if(!props.restaurant){ //temporary fix to handle form page refresh

@@ -12,6 +12,7 @@ import {
     sortUsingCategoryFilter,
     sortUsingTextFilter,
     filterRestaurants,
+    filterRestaurant,
     getNumberOfRatings
 } from '../utils/utils';
 
@@ -37,6 +38,12 @@ class RestaurantList extends Component {
     componentWillMount() {
 		this.props.fetchRestaurants();
 	}
+
+    componentWillReceiveProps() {
+        this.props.fetchRestaurant(this.props.params.id);
+
+    }
+
 
     handleClick (eventKey){
 

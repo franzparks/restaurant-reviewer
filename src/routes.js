@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, IndexRoute } from 'react-router';
+import { Route, IndexRoute, Redirect } from 'react-router';
 
 
 import MainLayout from './components/main_layout';
@@ -15,5 +15,7 @@ export default (
     <Route  path="reviews/new" component={CreateReview} />
 
   </Route>
+
+
 
 );
