@@ -29,6 +29,7 @@
     "jsdom": "^8.1.0",
     "mocha": "^2.4.5",
     "react-addons-test-utils": "^0.14.7",
+    "style-loader": "^0.13.1",
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.14.0"
   },
@@ -37,6 +38,7 @@
     "babel-preset-stage-1": "^6.1.18",
     "classnames": "^2.2.5",
     "compass": "^0.1.1",
+    "extract-text-webpack-plugin": "^1.0.1",
     "jquery": "^3.1.0",
     "lodash": "^3.10.1",
     "react": "^0.14.3",

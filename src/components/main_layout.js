@@ -3,6 +3,7 @@ import Footer from './footer';
 import Menu from './menu';
 import ToggleNav from './toggle_nav';
 import Header from './header';
+//require("../../assets/stars.css");
 
 const MainLayout = (props) => {
 
