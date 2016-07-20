@@ -16,11 +16,12 @@ require("../../assets/stars.css");
 
 class MainLayout extends Component {
 
+  
   constructor(props){
         
       super(props);
       
-    }
+  }
 
   
 
@@ -37,7 +38,7 @@ class MainLayout extends Component {
           <Header />
         </header>
 	  	  <main className="container">
-	  	    {props.children} 
+	  	    {this.props.children} 
 	      </main>
         <footer>
           <Footer />
