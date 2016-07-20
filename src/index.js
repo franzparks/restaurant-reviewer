@@ -9,6 +9,9 @@ import routes from './routes';
 import reducers from './reducers';
 import Async from './middlewares/async';
 
+require("../assets/stars.css");
+//require('css!./stars.css');
+
 const createStoreWithMiddleware = applyMiddleware(Async)(createStore);
 
 ReactDOM.render(

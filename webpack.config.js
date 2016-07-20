@@ -37,7 +37,7 @@ module.exports = {
         },
         { 
             test: /\.css$/,
-            loader: ExtractTextPlugin.extract("style-loader", "css-loader") 
+            loader: "style!css!" 
         }
   
 
@@ -52,14 +52,17 @@ module.exports = {
     
   },
   plugins: [
+    //new webpack.DefinePlugin({
+    //  'process.env': { NODE_ENV: '"production"' }
+    //}),
     new webpack.optimize.UglifyJsPlugin({
       
       mangle: false
     }),
 
-    new ExtractTextPlugin({
-            filenames: "styles.css",
-            allChunks: true
-        })
+    //new ExtractTextPlugin('src/styles/styles.css', {
+    //    publicPath: '/src/styles/',
+    //    allChunks: true
+    //})
   ]
 };
