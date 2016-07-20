@@ -39,11 +39,11 @@ class RestaurantList extends Component {
 		this.props.fetchRestaurants();
 	}
 
-    componentWillReceiveProps() {
-        this.props.fetchRestaurant(this.props.params.id);
-        console.log("after refresh got id :"+this.props.params.id);
+    //componentWillReceiveProps() {
+    //    this.props.fetchRestaurant(this.props.params.id);
+    //    console.log("after refresh got id :"+this.props.params.id);
 
-    }
+    //}
 
 
     handleClick (eventKey){

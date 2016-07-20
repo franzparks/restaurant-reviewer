@@ -11,6 +11,20 @@ require("../../assets/stars.css");
 
 class MainLayout extends Component {
 
+  constructor(props){
+        
+      super(props);
+      
+    }
+
+  
+
+    componentWillReceiveProps() {
+        this.props.fetchRestaurant(this.props.params.id);
+        console.log("after refresh got id :"+this.props.params.id);
+
+    }
+
   render(){   	
     return (
       <div>

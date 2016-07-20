@@ -29,9 +29,9 @@ class RestaurantDetails  extends Component{
 
     }
 
-    componentWillReceiveProps() {
+    //componentWillReceiveProps() {
         //this.props.fetchRestaurant(this.props.params.id);
-    }
+    //}
 
 
     renderRestaurant(restaurants,path){
