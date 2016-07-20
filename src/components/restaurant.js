@@ -8,8 +8,8 @@ require("../../assets/star_presentation.css");
 require("../../assets/stars.css");
 
 const Restaurant = (props) => {
-
-	var path = `restaurants/${props.id}`;
+    let id = props.id;
+	var path = `restaurants/${id}`;
 	
 	return(
 		

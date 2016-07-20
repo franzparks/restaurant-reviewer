@@ -12,7 +12,6 @@ import {
     sortUsingCategoryFilter,
     sortUsingTextFilter,
     filterRestaurants,
-    filterRestaurant,
     getNumberOfRatings
 } from '../utils/utils';
 

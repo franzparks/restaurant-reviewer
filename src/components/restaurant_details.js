@@ -29,6 +29,12 @@ class RestaurantDetails  extends Component{
 
     }
 
+    componentWillUnmount() {
+        console.log("about to unmount  :"+this.props.params.id);
+        this.props.fetchRestaurant(this.props.params.id);
+
+    }
+
     //componentWillReceiveProps() {
         //this.props.fetchRestaurant(this.props.params.id);
     //}
@@ -122,7 +128,7 @@ class RestaurantDetails  extends Component{
 
     render(){
 
-    	var path = '/reviews/new';
+    	var path = `${this.props.params.id}/reviews`;
      
 		return (
             <div>

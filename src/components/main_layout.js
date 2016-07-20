@@ -24,10 +24,10 @@ class MainLayout extends Component {
   
 
     componentWillReceiveProps() {
-        this.props.fetchRestaurant(this.props.params.id);
-        console.log("after refresh got id :"+Object.keys(this.props));
-        console.log("after refresh got id :"+Object.keys(this.props.location.key));
-        console.log("after refresh location:"+this.props.location);
+        //this.props.fetchRestaurant(this.props.params.id);
+        //console.log("after refresh got params :"+Object.keys(this.props.params));
+        //console.log("after refresh got id :"+Object.keys(this.props.children.props.params));
+        //console.log("after refresh location:"+this.props.params);
 
     }
 
