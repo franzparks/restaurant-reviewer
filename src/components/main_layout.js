@@ -3,6 +3,8 @@ import Footer from './footer';
 import Menu from './menu';
 import ToggleNav from './toggle_nav';
 import Header from './header';
+import {connect} from 'react-redux';
+import * as actions from '../actions';
 
 import {
     filterRestaurant
