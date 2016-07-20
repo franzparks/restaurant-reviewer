@@ -2,6 +2,11 @@ import React from 'react';
 import { Link } from 'react-router';
 import Stars from './stars';
 
+require('../../assets/jquery.min.js');
+require("../../assets/offcanvas.css");
+require("../../assets/star_presentation.css");
+require("../../assets/stars.css");
+
 const Restaurant = (props) => {
 
 	var path = `restaurants/${props.id}`;

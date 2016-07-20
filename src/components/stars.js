@@ -1,5 +1,12 @@
 import React from 'react';
 
+require('../../assets/jquery.min.js');
+require("../../assets/offcanvas.css");
+require("../../assets/star_presentation.css");
+var style = require("../../assets/stars.css");
+
+console.log("style is ..............."+Object.keys(style));
+
 const Stars = (props) => {
 
 const checked = props.checked_star + "";

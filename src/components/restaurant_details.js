@@ -12,6 +12,11 @@ import {
     loadReviews
 } from '../utils/utils';
 
+require('../../assets/jquery.min.js');
+require("../../assets/offcanvas.css");
+require("../../assets/star_presentation.css");
+require("../../assets/stars.css");
+
 class RestaurantDetails  extends Component{
 	
     constructor(props){

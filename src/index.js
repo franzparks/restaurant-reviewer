@@ -9,8 +9,26 @@ import routes from './routes';
 import reducers from './reducers';
 import Async from './middlewares/async';
 
+
+require('../assets/jquery.min.js');
+require("../assets/offcanvas.css");
+require("../assets/star_presentation.css");
 require("../assets/stars.css");
-//require('css!./stars.css');
+
+//require("bootstrap/dist/css/bootstrap.css");
+
+
+//require('bootstrap-fonts-complete');
+//require('bootstrap/dist/css/bootstrap.css');
+
+
+//require('jquery');
+
+//require("../assets/bootstrap.min.css");
+
+//require('bootstrap');
+//require('../assets/jquery.min.js');
+
 
 const createStoreWithMiddleware = applyMiddleware(Async)(createStore);
 

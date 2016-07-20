@@ -4,6 +4,11 @@ import { connect } from 'react-redux';
 import * as actions from '../actions';
 import SearchBar from './search_bar';
 
+require('../../assets/jquery.min.js');
+require("../../assets/offcanvas.css");
+require("../../assets/star_presentation.css");
+require("../../assets/stars.css");
+
 class Header extends Component {
 
 
