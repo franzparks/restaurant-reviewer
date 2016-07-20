@@ -4,6 +4,11 @@ import Menu from './menu';
 import ToggleNav from './toggle_nav';
 import Header from './header';
 
+import {
+    filterRestaurant
+} from '../utils/utils';
+
+
 require('../../assets/jquery.min.js');
 require("../../assets/offcanvas.css");
 require("../../assets/star_presentation.css");
