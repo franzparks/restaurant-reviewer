@@ -6,10 +6,6 @@ import Header from './header';
 import {connect} from 'react-redux';
 import * as actions from '../actions';
 
-import {
-    filterRestaurant
-} from '../utils/utils';
-
 
 require('../../assets/jquery.min.js');
 require("../../assets/offcanvas.css");
@@ -29,7 +25,9 @@ class MainLayout extends Component {
 
     componentWillReceiveProps() {
         this.props.fetchRestaurant(this.props.params.id);
-        console.log("after refresh got id :"+this.props.params.id);
+        console.log("after refresh got id :"+Object.keys(this.props));
+        console.log("after refresh got id :"+Object.keys(this.props.location.key));
+        console.log("after refresh location:"+this.props.location);
 
     }
 
