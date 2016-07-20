@@ -41,6 +41,7 @@ class RestaurantList extends Component {
 
     componentWillReceiveProps() {
         this.props.fetchRestaurant(this.props.params.id);
+        console.log("after refresh got id :"+this.props.params.id);
 
     }
 

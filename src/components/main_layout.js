@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Footer from './footer';
 import Menu from './menu';
 import ToggleNav from './toggle_nav';
@@ -9,9 +9,9 @@ require("../../assets/offcanvas.css");
 require("../../assets/star_presentation.css");
 require("../../assets/stars.css");
 
-const MainLayout = (props) => {
+class MainLayout extends Component {
 
-   	
+  render(){   	
     return (
       <div>
         <header>
@@ -26,6 +26,8 @@ const MainLayout = (props) => {
       </div>
   	);
 	 	
+}
+
 }
 
 export default MainLayout;
