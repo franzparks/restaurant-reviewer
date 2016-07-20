@@ -50,4 +50,4 @@ class MainLayout extends Component {
 
 }
 
-export default MainLayout;
+export default connect(null,actions)(MainLayout);
