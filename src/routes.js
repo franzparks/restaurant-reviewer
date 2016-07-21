@@ -19,9 +19,9 @@ export default (
   <Route path="/" component={MainLayout}>
     <IndexRoute component={RestaurantList} />
     <Route  path="restaurants/:id" component={RestaurantDetails} />
-    <Route  path="reviews" component={CreateReview} />
+    <Route  path=":id/reviews" component={CreateReview} />
 
- 	{/*<Redirect from="restaurants/:id/reviews" to=":id/reviews" /> */}
+ 	<Redirect from="restaurants/:id/reviews" to=":id/reviews" /> 
 
  	<Route path="*" component={NotFound} />
 

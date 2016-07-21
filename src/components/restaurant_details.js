@@ -121,14 +121,12 @@ class RestaurantDetails  extends Component{
 
     render(){
 
-    	//var path = `${this.props.params.id}/reviews`;
-        var path = "reviews";
+    	var path = `${this.props.params.id}/reviews`;
      
 		return (
             <div>
             
                 {this.renderRestaurant(this.props.restaurant,path)} 
-
 
 		    </div>
 		);

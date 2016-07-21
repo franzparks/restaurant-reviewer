@@ -22,32 +22,13 @@ class ReviewForm extends Component {
         this.onSubmit = this.onSubmit.bind(this);
         this.cancel = this.cancel.bind(this);
 
-        console.log("props : "+ Object.keys(props.pushState));
-
     }
 
-
-    componentWillMount () {
-    // respond to parameter change in scenario 3
-   // let oldId = prevProps.params;
-    //console.log("prevProps : "+ oldId);
-    //let newId = this.props.params.invoiceId
-    //if (newId !== oldId)
-    //  this.fetchInvoice()
-
-    this.props.fetchRestaurant(this.props.params.id);
-    }
-
-    componentWillReceiveProps() {
-        //this.props.fetchRestaurant(this.props.params.id);
-        //console.log("after refresh got params :"+Object.keys(this.props.routeParams));
-        //console.log("after refresh got id :"+Object.keys(this.props.children.props.params));
-        //console.log("after refresh location:"+this.props.params);
-
-    }
 
     onSubmit(props) {
 
+        console.log("context :: "+Object.keys(this.context.router));
+        console.log("context :: "+this.context.router.goBack);
         if(!props.restaurant){ //temporary fix to handle form page refresh
             this.context.router.push('/');
         }
