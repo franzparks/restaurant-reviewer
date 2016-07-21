@@ -6,6 +6,8 @@ import Header from './header';
 import {connect} from 'react-redux';
 import * as actions from '../actions';
 
+global.jQuery = require('jquery');
+//require('bootstrap');
 
 require('../../assets/jquery.min.js');
 require("../../assets/offcanvas.css");
