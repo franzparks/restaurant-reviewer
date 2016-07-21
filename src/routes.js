@@ -21,7 +21,8 @@ export default (
     <Route  path="restaurants/:id" component={RestaurantDetails} />
     <Route  path=":id/reviews" component={CreateReview} />
 
- 	<Redirect from="restaurants/:id/reviews" to=":id/reviews" /> 
+ 	<Redirect from="restaurants/:id/reviews" to="restaurants/:id/reviews" /> 
+ 	<Route  path="restaurants/:id/reviews" component={CreateReview} />
 
  	<Route path="*" component={NotFound} />
 
