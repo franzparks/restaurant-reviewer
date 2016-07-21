@@ -21,6 +21,9 @@ class ReviewForm extends Component {
 
         this.onSubmit = this.onSubmit.bind(this);
         this.cancel = this.cancel.bind(this);
+
+        console.log("props : "+ Object.keys(props.pushState));
+
     }
 
 
@@ -60,7 +63,7 @@ class ReviewForm extends Component {
 
         this.props.postReview(restaurant); 
  
-        var path = `/restaurants/${restaurant.id}`; 
+        var path = `restaurants/${restaurant.id}`; 
 
         this.context.router.push(path);
     }

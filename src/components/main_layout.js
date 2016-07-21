@@ -40,9 +40,11 @@ class MainLayout extends Component {
 	  	  <main className="container">
 	  	    {this.props.children} 
 	      </main>
+
         <footer>
           <Footer />
         </footer> 
+  
       </div>
   	);
 	 	

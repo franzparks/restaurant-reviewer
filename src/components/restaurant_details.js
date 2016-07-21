@@ -26,27 +26,11 @@ class RestaurantDetails  extends Component{
 
     componentWillMount() {
         this.props.fetchRestaurant(this.props.params.id);
-
     }
 
     componentWillUnmount() {
-        console.log("about to unmount  :"+this.props.params.id);
         this.props.fetchRestaurant(this.props.params.id);
-
     }
-
-    componentWillReceiveProps() {
-        //this.props.fetchRestaurant(this.props.params.id);
-        console.log("after refresh got params :"+Object.keys(this.props.routeParams));
-        //console.log("after refresh got id :"+Object.keys(this.props.children.props.params));
-        //console.log("after refresh location:"+this.props.params);
-
-    }
-
-
-    //componentWillReceiveProps() {
-        //this.props.fetchRestaurant(this.props.params.id);
-    //}
 
 
     renderRestaurant(restaurants,path){
@@ -137,8 +121,8 @@ class RestaurantDetails  extends Component{
 
     render(){
 
-    	var path = `${this.props.params.id}/reviews`;
-        //var path = "reviews";
+    	//var path = `${this.props.params.id}/reviews`;
+        var path = "reviews";
      
 		return (
             <div>
