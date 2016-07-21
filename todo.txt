@@ -2,7 +2,5 @@ To do items which are not part of project rubric
 
 1. Conditionally fetch data from api in order to show recently added reviews on index page
 2.  Filter better with text by ignoring case and using contains or something similar
-3. Implement route refresh, currently doesn't work
-4. Work on text responsiveness for better appearance on mobile
-5. Clean up random key generators and unused code
-6. Fix error handling form submission without selecting star
+3. Work on text responsiveness for better appearance on mobile
+4. Clean up random key generators and unused code
