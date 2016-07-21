@@ -38,7 +38,7 @@ class FilterMenu extends Component {
 		console.log(props.selected);
 		return(
 			<ButtonToolbar tabIndex="-1">
-	        <DropdownButton bsStyle={'link'} open noCaret 
+	        <DropdownButton bsStyle={'link'} open onToggle={()=> true} noCaret 
 	         title={'Menu'} key={Math.random() * 1000} id={'dropdown-basic-0'} >
 	          <MenuItem 
 	            name="all" 
