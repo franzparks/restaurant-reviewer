@@ -63,14 +63,9 @@ module.exports = {
     //new webpack.DefinePlugin({
     //  'process.env': { NODE_ENV: '"production"' }
     //}),
-    //new webpack.optimize.UglifyJsPlugin({
-    //  mangle: false
-    //}),
+    new webpack.optimize.UglifyJsPlugin({
+      mangle: false
+    }),
     
-
-    //new ExtractTextPlugin('src/styles/styles.css', {
-    //    publicPath: '/src/styles/',
-    //    allChunks: true
-    //})
   ]
 };
