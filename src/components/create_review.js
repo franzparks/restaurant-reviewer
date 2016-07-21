@@ -24,6 +24,11 @@ class ReviewForm extends Component {
 
     }
 
+    componentWillMount() {
+        console.log("route params : "+this.props.routeParams.id);
+        this.props.fetchRestaurant(this.props.routeParams.id);
+    }
+
 
     onSubmit(props) {
 

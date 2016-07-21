@@ -20,26 +20,17 @@ export default (
     <IndexRoute component={RestaurantList} />
     <Route  path="restaurants/:id" component={RestaurantDetails} />
     <Route  path=":id/reviews" component={CreateReview} />
-
+    <Route  path="restaurants/:id/reviews" component={CreateReview} />
  	<Redirect from="restaurants/:id/reviews" to="restaurants/:id/reviews" /> 
- 	<Route  path="restaurants/:id/reviews" component={CreateReview} />
+
 
  	<Route path="*" component={NotFound} />
 
   </Route>
 
-  {/*<Route path="#/" component={MainLayout}>
-    <IndexRoute component={RestaurantList} />
-    <Route  path="#/restaurants/:id" component={RestaurantDetails} />
-    <Redirect from="restaurants/:id" to="#/restaurants/:id" />
-
-    <Route  path="#/:id/reviews" component={CreateReview} />
-
- 	<Redirect from="#/restaurants/:id/reviews" to="#/:id/reviews" />
-
- 	<Route path="*" component={NotFound} />
-
-  </Route> */}
+  <Route path="#/" component={MainLayout}>
+    
+  </Route> 
 
   </div>
 
