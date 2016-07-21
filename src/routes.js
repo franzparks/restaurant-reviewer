@@ -12,7 +12,9 @@ export default (
   <Route path="/" component={MainLayout}>
     <IndexRoute component={RestaurantList} />
     <Route  path="restaurants/:id" component={RestaurantDetails} />
-    <Route  path=":id/reviews" component={CreateReview} />
+    <Route name="revs" path=":id/reviews" component={CreateReview} />
+
+ 	<Redirect from="restaurants/:id/reviews" to=":id/reviews" />
 
   </Route>
 

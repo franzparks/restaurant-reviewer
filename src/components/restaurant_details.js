@@ -35,6 +35,15 @@ class RestaurantDetails  extends Component{
 
     }
 
+    componentWillReceiveProps() {
+        //this.props.fetchRestaurant(this.props.params.id);
+        console.log("after refresh got params :"+Object.keys(this.props.routeParams));
+        //console.log("after refresh got id :"+Object.keys(this.props.children.props.params));
+        //console.log("after refresh location:"+this.props.params);
+
+    }
+
+
     //componentWillReceiveProps() {
         //this.props.fetchRestaurant(this.props.params.id);
     //}
@@ -129,11 +138,13 @@ class RestaurantDetails  extends Component{
     render(){
 
     	var path = `${this.props.params.id}/reviews`;
+        //var path = "reviews";
      
 		return (
             <div>
             
-                {this.renderRestaurant(this.props.restaurant,path)}  
+                {this.renderRestaurant(this.props.restaurant,path)} 
+
 
 		    </div>
 		);

@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { reduxForm } from 'redux-form';
 import classnames from 'classnames';
 
-import { postReview } from '../actions/index';
+import { postReview,fetchRestaurant } from '../actions/index';
 import { Link } from 'react-router';
 import Stars from './stars';
 
@@ -24,13 +24,23 @@ class ReviewForm extends Component {
     }
 
 
-    componentDidUpdate (prevProps) {
+    componentWillMount () {
     // respond to parameter change in scenario 3
-    let oldId = prevProps.params;
-    console.log("prevProps : "+ oldId);
+   // let oldId = prevProps.params;
+    //console.log("prevProps : "+ oldId);
     //let newId = this.props.params.invoiceId
     //if (newId !== oldId)
     //  this.fetchInvoice()
+
+    this.props.fetchRestaurant(this.props.params.id);
+    }
+
+    componentWillReceiveProps() {
+        //this.props.fetchRestaurant(this.props.params.id);
+        //console.log("after refresh got params :"+Object.keys(this.props.routeParams));
+        //console.log("after refresh got id :"+Object.keys(this.props.children.props.params));
+        //console.log("after refresh location:"+this.props.params);
+
     }
 
     onSubmit(props) {
@@ -223,4 +233,4 @@ export default reduxForm({
   form: 'review',
   fields,
   validate
-}, mapStateToProps, { postReview })(ReviewForm)
+}, mapStateToProps, { postReview,fetchRestaurant })(ReviewForm)
