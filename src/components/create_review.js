@@ -31,9 +31,7 @@ class ReviewForm extends Component {
 
 
     onSubmit(props) {
-
-        //console.log("context :: "+Object.keys(this.context.router));
-        //console.log("context :: "+this.context.router.goBack);
+        
         if(!props.restaurant){ //temporary fix to handle form page refresh
             this.context.router.push('/');
         }
