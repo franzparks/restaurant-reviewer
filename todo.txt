@@ -4,3 +4,4 @@ To do items which are not part of project rubric
 2.  Filter better with text by ignoring case and using contains or something similar
 3. Work on text responsiveness for better appearance on mobile
 4. Clean up random key generators and unused code
+5. Deploy to prod
