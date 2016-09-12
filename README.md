@@ -5,7 +5,7 @@ A Redux application with React and Babel support for reviewing restaurants
 The focus of the application is accessibility
 
 
-### How to run application
+### How To Run Application
 
 1. Clone repository
 
